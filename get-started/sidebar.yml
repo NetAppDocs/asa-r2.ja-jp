@@ -1,0 +1,28 @@
+---
+section: get-started
+title: 開始する
+entries:
+- title: ASA R2システムの詳細
+  url: "/get-started/learn-about.html"
+- title: クイックスタート
+  url: "/get-started/quick-start.html"
+- title: ASA R2システムのインストール
+  entries:
+  - title: インストールワークフロー
+    url: "/install-setup/install-setup-workflow.html"
+  - title: ハードウェア要件を確認する
+    url: "/install-setup/install-setup-requirements.html"
+  - title: インストールの準備
+    url: "/install-setup/prepare-hardware.html"
+  - title: ハードウェアを設置
+    url: "/install-setup/deploy-hardware.html"
+  - title: ハードウェアのケーブル接続
+    url: "/install-setup/cable-hardware.html"
+  - title: システムの電源を入れる
+    url: "/install-setup/power-on-hardware.html"
+- title: ASA R2システムのセットアップ
+  entries:
+  - title: クラスタをセットアップする
+    url: "/install-setup/initialize-ontap-cluster.html"
+  - title: データアクセスのセットアップ
+    url: "/install-setup/set-up-data-access.html"

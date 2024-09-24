@@ -1,0 +1,237 @@
+---
+sidebar: sidebar 
+permalink: learn-more/cli-support.html 
+keywords: asa r2, cli, asa r2, asa a1k, asa 70, asa 90 
+summary: 一部のONTAPコマンドは、ASA R2システム（ASA A1K、ASA 70、ASA 90）ではサポートされていません。 
+---
+= ASA R2ストレージシステムのONTAP CLIサポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2システムでは、ストレージシステムで使用可能な特定のディスクセットを所有する従来のアグリゲートの代わりに、_ストレージ可用性ゾーン_を使用します。ストレージアベイラビリティゾーンは、ストレージシステム内の使用可能なすべてのディスクにアクセスできる共通のストレージプールです。ストレージアベイラビリティゾーンは、ASA R2 HAペアの両方のノードから認識できます。ストレージユニット（LUNまたはNVMeネームスペース）を作成すると、ストレージユニットを格納するStorage Virtual Machine（VM）を含むボリュームがONTAPによってストレージアベイラビリティゾーンに自動的に作成されます。
+
+このようにシンプルなストレージ管理アプローチが採用 `storage aggregate`されているため、ASA R2システムではコマンドはサポートされていません。一部の `lun` `volume`コマンドとパラメータのサポートも制限されています。
+
+次のコマンドおよびコマンドセットは、R2上のASAではサポートされていません。
+
+.サポートされない<code> LUN </code>コマンド
+[%collapsible]
+====
+* `lun copy`
+* `lun geometry`
+* `lun import`
+* `lun mapping add-reportng-nodes`
+* `lun mapping-remove-reporting-nodes`
+* `lun maxsize`
+* `lun move`
+* `lun move-in-volume`
++
+このコマンドは、lun rename / vserver nvme namespace renameに置き換えられました。
+
+* `lun transition`
+
+
+====
+.サポートされない<code> Volume </code>のコマンドとパラメータ
+[%collapsible]
+====
+* `volume autosize`
+* `volume create`
+* `volume delete`
+* `volume expand`
+* `volume modify`
++
+このコマンドは、次のパラメータと組み合わせて使用する場合は使用できません。
+
++
+** `-anti-ransomware-state`
+** `-autosize`
+** `-autosize-mode`
+** `-autosize-shrik-threshold-percent`
+** `-autosize-reset`
+** `-group`
+** `-is-cloud-write-enabled`
+** `-is-space-enforcement-logical`
+** `-max-autosize`
+** `-min-autosize`
+** `-offline`
+** `-online`
+** `-percent-snapshot-space`
+** `-qos*`
+** `-size`
+** `-snapshot-policy`
+** `-space-guarantee`
+** `-space-mgmt-try-first`
+** `-state`
+** `-tiering-policy`
+** `-tiering-minimum-cooling-days`
+** `-user`
+** `-unix-permisions`
+** `-vserver-dr-protection`
+
+
+* `volume make-vsroot`
+* `volume mount`
+* `volume move`
+* `volume offline`
+* `volume rehost`
+* `volume rename`
+* `volume restrict`
+* `volume transition-prepare-to-downgrade`
+* `volume unmount`
+
+
+====
+.サポートされない<code> volume clone </code>コマンド
+[%collapsible]
+====
+* `volume clone create`
+* `volume clone split`
+
+
+====
+.サポートされない<code> Volume SnapLock </code>コマンド
+[%collapsible]
+====
+* `volume snaplock modify`
+
+
+====
+.サポートされない<code> volume snapshot </code>コマンド
+[%collapsible]
+====
+* `volume snapshot`
+* `volume snapshot autodelete modify`
+* `volume snapshot policy modify`
+
+
+====
+.サポートされない<code> Volume </code>コマンドセット
+[%collapsible]
+====
+* `volume activity-tracking`
+* `volume analytics`
+* `volume conversion`
+* `volume file`
+* `volume flexcache`
+* `volume flexgroup`
+* `volume inode-upgrade`
+* `volume object-store`
+* `volume qtree`
+* `volume quota`
+* `volume reallocation`
+* `volume rebalance`
+* `volume recovery-queue`
+* `volume schedule-style`
+
+
+====
+.サポートされない<code> storage </code>コマンド
+[%collapsible]
+====
+* `storage failover show-takeover`
+* `storage failover show-giveback`
+* `storage aggregate relocation`
+* `storage disk assign`
+* `storage disk partition`
+* `storage disk reassign`
+
+
+====
+.詳細情報
+link:https://docs.netapp.com/us-en/ontap-cli/["ONTAPコマンド リファレンス"]サポートされるコマンドの一覧については、を参照してください。
+
+
+
+== CLIを使用したONTAP ASA R2クラスタのセットアップ
+
+お勧めしlink:../install-setup/initialize-ontap-cluster.html["System Managerを使用してONTAP ASA R2クラスタをセットアップする"]ます。System Managerには、クラスタの運用を迅速かつ簡単に開始できるガイド付きワークフローが用意されています。ただし、ONTAPコマンドを使い慣れている場合は、クラスタのセットアップにONTAPのコマンドラインインターフェイス（CLI）を使用することもできます。CLIを使用したクラスタセットアップには、System Managerを使用したクラスタセットアップに比べて追加のオプションや利点はありません。
+
+クラスタのセットアップ時に、デフォルトのデータStorage Virtual Machine（VM）が作成され、初期ストレージユニットが作成され、データLIFが自動的に検出されます。必要に応じて、Domain Name System（DNS；ドメインネームシステム）を有効にしてホスト名を解決したり、Network Time Protocol（NTS；ネットワークタイムプロトコル）を使用して時刻を同期するようにクラスタを設定したり、保存データの暗号化を有効にしたりできます。
+
+.開始する前に
+次の情報を収集します。
+
+* クラスタ管理 IP アドレス
++
+クラスタ管理IPアドレスは、クラスタ管理インターフェイスの一意のIPv4アドレスです。クラスタ管理者は、管理Storage VMへのアクセスとクラスタの管理に使用します。このIPアドレスは、組織でIPアドレスを割り当てる管理者から取得できます。
+
+* ネットワークサブネットマスク
++
+ONTAPでは、クラスタのセットアップ時に、ご使用の構成に適した一連のネットワークインターフェイスを推奨します。必要に応じて推奨構成を調整できます。
+
+* ネットワークゲートウェイのIPアドレス
+* パートナーノードのIPアドレス
+* DNSドメイン名
+* DNSネームサーバのIPアドレス
+* NTPサーバのIPアドレス
+* データサブネットマスク
+
+
+.手順
+. HAペアの両方のノードの電源をオンにします。
+. ローカルネットワークで検出されたノードを表示します。
++
+[source, cli]
+----
+system node show-discovered -is-in-cluster false
+----
+. クラスタセットアップウィザードを開始します。
++
+[source, cli]
+----
+cluster setup
+----
+. AutoSupportステートメントを確認します。
+. ノード管理インターフェイスのポート、IPアドレス、ネットマスク、およびデフォルトゲートウェイの値を入力します。
+. コマンドラインインターフェイスを使用してセットアップを続行する場合は* Enter *を押し、新しいクラスタを作成する場合は* create *と入力します。
+. システムのデフォルトを受け入れるか、独自の値を入力します。
+. 1つ目のノードでのセットアップが完了したら、クラスタにログインします。
+. クラスタがアクティブで、第1ノードが正常であることを確認します。
++
+[source, cli]
+----
+system node show-discovered
+----
+. クラスタに2つ目のノードを追加します。
++
+[source, cli]
+----
+cluster add-node -cluster-ip <partner_node_ip_address>
+----
+. 必要に応じて、クラスタ全体のシステム時間を同期します。
++
+[cols="1h, 1"]
+|===
+
+
+| 対称認証を使用しない同期  a| 
+[source, cli]
+----
+cluster time-service ntp server create -server <server_name>
+----
+
+
+| 対称認証と同期  a| 
+[source, cli]
+----
+cluster time-service ntp server create -server <server_ip_address> -key-id <key_id>
+----
+|===
++
+.. クラスタがNTPサーバに関連付けられていることを確認します。
++
+[source, cli]
+----
+Cluster time-service ntp show
+----
+
+
+. 必要に応じて、をダウンロードしてを実行し、link:https://mysupport.netapp.com/site/tools/tool-eula/activeiq-configadvisor["ActiveIQ Config Advisor"]設定を確認します。
+
+
+.次の手順
+これで、link:../install-setup/set-up-data-access.html["データアクセスのセットアップ"]SANクライアントからシステムに接続する準備が整いました。

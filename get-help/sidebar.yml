@@ -1,0 +1,8 @@
+---
+section: get-help
+title: ヘルプを表示します
+entries:
+- title: AutoSupportの管理
+  url: "/get-help/manage-autosupport.html"
+- title: サポートケースの送信と表示
+  url: "/get-help/view-submit-support-case.html"

@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: videos/video_transcript_replicate_data.html 
+keywords: frontmatter, front matter 
+summary: ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。 
+---
+= ASA R2ストレージシステムからリモートクラスタにデータをレプリケートする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ビデオには以下のトランスクリプトが用意されて `Replicate data to a remote cluster from an ASA r2 storage system`います。
+
+link:videos-common-tasks.html#video_transcript_return_replicate_data["ページに戻る"]
+
+ONTAPシステムマネージャを使用して、ストレージユニットまたは整合グループのSnapshotのスケジュールを設定し、リモートの場所にレプリケートすることでデータを保護できます。
+
+この例では、既存のストレージユニットのスナップショットをスケジュールします。
+
+System Managerのメニューで、*[ストレージ]*を選択します。
+
+保護するストレージユニットを選択し、*[保護]*を選択します。
+
+必要に応じて、*[Add a snapshot now]*を選択してオンデマンドSnapshotを作成できます。
+
+[リモート保護]*で、*[リモートクラスタにレプリケート]*を選択します。
+
+レプリケーション用のStorage VMとレプリケーションポリシーを選択します。デフォルトでは、最初のデータ転送はすぐに開始されます。
+
+[ 保存（ Save ） ] を選択します。
+
+ストレージユニットが整合グループに含まれていない場合は、作成する必要があります。新しい整合グループの名前を入力し、*[作成]*を選択します。
+
+リモートクラスタに整合グループをすばやく簡単にレプリケートしておきます。

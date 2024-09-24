@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: monitor/view-insights.html 
+keywords: view, insights, optimize, cluster, performance, best practices, configuration, security 
+summary: 'ONTAP System Managerの[Insights（インサイト）]を表示して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。' 
+---
+= ASA R2ストレージシステムの分析情報でクラスタのセキュリティとパフォーマンスを最適化
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP System Managerのview_insights_inを使用して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。
+
+たとえば、クラスタ用にNetwork Time Protocol（NTP；ネットワークタイムプロトコル）サーバが設定されているとします。ただし、クラスタ時間管理を最適化するために必要なNTPサーバの数が推奨される数を下回っていることがわかりません。クラスタ時間が不正確な場合に発生する問題を回避するために、設定されているNTPサーバが少なすぎることが通知され、この問題の詳細を確認するか、修正するか、または却下するかを選択できます。
+
+image:insights.png["System Managerのインサイトページのスクリーンショット"]
+
+.手順
+. System Managerで、*[Insights]*を選択します。
+. 推奨事項を確認
+
+
+.次のステップ
+ベストプラクティスを実装し、クラスタのセキュリティとパフォーマンスを最適化するために必要な操作を実行します。

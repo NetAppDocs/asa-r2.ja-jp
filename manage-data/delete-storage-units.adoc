@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: manage-data/delete-storage-units.html 
+keywords: delete lun, delete namespace, delete storage unit, asa r2 
+summary: ストレージユニットを削除して、必要な物理ストレージの量を減らしたり、他のホストアプリケーションに必要なスペースを解放したりします。 
+---
+= ASA R2ストレージシステム上のストレージユニットの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ユニットに含まれるデータを維持する必要がなくなった場合は、ストレージユニットを削除します。不要になったストレージユニットを削除すると、他のホストアプリケーションに必要なスペースを解放できます。
+
+.開始する前に
+削除するストレージユニットがレプリケーション関係にあるコンシステンシグループに含まれている場合はlink:../data-protection/manage-consistency-groups.html#remove-a-storage-unit-from-a-consistency-group["コンシステンシ・グループからのストレージ・ユニットの削除"]、削除する前にストレージユニットを削除する必要があります。
+
+.手順
+. System Managerで、*[ストレージ]*を選択します。
+. 削除するストレージユニットの名前にカーソルを合わせます。
+. を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* Delete *を選択します。
+. 削除を元に戻せないことを承認します。
+. 「 * 削除」を選択します。
+
+
+.次の手順
+削除されたストレージユニットから解放されたスペースを、link:modify-storage-units.html["サイズを大きくする"]追加の容量が必要なストレージユニットに使用できます。

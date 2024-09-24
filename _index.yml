@@ -1,0 +1,43 @@
+---
+indexpage:
+  title: ASA r2のドキュメント
+  summary: NetApp ASA R2システムは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルな操作性を実現します。
+  keywords: asa r2, ontap, documentation, asa a1k, asa a70, asa a90
+  lead: 新しいNetApp ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルな操作性を実現します。
+  tiles:
+  - title: 開始する
+    links:
+    - title: 詳細
+      url: "/get-started/learn-about.html"
+    - title: クイックスタート
+      url: "/get-started/quick-start.html"
+  - title: データの管理
+    links:
+    - title: SANストレージのプロビジョニング
+      url: "/manage-data/provision-san-storage.html"
+    - title: クローンデータ
+      url: "/manage-data/data-cloning.html"
+    - title: ストレージユニットの変更
+      url: "/manage-data/modify-storage-units.html"
+  - title: データの保護とセキュリティ
+    links:
+    - title: スナップショットの作成
+      url: "/data-protection/create-snapshots.html"
+    - title: Snapshotレプリケーションのセットアップ
+      url: "/data-protection/snapshot-replication.html"
+    - title: 保存データを暗号化
+      url: "/secure-data/encrypt-data-at-rest.html"
+  - title: ASA R2に関するその他のリソース
+    links:
+    - title: ASAデータシート
+      url: https://www.netapp.com/data-storage/all-flash-san-storage-array/
+    - title: ONTAPコマンド リファレンス
+      url: https://docs.netapp.com/us-en/ontap-cli/
+    - title: ONTAP REST APIリファレンス
+      url: https://docs.netapp.com/us-en/ontap-restapi/index.html
+    - title: ONTAP EMSリファレンス
+      url: https://docs.netapp.com/us-en/ontap-ems/index.html
+  - title: その他のONTAPリソース
+    links:
+    - title: 他のONTAPシステムのドキュメント
+      url: https://docs.netapp.com/us-en/ontap-family/

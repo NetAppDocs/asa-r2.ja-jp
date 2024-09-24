@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: secure-data/nvme-tcp-connections.html 
+keywords: asa r2, secure data, data security, encrypt, data at rest, data-at-rest, encryption 
+summary: NVMe/TCPホストとONTAPの間でネットワーク経由で送信されるすべてのデータを暗号化するようにNVMe/TCP over TLSを設定して、データセキュリティを強化します。 
+---
+= ASA R2ストレージシステム上のセキュアなNVMe接続
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVMeプロトコルを使用している場合は、インバンド認証を設定してデータセキュリティを強化できます。インバンド認証を使用すると、NVMeホストとASA R2システムの間でセキュアな双方向認証と一方向認証を確立できます。インバンド認証はすべてのNVMeホストで使用できます。NVMe/TCPプロトコルを使用している場合は、NVMe/TCPホストとASA R2システムの間でネットワーク経由で送信されるすべてのデータを暗号化するようにトランスポートレイヤセキュリティ（TLS）を設定することで、データセキュリティをさらに強化できます。
+
+.手順
+. [ホスト]*を選択し、*[NVMe]*を選択します。
+. を選択しますimage:icon_add_blue_bg.png["プラス記号の後に白い文字で「追加」という単語が続く青い四角形"]。
+. ホスト名を入力し、ホストオペレーティングシステムを選択します。
+. ホストの説明を入力し、ホストに接続するStorage VMを選択します。
+. image:icon_dropdown_arrow.gif["青色の下向き矢印"]ホスト名の横にあるを選択します。
+. [インバンド認証]*を選択します。
+. NVMe/TCPプロトコルを使用している場合は、*[Transport Layer Security（TLS）が必要]*を選択します。
+. 「 * 追加」を選択します。
+
+
+.結果
+インバンド認証やTLSによって、データのセキュリティが強化されます。

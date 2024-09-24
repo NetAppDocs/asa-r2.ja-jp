@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: secure-data/ransomware-protection.html 
+keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection 
+summary: 改ざんを防止するSnapshotを使用してデータを保護します。改ざんを防止するSnapshotは削除できません。また、ランサムウェア攻撃によって侵害されたデータをリカバリするために使用できます。 
+---
+= ASA R2ストレージシステムに対するランサムウェア攻撃からデータを保護
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ランサムウェア攻撃に対する保護を強化するには、Snapshotをリモートクラスタにレプリケートし、デスティネーションSnapshotをロックして改ざんを防止します。ロックされたSnapshotは、誤ってまたは悪意を持って削除することはできません。ロックされたSnapshotを使用して、ランサムウェア攻撃によってストレージユニットが侵害された場合にデータをリカバリできます。
+
+
+
+== SnapLock Complianceクロックの初期化
+
+改ざん防止Snapshotを作成する前に、ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化する必要があります。
+
+.手順
+. [*Cluster] > [Overview] を選択します。
+. [ノード]*セクションで、*[Initialize SnapLock Compliance Clock]*を選択します。
+. [初期化]*を選択します。
+. コンプライアンスクロックが初期化されていることを確認します。
++
+.. [*Cluster] > [Overview] を選択します。
+.. [Nodes]*セクションでを選択しimage:icon_show_hide.png["白い背景に3つの青い列"]、* SnapLock Compliance Clock *を選択します。
+
+
+
+
+.次の手順
+ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化したら、を実行できますlink:../data-protection/snapshot-replication.html#step-3-create-a-replication-relationship["ロックされたSnapshotを使用してレプリケーション関係を作成する"]。

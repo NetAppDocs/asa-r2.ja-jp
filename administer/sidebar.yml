@@ -1,0 +1,34 @@
+---
+section: administer
+title: 管理と監視
+entries:
+- title: Storage VMへのクライアントアクセスの管理
+  url: "/administer/manage-client-vm-access.html"
+- title: クラスタネットワークを管理します。
+  url: "/administer/manage-cluster-networking.html"
+- title: 使用状況の監視と容量の拡張
+  entries:
+  - title: ストレージパフォーマンスを監視
+    url: "/monitor/monitor-performance.html"
+  - title: ストレージ利用率の監視
+    url: "/monitor/monitor-storage.html"
+  - title: ストレージ容量の拡張
+    url: "/administer/increase-storage-capacity.html"
+- title: ファームウェアの更新
+  url: "/administer/update-firmware.html"
+- title: 分析情報を表示
+  url: "/monitor/view-insights.html"
+- title: クラスタのイベントとジョブを表示する
+  url: "/monitor/view-events-jobs.html"
+- title: ノードの管理
+  entries:
+  - title: ノードのリブート、テイクオーバー、ギブバック
+    url: "/administer/reboot-take-over-give-back-nodes.html"
+  - title: ノードの名前変更
+    url: "/administer/rename-nodes.html"
+- title: ユーザアカウントとロールの管理
+  url: "/administer/user-accounts-roles.html"
+- title: セキュリティ証明書を管理する
+  url: "/administer/manage-certificates.html"
+- title: ホスト接続の確認
+  url: "/administer/verify-host-connectivity.html"

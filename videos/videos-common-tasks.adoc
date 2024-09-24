@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: videos/videos-common-tasks.html 
+keywords: demo,asa r2, videos 
+summary: ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。 
+---
+= ASA R2ストレージシステムのデモビデオ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。
+
+.ASA R2システムでSANプロトコルを設定する
+video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto]
+link:video_transcript_configure_san_protocols.html["ビデオのトランスクリプト"]
+
+[#video_transcript_return_configure_san_protocols]
+.ASA R2システムでのSANストレージのプロビジョニング
+video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto]
+link:video_transcript_provision_san_storage.html["ビデオのトランスクリプト"]
+
+[#video_transcript_return_provision_san_storage]
+.ASA R2システムからリモートクラスタにデータをレプリケート
+video::4b78312d-1bfa-4df5-afac-b1f0014ef80e[panopto]
+link:video_transcript_replicate_data.html["ビデオのトランスクリプト"]

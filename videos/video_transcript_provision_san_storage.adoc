@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: videos/video_transcript_provision_san_storage.html 
+keywords: frontmatter, front matter 
+summary: ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。 
+---
+= ASA R2システムでのSANストレージの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ビデオには以下のトランスクリプトが用意されて `Provision SAN storage on your ASA r2 storage system`います。
+
+link:videos-common-tasks.html#video_transcript_return_provision_san_storage["ページに戻る"]
+
+ONTAP System Managerを使用すると、ASA R2ストレージシステム上のホスト用のストレージユニットをすばやく簡単にプロビジョニングできます。
+
+この例では'VMwareホスト用に6つの新しいストレージ・ユニットを作成します
+
+System Managerのメニューから*[ストレージ]*を選択し、*[追加]*を選択します。
+
+ストレージユニットの名前、ユニット数、および各ユニットの容量を入力し、ホストオペレーティングシステムを選択します。
+
+複数のユニットを作成する場合'デフォルトでは'各ユニットは同じ容量で作成されます
+
+[その他のオプション]*を選択してホスト情報を入力します。この例では、SCSIプロトコルを選択し、新しいiSCSIホストを追加します。
+
+ホスト名を入力し、ホストイニシエータと説明を追加します。
+
+[スナップショットのスケジュール設定]*[定期的なスナップショットでストレージユニットを保護する]を選択します。
+
+リモート保護を選択して、*ユニットをリモートの場所に複製する*。
+
+Storage VMとレプリケーションポリシーを選択し、*[追加]*を選択します。
+
+ストレージユニットは、レプリケーションのためにコンシステンシグループに属している必要があります。整合グループ名を入力し、*[作成]*を選択します。
+
+ローカルとリモートのデータ保護機能を備えたVMwareホスト用の6つのストレージユニットを迅速かつ簡単にプロビジョニングできました。

@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: get-help/manage-autosupport.html 
+keywords:  
+summary:  
+---
+= ASA R2ストレージシステム上のAutoSupportを管理します。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupportは、システムヘルスをプロアクティブに監視し、NetAppテクニカルサポート、社内のサポート部門、およびサポートパートナーにメッセージを自動的に送信するメカニズムです。
+
+テクニカルサポートへのAutoSupportメッセージは、クラスタのセットアップ時にデフォルトで有効になります。メッセージを社内のサポート部門に送信するには、正しいオプションを設定し、有効なメールホストを指定する必要があります。ONTAPは、有効になってから24時間後にAutoSupportメッセージの送信を開始します。
+
+.開始する前に
+AutoSupportを管理するには、クラスタ管理者である必要があります。
+
+
+
+== AutoSupport接続のテスト
+
+クラスタのセットアップが完了したら、AutoSupport接続をテストして、テクニカルサポートがAutoSupportによって生成されたメッセージを受信することを確認する必要があります。
+
+.手順
+. System Managerで、*[クラスタ]>[設定]*を選択します。
+. AutoSupport *の横にある*を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* Test connectivity *を選択します。
+. AutoSupportメッセージの件名を入力し、* Send test AutoSupport message *を選択します。
+
+
+.次の手順
+は、テクニカルサポートがASA R2システムからAutoSupportメッセージを受信できること、および問題が発生した場合のサポートに必要なデータを提供できることを確認しています。
+
+
+
+== AutoSupport受信者の追加
+
+社内のサポート部門のメンバーを、AutoSupportメッセージを受信するEメールアドレスのリストに追加します。
+
+.手順
+. System Managerで、*[クラスタ]>[設定]*を選択します。
+. AutoSupport *の横にある*を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* More options *を選択します。
+. [Eメール]*の横にあるを選択しimage:icon_edit_pencil_blue_outline.png["鉛筆のアイコン"]、を選択しますimage:icon_add.gif["青のプラス記号の後に「追加」という文字が続く"]。
+. 受信者のEメールアドレスを入力し、次に受信者カテゴリを入力します。
++
+パートナーの場合は、受信者カテゴリとして*パートナー*を選択します。社内のサポート組織のメンバーには、*[全般]*を選択します。
+
+. 保存を選択します。
+
+
+.次の手順
+追加したメールアドレスには、特定の受信者カテゴリの新しいAutoSupportメッセージが送信されます。
+
+
+
+== AutoSupportデータの送信
+
+ASA R2システムで問題が発生した場合、AutoSupportデータを使用すると、問題の特定と解決にかかる時間が大幅に短縮されます。
+
+.手順
+. System Managerで、*[クラスタ]>[設定]*を選択します。
+. AutoSupport *の横にある*を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* Generate and send *を選択します。
+. AutoSupportメッセージの件名を入力し、*送信*を選択します。
+
+
+.次の手順
+AutoSupportデータがテクニカルサポートに送信されます。
+
+
+
+== サポートケースの生成を抑制
+
+ASA R2システムでアップグレードまたはメンテナンスを実行する場合は、アップグレードまたはメンテナンスが完了するまでAutoSupportでサポートケースが生成されないようにすることができます。
+
+.手順
+. System Managerで、*[クラスタ]>[設定]*を選択します。
+. AutoSupport *の横にある*を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* Suppress support case generation *を選択します。
+. サポートケースが生成されないようにする時間数を指定してから、ケースを生成しないノードを選択してください。
+. 「*送信」を選択します。
+
+
+.次の手順
+指定した時間内はAutoSupportケースは生成されません。指定した時間が経過する前にアップグレードまたはメンテナンスが完了した場合は、サポートケースの生成をただちに再開する必要があります。
+
+
+
+== サポートケースの生成を再開
+
+アップグレードまたはメンテナンス期間中にサポートケースが生成されないようにした場合は、アップグレードまたはメンテナンスの完了後すぐにサポートケースの生成を再開する必要があります。
+
+.手順
+. System Managerで、*[クラスタ]>[設定]*を選択します。
+. AutoSupport *の横にある*を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* Resume support case generation *を選択します。
+. 生成されたAutoSupportケースを再開するノードを選択します。
+. 「*送信」を選択します。
+
+
+.結果
+ASA R2システムのAutoSupportケースは、必要に応じて自動生成されます。

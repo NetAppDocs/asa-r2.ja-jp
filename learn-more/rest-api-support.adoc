@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: learn-more/rest-api-support.html 
+keywords: asa, asa r2, rest, rest api, asa r2 rest api 
+summary: ASA R2 REST APIは、Unified ONTAPパーソナリティで提供されるREST APIに基づいており、ASA R2パーソナリティの固有の特性と機能に合わせていくつかの変更が加えられています。 
+---
+= ASA R2のREST APIサポート
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2 REST APIは、Unified ONTAPパーソナリティで提供されるREST APIに基づいており、ASA R2パーソナリティの固有の特性と機能に合わせていくつかの変更が加えられています。
+
+
+
+== APIの変更の種類
+
+ASA R2システムREST APIと、FAS、AFF、およびASAシステムで使用できるUnified ONTAP REST APIには、いくつかの違いがあります。変更の種類を理解することで、オンラインのAPIリファレンスドキュメントをより有効に活用できます。
+
+.Unified ONTAPでサポートされない新しいASA R2エンドポイント
+ASA R2 REST APIには、Unified ONTAPでは使用できないエンドポイントがいくつか追加されています。
+
+たとえば、ASA R2システムのREST APIには、新しいブロックボリュームエンドポイントが追加されています。ブロックボリュームエンドポイントは、LUNネームスペースオブジェクトとNVMeネームスペースオブジェクトの両方にアクセスし、リソースをまとめて表示できるようにします。これはREST APIでのみ使用できます。
+
+別の例として、* storage-units *エンドポイントは、LUNおよびNVMeネームスペースの集計ビューを提供します。いくつかのエンドポイントがあり、それらはすべてベースまたは派生元 `/api/storage/storage-units`です。 `/api/storage/luns`およびも確認する必要があります `/api/storage/namespaces`。
+
+.一部のエンドポイントで使用されるHTTPメソッドの制限
+ASA R2で使用できるいくつかのエンドポイントには、Unified ONTAPと比較して使用できるHTTPメソッドが制限されています。たとえば `/api/protocols/nvme/services`、ASA R2システムでエンドポイントを使用する場合、POSTとDELETEは実行できません。
+
+.エンドポイントとHTTPメソッドのプロパティの変更
+一部のASA R2システムエンドポイントとメソッドの組み合わせでは、Unified ONTAP Personalityで使用可能な定義済みプロパティの一部がサポートされていません。たとえば、エンドポイントでPATCHを使用する場合、 `/api/storage/volumes/{uuid}`ASA R2では次のようないくつかのプロパティがサポートされません。
+
+* `autosize.maximum`
+* `autosize.minimum`
+* `autosize.mode`
+
+
+.内部処理の変更
+ASA R2での特定のREST API要求の処理方法にいくつかの変更があります。たとえば、エンドポイントの削除要求 `/api/storage/luns/{uuid}`は非同期で処理されます。
+
+
+
+== OAuth 2.0によるセキュリティの強化
+
+OAuth 2.0は業界標準の認可フレームワークです。署名されたアクセストークンに基づいて、保護されたリソースへのアクセスを制限および制御するために使用されます。ASA R2システムリソースを保護するために、System Managerを使用してOAuth 2.0を設定できます。
+
+System ManagerでOAuth 2.0をセットアップすると、REST APIクライアントによるアクセスを制御できます。まず、認可サーバーからアクセストークンを取得する必要があります。RESTクライアントは、認証要求ヘッダーを使用して、そのトークンをベアラトークンとしてASA R2クラスタに渡します。詳細については、を参照してください https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["OAuth 2.0を使用した認証と許可"^] 。
+
+
+
+== Swagger UIからASA R2 APIのリファレンスドキュメントにアクセス
+
+REST APIのリファレンスドキュメントには、ASA R2システムのSwagger UIからアクセスできます。
+
+.タスクの内容
+ASA R2のリファレンスドキュメントページにアクセスして、REST APIの詳細を確認してください。その一環として、文字列* Platform Specifications *を検索して、ASA R2システムでのAPI呼び出しとプロパティのサポートに関する詳細を確認できます。
+
+.開始する前に
+次の情報が必要です。
+
+* ASA R2システムのクラスタ管理LIFのIPアドレスまたはホスト名
+* REST APIにアクセスする権限を持つアカウントのユーザ名とパスワード
+
+
+.手順
+. ブラウザにURLを入力し、* Enter *：+を押します。
+`https://<ip_address>/docs/api`
+. 管理者アカウントを使用してサインインします。
++
+ASA R2 APIドキュメントページが表示され、主要なリソースカテゴリ別に分類されたAPI呼び出しが表示されます。
+
+. ASA R2システムのみに該当するAPI呼び出しの例を確認するには、* SAN *カテゴリまで下にスクロールし、*[GET /storage/storage-units]*をクリックします。
+

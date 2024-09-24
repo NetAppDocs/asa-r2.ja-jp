@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: install-setup/set-up-data-access.html 
+keywords:  
+summary:  
+---
+= SANホストからASA R2ストレージシステムへのデータアクセスを有効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データアクセスをセットアップするには、ONTAPでの適切な運用に欠かせないSANクライアントのパラメータと設定が正しく設定されていることを確認する必要があります。VMwareを使用している場合は、仮想マシンを移行する必要があります。
+
+
+
+== SANホストからのデータアクセスを設定する
+
+SANホストからASA R2システムへのデータアクセスを設定するために必要な設定は、ホストのオペレーティングシステムとプロトコルによって異なります。最適なパフォーマンスと正常なフェイルオーバーを実現するには、正しい設定が重要です。
+
+link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html["VMware vSphere SCSIクライアント"^]link:https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html["VMware vSphere NVMeクライアント"^]link:https://docs.netapp.com/us-en/ontap-sanhost/overview.html["その他のSANクライアント"^]ASA R2システムに接続するようにホストを適切に設定するには、ONTAP SANホストのマニュアルを参照してください。
+
+
+
+== VMware仮想マシンの移行
+
+VMワークロードをASAストレージシステムからASA R2ストレージシステムに移行する必要がある場合はNetApp、を使用しlink:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion["VMware vSphere vMotion"^]て、データのライブ移行を無停止で実行することを推奨します。
+
+.次の手順
+これで、link:../manage-data/provision-san-storage.html["ストレージのプロビジョニング"]SANホストがストレージユニットに対してデータの読み取りと書き込みを実行できるようになります。

@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: monitor/monitor-storage.html 
+keywords: monitor, storage, cluster, utilization, usage 
+summary: ストレージ利用率を監視して、現在および将来のワークロードに対応するために必要なストレージ容量を確保します。 
+searchtitle: ONTAP System Managerを使用したスペース使用量の監視| ASA R2 
+---
+= ASA R2ストレージシステムでのクラスタおよびストレージユニットの使用率の監視
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP System Managerを使用してストレージ利用率を監視し、現在および将来のワークロードに対応するために必要なストレージ容量を確保します。
+
+
+
+== クラスタ利用率の監視
+
+クラスタで消費されるストレージの量を定期的に監視し、必要に応じてスペースが不足する前にクラスタの容量を拡張できるようにします。
+
+.手順
+. System Manager で、 * Dashboard * を選択します。
+. [容量]*で、クラスタ上の使用済み物理スペースと使用可能なスペースを確認します。
++
+データ削減率は、Storage Efficiencyによって削減されるスペースの量を表します。
+
+
+
+.次の手順
+クラスタのスペースが不足している場合や、クラスタに将来の需要を満たすための容量がない場合は、link:../administer/increase-storage-capacity.html["新しいドライブを追加"]ASA R2システムでストレージ容量を増やすことを計画する必要があります。
+
+
+
+== ストレージユニットの使用状況の監視
+
+ビジネスニーズに基づいてストレージユニットのサイズをプロアクティブに拡張できるように、ストレージユニットが消費するストレージの量を監視します。
+
+.手順
+. System Managerで、*[ストレージ]*を選択します。
+. 監視するストレージユニットを選択し、*[概要]*を選択します。
+. [ストレージ]*で、次の情報を確認します。
++
+** ストレージユニットのサイズ
+** 使用済みスペースの量
+** データ削減率
++
+データ削減率は、Storage Efficiencyによって削減されたスペースを表します。
+
+** Snapshot使用済み
++
+[Snapshot Used]は、Snapshotで使用されているストレージの量を表します。
+
+
+
+
+
+.次の手順
+ストレージユニットの容量が上限に近づいている場合はlink:../manage-data/modify-storage-units.html["ストレージユニットの変更"]、サイズを大きくする必要があります。

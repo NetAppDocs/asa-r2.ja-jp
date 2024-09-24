@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: administer/rename-nodes.html 
+keywords: rename, node, renaming, asa r2 
+summary: 組織の命名規則やその他の管理上の理由で、ノードの名前を変更しなければならない場合があります。 
+---
+= ASA R2ストレージシステムでノードの名前を変更する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAPシステムマネージャを使用して、ASA R2システム上のノードの名前を変更できます。組織の命名規則やその他の管理上の理由で、ノードの名前を変更しなければならない場合があります。
+
+.手順
+. System Managerで、*[クラスタ]>[概要]*を選択します。
+. image:icon_kabob.gif["3つの垂直な青い点"]名前を変更するノードの横にあるを選択し、*[名前の変更]*を選択します。
+. ノードの新しい名前を入力し、*[名前の変更]*を選択します。
+
+
+.結果
+新しい名前がノードに適用されます。

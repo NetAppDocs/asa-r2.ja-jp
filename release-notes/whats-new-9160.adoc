@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9160.html 
+keywords:  
+summary:  
+---
+= ASA R2システムのONTAP 9 .16.0の新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2システム向けのONTAP 9 .16.10の新機能について説明します。
+
+
+
+== プラットフォーム
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| 新しいプラットフォーム  a| 
+次の新しいNetApp ASA R2システムを使用できます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。
+
+* ASA A1K
+* ASA A70
+* ASA A90
+
+
+|===
+
+
+== System Manager
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../get-started/learn-about.html["SANのみのお客様向けの合理的なサポート"] | System Managerは合理化されており、SAN環境でサポートされていない機能が認識されなくなり、重要なSAN機能がサポートされるようになりました。 
+|===
+
+
+== ストレージ管理
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../manage-data/provision-san-storage.html["シンプルなストレージ管理"]  a| 
+ASA R2システムでは、ストレージユニットとコンシステンシグループを使用してストレージ管理を簡易化します。
+
+* ストレージユニット_を指定すると、SANホストでデータ処理に使用できるストレージスペースが確保されます。ストレージユニットとは、SCSIホストの場合はLUN、NVMeホストの場合はNVMeネームスペースを指します。
+* コンシステンシグループ_は、1つのユニットとして管理されるストレージユニットの集まりです。
+
+
+|===
+
+
+== データセキュリティ
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../secure-data/encrypt-data-at-rest.html["オンボードキーマネージャとデュアルレイヤ暗号化"]  a| 
+ASA R2システムは、オンボードキーマネージャとデュアルレイヤ（ハードウェアとソフトウェア）暗号化をサポートしています。
+
+|===

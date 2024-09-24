@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: manage-data/storage-limits.html 
+keywords: storage limits, cluster limits, maximum lun size, supported protocols, asa r2, asa a1k, asa a70, asa a90 
+summary: ASA R2構成では、FC、iSCSI、NVMe/FC、NVMe/TCPの各プロトコルを実行するクラスタあたり最大2ノードがサポートされます。 
+---
+= ASA R2ストレージの制限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。
+
+ASA R2システムは、次の機能をサポートしています。
+
+[cols="1h, 1"]
+|===
+
+
+| クラスタあたりの最大ノード数 | 2 
+
+
+| 最大ストレージユニットサイズ | 128TB 
+|===
+.詳細情報
+ASA R2ストレージの最新の制限の一覧については、を参照してくださいlink:https://hwu.netapp.com/["NetApp Hardware Universe"^]。

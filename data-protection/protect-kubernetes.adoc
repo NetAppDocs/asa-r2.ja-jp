@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: data-protection/protect-kubernetes.html 
+keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication 
+summary: Astra Controlを使用して、Kubernetesクラスタ間でアプリケーションとデータを移行したり、アプリケーションをリモートシステムにレプリケートしたり、アプリケーションをクローニングしたりできます。 
+---
+= ASA R2ストレージシステム上のKubernetesアプリケーションを保護
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Astra Control Centerを使用してKubernetesアプリケーションを保護します。Astra Control Centerを使用すると、Kubernetesクラスタ間でアプリケーションとデータを移行したり、NetApp SnapMirrorテクノロジを使用してリモートシステムにアプリケーションをレプリケートしたり、ステージング環境から本番環境にアプリケーションをクローニングしたりできます。
+
+.詳細情報
+link:https://docs.netapp.com/us-en/astra-control-service/use/protect-apps.html["Astra Controlを使用したKubernetesアプリケーションの保護の詳細"^]です。

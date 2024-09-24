@@ -1,0 +1,40 @@
+---
+section: manage-data
+title: ONTAPを使用してデータを管理
+entries:
+- title: 一般的なタスクのビデオ
+  url: "/videos/videos-common-tasks.html"
+- title: ストレージを管理
+  entries:
+  - title: ストレージのプロビジョニング
+    url: "/manage-data/provision-san-storage.html"
+  - title: クローンデータ
+    url: "/manage-data/data-cloning.html"
+  - title: ストレージユニットの変更
+    url: "/manage-data/modify-storage-units.html"
+  - title: ストレージユニットの削除
+    url: "/manage-data/delete-storage-units.html"
+  - title: ストレージの制限
+    url: "/manage-data/storage-limits.html"
+- title: データを保護
+  entries:
+  - title: スナップショットの作成
+    url: "/data-protection/create-snapshots.html"
+  - title: Snapshotレプリケーションのセットアップ
+    url: "/data-protection/snapshot-replication.html"
+  - title: Kubernetesを保護
+    url: "/data-protection/protect-kubernetes.html"
+  - title: データのリストア
+    url: "/data-protection/restore-data.html"
+  - title: 整合性グループの管理
+    url: "/data-protection/manage-consistency-groups.html"
+  - title: 保護ポリシーとスケジュールの管理
+    url: "/data-protection/policies-schedules.html"
+- title: データセキュリティ
+  entries:
+  - title: 保存データを暗号化
+    url: "/secure-data/encrypt-data-at-rest.html"
+  - title: ランサムウェア攻撃からデータを保護
+    url: "/secure-data/ransomware-protection.html"
+  - title: セキュアなNVMe接続
+    url: "/secure-data/nvme-tcp-connections.html"
