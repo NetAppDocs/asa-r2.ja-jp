@@ -11,4 +11,4 @@ summary: ASA R2システムのメンテナンス手順について説明しま�
 
 
 [role="lead"]
- https://docs.netapp.com/us-en/ontap-systems/asa-r2-landing-maintain/index.html["ASA R2のドキュメントの管理"^]ASA R2システムコンポーネントのメンテナンス手順については、を参照してください。
+ https://docs.netapp.com/us-en/ontap-systems/asa-r2-landing-maintain/index.html["ASA R2メンテナンスマニュアル"^]ASA R2システムコンポーネントのメンテナンス手順については、を参照してください。
