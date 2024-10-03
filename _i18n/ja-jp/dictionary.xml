@@ -556,7 +556,6 @@
   <block id="c4bd20e96bacd4ca7f4f874cb8a77b00" category="summary">ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。</block>
   <block id="0ef2f5aecf77f5521c5e2b69fdb889af" category="searchtitle">ASA A1K、ASA A70、ASA A90ストレージシステムの詳細</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="doc">ASA R2ストレージシステムの詳細</block>
-  <block id="0ab1a7883d0399cbaf77a2e38633a6ea" category="paragraph">新しいNetApp ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルな操作性を実現します。</block>
   <block id="4fdeef14779674f92738c7750c976920" category="paragraph">ASA R2システムは、単一のHAペア環境ですべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートします。SCSI（iSCSIおよびFC）プロトコルは、ホストとストレージの間のすべてのパスがアクティブ/最適化されるように、マルチパスに対称アクティブ/アクティブアーキテクチャを使用します。NVMeプロトコルでは、ホストとストレージ間の直接パスがサポートされます。</block>
   <block id="4c09e6dc15402ad1dfdd0de9dde9ced3" category="paragraph">ASA R2システムでは、ONTAPソフトウェアとSystem Managerが合理化され、SAN環境でサポートされていない機能は削除されます。</block>
   <block id="8ba78ca0516a69b587aca58206efc01f" category="paragraph">ASA R2システムでは、ストレージユニットとコンシステンシグループを使用できます。</block>
@@ -1402,8 +1401,6 @@
   <block id="ed49a36c4fd547e5e2ace11bef4f21cf" category="section-title">プラットフォーム</block>
   <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">更新</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">説明</block>
-  <block id="2c84ef2816336594d59d5962b19f3047" category="cell">新しいプラットフォーム</block>
-  <block id="13d09074058b667f0fc1cfa7487fab45" category="paragraph">次の新しいNetApp ASA R2システムを使用できます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。</block>
   <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">System Manager</block>
   <block id="43216e15c49bb3bc0da538a8d830f901" category="inline-link-macro">SANのみのお客様向けの合理的なサポート</block>
   <block id="60dc71f158c44e4e34a36dec8e3210a5" category="cell"><block ref="60dc71f158c44e4e34a36dec8e3210a5" category="inline-link-macro-rx"></block></block>
@@ -1586,4 +1583,6 @@
   <block id="c43d68b5b8370d3423bfb0b13dfe0abe" category="inline-link">ASA R2メンテナンスマニュアル</block>
   <block id="f2abf1f4083409f0d65b59ffbcd13341" category="paragraph"><block ref="6805eee0c680715323289cabd48eb628" category="inline-link-rx"></block>ASA R2システムコンポーネントのメンテナンス手順については、を参照してください。</block>
   <block id="77ae7cb145355765cca98cef84bef3eb" category="paragraph">たとえば、重要なアプリケーションで高レイテンシと低スループットが発生しているとします。過去5営業日のクラスタパフォーマンスを表示すると、同じ時間にパフォーマンスが低下していることがわかります。この情報を使用して、重要でないプロセスがバックグラウンドで実行され始めるときに、重要なアプリケーションがクラスタリソースを競合しているかどうかを判断します。その後、QoSポリシーを変更して、重要でないワークロードがシステムリソースに与える影響を制限し、重要なワークロードが最小スループットの目標を満たすようにすることができます。</block>
+  <block id="9df0af6622b120b0338c4289d4d6b9e4" category="paragraph">NetApp ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせたシンプルな操作性を実現します。</block>
+  <block id="02a5548e7c0c7ed0e4a93d5e2d37ebc2" category="paragraph">次のNetApp ASA R2システムを使用できます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。</block>
 </blocks>
