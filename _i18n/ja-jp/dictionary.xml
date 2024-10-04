@@ -518,7 +518,6 @@
   <block id="8e3b3443f7322d7c7fc2e9b691e9b154" category="paragraph">AutoSupportを管理するには、クラスタ管理者である必要があります。</block>
   <block id="a1a978a0ef405a79f3b2c5f89d50b536" category="section-title">AutoSupport接続のテスト</block>
   <block id="d62c03a6357eefd7638471c82a6859be" category="paragraph">クラスタのセットアップが完了したら、AutoSupport接続をテストして、テクニカルサポートがAutoSupportによって生成されたメッセージを受信することを確認する必要があります。</block>
-  <block id="71ba518a68888a9623c97c1553396f78" category="list-text">System Managerで、*[クラスタ]&gt;[設定]*を選択します。</block>
   <block id="ab7f391aba14be442463b48ba048fc7d" category="list-text">AutoSupport *の横にある*を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、* Test connectivity *を選択します。</block>
   <block id="02b1e4285506fc0cffd29844e8121e1a" category="list-text">AutoSupportメッセージの件名を入力し、* Send test AutoSupport message *を選択します。</block>
   <block id="825777dd1ed1433192f80c9ec3cc95ab" category="section-title">AutoSupport受信者の追加</block>
@@ -1451,15 +1450,12 @@
   <block id="f82f9abf9d39b3ea7e9931fe0ec02989" category="summary">改ざんを防止するSnapshotを使用してデータを保護します。改ざんを防止するSnapshotは削除できません。また、ランサムウェア攻撃によって侵害されたデータをリカバリするために使用できます。</block>
   <block id="17d54966a51825ee64011655de8e99f5" category="doc">ASA R2ストレージシステムに対するランサムウェア攻撃からデータを保護</block>
   <block id="bb09a1295cce99402c216baed3c2b937" category="paragraph">ランサムウェア攻撃に対する保護を強化するには、Snapshotをリモートクラスタにレプリケートし、デスティネーションSnapshotをロックして改ざんを防止します。ロックされたSnapshotは、誤ってまたは悪意を持って削除することはできません。ロックされたSnapshotを使用して、ランサムウェア攻撃によってストレージユニットが侵害された場合にデータをリカバリできます。</block>
-  <block id="049905961ea2e1141d23d71eb662076b" category="section-title">SnapLock Complianceクロックの初期化</block>
-  <block id="045a584abdee8ddf49e1db3987711d93" category="paragraph">改ざん防止Snapshotを作成する前に、ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化する必要があります。</block>
   <block id="7e59070af3e4cd3a421461f7774f3c87" category="list-text">[*Cluster] &gt; [Overview] を選択します。</block>
   <block id="045e8ceb02be472a9bc3e54ba6f1d811" category="list-text">[ノード]*セクションで、*[Initialize SnapLock Compliance Clock]*を選択します。</block>
   <block id="2012a4286c3a1864d4fa11ba1cb42b1c" category="list-text">コンプライアンスクロックが初期化されていることを確認します。</block>
   <block id="2bc6e7414d5cb75e3addfdeb234222a1" category="inline-image-macro">白い背景に3つの青い列</block>
   <block id="ff632b6925cddc0c770d38368ff3755e" category="list-text">[Nodes]*セクションでを選択し<block ref="db89dee19aae8a41518f426597d8cb6e" category="inline-image-macro-rx" type="image"></block>、* SnapLock Compliance Clock *を選択します。</block>
   <block id="c19a0c09a1a9acec430b36accfdb5ac8" category="inline-link-macro">ロックされたSnapshotを使用してレプリケーション関係を作成する</block>
-  <block id="791bf7d3faa5342db177ff00f2bcca3f" category="paragraph">ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化したら、を実行できます<block ref="9e34609081a00054138ac6c8cbbd66f1" category="inline-link-macro-rx"></block>。</block>
   <block id="25abedf12d26e4bc8960557833ebe68d" category="summary">ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。</block>
   <block id="9e9e90703a7077203260b19a3af9704a" category="doc">ASA R2システムでSANプロトコルを設定する</block>
   <block id="21d3b12a5a9f6ff0d25b8b5e5e00b7ff" category="paragraph">ビデオには以下のトランスクリプトが用意されて<block ref="1ef61309a2d73f2fc4d83b527ce1790e" prefix=" " category="inline-code"></block>います。</block>
@@ -1587,4 +1583,8 @@
   <block id="02a5548e7c0c7ed0e4a93d5e2d37ebc2" category="paragraph">次のNetApp ASA R2システムを使用できます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。</block>
   <block id="514854c9f2116902eea3ece0f40e8154" category="paragraph-title">データ圧縮に対する変更</block>
   <block id="097c1368589d519db55e5ac8f141a847" category="paragraph">温度に基づくストレージ効率化は、ASA R2システムには適用されません。ASA R2システムでは、_hot_（アクセス頻度の高い）データや_cold_（アクセス頻度の低い）データには基づいて圧縮されません。圧縮は、データがコールドになるのを待たずに開始されます。</block>
+  <block id="e9dac8f777563b18c14aec6d0406e876" category="list-text">System Managerで、*[クラスタ]&gt;[設定]*を選択します。</block>
+  <block id="b16351f807fbda6965666255eef268dd" category="section-title">SnapLock Complianceクロックの初期化</block>
+  <block id="6f7e58f2fc20167d69dc971955e6bb11" category="paragraph">改ざん防止Snapshotを作成する前に、ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化する必要があります。</block>
+  <block id="71c1cda56d6fad5ca8b28cabd1f98042" category="paragraph">ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化したら、を実行できます<block ref="9e34609081a00054138ac6c8cbbd66f1" category="inline-link-macro-rx"></block>。</block>
 </blocks>
