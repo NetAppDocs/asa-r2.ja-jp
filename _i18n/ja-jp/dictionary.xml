@@ -1587,4 +1587,7 @@
   <block id="b16351f807fbda6965666255eef268dd" category="section-title">SnapLock Complianceクロックの初期化</block>
   <block id="6f7e58f2fc20167d69dc971955e6bb11" category="paragraph">改ざん防止Snapshotを作成する前に、ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化する必要があります。</block>
   <block id="71c1cda56d6fad5ca8b28cabd1f98042" category="paragraph">ローカルクラスタとデスティネーションクラスタでSnapLock Complianceクロックを初期化したら、を実行できます<block ref="9e34609081a00054138ac6c8cbbd66f1" category="inline-link-macro-rx"></block>。</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="section-title">ONTAP</block>
+  <block id="f20a7be09bb1e964599f6a093df3c792" category="inline-link-macro">ONTAP 9.16.01に関する注意事項</block>
+  <block id="7f4ce7e91f585315eb8df215a736469e" category="paragraph"><block ref="7f4ce7e91f585315eb8df215a736469e" category="inline-link-macro-rx"></block></block>
 </blocks>
