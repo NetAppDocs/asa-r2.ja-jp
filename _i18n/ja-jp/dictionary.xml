@@ -444,7 +444,6 @@
   <block id="40bf81e755dc73fb04ab21c9f9f5756c" category="searchtitle">ONTAP System Managerを使用したリモートクラスタへのSnapshotのレプリケート| ASA R2</block>
   <block id="52e62ad767d46ccf1912124d9b984dd6" category="doc">ASA R2ストレージシステムからリモートクラスタにSnapshotをレプリケート</block>
   <block id="f2b39b01edbe286e89542affc03f6d4f" category="paragraph">Snapshotレプリケーションは、ASA R2システム上の整合グループを地理的に離れた場所にコピーするプロセスです。最初のレプリケーションの後、コンシステンシグループへの変更は、レプリケーションポリシーに基づいてリモートロケーションにコピーされます。レプリケートされた整合グループは、ディザスタリカバリまたはデータ移行に使用できます。</block>
-  <block id="69ed1baaf5609225833ab8e05dd02cda" category="admonition">ASA R2ストレージシステムから別のASA R2ストレージシステムへのSnapshotレプリケーションのみがサポートされます。ASA R2システムから現在のASA、AFF、またはFASシステムにSnapshotをレプリケートすることはできません。</block>
   <block id="a11f569aa7659d38ad74c3348435869e" category="paragraph">Snapshotレプリケーションを設定するには、ASA R2システムとリモートサイトの間にレプリケーション関係を確立する必要があります。レプリケーション関係はレプリケーションポリシーによって管理されます。すべてのSnapshotをレプリケートするデフォルトポリシーは、クラスタのセットアップ時に作成されます。デフォルトのポリシーを使用することも、必要に応じて新しいポリシーを作成することもできます。</block>
   <block id="bb35c8e1197f3cb1f834baa178f51fdd" category="section-title">手順1：クラスタピア関係を作成する</block>
   <block id="256483a2b5ed8710e7c8fdf9ce515426" category="paragraph">データをリモートクラスタにレプリケートして保護するには、ローカルクラスタとリモートクラスタの間にクラスタピア関係を作成する必要があります。</block>
@@ -1590,4 +1589,5 @@
   <block id="7f4ce7e91f585315eb8df215a736469e" category="paragraph"><block ref="7f4ce7e91f585315eb8df215a736469e" category="inline-link-macro-rx"></block></block>
   <block id="7634d59040fd3f0630abac42ed05842e" category="inline-link-macro">ASA R2システムとASAシステムの比較</block>
   <block id="0a1c5c73cbf93d4b2d88ff0be84d2900" category="list-text">詳細については、をご覧ください <block ref="c736257475481e43d317d6d66a81a5cb" category="inline-link-macro-rx"></block>。</block>
+  <block id="420a0f9e5b6b25901e8477f2031c4f09" category="admonition">ASA R2ストレージシステムのSnapshotレプリケーションは、別のASA R2ストレージシステムとの間でのみサポートされます。ASA R2システムから現在のASA、AFF、またはFASシステムに、または現在のASA、AFF、またはFASシステムからASA R2システムにSnapshotをレプリケートすることはできません。</block>
 </blocks>
