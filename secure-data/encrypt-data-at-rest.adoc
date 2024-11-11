@@ -51,3 +51,5 @@ NSEに加えて、ソフトウェア暗号化を有効にしてデータのセ�
 
 .次の手順
 保存データの暗号化が完了したので、NVMe/TCPプロトコルを使用している場合はlink:nvme-tcp-connections.html["ネットワーク経由で送信されるすべてのデータを暗号化"]、NVMe/TCPホストとASA R2システムの間でデータを暗号化できます。
+
+オンボードキーマネージャから外部キーマネージャ（またはその逆）に切り替える必要がある場合は、を参照してくださいlink:https://docs.netapp.com/us-en/ontap/encryption-at-rest/migrate-keys-between-key-managers["キー管理ツール間でONTAPデータ暗号化キーを移行する"^]。

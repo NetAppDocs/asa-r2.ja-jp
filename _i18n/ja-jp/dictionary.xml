@@ -277,7 +277,6 @@
   <block id="e7c7a96626caf7f10a69abd91e0c9657" category="section-title">手順2：Snapshotを作成する</block>
   <block id="5ad8d455ea57e1690a8dd08af1513587" category="paragraph">Snapshotは、データのローカルの読み取り専用コピーであり、ストレージユニットを特定の時点にリストアするために使用できます。</block>
   <block id="a55eea56b3b5ac156631717b66974529" category="inline-link-macro">Snapshotポリシーとスケジュール</block>
-  <block id="aa2f9feb235086807c06e316a374c42b" category="paragraph">スナップショットは、オンデマンドで作成することも、に基づいて定期的に自動的に作成することもできます<block ref="174ad3d131cf18990fcf462c1e80dea1" category="inline-link-macro-rx"></block>。Snapshotポリシーとスケジュールは、Snapshotを作成するタイミング、保持するコピーの数、Snapshotに名前を付ける方法、およびSnapshotにレプリケーション用のラベルを付ける方法を指定します。たとえば、毎日午前12時10分にSnapshotを1つ作成し、最新の2つのコピーを保持して「daily」（タイムスタンプが付加された）という名前を付け、レプリケーション用に「daily」というラベルを付けるとします。</block>
   <block id="778e49c36a4b37504a26fe297bcd89cd" category="paragraph-title">Snapshotのタイプ</block>
   <block id="d6acd69ed4935a0b24bcc6574f0a4d59" category="paragraph">単一のストレージユニットまたは整合性グループのオンデマンドSnapshotを作成できます。複数のストレージユニットを含む整合グループの自動スナップショットを作成できます。単一のストレージユニットの自動スナップショットは作成できません。</block>
   <block id="92cd7e74f8f496ce11ec549a066c7294" category="list-text">オンデマンドのスナップショット</block>
@@ -1590,4 +1589,25 @@
   <block id="420a0f9e5b6b25901e8477f2031c4f09" category="admonition">ASA R2ストレージシステムのSnapshotレプリケーションは、別のASA R2ストレージシステムとの間でのみサポートされます。ASA R2システムから現在のASA、AFF、またはFASシステムに、または現在のASA、AFF、またはFASシステムからASA R2システムにSnapshotをレプリケートすることはできません。</block>
   <block id="3f808654ebfed6aae875b71a402ac91b" category="inline-link-macro">ONTAP 9.16.1に関する注意事項</block>
   <block id="ccde34ed9a96a11b25c1db2a8c9acb87" category="paragraph"><block ref="ccde34ed9a96a11b25c1db2a8c9acb87" category="inline-link-macro-rx"></block></block>
+  <block id="82f8a3cbf0a93791bbbfc70a1b650bcf" category="paragraph">スナップショットは、オンデマンドで作成することも、に基づいて定期的に自動的に作成することもできます<block ref="83bfa2dc5e6407223dca634141b43309" category="inline-link-macro-rx"></block>。Snapshotポリシーとスケジュールは、Snapshotを作成するタイミング、保持するコピーの数、Snapshotに名前を付ける方法、およびSnapshotにレプリケーション用のラベルを付ける方法を指定します。たとえば、毎日午前12時10分にSnapshotを1つ作成し、最新の2つのコピーを保持して「daily」（タイムスタンプが付加された）という名前を付け、レプリケーション用に「daily」というラベルを付けるとします。</block>
+  <block id="45572a9b40e369d2ef8629844808cced" category="summary">ASA R2システムに影響する制限とデフォルトの変更について説明します。</block>
+  <block id="1103c7c9b683247c76b5f25f9cd64b74" category="doc">ASA R2システムに影響するONTAPの制限とデフォルトの変更</block>
+  <block id="1daa1b3cc6e7b6b7a591ba10582085a8" category="paragraph">ASA R2システムに影響する制限とデフォルトの変更について説明します。NetAppは、ONTAPの各リリースで最も重要なデフォルトと制限の変更をお客様が理解できるように努めています。</block>
+  <block id="d579ca395df40cbbb953cb531ce23a3d" category="section-title">ONTAPの制限に対する変更</block>
+  <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">機能</block>
+  <block id="4d209cddba5e4e3f517cda6d0180e867" category="cell">セイケンヘンコウ</block>
+  <block id="b0aeee779af528e83de1fcb141fbbca7" category="cell">リリースで変更...</block>
+  <block id="d705195acc2d17086d7e28da066d6c23" category="cell">ストレージユニット</block>
+  <block id="6f758206269a4d26aaaac9a25afe7fe5" category="cell">ストレージユニットの最大数がHAペアあたり2500個からHAペアあたり10、000個に引き上げられました。</block>
+  <block id="31272abf1c9209ab4acd0bf10f129338" category="cell">ONTAP 9 .16.1</block>
+  <block id="456488f81b27ee2e1475e6d76ffad2ca" category="summary">ASA R2システム向けのONTAP 9 .16.1の新機能について説明します。</block>
+  <block id="02b0c0371a6864d344959c06c5237165" category="doc">ASA R2システムのONTAP 9 .16.1の新機能</block>
+  <block id="fd18465573ec21a6218982055981f6b1" category="section-title">Storage Efficiency</block>
+  <block id="3a405933969f80a6182b8257c15c10ff" category="cell">NVMeスペースの割り当て解除がデフォルトで有効</block>
+  <block id="7ec849e005dbd9c153a3b9fc38bf47df" category="paragraph">NVMeネームスペースでは、スペースの割り当て解除（「ホールパンチング」や「UNMAP」とも呼ばれます）がデフォルトで有効になっています。スペースの割り当て解除を使用すると、ホストはネームスペースの未使用ブロックの割り当てを解除してスペースを再生できます。</block>
+  <block id="9228b29536da5aa86ee6865642b7a754" category="paragraph">これにより、ストレージ全体の効率が大幅に向上します。特に、データの回転率が高いファイルシステムでは顕著です。</block>
+  <block id="459e6c3f59570324cab3a799ce9f4d6f" category="inline-link-macro">キー管理ツール間でONTAPデータ暗号化キーを移行する</block>
+  <block id="ba905aa152bc67dfe7369966e1f7b161" category="paragraph">オンボードキーマネージャから外部キーマネージャ（またはその逆）に切り替える必要がある場合は、を参照してください<block ref="ddc33c992daebda8b45882e4c40e07d4" category="inline-link-macro-rx"></block>。</block>
+  <block id="319ffa33cfb4e70c9e521494969d662a" category="sidebar">ONTAP 9.16.1の新機能</block>
+  <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">ONTAPのデフォルトと制限に対する変更</block>
 </blocks>

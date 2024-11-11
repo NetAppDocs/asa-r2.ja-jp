@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: release-notes/changes-to-limits-defaults.html 
+keywords: release notes, changes, updates, defaults, limits, asa r2, asa a1k, asa 70, asa 90 
+summary: ASA R2システムに影響する制限とデフォルトの変更について説明します。 
+---
+= ASA R2システムに影響するONTAPの制限とデフォルトの変更
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2システムに影響する制限とデフォルトの変更について説明します。NetAppは、ONTAPの各リリースで最も重要なデフォルトと制限の変更をお客様が理解できるように努めています。
+
+
+
+== ONTAPの制限に対する変更
+
+[cols="2,4,4"]
+|===
+| 機能 | セイケンヘンコウ | リリースで変更... 
+
+
+| ストレージユニット | ストレージユニットの最大数がHAペアあたり2500個からHAペアあたり10、000個に引き上げられました。 | ONTAP 9 .16.1 
+|===
