@@ -20,8 +20,8 @@ ASA R2システムはSANソリューションを幅広くサポートしてい�
 * MetroCluster
 * オブジェクトプロトコル
 * ONTAP S3 SnapMirrorとS3 API
-* SnapMirrorからクラウドへ
-* SnapMirrorからASA R2以外のシステムへ
+* SnapMirror（非同期および同期）からクラウドへ
+* SnapMirror（非同期および同期）からASA R2以外のシステムへ
 * 選択的LUNマップ（SLM）
 
 
