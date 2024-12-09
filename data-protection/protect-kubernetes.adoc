@@ -13,5 +13,8 @@ summary: Astra Controlを使用して、Kubernetesクラスタ間でアプリケ
 [role="lead"]
 Astra Control Centerを使用してKubernetesアプリケーションを保護します。Astra Control Centerを使用すると、Kubernetesクラスタ間でアプリケーションとデータを移行したり、NetApp SnapMirrorテクノロジを使用してリモートシステムにアプリケーションをレプリケートしたり、ステージング環境から本番環境にアプリケーションをクローニングしたりできます。
 
+
+NOTE: SnapMirror（非同期および同期）は、ASA R2システムからASA R2システムにのみサポートされます。SnapMirrorは、ASA R2システムからAFFまたはFASシステムにはサポートされていません。
+
 .詳細情報
 link:https://docs.netapp.com/us-en/astra-control-service/use/protect-apps.html["Astra Controlを使用したKubernetesアプリケーションの保護の詳細"^]です。

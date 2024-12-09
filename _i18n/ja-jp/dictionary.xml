@@ -1610,4 +1610,5 @@
   <block id="d32b93d0cc0df3a57e074a2dd7f55bac" category="list-text">SnapMirror（非同期および同期）からクラウドへ</block>
   <block id="db501755a13db6bc1da40b7fa29e25f1" category="list-text">SnapMirror（非同期および同期）からASA R2以外のシステムへ</block>
   <block id="b0af3c84875edd616110edf2dac64154" category="paragraph">データ削減率は、Storage Efficiencyによって削減されるスペースの量を表します。</block>
+  <block id="f31e58176a4fc5fa75f3c5160b712278" category="admonition">SnapMirror（非同期および同期）は、ASA R2システムからASA R2システムにのみサポートされます。SnapMirrorは、ASA R2システムからAFFまたはFASシステムにはサポートされていません。</block>
 </blocks>
