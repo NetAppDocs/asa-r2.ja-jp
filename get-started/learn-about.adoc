@@ -3,7 +3,7 @@ sidebar: sidebar
 permalink: get-started/learn-about.html 
 keywords: asa r2, asa a1k, asa 70, asa 90 
 summary: ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。 
-searchtitle: ASA A1K、ASA A70、ASA A90ストレージシステムの詳細 
+searchtitle: ASA R2ストレージシステム（A1K、A90、A70）の詳細 
 ---
 = ASA R2ストレージシステムの詳細
 :allow-uri-read: 
