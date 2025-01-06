@@ -24,5 +24,7 @@ entries:
   entries:
   - title: クラスタをセットアップする
     url: "/install-setup/initialize-ontap-cluster.html"
+  - title: SANホスト構成をセットアップする
+    url: "/install-setup/set-up-san-host.html"
   - title: データアクセスのセットアップ
     url: "/install-setup/set-up-data-access.html"

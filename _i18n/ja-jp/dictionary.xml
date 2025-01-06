@@ -1611,4 +1611,19 @@
   <block id="f31e58176a4fc5fa75f3c5160b712278" category="admonition">SnapMirror（非同期および同期）は、ASA R2システムからASA R2システムにのみサポートされます。SnapMirrorは、ASA R2システムからAFFまたはFASシステムにはサポートされていません。</block>
   <block id="a45025bc45c4e360bb41b761b432dd34" category="doc">ASA R2ストレージシステムのクイックスタート</block>
   <block id="426ed8a052d2d7277d60ee8001b9d37e" category="searchtitle">ASA R2ストレージシステム（A1K、A90、A70）の詳細</block>
+  <block id="465ce601131c87fafd3a4a3da5836246" category="summary">ASA R2システムは、他のすべてのONTAPシステムと同じSANホスト構成の推奨事項およびガイドラインに従います。</block>
+  <block id="9a364a877707d0b61983419895ba3632" category="doc">ASA R2システムを使用するSANホスト構成</block>
+  <block id="31eb0490b298463d8797eab8041ed748" category="paragraph">ストレージシステムを1つ以上のSANホストに接続するには、複数のスイッチを使用することを推奨します。iSCSI構成の場合、ホスト、スイッチ、およびストレージシステムを接続するネットワークトポロジを_ネットワーク_と呼びます。FC構成とFC-NVMe構成では、同じネットワークトポロジを_fabric_と呼びます。</block>
+  <block id="1ea2e359c5275499813dff319ee20baa" category="paragraph">スイッチレイヤとストレージレイヤの両方で冗長性を提供するため、マルチネットワークのマルチファブリック構成（複数のスイッチを使用する構成）を推奨します。この冗長性により、ストレージシステムのフォールトトレランスが向上し、ノンストップオペレーションがサポートされます。</block>
+  <block id="37fdee11e5eadf392d943f0a18609831" category="paragraph">次の図は、2つのファブリックを使用して単一のHAペアにアクセスする複数のホストを使用するFC構成の例です。FCターゲットポート番号（0c、0d、1a、1b）も一例です。実際のポート番号は、プラットフォームモデル、および拡張アダプタを使用しているかどうかによって異なります。</block>
+  <block id="cafd65a257cc24af0e84e8951ad9d9b5" category="image-alt">2つのFCファブリックで複数のホストを単一のHAペアに接続</block>
+  <block id="7934e04423cdef3122abed138d14e800" category="inline-link-macro">iSCSIホスト用のSAN構成</block>
+  <block id="1697498835ad65fe0eb56d5a08926207" category="inline-link-macro">FCホストおよびFC/NVMeホスト向けのSANの設定</block>
+  <block id="ebd194f81358f792dec388e009d8bec3" category="paragraph">詳細については、をご覧ください <block ref="9880b1feac4156c93ea0abed0c0efc7f" category="inline-link-macro-rx"></block>。詳細については、をご覧ください <block ref="e620f7fdd29d4d62cc1639e7aa82a5ed" category="inline-link-macro-rx"></block>。</block>
+  <block id="f32de8a0d0833354764d0913e73367fa" category="section-title">FCホストのゾーニングに関する推奨事項</block>
+  <block id="3efb87f7842540462326a834b157f4ab" category="paragraph">ゾーニングを使用するようにFCホストを設定する必要があります。ASA R2システムは、他のすべてのONTAPシステムと同じFCホストゾーニングの推奨事項とガイドラインに従います。</block>
+  <block id="db6c51496ac3638e90475615dca619b4" category="paragraph">ゾーンとは、ファブリック内の1つ以上のポートを論理的にグループ化したものです。デバイスがお互いを検出し、相互にセッションを確立し、通信できるようにするには、両方のポートに共通のゾーンメンバーシップが必要です。</block>
+  <block id="61cf7293359faa875bba34aec2374d5e" category="inline-link-macro">FC / FC-NVMeゾーニング</block>
+  <block id="05c164818e6cf72673636c3f026f35fd" category="paragraph">詳細については、をご覧ください <block ref="04395b79c4c7664c0e1d06aced656acd" category="inline-link-macro-rx"></block>。</block>
+  <block id="9567f97a2f92160f66cfc2ac7b1e9cc2" category="sidebar">SANホスト構成をセットアップする</block>
 </blocks>
