@@ -35,7 +35,7 @@ ONTAP tools for VMwareを使用すると、ASA R2システムをVMware環境の�
 
 ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vCSA）と連携して動作する一連のツールで、VMware ESXiホスト上の仮想マシンを簡単に管理できます。
 
-ASA R2システムは、以降でサポートされlink:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/concepts/ontap-tools-overview.html["ONTAP tools for VMware vSphere 10.3"]ます。
+ASA R2システムは、以降でサポートされlink:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/concepts/ontap-tools-overview.html["ONTAP tools for VMware vSphere 10.3"^]ます。
 
 その方法を説明しlink:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/deploy/ontap-tools-deployment.html["ONTAP Tools for VMwareの導入"^]、次の操作を実行します。
 
