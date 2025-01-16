@@ -11,7 +11,7 @@ summary:
 
 
 [role="lead"]
-データアクセスをセットアップするには、ONTAPでの適切な運用に欠かせないSANクライアントのパラメータと設定が正しく設定されていることを確認する必要があります。VMwareを使用している場合は、仮想マシンを移行する必要があります。
+データアクセスをセットアップするには、ONTAPで適切に動作するためのSANクライアントの重要なパラメータと設定が正しく設定されていることを確認する必要があります。VMware環境用のストレージを提供する場合は、OTV 10.3をインストールしてASA R2ストレージを管理する必要があります。
 
 
 
@@ -26,6 +26,23 @@ link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html["VMware vSphe
 == VMware仮想マシンの移行
 
 VMワークロードをASAストレージシステムからASA R2ストレージシステムに移行する必要がある場合はNetApp、を使用しlink:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion["VMware vSphere vMotion"^]て、データのライブ移行を無停止で実行することを推奨します。
+
+
+
+== ASA R2システムをVMware環境のストレージプロバイダとして設定する
+
+ONTAP tools for VMwareを使用すると、ASA R2システムをVMware環境のストレージプロバイダとして簡単に有効にすることができます。
+
+ONTAP Tools for VMware vSphereは、VMware vCenter Server Virtual Appliance（vCSA）と連携して動作する一連のツールで、VMware ESXiホスト上の仮想マシンを簡単に管理できます。
+
+ASA R2システムは、以降でサポートされlink:https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10/concepts/ontap-tools-overview.html["ONTAP tools for VMware vSphere 10.3"]ます。
+
+その方法を説明しlink:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/deploy/ontap-tools-deployment.html["ONTAP Tools for VMwareの導入"^]、次の操作を実行します。
+
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/add-vcenter.html["vCenter Serverインスタンスの追加"^]
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/configure-esx-server-multipath-and-timeout-settings.html["ESXiホストの設定"^]
+* link:https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv103-releasebranch/configure/discover-storage-systems-and-hosts.html["ASA R2ストレージシステムとホストの検出"^]
+
 
 .次の手順
 これで、link:../manage-data/provision-san-storage.html["ストレージのプロビジョニング"]SANホストがストレージユニットに対してデータの読み取りと書き込みを実行できるようになります。
