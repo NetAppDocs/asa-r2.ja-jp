@@ -14,7 +14,13 @@ summary: ASA R2システムはSANソリューションを幅広くサポート�
 ASA R2システムはSANソリューションを幅広くサポートしていますが、一部のONTAPソフトウェア機能はサポートされていません。
 
 .ASA R2システムでは、次の機能はサポートされません。
-* iSCSI LIFフェイルオーバー
+* デフォルトのiSCSI LIFの自動フェイルオーバー
++
+ASA R2システムでは、デフォルトのネットワークLIFがNVMeホストとSCSIホストの間で共有されるため、自動フェイルオーバーはサポートされません。iSCSI LIFの自動フェイルオーバーを有効にするには、が必要ですlink:../administer/manage-client-vm-access.html#create-a-lif-network-interface["iSCSIのみのLIFを作成する"]。自動フェイルオーバーは、iSCSIのみのLIFではデフォルトで有効になっています。
+
++
+iSCSI LIFの自動フェイルオーバーを有効にしている場合、ストレージフェイルオーバーが発生すると、iSCSI LIFはホームノードまたはポートからHAパートナーノードまたはポートに自動的に移行され、フェイルオーバーの完了後に再び移行されます。または、iSCSI LIFのポートが正常な状態でなくなった場合、そのLIFは現在のホームノードの正常なポートに自動的に移行され、ポートが正常な状態に戻った時点で元のポートに戻ります。
+
 * FabricPool
 * LUNシックプロビジョニング
 * MetroCluster
@@ -27,11 +33,15 @@ ASA R2システムはSANソリューションを幅広くサポートしてい�
 
 .ASA R2システムは、次の機能をサポートしています。
 * SnapLock
++
+link:../secure-data/ransomware-protection.html["Snapshotをロックする方法"]ASA R2システム。
+
 * デュアルレイヤ暗号化
++
+link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA R2システム上のデータに接続します。
+
 
 
 .詳細情報
 * link:https://hwu.netapp.com/["NetApp Hardware Universe"^]ASA R2ハードウェアのサポートおよび制限事項の詳細については、を参照してください。
-* link:../secure-data/ransomware-protection.html["Snapshotをロックする方法"]ASA R2システム。
-* link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA R2システム上のデータに接続します。
 

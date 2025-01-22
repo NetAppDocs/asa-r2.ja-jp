@@ -1091,7 +1091,6 @@
   <block id="769cac8936a099436eaf35a70beb7039" category="summary">ASA R2システムはSANソリューションを幅広くサポートしていますが、一部のONTAPソフトウェア機能はサポートされていません。</block>
   <block id="c305c29e81953bb01b7c42d73fc8099c" category="doc">ASA R2ストレージシステムのONTAPソフトウェアのサポートおよび制限事項</block>
   <block id="2f7f66e818d17cdf226ec888e94e2751" category="list-title">ASA R2システムでは、次の機能はサポートされません。</block>
-  <block id="e2d11c222fd8d727dcdcff1a70a7c1c0" category="list-text">iSCSI LIFフェイルオーバー</block>
   <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
   <block id="e4bc96983300161ae3464466c0030db7" category="list-text">LUNシックプロビジョニング</block>
   <block id="1749d12df3df2319d3eee218a277ff83" category="list-text">MetroCluster</block>
@@ -1639,4 +1638,10 @@
   <block id="b57ea9712535452d1a9c410e0f1f4f93" category="list-text"><block ref="b57ea9712535452d1a9c410e0f1f4f93" category="inline-link-macro-rx"></block></block>
   <block id="8182eb8f155278176f93ebb4d84774dc" category="list-text"><block ref="8182eb8f155278176f93ebb4d84774dc" category="inline-link-macro-rx"></block></block>
   <block id="8027cf82d29e89bcd72c0f7ae984c222" category="paragraph">ASA R2システムは、以降でサポートされ<block ref="6a0b5c767b375da41f0e7140f5d8129e" category="inline-link-macro-rx"></block>ます。</block>
+  <block id="ace9c44d680e3a8684441fd776f4db68" category="paragraph">iSCSI LIFの自動フェイルオーバーを有効にする場合は、iSCSIのみのLIFを作成する必要があります。iSCSI LIFの自動フェイルオーバーを有効にしている場合、ストレージフェイルオーバーが発生すると、iSCSI LIFはホームノードまたはポートからHAパートナーノードまたはポートに自動的に移行され、フェイルオーバーの完了後に再び移行されます。または、iSCSI LIFのポートが正常な状態でなくなった場合、そのLIFは現在のホームノードの正常なポートに自動的に移行され、ポートが正常な状態に戻った時点で元のポートに戻ります。</block>
+  <block id="38db38181d3edceaf9353ed23bb6a1d6" category="paragraph">プロトコルLIFを1つ作成するには、プロトコルを1つだけ選択してください。たとえば、iSCSIのみのLIFを作成するには、* iscsi *を選択します。</block>
+  <block id="f08b07b736a8c5201accc4549e8a0762" category="list-text">デフォルトのiSCSI LIFの自動フェイルオーバー</block>
+  <block id="4b3d6eefe10e552e93669e44e3908ab2" category="inline-link-macro">iSCSIのみのLIFを作成する</block>
+  <block id="c32fddd27ad2252ef230f0871f34068f" category="paragraph">ASA R2システムでは、デフォルトのネットワークLIFがNVMeホストとSCSIホストの間で共有されるため、自動フェイルオーバーはサポートされません。iSCSI LIFの自動フェイルオーバーを有効にするには、が必要です<block ref="80674e801e3a84767641d7c52bb7dcab" category="inline-link-macro-rx"></block>。自動フェイルオーバーは、iSCSIのみのLIFではデフォルトで有効になっています。</block>
+  <block id="22f4d4e3ef9ad886ae95608e10f828cb" category="paragraph">iSCSI LIFの自動フェイルオーバーを有効にしている場合、ストレージフェイルオーバーが発生すると、iSCSI LIFはホームノードまたはポートからHAパートナーノードまたはポートに自動的に移行され、フェイルオーバーの完了後に再び移行されます。または、iSCSI LIFのポートが正常な状態でなくなった場合、そのLIFは現在のホームノードの正常なポートに自動的に移行され、ポートが正常な状態に戻った時点で元のポートに戻ります。</block>
 </blocks>
