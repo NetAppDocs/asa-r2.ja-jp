@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: administer/upgrade-ontap.html 
+keywords: update, firmware, system files, automatic updates, automated updates, asa r2, disable, 
+summary: ONTAPは、ASA R2システムのファームウェアを自動的に更新します。System Managerを使用して、自動更新を無効にし、インストール前に更新を確認することができます。 
+---
+= ASA R2ストレージシステムでのONTAPのアップグレード
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2システムでONTAPソフトウェアをアップグレードすると、ONTAPの新機能や強化された機能を活用して、コストの削減、重要なワークロードの高速化、セキュリティの強化、組織で利用できるデータ保護の範囲の拡大を実現できます。
+
+ASA R2システムのONTAPソフトウェアのアップグレードは、他のONTAPシステムのアップグレードと同じプロセスに従います。Active IQデジタルアドバイザ(デジタルアドバイザとも呼ばれます)の有効なSupportEdge契約がある場合は、次のlink:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html["Upgrade Advisorを使用してアップグレードを準備する"^]手順を実行してください。Upgrade Advisorは、クラスタを評価し、構成に固有のアップグレードプランを作成することで、不確実性とリスクを最小限に抑えるためのインテリジェンスを提供します。Active IQデジタルアドバイザの有効なSupportEdge契約をお持ちでない場合は、次のlink:https://docs.netapp.com/us-en/ontap/upgrade/prepare.html["Upgrade Advisorを使用せずにアップグレードを準備"^]手順を実行してください。
+
+アップグレードの準備が完了したら、を使用してアップグレードを実行することを推奨しlink:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["System Managerからの自動無停止アップグレード（ANDU）"]ます。ANDUは、ONTAPの高可用性（HA）フェイルオーバーテクノロジを活用して、アップグレード中もクラスタが中断することなくデータを提供し続けます。
+
+詳細については、をご覧ください link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPソフトウェアのアップグレード"]。

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: install-setup/power-on-hardware.html 
-keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a70, asa a90, asa c80, power on 
+keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, power on 
 summary: 各NS224シェルフの電源をオンにして一意のシェルフIDを割り当て、ASA R2コントローラの電源をオンにして電源ケーブルを固定します。 
 ---
 = ASA R2ストレージシステムの電源をオンにします。

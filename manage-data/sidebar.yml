@@ -10,10 +10,14 @@ entries:
     url: "/manage-data/provision-san-storage.html"
   - title: クローンデータ
     url: "/manage-data/data-cloning.html"
-  - title: ストレージユニットの変更
-    url: "/manage-data/modify-storage-units.html"
-  - title: ストレージユニットの削除
-    url: "/manage-data/delete-storage-units.html"
+  - title: ストレージユニットの管理
+    entries:
+    - title: ストレージユニットの変更
+      url: "/manage-data/modify-storage-units.html"
+    - title: ストレージユニットの移動
+      url: "/manage-data/move-storage-units.html"
+    - title: ストレージユニットの削除
+      url: "/manage-data/delete-storage-units.html"
   - title: ストレージの制限
     url: "/manage-data/storage-limits.html"
 - title: データを保護

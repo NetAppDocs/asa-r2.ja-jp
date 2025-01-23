@@ -268,7 +268,6 @@
   <block id="82fd6aa34bfb21de39dd81c963a0a2e8" category="list-text">System Managerで、*[保護]&gt;[整合グループ]*を選択します。</block>
   <block id="edb9e8b079cc1bbba23675ed2fb9ee82" category="list-text">を選択し<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>、*[Using new storage units]*を選択します。</block>
   <block id="52121a2aaeb6d47d15d81e8ee203b5f7" category="list-text">新しいストレージ・ユニットの名前'ユニット数'ユニットあたりの容量を入力します</block>
-  <block id="b6a57406c839874cc450218c65042a9c" category="paragraph">複数のユニットを作成する場合は、各ユニットが同じ容量とホストオペレーティングシステムで作成されます。各ユニットに異なる容量を割り当てるには、*[その他のオプション]*を選択し、*[別の容量を追加する]*を選択します。</block>
   <block id="7028b1e3a2021d39c73b8824b7bc9a9d" category="list-text">ホストオペレーティングシステムとホストマッピングを選択します。</block>
   <block id="97b6e4a76453272c0f1f20a9a7e57b6b" category="paragraph">保護するストレージユニットを含む整合グループを作成しておきます。これで、スナップショットを作成する準備ができました。</block>
   <block id="c8ea84d9e7c3634b93976499f8f58956" category="open-title">既存のストレージユニットを使用</block>
@@ -550,7 +549,6 @@
   <block id="871826e1588c93437ae23af0a8c5c29e" category="paragraph"><block ref="2d57bedaf7449221ca7cf6e2da6e5236" category="inline-link-macro-rx"></block>ASA R2システムのサポートケースを表示する必要があります。</block>
   <block id="18aec681e94562add9f015e57e17b8d0" category="list-text">サポートケースを送信するには、System Managerで*[クラスタ]&gt;[サポート]*を選択し、*[Go to NetApp Support]*を選択します。</block>
   <block id="ce3bbf8e2056eaff8c2c9a52eb4ce4dc" category="list-text">以前に送信されたケースを表示するには、System Managerで*[クラスタ]&gt;[サポート]*を選択し、*[ケースを表示]*を選択します。</block>
-  <block id="c4bd20e96bacd4ca7f4f874cb8a77b00" category="summary">ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="doc">ASA R2ストレージシステムの詳細</block>
   <block id="4c09e6dc15402ad1dfdd0de9dde9ced3" category="paragraph">ASA R2システムでは、ONTAPソフトウェアとSystem Managerが合理化され、SAN環境でサポートされていない機能は削除されます。</block>
   <block id="8ba78ca0516a69b587aca58206efc01f" category="paragraph">ASA R2システムでは、ストレージユニットとコンシステンシグループを使用できます。</block>
@@ -562,13 +560,10 @@
   <block id="989f2b4edace5981db8b18b1ad4a385f" category="list-text">ASA R2システムのサポートおよび制限の詳細については、を<block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>参照してください。</block>
   <block id="2b304856171196502641312a496c6d54" category="inline-link-macro">NetApp ASA</block>
   <block id="b4e5592d9ac502884e059b5eb31d6bf6" category="list-text">の詳細については、を<block ref="7ca9eeacedc91cf0cb26acef9d99ecbd" category="inline-link-macro-rx"></block>参照してください。</block>
-  <block id="05b76f77eda2923699bcc5fed0226549" category="summary">ASA R2（ASA A1K、ASA A70、ASA A90）システムの使用を開始するには、ハードウェアの設置、クラスタのセットアップ、データアクセスのセットアップ、ストレージのプロビジョニングを行います。</block>
-  <block id="726d7bea9295f2cedea11857011476c0" category="searchtitle">ASA A1K、ASA A70、およびASA A90ストレージシステムの設置とセットアップ</block>
   <block id="7277c9d417ac8a6d967bd0e7b323cd57" category="paragraph">ASA R2システムをセットアップして稼働させるには、ハードウェアコンポーネントを設置し、クラスタをセットアップし、ホストからストレージシステムへのデータアクセスをセットアップし、ストレージをプロビジョニングします。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">1つ</block>
   <block id="40a0d9b63d17cd9ee40121b195ad7812" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>ハードウェアの設置とセットアップ</block>
   <block id="0838ba24ec50794012b940c57af5703f" category="inline-link-macro">インストールとセットアップ</block>
-  <block id="bd37b0d902cca84ba3edf7120a5ff8ea" category="paragraph"><block ref="1284f4e581f500fae0f4daa3e9543a0c" category="inline-link-macro-rx"></block>ASA R2システムを使用し、ONTAP環境にHAペアとして導入します。</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">2つ</block>
   <block id="d950f0cc340509cac6299d8daed8cf0a" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>クラスタのセットアップ</block>
   <block id="358ff255f5304eea2541b8491eafcb09" category="inline-link-macro">ONTAPクラスタをセットアップする</block>
@@ -770,7 +765,6 @@
   <block id="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="list-text"><block ref="fa81f583d8b6c7dcaf8e26a5fcf5de52" category="inline-link-rx"></block></block>
   <block id="bc49acf6a4bdda7bb7cff74873359411" category="inline-link-macro">ASA R2ストレージシステムの設置の準備</block>
   <block id="9bc515044882c3ed46aa32f2e8aa575e" category="paragraph">ハードウェア要件を確認したら、<block ref="8054262d52a0c88e2eb96c4a29491e7c" category="inline-link-macro-rx"></block></block>
-  <block id="4e12da3ed45d8c0cbcaf56b1f9f08af6" category="summary">ASA R2ストレージシステムのインストールとセットアップを開始し、ONTAP環境にHAペアとして導入します。</block>
   <block id="bec12648a072f54e7209e45d72c0ba78" category="doc">ASA R2ストレージシステムのインストールとセットアップのワークフロー</block>
   <block id="f08e3211126883342efb2c1028678668" category="paragraph">ASA R2システムを設置して設定するには、ハードウェア要件を確認し、設置場所を準備し、ハードウェアコンポーネントを設置してケーブル接続し、システムの電源をオンにして、ONTAPクラスタをセットアップします。</block>
   <block id="7ccd978bf0dbca0a0746f98d09b99f7f" category="inline-link-macro">ハードウェアの設置要件を確認する</block>
@@ -1213,7 +1207,6 @@
   <block id="4ce211e7f3238dc2a7e5fc38f7096d99" category="list-text">ストレージユニットの容量を入力し、ホストオペレーティングシステムを選択します。</block>
   <block id="4a12fcafc1a3c4f57a718c8ca92efc50" category="list-text">自動選択された*ホストマッピング*を受け入れるか、マッピング先のストレージユニットに別のホストグループを選択してください。</block>
   <block id="3a880a9aa73ca2acefaaddbfcdb6e4e5" category="paragraph">*ホスト・マッピング*は'新しいストレージ・ユニットのマッピング先となるホスト・グループを示します新しいストレージ・ユニット用に選択したホスト・タイプに対して既存のホスト・グループが存在する場合は'既存のホスト・グループがホスト・マッピング用に自動的に選択されますホストマッピング用に自動選択されたホストグループを受け入れることも、別のホストグループを選択することもできます。</block>
-  <block id="827c0951d229d00d677d2fcd8db9ed5e" category="paragraph">指定したオペレーティングシステムで実行されているホストのホストグループが存在しない場合は、ONTAPによって新しいホストグループが自動的に作成されます。</block>
   <block id="ec00cac618e2a8983fc71ca2a711519c" category="list-text">次のいずれかを実行する場合は、*[その他のオプション]*を選択し、必要な手順を実行します。</block>
   <block id="7e8304ed8a1d7b1d5ea3d023833084ac" category="paragraph">デフォルトのQoSポリシーを変更する</block>
   <block id="670420248bfae86c26e9659cd428df4a" category="paragraph">ストレージユニットを作成するStorage Virtual Machine（VM）にデフォルトのQoSポリシーがまだ設定されていない場合、このオプションは使用できません。</block>
@@ -1308,7 +1301,6 @@
   <block id="b6e8a44e2a75e79622ab8bca1270a5ce" category="doc">ASA R2ストレージの制限</block>
   <block id="abe1583ce937db07d8d0619331789f3c" category="paragraph">最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。</block>
   <block id="96518fa8caa802b5be6e8e42fa8d0690" category="cell">クラスタあたりの最大ノード数</block>
-  <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2</block>
   <block id="d8aa4c4ba6e098346f0524ef76464fe4" category="cell">最大ストレージユニットサイズ</block>
   <block id="d0bb632fcdb31cf3c729c1c59f826d4f" category="cell">128TB</block>
   <block id="bebabfeb2bb62750bf38ee33a0e54982" category="paragraph">ASA R2ストレージの最新の制限の一覧については、を参照してください<block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>。</block>
@@ -1602,13 +1594,11 @@
   <block id="319ffa33cfb4e70c9e521494969d662a" category="sidebar">ONTAP 9.16.1の新機能</block>
   <block id="0b6845dd2391304844b6f9578fd8c865" category="sidebar">ONTAPのデフォルトと制限に対する変更</block>
   <block id="ec7ed1b959417fb145bcf5bc5351a4e1" category="paragraph">オンボードキーマネージャから外部キーマネージャ（またはその逆）に切り替える必要がある場合は、を参照してください<block ref="6c5d784251393a5f6fda5c1a058497d1" category="inline-link-macro-rx"></block>。</block>
-  <block id="741966f7a31d60fddc8857d2cb9fb674" category="paragraph">ASA R2システムは、単一のHAペア環境ですべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートします。SCSI（iSCSIおよびFC）プロトコルは、ホストとストレージの間のすべてのパスがアクティブ/最適化されるように、マルチパスに対称アクティブ/アクティブアーキテクチャを使用します。iSCSIプロトコルとNVMe/TCPプロトコルは、ホストとストレージ間の直接パスをサポートします。</block>
   <block id="d32b93d0cc0df3a57e074a2dd7f55bac" category="list-text">SnapMirror（非同期および同期）からクラウドへ</block>
   <block id="db501755a13db6bc1da40b7fa29e25f1" category="list-text">SnapMirror（非同期および同期）からASA R2以外のシステムへ</block>
   <block id="b0af3c84875edd616110edf2dac64154" category="paragraph">データ削減率は、Storage Efficiencyによって削減されるスペースの量を表します。</block>
   <block id="f31e58176a4fc5fa75f3c5160b712278" category="admonition">SnapMirror（非同期および同期）は、ASA R2システムからASA R2システムにのみサポートされます。SnapMirrorは、ASA R2システムからAFFまたはFASシステムにはサポートされていません。</block>
   <block id="a45025bc45c4e360bb41b761b432dd34" category="doc">ASA R2ストレージシステムのクイックスタート</block>
-  <block id="426ed8a052d2d7277d60ee8001b9d37e" category="searchtitle">ASA R2ストレージシステム（A1K、A90、A70）の詳細</block>
   <block id="465ce601131c87fafd3a4a3da5836246" category="summary">ASA R2システムは、他のすべてのONTAPシステムと同じSANホスト構成の推奨事項およびガイドラインに従います。</block>
   <block id="9a364a877707d0b61983419895ba3632" category="doc">ASA R2システムを使用するSANホスト構成</block>
   <block id="31eb0490b298463d8797eab8041ed748" category="paragraph">ストレージシステムを1つ以上のSANホストに接続するには、複数のスイッチを使用することを推奨します。iSCSI構成の場合、ホスト、スイッチ、およびストレージシステムを接続するネットワークトポロジを_ネットワーク_と呼びます。FC構成とFC-NVMe構成では、同じネットワークトポロジを_fabric_と呼びます。</block>
@@ -1644,4 +1634,133 @@
   <block id="4b3d6eefe10e552e93669e44e3908ab2" category="inline-link-macro">iSCSIのみのLIFを作成する</block>
   <block id="c32fddd27ad2252ef230f0871f34068f" category="paragraph">ASA R2システムでは、デフォルトのネットワークLIFがNVMeホストとSCSIホストの間で共有されるため、自動フェイルオーバーはサポートされません。iSCSI LIFの自動フェイルオーバーを有効にするには、が必要です<block ref="80674e801e3a84767641d7c52bb7dcab" category="inline-link-macro-rx"></block>。自動フェイルオーバーは、iSCSIのみのLIFではデフォルトで有効になっています。</block>
   <block id="22f4d4e3ef9ad886ae95608e10f828cb" category="paragraph">iSCSI LIFの自動フェイルオーバーを有効にしている場合、ストレージフェイルオーバーが発生すると、iSCSI LIFはホームノードまたはポートからHAパートナーノードまたはポートに自動的に移行され、フェイルオーバーの完了後に再び移行されます。または、iSCSI LIFのポートが正常な状態でなくなった場合、そのLIFは現在のホームノードの正常なポートに自動的に移行され、ポートが正常な状態に戻った時点で元のポートに戻ります。</block>
+  <block id="e51f73897cef482e683893c74ad0aebf" category="doc">ONTAPクラスタへのASA R2ノードの追加</block>
+  <block id="be36547b484c259b8e39cb4b17bdac83" category="paragraph">ONTAP 9.16.1以降では、ASA R2ストレージシステムでクラスタあたり最大12ノードがサポートされます。HAペアの新しいノードをケーブル接続して電源をオンにしたら、ノードをクラスタに追加する必要があります。</block>
+  <block id="97a5a9f5366a279a2160c428ad458079" category="list-text">ノードのIPアドレス</block>
+  <block id="d08cd309dd95d7aa27f8f977cf1a060e" category="list-text">クラスタ間ネットワークインターフェイスのIPアドレス</block>
+  <block id="20f5ca91f6dbeac15890f67c9a4cb751" category="list-text">クラスタ間ネットワークサブネットマスク</block>
+  <block id="62f6882cb404e558e070fbed9abb8408" category="list-text">クラスタ間ネットワークゲートウェイ</block>
+  <block id="8d5bab260f1fd17a58eead81f9a933dc" category="list-text">オンボードキーマネージャ（OKM）を設定する場合は、OKMのパスフレーズが必要です。</block>
+  <block id="01c399628d4ca140e3f9a9b4af069aaf" category="list-text">クラスタに追加するノードの横にあるを選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[ノードの追加]*を選択します。</block>
+  <block id="83574618638225092ab0e933a6da9812" category="list-text">各ノードのIPアドレスを入力します。</block>
+  <block id="e7b7c94e6d81ece348285ff2b7c586bc" category="list-text">クラスタ間ネットワークインターフェイスのIPアドレス、サブネットマスク、およびゲートウェイを入力します。</block>
+  <block id="4cb7615df5933d98f247b46408545f05" category="list-text">オンボードキーマネージャ（OKM）を設定する場合は、OKMのパスフレーズを入力します。</block>
+  <block id="e65c1f346347ea2c3f94d2f7b1f37252" category="paragraph">*暗号化用にオンボードキーマネージャを設定*がデフォルトで選択されています。</block>
+  <block id="114bac06cb680744fb618e2d1de76644" category="paragraph">新しいHAペアがクラスタに追加されます。</block>
+  <block id="d46a824e09e83ce9ce018295770894a6" category="inline-link-macro">SANホストからのデータアクセスを実現</block>
+  <block id="a5f04ac5782b3b4db001475a2ce8f1f8" category="paragraph">新しいHAペアをクラスタに追加したら、新しいノードに追加できます<block ref="180fb7c364ff620a7da1de634e394af5" category="inline-link-macro-rx"></block>。</block>
+  <block id="f142a152601a952c440aa742ae54d56c" category="doc">ASA R2ストレージシステムでのONTAPのアップグレード</block>
+  <block id="f46c905b973360f57c509a5dac0d6aca" category="paragraph">ASA R2システムでONTAPソフトウェアをアップグレードすると、ONTAPの新機能や強化された機能を活用して、コストの削減、重要なワークロードの高速化、セキュリティの強化、組織で利用できるデータ保護の範囲の拡大を実現できます。</block>
+  <block id="1609fb0c876b70bfae98d1cafa399784" category="inline-link-macro">Upgrade Advisorを使用してアップグレードを準備する</block>
+  <block id="e4b24f4689bdc8358c4d409b6a9d4103" category="inline-link-macro">Upgrade Advisorを使用せずにアップグレードを準備</block>
+  <block id="715a6cc9b89f202d46f87d2b8ae93e8e" category="paragraph">ASA R2システムのONTAPソフトウェアのアップグレードは、他のONTAPシステムのアップグレードと同じプロセスに従います。Active IQデジタルアドバイザ(デジタルアドバイザとも呼ばれます)の有効なSupportEdge契約がある場合は、次の<block ref="1117d34674fd91a6ee3c7506ddc3a8f0" category="inline-link-macro-rx"></block>手順を実行してください。Upgrade Advisorは、クラスタを評価し、構成に固有のアップグレードプランを作成することで、不確実性とリスクを最小限に抑えるためのインテリジェンスを提供します。Active IQデジタルアドバイザの有効なSupportEdge契約をお持ちでない場合は、次の<block ref="66ecb4b248d940ec34981282ad334ce1" category="inline-link-macro-rx"></block>手順を実行してください。</block>
+  <block id="46629b819dff531a5a2a49fcda5443dd" category="inline-link-macro">System Managerからの自動無停止アップグレード（ANDU）</block>
+  <block id="d351531ad851e21d1ccbc812e54540ff" category="paragraph">アップグレードの準備が完了したら、を使用してアップグレードを実行することを推奨し<block ref="a93595527d1144b0b27a701c939efa63" category="inline-link-macro-rx"></block>ます。ANDUは、ONTAPの高可用性（HA）フェイルオーバーテクノロジを活用して、アップグレード中もクラスタが中断することなくデータを提供し続けます。</block>
+  <block id="8b7f4f92636306e034e67a0098393065" category="inline-link-macro">ONTAPソフトウェアのアップグレード</block>
+  <block id="db24448a282517925d7637e0ab57fb35" category="paragraph">詳細については、をご覧ください <block ref="ee50b0384392ffd34e721693cf1abb90" category="inline-link-macro-rx"></block>。</block>
+  <block id="fff17537d9a4bdde67e260b49d17c884" category="paragraph">新しいストレージユニットを使用して整合グループを作成する場合は、各ストレージユニットに異なる容量を割り当て、デフォルトのパフォーマンスサービスレベルを変更し、最大5つの子整合グループを作成できます。既存のストレージユニットを使用して整合グループを作成する場合、すでに使用されているストレージユニットを追加できます。</block>
+  <block id="06b783ccc728f89654eb406f121a920e" category="paragraph">複数のユニットを作成する場合、各ユニットはデフォルトで同じ容量と同じホストオペレーティングシステムで作成されます。必要に応じて、各ユニットに異なる容量を割り当てることができます。</block>
+  <block id="c714809f14fa9d9c65c38961426d89e3" category="paragraph">各ストレージユニットに異なる容量を割り当てる</block>
+  <block id="b079c5d39925229ba3c754aec7200bfe" category="paragraph">[別の容量を追加する]*を選択します。</block>
+  <block id="31a76ac8189f6bc9ca7266bc2fa13c8d" category="paragraph">デフォルトのパフォーマンスサービスレベルの変更</block>
+  <block id="fe36b3d0747e41e736245b1f2f016f37" category="paragraph">[パフォーマンスサービスレベル]*で、別のサービスレベルを選択します。</block>
+  <block id="e39fb54244b4e7e5902cf86f104eae5f" category="paragraph">子整合グループを作成する</block>
+  <block id="df30ab788ddab119f1a9a52f397c1578" category="paragraph">[子整合グループの追加]*を選択します。</block>
+  <block id="47f30cf1dbc386b695e587c89d934679" category="paragraph">ONTAP 9.16.1以降では、System Managerを使用してASA R2システムに階層型整合グループを作成できます。階層構造では、1つ以上の整合グループが親整合グループの子として設定されます。</block>
+  <block id="accc48ba80dae134714334f9974f857c" category="paragraph">階層型整合性グループを使用すると、各子整合性グループに個別のSnapshotポリシーを適用し、親をレプリケートしてすべての子整合性グループのSnapshotを1つのユニットとしてリモートクラスタにレプリケートできます。これにより、複雑なデータ構造のデータ保護と管理が簡易化されます。たとえば、という名前の親整合グループを作成し、このグループには、アプリケーションデータ用と<block ref="0f23ff9c78f3eb5ab959d518e111d2f4" prefix=" " category="inline-code"></block>アプリケーションログ用の2つの子整合グループが含まれている<block ref="234223ee2714e5f18034660862262d11" prefix=" " category="inline-code"></block>とし<block ref="f4834f6322c13f96b4d06d74fae1bbee" prefix=" " category="inline-code"></block>ます。のスナップショット<block ref="234223ee2714e5f18034660862262d11" prefix=" " category="inline-code"></block>は15分ごとに作成され、のスナップショット<block ref="0f23ff9c78f3eb5ab959d518e111d2f4" prefix=" " category="inline-code"></block>は1時間ごとに作成されます。親整合グループ<block ref="d6faa7ca58e81c6f13095e4f9ff20e81" prefix=" " category="inline-code"></block>には、との<block ref="0f23ff9c78f3eb5ab959d518e111d2f4" prefix=" " category="inline-code"></block>両方のSnapshotを24時間ごとにリモートクラスタにレプリケートするSnapMirrorポリシーがあります。<block ref="234223ee2714e5f18034660862262d11" prefix=" " category="inline-code"></block>親整合グループは<block ref="f4834f6322c13f96b4d06d74fae1bbee" prefix=" " category="inline-code"></block>単一のユニットとして管理され、子整合グループは個別のユニットとして管理されます。</block>
+  <block id="5c31d135ad789e411ad759e0c134e359" category="section-title">既存の整合グループを親整合グループに変換する</block>
+  <block id="ab5220486193aa4a04c53d18e19056fc" category="paragraph">ストレージユニットを親整合グループに直接関連付けることはできません。既存の整合グループを親に変換すると、新しい子整合グループが作成され、変換された整合グループに属するストレージユニットが新しい子整合グループに移動されます。</block>
+  <block id="9bb9a0458dabe990942bf493592cb497" category="list-text">親整合グループに変換する整合グループにカーソルを合わせます。</block>
+  <block id="ec57f29bebbe66441595e764308d00a6" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[親整合グループに昇格]*を選択します。</block>
+  <block id="e0e1d719c3169a36adccf812d315cc3d" category="list-text">親整合グループの名前を入力するか、デフォルトの名前をそのまま使用して、整合グループのコンポーネントタイプを選択します。</block>
+  <block id="3073e32eb6f2f0cb69e9248a5f0c848c" category="list-text">[昇格]*を選択します。</block>
+  <block id="f61d709beaccfca851c4fd737b049a61" category="paragraph">親整合グループの下に追加の子整合グループを作成できます。また、バックアップやディザスタリカバリ用に、地理的に離れた場所に親整合グループをコピーすることもできます<block ref="c9073dd826fc7721b98f9930c55d01b2" category="inline-link-macro-rx"></block>。</block>
+  <block id="f28898d3cd8988ff697e782c8449eb18" category="paragraph">子整合性グループを作成すると、個 々 のSnapshotポリシーを各子に適用しながら、レプリケーションポリシーを親レベルのすべての子整合性グループに適用できます。</block>
+  <block id="34dd18f2c196dd45fa9dfab7e7517350" category="paragraph">新規または既存の整合グループから子整合グループを作成できます。</block>
+  <block id="643328739ada7596678f9066cec81be9" category="open-title">シンシイコンシステンシクルウフカラ</block>
+  <block id="d7c5fedb6bb1501de8279366644bdd86" category="list-text">子整合グループを追加する親整合グループにカーソルを合わせます。</block>
+  <block id="f51c3dd065cb4f7804909df96d48e637" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[Add a new child consistency group]*を選択します。</block>
+  <block id="1e01b7d6c9d4045d5d60b1701e87a5f6" category="list-text">子整合グループの名前を入力するか、デフォルトの名前をそのまま使用して、整合グループのコンポーネントタイプを選択します。</block>
+  <block id="fd11eccc6260851a0ec00ec6dfe7a17e" category="list-text">既存のストレージユニットを子整合グループに追加するか、新しいストレージユニットを作成する場合に選択します。</block>
+  <block id="214e2148a848b4d516c6f14ed1efd50d" category="paragraph">新しいストレージユニットを作成する場合は、作成するユニット数とユニットあたりの容量を入力してから、ホスト情報を入力します。</block>
+  <block id="34277bacf7bd7771bbb4c1c64a00dedb" category="paragraph">複数のストレージユニットを作成する場合は、各ユニットが同じ容量とホストオペレーティングシステムで作成されます。各ユニットに異なる容量を割り当てるには、*[Add a different capacity]*を選択します。</block>
+  <block id="3fb56bc224d2a0ac3d902de4d323e71a" category="open-title">キソンノコンシステンシクルウフ</block>
+  <block id="9e532008425c88c7f9f600e01feb942c" category="list-text">子整合グループにする既存の整合グループを選択します。</block>
+  <block id="7ab1a538b156a84c113e1b25aa016aef" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[別の整合グループの下に移動]*を選択します。</block>
+  <block id="f50d0d6201337aee6a17962f21e42153" category="paragraph">すでに別の整合グループの子として使用する整合グループを新しい親整合グループに移動する場合は、その整合グループを既存の親整合グループから切り離す必要があります。</block>
+  <block id="b13aafb46acdbda66ede2f929c14fff7" category="list-text">子整合グループの新しい名前を入力するか、デフォルトの名前をそのまま使用して、整合グループのコンポーネントタイプを選択します。</block>
+  <block id="767e4528802b2fbd53126bfeffbfbb47" category="list-text">親整合グループにする既存の整合グループを選択するか、新しい親整合グループを作成する場合に選択します。</block>
+  <block id="36a7554cab29967611589d7eefa20c88" category="paragraph">新しい親整合グループの作成を選択した場合は、親整合グループの名前を入力するかデフォルトの名前をそのまま使用してから、整合性アプリケーションコンポーネントのタイプを選択します。</block>
+  <block id="c3eb9435da3ee7c0ac02ef30983ba9d2" category="list-text">[移動]*を選択します。</block>
+  <block id="1aebd2565785840796b5b11c1362918f" category="inline-link-macro">個 々 のスナップショット保護ポリシーを適用する</block>
+  <block id="27f6c159b783eaece3b27009d252861f" category="inline-link-macro">レプリケーションポリシーの設定</block>
+  <block id="5584e5580824a6a612aaebc7cae0dc13" category="paragraph">子整合グループを作成したら、各子整合グループを作成できます<block ref="b20e7e9a535f6a3244da85f4587a0502" category="inline-link-macro-rx"></block>。また、親整合グループ上で、すべての子整合グループのSnapshotを1つのユニットとしてリモートクラスタにレプリケートすることもできます<block ref="cbc7b65bc979a0ca08aaa98e2dc63eda" category="inline-link-macro-rx"></block>。</block>
+  <block id="4aafb19b9676db4e8aa85eb3131ac5f4" category="section-title">親整合グループを単一の整合グループに降格する</block>
+  <block id="5837ba118b622a1f9ee732410e451284" category="paragraph">親整合グループを単一の整合グループに降格すると、関連付けられた子整合グループのストレージユニットが親整合グループに追加されます。子整合グループが削除され、親が単一の整合グループとして管理されます。</block>
+  <block id="dd487eacf1aba6e2726ce73064acff7b" category="list-text">降格する親整合性グループにカーソルを合わせます。</block>
+  <block id="d26a37885a1db03d1d33fa1b32e74c25" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[単一の整合グループに降格]*を選択します。</block>
+  <block id="0b886822f169d28b04dc34a1cb55c402" category="list-text">[降格]*を選択します。</block>
+  <block id="8eea35138709fe7cf5caaf5b5fb53a4d" category="inline-link-macro">Snapshotポリシーを追加します。</block>
+  <block id="a4cc38b952e58f7fac916d3297d86f9f" category="paragraph"><block ref="9b6117933a7d1c9745a65ab485bb26f2" category="inline-link-macro-rx"></block>降格された整合グループに追加して、子整合グループによって以前管理されていたストレージユニットを保護します。</block>
+  <block id="e8289e36e948e36d5aeb9297cf2c6712" category="section-title">親整合グループから子整合グループの接続解除</block>
+  <block id="a98e8367b6b0b1bc6b9fdb2658c07a83" category="paragraph">親整合グループから子整合グループを切り離すと、子整合グループは親整合グループから削除され、単一の整合グループとして管理されます。親に適用されたレプリケーションポリシーは、切り離された子コンシステンシグループに適用されなくなります。</block>
+  <block id="94db0ec67f710fec5c7f775e299a2d6e" category="list-text">親整合グループを選択します。</block>
+  <block id="77b355d4c3903a5367febffb1d5fb080" category="list-text">接続を解除する子整合グループから選択します。</block>
+  <block id="baffc5619c6b92cfb8bd0f06efe69615" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[親から切り離し]*を選択します。</block>
+  <block id="43faed766403b7432cc59c42e8d49ebf" category="list-text">接続を解除する整合グループの新しい名前を入力するか、デフォルトの名前をそのまま使用してから、整合グループのアプリケーションタイプを選択します。</block>
+  <block id="f9e81700c82de44e7b8b9b6bfcfbba80" category="list-text">[切り離し]*を選択します。</block>
+  <block id="3fe9697b148df0f9994a0c38ed482555" category="inline-link-macro">レプリケーションポリシーの設定</block>
+  <block id="ee498a1797cb05156ed6a63b8ff17543" category="paragraph"><block ref="2e81c1e2e7e67baddc7dd1eab1535a95" category="inline-link-macro-rx"></block>切り離された子整合性グループのSnapshotを、単一の整合性グループとしてリモートクラスタにレプリケートする場合。</block>
+  <block id="ab8f09c8990747589e661d2b7b0d3f20" category="summary">ASA R2システム（ASA A1K、A90、A70）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。</block>
+  <block id="2168b2f72c5b19d6c97100664276ea67" category="searchtitle">ASA A1K、A90、A70システムの詳細</block>
+  <block id="a2d4e1cad7dfa6160fb66fdbda1b87c5" category="paragraph">ASA R2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートします。iSCSI、FC、NVMe/FCの各プロトコルでは、対称アクティブ/アクティブアーキテクチャのマルチパスがサポートされ、ホストとストレージ間のすべてのパスがアクティブ/最適化されます。iSCSIプロトコルとNVMe/TCPプロトコルは、ホストとストレージ間の直接パスをサポートします。</block>
+  <block id="109a51a8a2c0a685a3c75a58d3c4230b" category="summary">ASA R2（ASA A1K、A90、A70）システムの使用を開始するには、ハードウェアの設置、クラスタのセットアップ、データアクセスのセットアップ、ストレージのプロビジョニングを行います。</block>
+  <block id="1e6107a968feb6567db48861306cc49f" category="searchtitle">ASA A1K、A90、A70ストレージシステムの設置とセットアップ</block>
+  <block id="e5c51f544e69319bec042113911e203e" category="paragraph"><block ref="1284f4e581f500fae0f4daa3e9543a0c" category="inline-link-macro-rx"></block>ASA R2システムをONTAP環境に導入します。</block>
+  <block id="9a5e67864d1a0cbd6f43034e561f51a2" category="summary">ASA R2ストレージシステムのインストールとセットアップを開始し、ONTAP環境に導入します。</block>
+  <block id="bf0f6aa21aec3e349179a68aa2cb89e0" category="section-title">整合グループクローンのスプリット</block>
+  <block id="6227fd79476a373a893c1d081a6db13e" category="paragraph">整合グループのクローンをスプリットする場合は、クローンとソース整合グループの関連付けを解除し、クローン用のディスクスペースを割り当てます。クローンはスタンドアロン整合グループになり、ソース整合グループとは別に使用できます。</block>
+  <block id="d76e4c0366befa279b219a5ee2ef2f9c" category="list-text">スプリットする整合グループのクローンにカーソルを合わせます。</block>
+  <block id="c7146cc88efb9d4aa82ab0e52c436a48" category="list-text">[クローンのスプリット]*を選択します。</block>
+  <block id="54e2c4dd2b9e992b761540f131754e81" category="list-text">[分割]*を選択します。</block>
+  <block id="b75f8c35975d217c69d40f46c56bb8c5" category="paragraph">クローンとソース整合グループの関連付けが解除され、クローン用のディスクスペースが割り当てられます。</block>
+  <block id="9ebaaa53fbc9e58c2b9ee7ad84f3ada8" category="doc">ASA R2ストレージシステムでのストレージユニットの移動</block>
+  <block id="aa2588a0578a9bf3830dd720f8969abf" category="paragraph">ストレージ可用性ゾーンのスペースが少なくなってきた場合は、ストレージユニットを別のストレージ可用性ゾーンに移動して、クラスタ全体でストレージ利用率を分散させることができます。</block>
+  <block id="d4ec5e86ec36bfd751dc7ae22931f6a3" category="paragraph">ストレージユニットがオンラインでデータを提供している間に、ストレージユニットを移動することができます。移動処理は無停止で実行されます。</block>
+  <block id="3df7f1089e4d9e422795c1f9b7ebd7cb" category="list-text">ONTAP 9.16.1以降が実行されている必要があります。</block>
+  <block id="89f5399d31e98d41d9ed3262351036ba" category="list-text">クラスタが4ノード以上で構成されている必要があります。</block>
+  <block id="75c802412c81363d98f12df3afdd41ee" category="list-text">System Managerで*[ストレージ]*を選択し、移動するストレージユニットを選択します。</block>
+  <block id="d5ea13be4cb9332cce8fc578618d94de" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*移動*を選択します。</block>
+  <block id="fdc877319615730d39477cdaa8dc7207" category="list-text">ストレージユニットの移動先のストレージアベイラビリティゾーンを選択し、*[移動]*を選択します。</block>
+  <block id="a48688c54c854235d38fe4b42f162152" category="paragraph">指定したオペレーティングシステムで実行されているホストのホストグループが存在しない場合、ONTAPは自動的に新しいホストグループを作成します。</block>
+  <block id="12a1557d26fa34ac5e904bc3e60b0bf4" category="list-text">[ストレージと最適化]*で、*[Quality of Service（QoS）]*の横にあるを選択します<block ref="b3b2ed9f542d1ec15ba7a198ec58e0b4" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="2cb253331363d78b30ad71dd5d7edd19" category="paragraph">デフォルトのパフォーマンスサービスレベルを変更</block>
+  <block id="550794613b3e2574a3e7ea8c2b3d0529" category="paragraph">ASA R2システムには、2つのパフォーマンスレベルがあります。デフォルトのパフォーマンスレベルは* Extreme *で、使用可能な最高レベルです。パフォーマンスレベルを* Performance *に下げることができます。</block>
+  <block id="337c483d117ff7e78ed214b1799b666f" category="list-text">[ストレージと最適化]*で、*[パフォーマンスサービスレベル]*の横にあるを選択します<block ref="b3b2ed9f542d1ec15ba7a198ec58e0b4" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="06a4e0373e144570a83a3fcfaa55ff46" category="list-text">[パフォーマンス]*を選択します。</block>
+  <block id="c20ad4d76fe97759aa27a0c99bff6710" category="cell">12</block>
+  <block id="455f024d5e786170a224f947b09bd74a" category="section-title">ストレージアベイラビリティゾーンの使用状況の監視</block>
+  <block id="9cf3716a035447d7f3920daf3ae979bd" category="paragraph">ASA R2システムの各HAペアは、_ストレージ可用性ゾーン_と呼ばれる共通のストレージプールを使用します。ストレージのアベイラビリティゾーンは、ストレージシステム内の使用可能なすべてのディスクにアクセスでき、HAペアの両方のノードから認識できます。</block>
+  <block id="c54830fa97aef91a8bc830d439dc004a" category="paragraph">クラスタにノードが4つ以上ある場合は、各HAペアのストレージアベイラビリティゾーンで使用されているスペースの量を表示できます。この指標は2ノードクラスタでは使用できません。</block>
+  <block id="dd7cd8aba78024bcc6ec1c67f3987760" category="list-text">System Managerで、*[クラスタ]*を選択し、*[概要]*を選択します。</block>
+  <block id="0ce03f9ea97502f3a10721575d8a9696" category="paragraph">クラスタ内の各HAペアについて、ストレージアベイラビリティゾーンの利用率の概要が表示されます。</block>
+  <block id="3670021e257ef0702d763c08d8b9c8b3" category="list-text">より詳細な指標が必要な場合は、特定のストレージの可用性を選択します。</block>
+  <block id="b8e5e4895e260a0a4eeab6a3c66ae9b3" category="paragraph">[概要]*には、ストレージ可用性ゾーンの容量、使用済みスペース、およびデータ削減率が表示されます。</block>
+  <block id="97803d08cef50f43e58f978c9b2e1f08" category="paragraph">[ストレージユニット]*には、ストレージアベイラビリティゾーン内のすべてのストレージユニットのリストが表示されます。</block>
+  <block id="c5b460be9264c217ff7aa949f8f26aab" category="inline-link-macro">ストレージユニットの移動</block>
+  <block id="7245821daa5af47d8243d8eee3f64b1e" category="paragraph">ストレージ可用性ゾーンのスペースが不足している場合は、別のストレージ可用性ゾーンへの接続を計画して、クラスタ全体でストレージ利用率のバランスを調整する必要があります<block ref="a3223fe003597dcfd7b6d75426783c5a" category="inline-link-macro-rx"></block>。</block>
+  <block id="8010ab2f71c733c1a8013b31b901be79" category="cell">クラスタあたりのノード数</block>
+  <block id="c7ae27ad054ff4d389e7c15cc82b0866" category="paragraph">クラスタあたりの最大ノード数が2から12に拡張されました。</block>
+  <block id="f35462670e9b95d1e4a8748ba6872f91" category="admonition">クラスタ内の3つ以上のノードでONTAP 9.16.1を実行している場合、ONTAP 9.16.0にリバートすることはできません。</block>
+  <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">データ保護</block>
+  <block id="52b359b5c00e0db3bdd91a9f5c05cf7a" category="inline-link-macro">階層型整合グループのサポート</block>
+  <block id="410817362abc44b1b70bdc2f9f49fece" category="cell"><block ref="410817362abc44b1b70bdc2f9f49fece" category="inline-link-macro-rx"></block></block>
+  <block id="aada91e6d0de9250c4de431c33ad5116" category="cell">階層整合グループを使用すると、複数の子整合グループを含む親整合グループを作成できます。これにより、複雑なデータ構造のデータ保護と管理が簡易化されます。</block>
+  <block id="6feaf968503604ce3e0d0b4eefca6c57" category="cell">ストレージユニットの自動リバランシングのサポート</block>
+  <block id="ec84fb814253e6779e1876e18f7db731" category="cell">ONTAPは、パフォーマンスと容量利用率を最適化するために、ストレージアベイラビリティゾーン間でストレージユニットのリバランシングを自動的に行います。</block>
+  <block id="abdffd3ebdd2031130d1592a9a139a92" category="sidebar">NetApp ASA R2システム（ASA A1K、A90、A70）は、SANのみのお客様のニーズに合わせてシンプルな操作性を実現する、ハードウェアとソフトウェアの統合ソリューションを提供します。</block>
+  <block id="d04e5f519989e5f2ca95f9541ffe17a0" category="sidebar">ONTAPのアップグレード</block>
+  <block id="fb3dca1c5682d0eef255de24a00af0f3" category="sidebar">ノードの追加</block>
+  <block id="3214e36fd00eb6d4da6f5d9b64f41cb1" category="sidebar">ストレージユニットの管理</block>
+  <block id="611bc8bee4d5b03a55be78ab0ca75f66" category="sidebar">ストレージユニットの移動</block>
 </blocks>

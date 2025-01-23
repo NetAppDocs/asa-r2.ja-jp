@@ -1,9 +1,9 @@
 ---
 sidebar: sidebar 
 permalink: get-started/quick-start.html 
-keywords: asa r2, asa a1k, asa a70, asa a90, get started, getting started, quick start, install, set up 
-summary: ASA R2（ASA A1K、ASA A70、ASA A90）システムの使用を開始するには、ハードウェアの設置、クラスタのセットアップ、データアクセスのセットアップ、ストレージのプロビジョニングを行います。 
-searchtitle: ASA A1K、ASA A70、およびASA A90ストレージシステムの設置とセットアップ 
+keywords: asa r2, asa a1k, asa a90, asa a70, get started, getting started, quick start, install, set up 
+summary: ASA R2（ASA A1K、A90、A70）システムの使用を開始するには、ハードウェアの設置、クラスタのセットアップ、データアクセスのセットアップ、ストレージのプロビジョニングを行います。 
+searchtitle: ASA A1K、A90、A70ストレージシステムの設置とセットアップ 
 ---
 = ASA R2ストレージシステムのクイックスタート
 :allow-uri-read: 
@@ -16,7 +16,7 @@ ASA R2システムをセットアップして稼働させるには、ハード�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]ハードウェアの設置とセットアップ
 [role="quick-margin-para"]
-link:../install-setup/install-setup-workflow.html["インストールとセットアップ"]ASA R2システムを使用し、ONTAP環境にHAペアとして導入します。
+link:../install-setup/install-setup-workflow.html["インストールとセットアップ"]ASA R2システムをONTAP環境に導入します。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]クラスタのセットアップ
 [role="quick-margin-para"]

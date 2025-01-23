@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: learn-more/rest-api-support.html 
-keywords: asa, asa r2, rest, rest api, asa r2 rest api 
+keywords: asa, asa r2, rest, rest api, asa r2 rest api, asa a1k, asa a90, asa a70 
 summary: ASA R2 REST APIは、Unified ONTAPパーソナリティで提供されるREST APIに基づいており、ASA R2パーソナリティの固有の特性と機能に合わせていくつかの変更が加えられています。 
 ---
 = ASA R2のREST APIサポート

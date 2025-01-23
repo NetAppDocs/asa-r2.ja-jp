@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: install-setup/install-setup-workflow.html 
 keywords: asa r2, install, setup, workflow 
-summary: ASA R2ストレージシステムのインストールとセットアップを開始し、ONTAP環境にHAペアとして導入します。 
+summary: ASA R2ストレージシステムのインストールとセットアップを開始し、ONTAP環境に導入します。 
 ---
 = ASA R2ストレージシステムのインストールとセットアップのワークフロー
 :allow-uri-read: 

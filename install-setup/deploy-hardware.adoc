@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: install-setup/deploy-hardware.html 
-keywords: asa r2, install hardware, deploy hardware, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a70, asa a90, asa c80 
+keywords: asa r2, install hardware, deploy hardware, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70 
 summary: ASA R2ストレージシステムおよびストレージシェルフ用のレールキットを設置し、ASA R2ハードウェアをキャビネットまたはTelcoラックに固定する方法について説明します。 
 ---
 = ASA R2ストレージシステムのインストール

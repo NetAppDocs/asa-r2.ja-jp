@@ -14,6 +14,8 @@ entries:
     url: "/monitor/monitor-storage.html"
   - title: ストレージ容量の拡張
     url: "/administer/increase-storage-capacity.html"
+- title: ONTAPのアップグレード
+  url: "/administer/upgrade-ontap.html"
 - title: ファームウェアの更新
   url: "/administer/update-firmware.html"
 - title: 分析情報を表示
@@ -22,6 +24,8 @@ entries:
   url: "/monitor/view-events-jobs.html"
 - title: ノードの管理
   entries:
+  - title: ノードの追加
+    url: "/administer/add-nodes.html"
   - title: ノードのリブート、テイクオーバー、ギブバック
     url: "/administer/reboot-take-over-give-back-nodes.html"
   - title: ノードの名前変更
