@@ -38,6 +38,8 @@ entries:
   entries:
   - title: 保存データを暗号化
     url: "/secure-data/encrypt-data-at-rest.html"
+  - title: キー管理ツール間でデータ暗号化キーを移行する
+    url: "/secure-data/migrate-encryption-keys-between-key-managers.html"
   - title: ランサムウェア攻撃からデータを保護
     url: "/secure-data/ransomware-protection.html"
   - title: セキュアなNVMe接続
