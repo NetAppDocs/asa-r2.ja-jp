@@ -1,9 +1,9 @@
 ---
 sidebar: sidebar 
 permalink: get-started/learn-about.html 
-keywords: asa r2, asa a1k, asa a90, asa a70, learn more, learn about, get started 
-summary: ASA R2システム（ASA A1K、A90、A70）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。 
-searchtitle: ASA A1K、A90、A70システムの詳細 
+keywords: asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, learn more, learn about, get started 
+summary: ASA R2システム（ASA A1K、A90、A70、A50、A30、A20）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。 
+searchtitle: ASA A1K、A90、A70、A50、A30、A20システムの詳細 
 ---
 = ASA R2ストレージシステムの詳細
 :allow-uri-read: 
@@ -12,7 +12,17 @@ searchtitle: ASA A1K、A90、A70システムの詳細
 
 
 [role="lead"]
-NetApp ASA R2システム（ASA A1K、ASA A70、およびASA A90）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせたシンプルな操作性を実現します。
+NetApp ASA R2システムは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせたシンプルな操作性を実現します。
+
+次のASAプラットフォームは、ASA R2システムに分類されます。
+
+* ASA A1K
+* ASA A90
+* ASA A70
+* ASA A50
+* ASA A30
+* ASA A20
+
 
 ASA R2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートします。iSCSI、FC、NVMe/FC、NVMe/TCPの各プロトコルでは、対称アクティブ/アクティブアーキテクチャのマルチパスがサポートされ、ホストとストレージ間のすべてのパスがアクティブ/最適化されます。iSCSIプロトコルとNVMe/TCPプロトコルは、ホストとストレージ間の直接パスをサポートします。
 

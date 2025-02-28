@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: install-setup/deploy-hardware.html 
-keywords: asa r2, install hardware, deploy hardware, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70 
+keywords: asa r2, install hardware, deploy hardware, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50 
 summary: ASA R2ストレージシステムおよびストレージシェルフ用のレールキットを設置し、ASA R2ハードウェアをキャビネットまたはTelcoラックに固定する方法について説明します。 
 ---
 = ASA R2ストレージシステムのインストール
@@ -27,7 +27,12 @@ ASA R2ストレージシステムの設置準備が完了したら、システ�
 .. 付属の取り付けネジを使用して、ストレージシステムをキャビネットまたはTelcoラックに固定します。
 
 
-. ストレージシェルフを設置します。
+. ベゼルをストレージシステムの前面に取り付けます。
+. ASA R2システムにケーブルマネジメントデバイスが付属している場合は、ストレージシステムの背面に取り付けます。
++
+image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[ケーブルマネジメントデバイスの取り付け]
+
+. ストレージシェルフを設置して固定します。
 +
 .. ストレージシェルフの背面をレールに合わせ、シェルフを下から支えてキャビネットまたはTelcoラックに挿入します。
 +
@@ -36,11 +41,6 @@ ASA R2ストレージシステムの設置準備が完了したら、システ�
 .. 付属の取り付けネジを使用して、ストレージシェルフをキャビネットまたはTelcoラックに固定します。
 
 
-. ケーブルマネジメントデバイスをストレージシステムの背面に接続します。
-+
-image::../media/drw_affa1k_install_cable_mgmt_ieops-1697.svg[ケーブルマネジメントデバイスの取り付け]
-
-. ベゼルをストレージシステムの前面に取り付けます。
 
 
 .次の手順

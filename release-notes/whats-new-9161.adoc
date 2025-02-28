@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: release-notes/whats-new-9161.html 
-keywords: 'what"s new, release notes, 9.16.1, asa r2, asa a1k, asa a90, asa a70' 
+keywords: 'what"s new, release notes, 9.16.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20' 
 summary: ASA R2システム向けのONTAP 9 .16.1の新機能について説明します。 
 ---
 = ASA R2システムのONTAP 9 .16.1の新機能
@@ -16,6 +16,24 @@ summary: ASA R2システム向けのONTAP 9 .16.1の新機能について説明�
 [role="lead"]
 ASA R2システム向けのONTAP 9 .16.1の新機能について説明します。
 
+
+
+== プラットフォーム
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| プラットフォーム  a| 
+ONTAP 9.16.1以降では、次のNetApp ASA R2システムがサポートされます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。
+
+* ASA A50
+* ASA A30
+* ASA A20
+
+
+|===
 
 
 == データ保護

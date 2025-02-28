@@ -3,7 +3,7 @@ indexpage:
   title: ASA r2のドキュメント
   summary: NetApp ASA R2システムは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルな操作性を実現します。
   keywords: asa r2, ontap, documentation, asa a1k, asa a70, asa a90
-  lead: NetApp ASA R2システム（ASA A1K、A90、A70）は、SANのみのお客様のニーズに合わせてシンプルな操作性を実現する、ハードウェアとソフトウェアの統合ソリューションを提供します。
+  lead: NetApp ASA R2システム（ASA A1K、ASA A90、ASA A70、ASA A50、ASA A30、ASA A20）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現します。
   tiles:
   - title: 開始する
     links:
