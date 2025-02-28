@@ -1901,4 +1901,7 @@
   <block id="556e0ee8174fe1dd298dfe165915e58f" category="summary">一部のONTAPコマンドは、ASA R2システム（ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20）ではサポートされていません。</block>
   <block id="d4b904a6ceddca0805b85998f1946d36" category="paragraph">ONTAP 9.16.1以降では、次のNetApp ASA R2システムがサポートされます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。</block>
   <block id="1afab26d25573baff41c4a297e2b15fb" category="sidebar">NetApp ASA R2システム（ASA A1K、ASA A90、ASA A70、ASA A50、ASA A30、ASA A20）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現します。</block>
+  <block id="9e607734cbe02d05fcbdf2a8bd579b3a" category="inline-link-macro">キー管理ツール間での暗号化キーの移行のサポート</block>
+  <block id="c18d7ea3e180dd72f3fc8869a57e6376" category="cell"><block ref="c18d7ea3e180dd72f3fc8869a57e6376" category="inline-link-macro-rx"></block></block>
+  <block id="86c79aae612f98a6019861f950eeb1a3" category="cell">クラスタレベルでONTAPのオンボードキーマネージャを外部キー管理ツールに切り替える場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用して、暗号化キーをあるキー管理ツールから別のキー管理ツールに簡単に移行できます。</block>
 </blocks>

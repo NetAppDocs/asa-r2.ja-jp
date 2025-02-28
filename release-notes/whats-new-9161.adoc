@@ -43,6 +43,9 @@ ONTAP 9.16.1以降では、次のNetApp ASA R2システムがサポートされ�
 | 更新 | 説明 
 
 
+| link:../secure-data/migrate-encryption-keys-between-key-managers.html["キー管理ツール間での暗号化キーの移行のサポート"] | クラスタレベルでONTAPのオンボードキーマネージャを外部キー管理ツールに切り替える場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用して、暗号化キーをあるキー管理ツールから別のキー管理ツールに簡単に移行できます。 
+
+
 | link:../data-protection/manage-consistency-groups.html["階層型整合グループのサポート"] | 階層整合グループを使用すると、複数の子整合グループを含む親整合グループを作成できます。これにより、複雑なデータ構造のデータ保護と管理が簡易化されます。 
 |===
 
