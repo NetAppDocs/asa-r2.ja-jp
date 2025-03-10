@@ -28,7 +28,6 @@ iSCSI LIFの自動フェイルオーバーを有効にしている場合、ス�
 * ONTAP S3 SnapMirrorとS3 API
 * SnapMirror（非同期および同期）からクラウドへ
 * SnapMirror（非同期および同期）からASA R2以外のシステムへ
-* 選択的LUNマップ（SLM）
 
 
 .ASA R2システムは、次の機能をサポートしています。
