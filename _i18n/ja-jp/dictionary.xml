@@ -1903,4 +1903,5 @@
   <block id="c18d7ea3e180dd72f3fc8869a57e6376" category="cell"><block ref="c18d7ea3e180dd72f3fc8869a57e6376" category="inline-link-macro-rx"></block></block>
   <block id="86c79aae612f98a6019861f950eeb1a3" category="cell">クラスタレベルでONTAPのオンボードキーマネージャを外部キー管理ツールに切り替える場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用して、暗号化キーをあるキー管理ツールから別のキー管理ツールに簡単に移行できます。</block>
   <block id="f06feed69dbf0f5f7721d9ea53af616f" category="list-text">クラスタネットワークを検出する</block>
+  <block id="54ece869b1ae7921e7f18bd670ac879c" category="list-text">ASAr2 A20、A30、またはA50ストレージシステムでは、システムシャーシ前面のシェルフIDディスプレイは点灯しません。システムの内部シェルフIDは00に固定されています。</block>
 </blocks>
