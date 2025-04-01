@@ -964,8 +964,6 @@
   <block id="7a15ceb09d1ef08df7b9021f7341e654" category="paragraph">これで、<block ref="0675c663575ea5d2004171fa7c4c09af" category="inline-link-macro-rx"></block>SANクライアントからシステムに接続する準備が整いました。</block>
   <block id="e42d5bab0edf2441b75829873e298e1b" category="summary">ASAシステムは、SANのみのソリューション向けに最適化されたハードウェアサポートを提供します。ASA R2システムは、ハードウェアとソフトウェアの最適化を提供します。</block>
   <block id="b8d343a2d9dfd7386b6b373e6050b930" category="searchtitle">ASA R2システムを他のONTAPシステムと比較する</block>
-  <block id="a96666c23540f7c6d0da8ca6ab7b57d5" category="paragraph">ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。ASA R2システムのストレージレイヤ、サポートされるプロトコル、ONTAPパーソナリティの実装において、他のONTAPシステム（ASA、AFF、FAS）とは異なります。</block>
-  <block id="9bbd2ec1679b3be9cb3ca46d69e0297c" category="paragraph">ASA R2システムでは、ONTAPソフトウェアが合理化され、SAN関連以外の機能の可視性と可用性を制限しながら、重要なSAN機能をサポートします。たとえば、ASA R2システムで実行されているSystem Managerには、NASクライアントのホームディレクトリを作成するオプションは表示されません。この合理化されたバージョンのONTAPは、_ ASA R2 personality_として識別されます。他のすべてのONTAPシステム（ASA、AFF、FAS）で実行されているONTAPは、_Unified ONTAP personality_として識別されます。ONTAPのパーソナリティの違いについては、ONTAPコマンドリファレンス（マニュアルページ）、REST API仕様、およびEMSメッセージ（該当する場合）を参照してください。</block>
   <block id="cf4ae521a2a16cdd073860fee0fbab96" category="paragraph">ONTAPストレージのパーソナリティは、System ManagerまたはONTAP CLIを使用して確認できます。</block>
   <block id="c3e4be39d2ab89664b205dd7d0bb6510" category="list-text">System Managerのメニューで、*[クラスタ]&gt;[概要]*を選択します。</block>
   <block id="8fb6b6206aca4aa491419e270ea3424d" category="list-text">CLIから、次のように入力します。<block ref="9228fcbc2cb846682f56e98989045eaa" prefix=" " category="inline-code"></block></block>
@@ -1904,4 +1902,6 @@
   <block id="86c79aae612f98a6019861f950eeb1a3" category="cell">クラスタレベルでONTAPのオンボードキーマネージャを外部キー管理ツールに切り替える場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用して、暗号化キーをあるキー管理ツールから別のキー管理ツールに簡単に移行できます。</block>
   <block id="f06feed69dbf0f5f7721d9ea53af616f" category="list-text">クラスタネットワークを検出する</block>
   <block id="54ece869b1ae7921e7f18bd670ac879c" category="list-text">ASAr2 A20、A30、またはA50ストレージシステムでは、システムシャーシ前面のシェルフIDディスプレイは点灯しません。システムの内部シェルフIDは00に固定されています。</block>
+  <block id="792fd8488bba0c03a6a9c46a34c7db99" category="paragraph">ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けのハードウェアおよびソフトウェアソリューションを提供します。ASA R2システムのストレージレイヤ、サポートされるプロトコル、ONTAPパーソナリティの実装において、他のONTAPシステム（ASA、AFF、FAS）とは異なります。</block>
+  <block id="6875b01c5e1cd1eaa394cb250554d067" category="paragraph">ASA R2システムでは、ONTAPソフトウェアが合理化され、SAN関連以外の機能の可視性と可用性を制限しながら、重要なSAN機能をサポートします。たとえば、ASA R2システムで実行されているSystem Managerには、NASクライアントのホームディレクトリを作成するオプションは表示されません。この合理化されたバージョンのONTAPは、_ ASA R2 personality_として識別されます。ASAシステムで実行されているONTAPは、_ ASA ONTAP personality_として識別されます。AFFおよびFAS ONTAPシステムで実行されているONTAPは、_Unified ONTAP personality_として識別されます。ONTAPのパーソナリティの違いについては、ONTAPコマンドリファレンス（マニュアルページ）、REST API仕様、およびEMSメッセージ（該当する場合）を参照してください。</block>
 </blocks>

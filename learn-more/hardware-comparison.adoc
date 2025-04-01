@@ -12,9 +12,9 @@ searchtitle: ASA R2システムを他のONTAPシステムと比較する
 
 
 [role="lead"]
-ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けに、ハードウェアとソフトウェアの統合ソリューションを提供します。ASA R2システムのストレージレイヤ、サポートされるプロトコル、ONTAPパーソナリティの実装において、他のONTAPシステム（ASA、AFF、FAS）とは異なります。
+ASA R2システムは、オールフラッシュプラットフォーム上に構築されたSAN専用環境向けのハードウェアおよびソフトウェアソリューションを提供します。ASA R2システムのストレージレイヤ、サポートされるプロトコル、ONTAPパーソナリティの実装において、他のONTAPシステム（ASA、AFF、FAS）とは異なります。
 
-ASA R2システムでは、ONTAPソフトウェアが合理化され、SAN関連以外の機能の可視性と可用性を制限しながら、重要なSAN機能をサポートします。たとえば、ASA R2システムで実行されているSystem Managerには、NASクライアントのホームディレクトリを作成するオプションは表示されません。この合理化されたバージョンのONTAPは、_ ASA R2 personality_として識別されます。他のすべてのONTAPシステム（ASA、AFF、FAS）で実行されているONTAPは、_Unified ONTAP personality_として識別されます。ONTAPのパーソナリティの違いについては、ONTAPコマンドリファレンス（マニュアルページ）、REST API仕様、およびEMSメッセージ（該当する場合）を参照してください。
+ASA R2システムでは、ONTAPソフトウェアが合理化され、SAN関連以外の機能の可視性と可用性を制限しながら、重要なSAN機能をサポートします。たとえば、ASA R2システムで実行されているSystem Managerには、NASクライアントのホームディレクトリを作成するオプションは表示されません。この合理化されたバージョンのONTAPは、_ ASA R2 personality_として識別されます。ASAシステムで実行されているONTAPは、_ ASA ONTAP personality_として識別されます。AFFおよびFAS ONTAPシステムで実行されているONTAPは、_Unified ONTAP personality_として識別されます。ONTAPのパーソナリティの違いについては、ONTAPコマンドリファレンス（マニュアルページ）、REST API仕様、およびEMSメッセージ（該当する場合）を参照してください。
 
 ONTAPストレージのパーソナリティは、System ManagerまたはONTAP CLIを使用して確認できます。
 
