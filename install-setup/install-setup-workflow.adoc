@@ -13,22 +13,22 @@ summary: ASA R2ストレージシステムのインストールとセットア�
 [role="lead"]
 ASA R2システムを設置して設定するには、ハードウェア要件を確認し、設置場所を準備し、ハードウェアコンポーネントを設置してケーブル接続し、システムの電源をオンにして、ONTAPクラスタをセットアップします。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"]link:install-setup-requirements.html["ハードウェアの設置要件を確認する"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"] link:install-setup-requirements.html["ハードウェアの設置要件を確認する"]
 [role="quick-margin-para"]
 ASA R2ストレージシステムを設置するためのハードウェア要件を確認します。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["1つ"]link:prepare-hardware.html["ASA R2ストレージシステムのインストールの準備"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"] link:prepare-hardware.html["ASA R2ストレージシステムのインストールの準備"]
 [role="quick-margin-para"]
 ASA R2システムを設置する準備をするには、設置場所の準備を整え、環境要件と電力要件を確認し、十分なラックスペースがあることを確認する必要があります。その後、機器を開梱して内容を納品書と比較し、ハードウェアを登録してサポートを利用できます。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["2つ"]link:deploy-hardware.html["ASA R2ストレージシステムのハードウェアの設置"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] link:deploy-hardware.html["ASA R2ストレージシステムのハードウェアの設置"]
 [role="quick-margin-para"]
 ハードウェアを設置するには、ストレージシステムとシェルフ用のレールキットを設置し、ストレージシステムをキャビネットまたはTelcoラックに設置して固定します。次に、シェルフをレールにスライドさせます。最後に、ケーブル配線を整理するために、ケーブルマネジメントデバイスをストレージシステムの背面に取り付けます。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["3つ"]link:cable-hardware.html["ASA R2ストレージシステムのコントローラとストレージシェルフをケーブル接続"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4つ"] link:cable-hardware.html["ASA R2ストレージシステムのコントローラとストレージシェルフをケーブル接続"]
 [role="quick-margin-para"]
 ハードウェアをケーブル接続するには、まずストレージコントローラをネットワークに接続し、次にコントローラをストレージシェルフに接続します。
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["4つ"]link:power-on-hardware.html["ASA R2ストレージシステムの電源をオンにします。"]
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["5 つ"] link:power-on-hardware.html["ASA R2ストレージシステムの電源をオンにします。"]
 [role="quick-margin-para"]
 セットアップ時に各シェルフが一意に識別されるように、コントローラの電源をオンにする前に、各NS224シェルフの電源をオンにして一意のシェルフIDを割り当てます。
