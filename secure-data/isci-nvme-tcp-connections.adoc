@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: secure-data/iscsi-nvme-tcp-connections.html 
+keywords: asa r2, secure data, data security, encrypt, data at rest, data-at-rest, encryption, iscsi, nvme/tcp, ipsec, data-in-flight, ip security, secure connections, secure data connections, hardware offload 
+summary: ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。 
+---
+= ASA R2ストレージシステム上のセキュアなIP接続
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。IPsecは、転送中データの暗号化、IPレベルでのネットワークエンドポイント間のトラフィックの認証、およびデータに対するリプレイおよび悪意のある中間者攻撃からの保護を提供するインターネット標準です。
+
+ASA R2システムでは、iSCSIホストとNVMe/TCPホストでIPSecを使用できます。
+
+一部のASA R2システムでは、暗号化や整合性チェックなどの暗号化処理の一部を、サポートされているネットワークインターフェイスコントローラ（NIC）カードにオフロードできます。NICカードにオフロードされた処理のスループットは約5%以下です。これにより、IPsecで保護されるネットワークトラフィックのパフォーマンスとスループットが大幅に向上します。
+
+次のNICカードは、次のASA R2システムのハードウェアオフロードでサポートされています。
+
+[cols="2"]
+|===
+| サポートされているNICカード | ASA r2システム 
+
+
+ a| 
+X50131A -（2p、40G/100G/200G/400Gイーサネットコントローラ）
+ a| 
+* ASA A1K
+* ASA A90
+* ASA A70
+
+
+
+
+ a| 
+X60132A -（4p、10G / 25Gイーサネットコントローラ）
+ a| 
+* ASA A50
+* ASA A30
+* ASA A20
+
+
+|===
+関連情報
+
+link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html["ONTAPネットワークのIPセキュリティの設定"]

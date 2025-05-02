@@ -1905,4 +1905,17 @@
   <block id="b78c98e70e341751d6f58db28ecec461" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> <block ref="29aaf1b4e7e6610ae4790f0740e69e4e" category="inline-link-macro-rx"></block></block>
   <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">5 つ</block>
   <block id="77aa123fc5c68731cdf628d8e9c75afc" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> <block ref="69d31d64dbed246448f394257b05fdb9" category="inline-link-macro-rx"></block></block>
+  <block id="43be05fcb9765d24f8081a2284f82de7" category="summary">ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。</block>
+  <block id="95f5e5110bbbc9d987c115097008c227" category="doc">ASA R2ストレージシステム上のセキュアなIP接続</block>
+  <block id="c10f6cdf89366933afe9e0a05f726423" category="paragraph">ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。IPsecは、転送中データの暗号化、IPレベルでのネットワークエンドポイント間のトラフィックの認証、およびデータに対するリプレイおよび悪意のある中間者攻撃からの保護を提供するインターネット標準です。</block>
+  <block id="602c5938acf67898ca9af2011ec2c721" category="paragraph">ASA R2システムでは、iSCSIホストとNVMe/TCPホストでIPSecを使用できます。</block>
+  <block id="a0304825371175c4b6363207289817a6" category="paragraph">一部のASA R2システムでは、暗号化や整合性チェックなどの暗号化処理の一部を、サポートされているネットワークインターフェイスコントローラ（NIC）カードにオフロードできます。NICカードにオフロードされた処理のスループットは約5%以下です。これにより、IPsecで保護されるネットワークトラフィックのパフォーマンスとスループットが大幅に向上します。</block>
+  <block id="1d0cc018fd5504976c79bca7bbffc647" category="paragraph">次のNICカードは、次のASA R2システムのハードウェアオフロードでサポートされています。</block>
+  <block id="90dda976d3b078f124db5239495ee246" category="cell">サポートされているNICカード</block>
+  <block id="fde1abb5537b55c34521d414267b3f70" category="cell">ASA r2システム</block>
+  <block id="9709e8dba9666b1074d2084b0d7f0020" category="paragraph">X50131A -（2p、40G/100G/200G/400Gイーサネットコントローラ）</block>
+  <block id="078fcdf403281df3fd9849a79a715dc5" category="paragraph">X60132A -（4p、10G / 25Gイーサネットコントローラ）</block>
+  <block id="68852b93a73d565bf943b2e28d4c653b" category="inline-link-macro">ONTAPネットワークのIPセキュリティの設定</block>
+  <block id="22935e4bd8297da6bdfa32067fc7243c" category="paragraph"><block ref="22935e4bd8297da6bdfa32067fc7243c" category="inline-link-macro-rx"></block></block>
+  <block id="0a0e33e3bee1123a43e4178aad30ed45" category="sidebar">セキュアなIP接続</block>
 </blocks>
