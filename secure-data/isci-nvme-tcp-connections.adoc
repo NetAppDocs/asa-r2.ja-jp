@@ -43,6 +43,5 @@ X60132A -（4p、10G / 25Gイーサネットコントローラ）
 
 
 |===
-関連情報
-
+.次の手順
 link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html["ONTAPネットワークのIPセキュリティの設定"]
