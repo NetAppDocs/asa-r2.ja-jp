@@ -16,6 +16,28 @@ ASA R2システム上のストレージユニットは、Storage Virtual Machine
 
 
 
+== Storage VM を作成
+
+クラスタのセットアップ時に、デフォルトのデータStorage Virtual Machine（VM）が作成されます。別のStorage VMを作成して選択しないかぎり、すべての新しいストレージユニットはデフォルトのデータStorage VM内に作成されます。Storage VMを追加で作成して、アプリケーション、部門、クライアントごとにストレージユニットを分離することができます。たとえば、開発環境用にストレージVMを作成して本番環境用に別のストレージVMを作成したり、財務部門用にストレージVMを作成してマーケティング部門用に別のストレージVMを作成したりできます。
+
+.手順
+. [クラスタ]>[Storage VM]*を選択します。
+. を選択します image:icon_add_blue_bg.png["プラス記号が付いた青い四角形の後に、白い文字で「add」という単語が続く"]。
+. Storage VMの名前を入力するか、デフォルトの名前をそのまま使用します。
+. [プロトコルの設定]*で、Storage VMのプロトコルを選択します。
++
+iSCSIおよびNVMe/TCPの場合は*[IP]*を選択します。Fibre ChannelまたはNVMe/FCの場合は* FC *を選択します。
+
+. Storage VM管理*で*管理者アカウントの管理*を選択し、管理者アカウントのユーザ名とパスワードを入力します。
+. Storage VMのネットワークインターフェイスを追加してください。
+. [ 保存（ Save ） ] を選択します。
+
+
+.次の手順
+Storage VMを作成しておきます。これで、Storage VMを使用してをlink:../manage-data/provision-san-storage.html["ストレージのプロビジョニング"]実行できるようになります。
+
+
+
 == IPspaceの作成
 
 IPspaceは、Storage VMが配置される個別のIPアドレススペースです。IPspaceを作成すると、Storage VMに独自のセキュアなストレージ、管理、およびルーティングを設定できます。また、管理上分離されたネットワークドメイン内のクライアントで、同じIPアドレスサブネット範囲の重複するIPアドレスを使用できるようにします。
@@ -96,6 +118,26 @@ iSCSI LIFのフェイルオーバーを有効にするには、IPプロトコル
 
 .結果
 データアクセス用のLIFを作成しておきます。
+
+.次の手順
+iSCSI用のIP LIFを作成した場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用してiSCSI LIFの自動フェイルオーバーを有効にすることができます。
+
+
+
+=== iSCSI LIFの自動フェイルオーバーの有効化
+
+SVM上にLIFの自動フェイルオーバーが有効になっていないiSCSI LIFがある場合、新しく作成したLIFでもLIFの自動フェイルオーバーは有効になりません。LIFの自動フェイルオーバーが有効になっていない状態でフェイルオーバーが発生すると、iSCSI LIFは移行されません。
+
+iSCSI LIFの自動フェイルオーバーを有効にするには、ONTAPのコマンドラインインターフェイス（CLI）を使用する必要があります。
+
+.ステップ
+. iSCSI LIFの自動フェイルオーバーを有効にします。
++
+[source, cli]
+----
+network interface modify -vserver <SVM_name> -lif <iscsi_lif> -failover-policy sfo-partner-only -auto-revert true
+----
+
 
 
 

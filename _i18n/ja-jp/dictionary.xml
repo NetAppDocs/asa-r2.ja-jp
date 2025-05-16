@@ -961,7 +961,6 @@
   <block id="8fb6b6206aca4aa491419e270ea3424d" category="list-text">CLIから、次のように入力します。<block ref="9228fcbc2cb846682f56e98989045eaa" prefix=" " category="inline-code"></block></block>
   <block id="8369fc694deadf80f5d106ef41b6e7b2" category="paragraph">ONTAPストレージシステムのパーソナリティは変更できません。</block>
   <block id="df5591b00e0f940a96e7ea141a5a8f82" category="paragraph">Unified ONTAPパーソナリティを実行するONTAPシステムのストレージレイヤでは、ストレージのベースユニットとしてアグリゲートが使用されます。アグリゲートは、ストレージシステムで使用可能な特定のディスクセットを所有します。アグリゲートは、自身が所有するディスクのスペースをLUNおよびネームスペース用のボリュームに割り当てます。Unified ONTAPユーザは、コマンドラインインターフェイス（CLI）を使用して、アグリゲート、ボリューム、LUN、ネームスペースを作成および変更できます。</block>
-  <block id="61fd53d6a04a3c721dc360956e9ca445" category="paragraph">ASA R2システムのストレージレイヤでは、アグリゲートではなくストレージアベイラビリティゾーンを使用します。ストレージアベイラビリティゾーンは、ストレージシステム内の使用可能なすべてのディスクにアクセスできる共通のストレージプールです。ストレージアベイラビリティゾーンは、ASA R2 HAペアの両方のノードから認識できます。ストレージユニット（LUNまたはNVMeネームスペースに基づく）を作成すると、そのストレージユニットを格納するStorage Virtual Machine（VM）を含むボリュームがONTAPのストレージアベイラビリティゾーンに自動的に作成されます。この自動化されたシンプルなストレージ管理アプローチにより、ASA R2システムでは、特定のSystem Managerオプション、ONTAPコマンド、およびREST APIエンドポイントを使用できないか、または使用方法が制限されています。たとえば、ボリュームの作成と管理はASA R2システムで自動化されているため、*[ボリューム]*メニューはSystem Managerに表示されず、<block ref="4784dd0ffa42c3d1b43b0afd079dfc17" prefix=" " category="inline-code"></block>コマンドはサポートされません。</block>
   <block id="32b01bd4b9f59e30b1c7471c280b0045" category="paragraph">ASA R2ストレージは、次の点で他のONTAPストレージシステムと比較されます。</block>
   <block id="df5b8332c344a8d1a2ca6124ea06defe" category="cell">ASA r2</block>
   <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="cell">ASA</block>
@@ -1918,4 +1917,20 @@
   <block id="68852b93a73d565bf943b2e28d4c653b" category="inline-link-macro">ONTAPネットワークのIPセキュリティの設定</block>
   <block id="22935e4bd8297da6bdfa32067fc7243c" category="paragraph"><block ref="22935e4bd8297da6bdfa32067fc7243c" category="inline-link-macro-rx"></block></block>
   <block id="0a0e33e3bee1123a43e4178aad30ed45" category="sidebar">セキュアなIP接続</block>
+  <block id="8272f5b23e79d0ee33bd5151dcddc454" category="section-title">Storage VM を作成</block>
+  <block id="628df41697616cee6d5c865542d342ad" category="paragraph">クラスタのセットアップ時に、デフォルトのデータStorage Virtual Machine（VM）が作成されます。別のStorage VMを作成して選択しないかぎり、すべての新しいストレージユニットはデフォルトのデータStorage VM内に作成されます。Storage VMを追加で作成して、アプリケーション、部門、クライアントごとにストレージユニットを分離することができます。たとえば、開発環境用にストレージVMを作成して本番環境用に別のストレージVMを作成したり、財務部門用にストレージVMを作成してマーケティング部門用に別のストレージVMを作成したりできます。</block>
+  <block id="9d51c1df5884ca3290827847b5ca369e" category="list-text">[クラスタ]&gt;[Storage VM]*を選択します。</block>
+  <block id="a2606f19bd0ddba50071c32e6f0d3941" category="list-text">Storage VMの名前を入力するか、デフォルトの名前をそのまま使用します。</block>
+  <block id="47e869b5fd15e0e1eb4d7ed47d7db38e" category="list-text">[プロトコルの設定]*で、Storage VMのプロトコルを選択します。</block>
+  <block id="e5f4e279e78936e76a497e9a15004b2e" category="paragraph">iSCSIおよびNVMe/TCPの場合は*[IP]*を選択します。Fibre ChannelまたはNVMe/FCの場合は* FC *を選択します。</block>
+  <block id="7829236e8ef56480b7f29df2b14afa3a" category="list-text">Storage VM管理*で*管理者アカウントの管理*を選択し、管理者アカウントのユーザ名とパスワードを入力します。</block>
+  <block id="ff5f233f84c798fec376d29c4c3db0a9" category="list-text">Storage VMのネットワークインターフェイスを追加してください。</block>
+  <block id="b1481e6f17d8c80e8f17d881ac08a5a1" category="paragraph">Storage VMを作成しておきます。これで、Storage VMを使用してを<block ref="16349da302f4151e8c9d8212eacbac27" category="inline-link-macro-rx"></block>実行できるようになります。</block>
+  <block id="2a001457153311540278338d0772fe89" category="paragraph">iSCSI用のIP LIFを作成した場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用してiSCSI LIFの自動フェイルオーバーを有効にすることができます。</block>
+  <block id="4d1481a2752fdec4530d68b1f27aff2e" category="section-title">iSCSI LIFの自動フェイルオーバーの有効化</block>
+  <block id="7dca75f4415194c135e180d8fe8fa1a8" category="paragraph">SVM上にLIFの自動フェイルオーバーが有効になっていないiSCSI LIFがある場合、新しく作成したLIFでもLIFの自動フェイルオーバーは有効になりません。LIFの自動フェイルオーバーが有効になっていない状態でフェイルオーバーが発生すると、iSCSI LIFは移行されません。</block>
+  <block id="c6ed1523d61eecc1cc0a6a7b92992e00" category="paragraph">iSCSI LIFの自動フェイルオーバーを有効にするには、ONTAPのコマンドラインインターフェイス（CLI）を使用する必要があります。</block>
+  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">ステップ</block>
+  <block id="e44a90b30c1dfbb968cf631463193afc" category="list-text">iSCSI LIFの自動フェイルオーバーを有効にします。</block>
+  <block id="0ce336b8cb4b71d1f6d61b47075052a1" category="paragraph">ASA R2システムのストレージレイヤでは、アグリゲートではなくストレージアベイラビリティゾーンを使用します。ストレージアベイラビリティゾーンは、ストレージシステム内の使用可能なすべてのディスクにアクセスできる共通のストレージプールです。ストレージアベイラビリティゾーンは、ASA R2 HAペアの両方のノードから認識できます。ストレージユニット（LUNまたはNVMeネームスペースに基づく）を作成すると、ストレージユニットを格納するためのボリュームが、ストレージアベイラビリティゾーン内の選択したStorage Virtual Machine（VM）内にONTAPによって自動的に作成されます。この自動化されたシンプルなストレージ管理アプローチにより、ASA R2システムでは、特定のSystem Managerオプション、ONTAPコマンド、およびREST APIエンドポイントを使用できないか、または使用方法が制限されています。たとえば、ボリュームの作成と管理はASA R2システムで自動化されているため、*[ボリューム]*メニューはSystem Managerに表示されず、<block ref="4784dd0ffa42c3d1b43b0afd079dfc17" prefix=" " category="inline-code"></block>コマンドはサポートされません。</block>
 </blocks>
