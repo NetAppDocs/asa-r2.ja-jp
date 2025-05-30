@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: install-setup/prepare-hardware.html 
-keywords: prepare, hardware installation, aff a1k, aff a70, aff a90, aff c80, asa r2, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50 
+keywords: prepare, hardware installation, aff a1k, aff a70, aff a90, aff c80, asa r2, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa c30 
 summary: ONTAP環境にASA R2ストレージシステムを設置する準備をし、ハードウェアを登録してサポートを受けられるようにします。 
 ---
 = ASA R2ストレージシステムのインストールの準備
@@ -42,6 +42,14 @@ ASA R2ストレージシステムを設置するには、設置場所および�
 
 --
 .A20 、 A30 、および A50
+--
+** ストレージシステムの場合は2U
+** NS224ストレージシェルフごとに2U
+** ほとんどのスイッチで1U
+
+
+--
+.C30
 --
 ** ストレージシステムの場合は2U
 ** NS224ストレージシェルフごとに2U

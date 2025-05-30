@@ -614,8 +614,6 @@
   <block id="ab7ef1e990b02e4f310f950e86665f24" category="list-text">コントローラBで、次のポートを接続します。</block>
   <block id="a34418430d19dabd71e89f00a9e8e782" category="list-text">ポートe11aをNSM Bのポートe0aに接続します。</block>
   <block id="3a95f3cf99705bbbd01d1dd74336e9fd" category="list-text">ポートe11bをNSM Aのポートe0bに接続します。</block>
-  <block id="182824a7bd82a321df1a100637995a19" category="inline-image-macro">コントローラBのポートe11aおよびe11bを1台のNS224シェルフにケーブル接続</block>
-  <block id="86ab7b5fab8b30fc8e3619226fb66002" category="paragraph"><block ref="86ab7b5fab8b30fc8e3619226fb66002" category="inline-image-macro-rx" type="image"></block></block>
   <block id="348bd528033e13e79fcfb366a5cd5af4" category="paragraph">各コントローラを両方のNS224シェルフのNSMモジュールに接続します。図は、各コントローラからのケーブル接続を示しています。コントローラAのケーブル接続は青、コントローラBのケーブル接続は黄色です。</block>
   <block id="4b079ba797f88f932136bdbd1aa314a0" category="list-text">ポートe11aをシェルフ1のNSM Aのポートe0aに接続します。</block>
   <block id="486d7e107c3f396974308ba4cc20a5f9" category="list-text">ポートe11bをシェルフ2のNSM Bのポートe0bに接続します。</block>
@@ -1735,7 +1733,6 @@
   <block id="eb020f30ead1b473ff4a75c9863c0d1a" category="summary">ASA R2（ASA A1K、A90、A70、A50、A30、A20）システムの使用を開始するには、ハードウェアの設置、クラスタのセットアップ、データアクセスのセットアップ、およびストレージのプロビジョニングを行います。</block>
   <block id="e25344cc16f12d622f2af42aea8ed7a8" category="searchtitle">ASA A1K、A90、A70、A50、A30、A20ストレージシステムの設置とセットアップ</block>
   <block id="b3a1e3cfc607694cb423d46b8b23fa54" category="paragraph">ストレージシステムをネットワークスイッチに接続する方法については、ネットワーク管理者にお問い合わせください。</block>
-  <block id="cdd3776ed8f948030728899ab7f94b8e" category="list-text">ここでは、一般的な設定について説明します。具体的なケーブル接続は、ご使用のストレージシステム用に注文したコンポーネントによって異なります。構成の詳細については、を参照してください<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
   <block id="28c4b42113d6ebd3c5e6ca40929d04a6" category="list-text">ケーブル配線図には、ポートにコネクタを挿入する際のケーブルコネクタプルタブの正しい方向（上または下）を示す矢印アイコンがあります。</block>
   <block id="fd2cb99acafb4f0144bfb5e0e4c31373" category="paragraph">コネクタを挿入すると、カチッという音がしてコネクタが所定の位置に収まるはずです。カチッと音がしない場合は、コネクタを取り外し、裏返してもう一度試してください。</block>
   <block id="416f5908ffc86e7abf276c4f75904ee7" category="inline-image-macro">ケーブルプルタブの方向</block>
@@ -1781,40 +1778,27 @@
   <block id="7e04550968face4eb31df851171941f8" category="image-alt">1つの25GbE IOモジュールを使用したA20スイッチレスクラスタのケーブル配線図</block>
   <block id="151c289f37f59079c337dd0b4878c201" category="paragraph">*スイッチクラスタのケーブル配線*</block>
   <block id="fa02cdb8515e1cd51b4eadba9fd50080" category="paragraph">コントローラをクラスタネットワークスイッチに接続して、ONTAPクラスタ接続を作成します。</block>
-  <block id="ee68cf12a16ca46d58bedd8cf9051f32" category="example-title">2ポートの40 / 100GbE I/Oモジュールを2つ搭載したAFF A30またはAFF A50</block>
   <block id="a8d16746fb80901317600cba36862a10" category="list-text">クラスタ/ HAインターコネクト接続をケーブル接続します。</block>
-  <block id="3a343cf67a3c616a35a00f3a82358fe3" category="list-text">コントローラAのポートe4aをクラスタネットワークスイッチAにケーブル接続します。</block>
-  <block id="627172884756ce9f3fccfd51a4559c59" category="list-text">コントローラAのポートe2aをクラスタネットワークスイッチBにケーブル接続します。</block>
-  <block id="9c7f10ca7cef7791dc302ef4b9fc6cff" category="list-text">コントローラBのポートe4aをクラスタネットワークスイッチAにケーブル接続します。</block>
-  <block id="e7a7b98be669245e46e9b8f7bbe98b71" category="list-text">コントローラBのポートe2aをクラスタネットワークスイッチBにケーブル接続します。</block>
   <block id="b53a4effb80334f95a8d3a106ebd8d78" category="paragraph">* 40 / 100GbEクラスタ/ HAインターコネクトケーブル*</block>
   <block id="b0f68808f5130fe93780d063d5a249ef" category="image-alt">クラスタHA 40 / 100GbEケーブル</block>
   <block id="fdf9561d280feaca372af24a497c913c" category="image-alt">2つの100GbE IOモジュールを使用したA30およびA50スイッチクラスタのケーブル配線図</block>
-  <block id="0876d414989c1fb53595c5b00b028242" category="example-title">AFF A30またはAFF A50（2ポート40 / 100GbE I/Oモジュール×1）</block>
   <block id="03b14fd60bbaa553460ca8bf5858ac71" category="list-text">コントローラをクラスタネットワークスイッチにケーブル接続します。</block>
-  <block id="2cfaddf7a4d44f5351fdb0ee36c9c36b" category="list-text">コントローラAのポートe4bをクラスタネットワークスイッチBにケーブル接続します。</block>
-  <block id="04fca3f1f2d55aeb84370ab3e66d9214" category="list-text">コントローラBのポートe4bをクラスタネットワークスイッチBにケーブル接続します。</block>
-  <block id="b7b6d611e5d7c5c0d87c70245fb7d396" category="example-title">AFF A20：2ポート10 / 25GbE I/Oモジュール×1</block>
   <block id="9d14c26ccbbb0d65a3b5d05e2013404b" category="paragraph">* 10/25GbEクラスタ/ HAインターコネクトケーブル*</block>
   <block id="3488ff918c31f4a57e74bbab6ef9bcc9" category="inline-image-macro">1つの25GbE IOモジュールを使用したA20スイッチクラスタのケーブル配線図</block>
-  <block id="ae3bd4fc66b4084d0dc856b5f0230d72" category="paragraph"><block ref="ae3bd4fc66b4084d0dc856b5f0230d72" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7f99cbc2aa28ab9fed6e99fa94242b4a" category="section-title">手順2：ホストネットワーク接続をケーブル接続する</block>
   <block id="11b5e1f572906bdd8b96e6f22d885cd4" category="paragraph">コントローラをホストネットワークに接続します。</block>
   <block id="40a36b0ffd7a648bae61167d750303ae" category="paragraph">この手順は、ストレージシステムのモデルおよびI/Oモジュールの構成によって異なります。</block>
   <block id="3b29102e499249644dff327644d96081" category="list-text">ポートe9aおよびe9bをイーサネットデータネットワークスイッチに接続します。</block>
   <block id="4f3114ccf1048d4ddc64a6a3b00212c0" category="paragraph">イーサネットモジュールポートまたはファイバチャネル（FC）モジュールポートをホストネットワークに接続します。</block>
   <block id="fa60bebf26c9f26f466d33f766281ef9" category="paragraph">*イーサネットホストケーブル接続*</block>
-  <block id="e754a652dbb952ac31751366c3c21c14" category="example-title">ASA A30およびASA A50：2ポート40 / 100GbE I/Oモジュール×2</block>
   <block id="3202c4ba4b5ac6113c606ef9bb3c50cf" category="paragraph">各コントローラで、ポートe2bとe4bをイーサネットホストネットワークスイッチに接続します。</block>
   <block id="e827a0600a7ebd00f36ea855012f66a1" category="admonition">スロット2および4のI/Oモジュールのポートは40 / 100GbE（ホスト接続は40 / 100GbE）です。</block>
   <block id="7329bfa51dec924de206ced093bea600" category="paragraph">* 40/100GbEケーブル*</block>
   <block id="8f31147c7cfeb7520dc9739e31dedc90" category="image-alt">40 / 100Gbケーブル</block>
   <block id="ec83c89c1bfd1fa2fe72db4df75b0e43" category="image-alt">40 / 100GbEイーサネットホストネットワークスイッチへのケーブル接続</block>
-  <block id="e542a7b563f91e8435b64ab751642f56" category="example-title">ASA A20、A30、A50：4ポート10 / 25GbE I/Oモジュール×1</block>
   <block id="3e42ab3fbc066a1e09943ca314bf3205" category="paragraph">各コントローラで、ポートe2a、e2b、e2c、e2dをイーサネットホストネットワークスイッチに接続します。</block>
   <block id="c053ea984f8ec26545ef5a0f8e3c516b" category="paragraph">* 10/25GbEケーブル*</block>
   <block id="b8382f91ab365521fe8568f720b6ddd4" category="paragraph">* FCホストケーブル接続*</block>
-  <block id="54f820ebbd8d18dec75e23b076eb9340" category="example-title">ASA A20、A30、A50：4ポート64 Gb/秒FC I/Oモジュール×1</block>
   <block id="945fde23e0c7ac9dc52f131c48ef5861" category="paragraph">各コントローラで、ポート1a、1b、1c、1dをFCホストネットワークスイッチに接続します。</block>
   <block id="241c17a1be2cc4feae5c8c6007f8aed3" category="paragraph">* 64 Gb/秒FCケーブル*</block>
   <block id="176084e0e3d1d8b98919ade28704bd7b" category="inline-image-macro">64Gb FCケーブル、幅= 100px</block>
@@ -1827,10 +1811,8 @@
   <block id="827e1151fb167c880355e4177a701fcc" category="paragraph">各コントローラの管理（レンチマーク）ポートを管理ネットワークスイッチに接続します。</block>
   <block id="cc9dc8ff5d926a2f202e16be7619d147" category="section-title">手順4：シェルフをケーブル接続する</block>
   <block id="0d76e0793ffa0c020fcde5112f3ab0ac" category="paragraph">次のケーブル接続手順では、コントローラをストレージシェルフに接続する方法を示します。</block>
-  <block id="5a684badbec5242d1800f819ca49559e" category="paragraph">ストレージシステムでサポートされるシェルフの最大数、およびすべてのケーブル接続オプションについては、を参照してください<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
   <block id="11f69ba457c92cc85e478b022d6fe27d" category="example-title">オプション1：NS224ストレージシェルフ1台</block>
   <block id="dbc80d316683c8c8fbd51c4f53c57169" category="example-title">オプション2：NS224ストレージシェルフ×2</block>
-  <block id="d0102d843a83876d4bd560d55dc295dd" category="paragraph">ストレージシステムに付属のストレージケーブルを使用して、各コントローラをNS224シェルフの対応するNSM100Bモジュールに接続します。次のようなケーブルが該当します。</block>
   <block id="302158186d4e933e7fd1df5cef7e5e27" category="paragraph">図は、コントローラAのケーブル配線を青で示し、コントローラBのケーブル配線を黄色で示しています。</block>
   <block id="43f628d39f94658277cbd1d5e2ec5913" category="list-text">コントローラAをシェルフに接続します。</block>
   <block id="6c7c671b8bb322ab01af1c161215e3d7" category="list-text">コントローラAのポートe3aをNSM Aのポートe1aに接続します。</block>
@@ -1896,7 +1878,6 @@
   <block id="bca36b0a086865a5988c326bd3a3c6ef" category="list-text">システムによってブートプロセスが開始されます。最初のブートシーケンスには最大8分かかることがあります。</block>
   <block id="f3e09817ba15a4f8685cb156fe2ade6f" category="list-text">ブートプロセス中にLEDが点滅し、ファンがアクティブになり、コントローラの電源がオンになっていることを示します。</block>
   <block id="86450f6a6524d00aefa9dda44e7aee80" category="list-text">ファンが最初に起動したときに高レベルのノイズが発生する可能性があることに注意してください。起動時のファンの異音は正常。</block>
-  <block id="43dd17b3ea5146830157251c7508ca20" category="list-text">ASA A20、ASA A30、およびASA A50ストレージシステムでは、システムシャーシ前面のシェルフIDディスプレイは点灯しません。</block>
   <block id="c8aaa99aa53241360c3c889fc0ceba93" category="paragraph">ASA R2システムでは、IP LIF、FC LIF、およびNVMe/FC LIFを作成できます。IPデータLIFは、デフォルトでiSCSIとNVMe/TCPの両方のトラフィックに対応できます。FCトラフィック用とNVMe/FCトラフィック用に、別 々 のデータLIFを作成する必要があります。</block>
   <block id="f137f93169cc0e3caf4322bfd35b3f03" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="90572de4b12061d10d3adbe91dd02ace" category="inline-link-macro-rx"></block></block>
   <block id="9938ec4aaa5e9affe1e87bdd3406a54f" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="364d625567d09103e7911f1934bc8d24" category="inline-link-macro-rx"></block></block>
@@ -1933,4 +1914,50 @@
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">ステップ</block>
   <block id="e44a90b30c1dfbb968cf631463193afc" category="list-text">iSCSI LIFの自動フェイルオーバーを有効にします。</block>
   <block id="0ce336b8cb4b71d1f6d61b47075052a1" category="paragraph">ASA R2システムのストレージレイヤでは、アグリゲートではなくストレージアベイラビリティゾーンを使用します。ストレージアベイラビリティゾーンは、ストレージシステム内の使用可能なすべてのディスクにアクセスできる共通のストレージプールです。ストレージアベイラビリティゾーンは、ASA R2 HAペアの両方のノードから認識できます。ストレージユニット（LUNまたはNVMeネームスペースに基づく）を作成すると、ストレージユニットを格納するためのボリュームが、ストレージアベイラビリティゾーン内の選択したStorage Virtual Machine（VM）内にONTAPによって自動的に作成されます。この自動化されたシンプルなストレージ管理アプローチにより、ASA R2システムでは、特定のSystem Managerオプション、ONTAPコマンド、およびREST APIエンドポイントを使用できないか、または使用方法が制限されています。たとえば、ボリュームの作成と管理はASA R2システムで自動化されているため、*[ボリューム]*メニューはSystem Managerに表示されず、<block ref="4784dd0ffa42c3d1b43b0afd079dfc17" prefix=" " category="inline-code"></block>コマンドはサポートされません。</block>
+  <block id="a5e51e5f50ca83720f1d0d8b17c1e93b" category="list-text">ここでは、一般的な設定について説明します。具体的なケーブル接続は、ご使用のストレージシステム用に注文したコンポーネントによって異なります。設定およびスロットプライオリティの詳細については、を参照してください <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="ce48b5f9c255c35e0431b311322885fc" category="list-text">一般的な構成については、クラスタ/ HAおよびホストネットワークのケーブル接続手順を参照してください。</block>
+  <block id="ce72f54a68f16b1880e22ca0324ba2d3" category="paragraph">ケーブル接続手順に構成が見つからない場合は、 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>ストレージ システムを適切にケーブル接続するための包括的な構成とスロットの優先順位に関する情報。</block>
+  <block id="b3f5957e8d13865a2baa9be1f21f2f26" category="list-text">ASA A1K、ASA A70、または ASA A90 ストレージ システムを使用している場合、I/O スロットの番号は 1 ～ 11 になります。</block>
+  <block id="280b4844865d828381a08cf7c5fa9403" category="image-alt">ASA A1K、ASA A70、および ASA A90 コントローラのスロット番号</block>
+  <block id="f6380d621a082c0c194a242b5559335c" category="example-title">2ポートの40 / 100GbE I/Oモジュールを2つ搭載したASA A30またはASA A50</block>
+  <block id="9408328695e123555b17c0ac4d57eecd" category="list-text">コントローラー A のポート e4a をクラスター ネットワーク スイッチ A に接続します。</block>
+  <block id="815f2582bceacb80e5133f54d18837f2" category="list-text">コントローラー A のポート e2a をクラスター ネットワーク スイッチ B に接続します。</block>
+  <block id="4ea5630e167a49a93949fae0a08c0a1f" category="list-text">コントローラー B のポート e4a をクラスター ネットワーク スイッチ A に接続します。</block>
+  <block id="fea6452a713f117f84ac40f4c5c8a9c5" category="list-text">コントローラー B のポート e2a をクラスター ネットワーク スイッチ B に接続します。</block>
+  <block id="b7b804ab265402ae61787c636c38a6a3" category="example-title">ASA A30またはASA A50（2ポート40 / 100GbE I/Oモジュール×1）</block>
+  <block id="02ba76a663b439c597a1649b7a552dbb" category="list-text">コントローラ A のポート e4b をクラスター ネットワーク スイッチ B に接続します。</block>
+  <block id="876067e7a24fe79036654eba558e2c1b" category="list-text">コントローラー B のポート e4b をクラスター ネットワーク スイッチ B に接続します。</block>
+  <block id="e7d617cd83ffff85b1716e3bdf236b13" category="image-alt">GbE SFP銅線コネクタ</block>
+  <block id="9c5fd388a2ee6ceb65d30336d2fec257" category="open-title">C30</block>
+  <block id="bc136eeedee4f222909ef4dc89936e65" category="example-title">2 つの 2 ポート 40/100 GbE I/O モジュールを備えた ASA C30</block>
+  <block id="d10c45e8f7beef65a96450aa447c2f06" category="example-title">2 ポート 40/100 GbE I/O モジュールを 1 つ備えた ASA C30</block>
+  <block id="34976d581bae1d7b284bd3eaaebbf5da" category="image-alt">100GBE IOモジュール1つを使用したC30スイッチレスクラスタ配線図</block>
+  <block id="756127cf1c5d9fc6c88b92bfd2c43c60" category="image-alt">2つの100GBE IOモジュールを使用したC30スイッチドクラスタ配線図</block>
+  <block id="5c1af8c9ab8e0295670deef7823e8b23" category="list-text">コントローラーをクラスター ネットワーク スイッチに接続します。</block>
+  <block id="2a95db36543b0ed49d140f26d5c68cde" category="example-title">ASA A20、A30、および A50（4 ポート 10/25 GbE I/O モジュール 1 台搭載）</block>
+  <block id="41b996c4b4ae97eb30c867757090ffc8" category="example-title">ASA A20、A30、および A50（4 ポート 64 Gb/s FC I/O モジュール 1 個搭載）</block>
+  <block id="8246042d23ca859d83185957ac9c4044" category="list-text">各コントローラで、ポートe2bおよびe4bをイーサネットホストネットワークスイッチにケーブル接続します。</block>
+  <block id="7358d22f4186a5e126b0fada0a666115" category="example-title">ASA C30：4ポート10 / 25GbE I/Oモジュール×1</block>
+  <block id="baae66b5065d8c53c84d82ba2175779d" category="list-text">各コントローラで、ポートe2a、e2b、e2c、e2dをイーサネットホストネットワークスイッチにケーブル接続します。</block>
+  <block id="84f30e54db618597e0548b01a8f9bb23" category="example-title">4ポート64 Gb/s FC I/Oモジュール1個を搭載したASA C30</block>
+  <block id="8f03269dbdbab70bab244893051fb6ec" category="list-text">各コントローラで、ポート1a、1b、1c、および1dをFCホストネットワークスイッチにケーブル接続します。</block>
+  <block id="02b0ddc9c51a6fd3d072763fb5b859f3" category="paragraph">ストレージシステムでサポートされるシェルフの最大数、および光ファイバやスイッチ接続などのすべてのケーブル接続オプションについては、を参照してください<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="ed57089257c5bf0e9855c2abce5e2f2c" category="paragraph">AFF A1Kストレージシステムは、NSM100またはNSM100Bモジュールを搭載したNS224シェルフをサポートします。モジュール間の主な違いは次のとおりです。</block>
+  <block id="bee9bdef55e93399a97d85b3925cfca2" category="list-text">NSM100 シェルフ モジュールは、組み込みポート e0a および e0b を使用します。</block>
+  <block id="1d18f8f4fb2168d48bce60e13139f7da" category="list-text">NSM100B シェルフ モジュールは、スロット 1 のポート e1a と e1b を使用します。</block>
+  <block id="cc71e1eb20bbf56ae364562c6769007c" category="paragraph">次の配線例は、シェルフ モジュール ポートを参照する場合の NS224 シェルフ内の NSM100 モジュールを示しています。</block>
+  <block id="bf3082f44633e623761fac0a042bfa3f" category="inline-image-macro">コントローラBのポートe11aとe11bを単一のNS224シェルフに接続します。</block>
+  <block id="68b3b4b28307463a871642d9f01ab048" category="paragraph"><block ref="68b3b4b28307463a871642d9f01ab048" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="01bd09c5271f772a108914f35e7efcd3" category="paragraph">AFF A70および90ストレージシステムは、NSM100またはNSM100Bモジュールを搭載したNS224シェルフをサポートします。モジュール間の主な違いは次のとおりです。</block>
+  <block id="2486a91e78743df4d0cc635c5b8b51c8" category="list-text">NSM100 シェルフ モジュールは、組み込みポート e0a および e0b を使用します。</block>
+  <block id="a93a7a45b049b849ed9c03ad1c596615" category="paragraph">NS224シェルフの配線手順では、NSM100モジュールではなくNSM100Bモジュールが示されています。使用するNSMモジュールの種類に関わらず、配線は同じで、ポート名のみが異なります。</block>
+  <block id="30898d03a4ca37450e8ab2be81f38dd5" category="list-text">NSM100B モジュールは、スロット 1 の I/O モジュール上のポート e1a と e1b を使用します。</block>
+  <block id="e6c68585977f6b3e8b2b4ced88ca3d4d" category="list-text">NSM100 モジュールは、内蔵 (オンボード) ポート e0a および e0b を使用します。</block>
+  <block id="215caa644827ccfb864125e557ed29f2" category="paragraph">ストレージ システムに付属のストレージ ケーブルを使用して、各コントローラを NS224 シェルフ上の各 NSM モジュールに接続します。ストレージ ケーブルの種類は次のとおりです。</block>
+  <block id="6c69c43899171bbdeff48b0407169a1e" category="list-text">キャビネットまたは Telco ラックのガイド ピンがストレージ システムのガイド スロットにしっかりと固定されていることを確認します。</block>
+  <block id="260e26066a84ba8b3722b386796dd177" category="image-alt">ASA A90 ASA A70重量警告アイコン</block>
+  <block id="430f612bc8e82ffd0dfe48278467d55e" category="image-alt">ASA A20 A30 A50 重量注意アイコン</block>
+  <block id="d7c72b30313c5745f0e330939a9ac031" category="paragraph">ASA C30 ストレージ システムの重量は最大 61.5 ポンド (27.9 kg) になります。ストレージ・システムを持ち上げるには、2人で作業するか、油圧リフトを使用します。</block>
+  <block id="7dcb9af2c1167cd0c65ac5b5a874a41d" category="image-alt">ASA A20 A30またはA50の重量注意アイコン</block>
+  <block id="48931ca8df47e809f96404b5fc332cc1" category="list-text">ASA A20、A30、A50、および ASA C30 ストレージ システムの場合、システム シャーシの前面にあるシェルフ ID ディスプレイは点灯しません。</block>
 </blocks>

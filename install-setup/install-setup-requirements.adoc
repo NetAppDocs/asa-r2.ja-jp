@@ -52,14 +52,21 @@ image::../media/drw_a1k_weight_caution_ieops-1698.svg[ASA A1Kリフティング�
 --
 ASA A70またはASA A90ストレージシステムの重量は最大68.8 kg（151.68ポンド）です。ストレージ・システムを持ち上げるには、4人で作業するか、油圧リフトを使用します。
 
-image::../media/drw_a70-90_weight_icon_ieops-1730.svg[ASA A90]
+image::../media/drw_a70-90_weight_icon_ieops-1730.svg[ASA A90 ASA A70重量警告アイコン]
 
 --
 .A20 、 A30 、および A50
 --
 ASA A20、ASA A30、またはASA A50ストレージシステムの重量は最大27.9 kg（61.5ポンド）です。ストレージ・システムを持ち上げるには、2人で作業するか、油圧リフトを使用します。
 
-image::../media/drw_g_lifting_weight_ieops-1831.svg[ASA A20,A30,or an A50 weight caution icon]
+image::../media/drw_g_lifting_weight_ieops-1831.svg[ASA A20 A30 A50 重量注意アイコン]
+
+--
+.C30
+--
+ASA C30 ストレージ システムの重量は最大 61.5 ポンド (27.9 kg) になります。ストレージ・システムを持ち上げるには、2人で作業するか、油圧リフトを使用します。
+
+image::../media/drw_g_lifting_weight_ieops-1831.svg[ASA A20 A30またはA50の重量注意アイコン]
 
 --
 ====

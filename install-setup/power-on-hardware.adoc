@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: install-setup/power-on-hardware.html 
-keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, power on 
+keywords: asa r2, aff a1k, aff a70, aff a90, aff c80, asa a1k, asa a90, asa a70, asa a30, asa a20, asa a50, asa c30, power on 
 summary: 各シェルフの電源をオンにして一意のシェルフIDを割り当て、ASA R2コントローラの電源をオンにして、電源ケーブルを固定します。 
 ---
 = ASA R2ストレージシステムの電源をオンにします。
@@ -156,6 +156,11 @@ image::../media/drw_a1k_70-90_console_connection_ieops-1702.svg[コンソール�
 image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[コンソール接続]
 
 --
+.C30
+--
+image::../media/drw_g_isi_console_serial_port_cabling_ieops-1882.svg[コンソール接続]
+
+--
 ====
 
 
@@ -181,12 +186,17 @@ image::../media/drw_affa1k_power_source_icon_ieops-1700.svg[A1Kストレージ�
 image::../media/drw_psu_layout_1_ieops-1886.svg[A20、A30、A50ストレージ・システムの電源接続図]
 
 --
+.C30
+--
+image::../media/drw_psu_layout_1_ieops-1886.svg[A20、A30、A50ストレージ・システムの電源接続図]
+
+--
 ====
 +
 ** システムによってブートプロセスが開始されます。最初のブートシーケンスには最大8分かかることがあります。
 ** ブートプロセス中にLEDが点滅し、ファンがアクティブになり、コントローラの電源がオンになっていることを示します。
 ** ファンが最初に起動したときに高レベルのノイズが発生する可能性があることに注意してください。起動時のファンの異音は正常。
-** ASA A20、ASA A30、およびASA A50ストレージシステムでは、システムシャーシ前面のシェルフIDディスプレイは点灯しません。
+** ASA A20、A30、A50、および ASA C30 ストレージ システムの場合、システム シャーシの前面にあるシェルフ ID ディスプレイは点灯しません。
 
 
 
