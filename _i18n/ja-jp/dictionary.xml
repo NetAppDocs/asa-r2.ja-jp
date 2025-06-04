@@ -184,29 +184,20 @@
   <block id="b1fa95bfdd87d26ef5f8aca8df282454" category="paragraph">ONTAPは、デフォルトで、ASA R2システム上のファームウェアとシステムファイルを自動的にダウンロードして更新します。推奨される更新がダウンロードされてインストールされる前に、ONTAP System Managerを使用して自動更新を無効にしたり、更新パラメータを編集したりして、操作が実行される前に利用可能な更新に関する通知を表示したりできます。</block>
   <block id="9543e3c5ee671be608b8d7358d2905b4" category="section-title">自動更新を有効にする</block>
   <block id="16dd8aa4e8a61c5fff4660292af260d6" category="paragraph">ストレージファームウェア、SP / BMCファームウェア、およびシステムファイルの推奨アップデートは、デフォルトで自動的にダウンロードされ、ASA R2システムにインストールされます。自動更新が無効になっている場合は、自動更新を有効にしてデフォルトの動作に戻すことができます。</block>
-  <block id="61afff9f522bbf671738bb412c8fe956" category="list-text">[自動更新]*の横にあるを選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[有効化]*を選択します。</block>
-  <block id="a05df79f4b35e5abaa3bdc88c372d245" category="list-text">EULAを読んで同意します。</block>
-  <block id="e96b4d3ae2048d6e0ab6b5175cdc67ba" category="list-text">デフォルトのままにして、ファームウェアとシステムファイルを自動的に更新します。必要に応じて、通知を表示するか、推奨される更新を自動的に却下するかを選択します。</block>
   <block id="17ac6cdd9934a4f4aca00f5228a64555" category="list-text">更新の変更が現在および将来のすべての更新に適用されることを承認する場合に選択します。</block>
   <block id="7ae6e72fcf95f7e0b8f4dbe1153d8398" category="paragraph">推奨されるアップデートは、選択したアップデートに基づいて、ASA R2システムに自動的にダウンロードされ、インストールされます。</block>
   <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">自動更新を無効にする</block>
   <block id="6141cdc0ba26479d87d6b8c24af9fc18" category="paragraph">推奨されるアップデートをインストール前に表示できるようにするには、自動アップデートを無効にします。自動更新を無効にした場合は、ファームウェアとシステムファイルの更新を手動で実行する必要があります。</block>
-  <block id="292eff21b210f8e769ea67e93af60cc2" category="list-text">[自動更新]*の横にあるを選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[無効化]*を選択します。</block>
   <block id="3a73131e5e1a3a498c8e055e84a30f60" category="paragraph">自動更新は無効になっています。推奨される更新プログラムを定期的に確認し、手動インストールを実行するかどうかを決定する必要があります。</block>
   <block id="e8b8aa5f70e0a4459ca2284f8da3b813" category="section-title">自動更新の表示</block>
   <block id="6edf33a55c81d08e5aac13aae918832c" category="paragraph">クラスタにダウンロードされ、自動インストールがスケジュールされているファームウェアおよびシステムファイルの更新のリストを表示します。また、以前に自動的にインストールされたアップデートも表示します。</block>
-  <block id="abd4e9614ca55c29d3b65381570676f5" category="list-text">[自動更新]*の横にあるを選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[すべての自動更新を表示]*を選択します。</block>
   <block id="c5f5044ff24461ba8a4e4a6bc2887bd0" category="section-title">自動更新の編集</block>
   <block id="aa32761812c5105416e1c8de6901bbf8" category="paragraph">ストレージファームウェア、SP / BMCファームウェア、およびシステムファイルの推奨される更新をクラスタに自動的にダウンロードしてインストールするか、推奨される更新を自動的に却下するかを選択できます。更新プログラムのインストールまたは却下を手動で制御する場合は、推奨される更新プログラムが利用可能になったときに通知を受け取るを選択します。その後、手動でインストールまたは却下を選択できます。</block>
-  <block id="72c17efc027d7f0c3f48d02c16886905" category="list-text">[自動更新]*の横にあるを選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[自動更新の編集]*を選択します。</block>
   <block id="820669251a6d9aa8a265e4aa20459cdf" category="list-text">自動更新の選択を更新します。</block>
   <block id="aed3f23a5ce94e81514a2da9dce9b2ef" category="paragraph">選択内容に基づいて自動更新が変更されます。</block>
   <block id="d51f54f2a9182b10cea278ae35000b46" category="section-title">ファームウェアの手動更新</block>
   <block id="bc1104446ea3d0b83abd00c11e939335" category="paragraph">推奨される更新プログラムをダウンロードしてインストールする前に表示できる柔軟性が必要な場合は、自動更新を無効にしてファームウェアを手動で更新できます。</block>
   <block id="bf48a37237272ddc300e21b45b8971dc" category="list-text">ファームウェアアップデートファイルをサーバーまたはローカルクライアントにダウンロードします。</block>
-  <block id="484bee1f3996418a874aa526da0b5753" category="list-text">System Managerで、*[クラスタ]&gt;[概要]*を選択し、*[更新]*を選択します。</block>
-  <block id="e5f510366eded3b692a9273af6f6bd62" category="inline-image-macro">プラス記号が付いた青い四角形の後に、ファームウェアを更新するという文字が白い文字で表示されます。</block>
-  <block id="1c6248c9b917dc357a68441deb105f78" category="list-text">[Firmware update]*を選択し、を選択し<block ref="86ace020e2f51d5cc4db2b665d9f2405" category="inline-image-macro-rx" type="image"></block>ます。</block>
   <block id="70bd8d7d7e01ac7ceebd8e8ba2be8da6" category="paragraph">ファームウェアが更新されました。</block>
   <block id="a8d696bbc3e0da20e552c1bb59ce8581" category="doc">ASA R2ストレージシステムでのユーザアカウントとロールの管理</block>
   <block id="26c63dfee3232ccec05fbebd34b103b5" category="paragraph">System Managerを使用して、Active Directoryドメインコントローラアクセス、LDAPおよびSAML認証をユーザアカウントに設定します。ユーザアカウントロールを作成して、そのロールに割り当てられたユーザがクラスタで実行できる特定の機能を定義します。</block>
@@ -1724,14 +1715,10 @@
   <block id="cc1a9524f9ddd8574a5553ccd90ee9c3" category="paragraph">ONTAPのコマンドラインインターフェイス（CLI）を使用して、クラスタレベルのキー管理ツールとStorage VMレベルのキー管理ツールの間でキーを移行できます。</block>
   <block id="5efbf2392161773688bf42568dd2c8c6" category="list-text">キーを移行します。</block>
   <block id="f7d82610ce1c76769575f4a95bb11e80" category="sidebar">キー管理ツール間でデータ暗号化キーを移行する</block>
-  <block id="77a58a8f042eca52cbae63333451e567" category="summary">ASA R2システム（ASA A1K、A90、A70、A50、A30、A20）は、SANのみのお客様にシンプルなエクスペリエンスを提供する、ハードウェアとソフトウェアの統合ソリューションです。</block>
-  <block id="16b2362ce213edbe317b5df3169d035c" category="searchtitle">ASA A1K、A90、A70、A50、A30、A20システムの詳細</block>
   <block id="feb8007866385642b73ef1e6524ba327" category="paragraph">NetApp ASA R2システムは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせたシンプルな操作性を実現します。</block>
   <block id="3ee9bc9a210bd85fa921ca63bdeef612" category="list-text">ASA A50</block>
   <block id="e21bdbd552261278be0a5ad02fbc6fa7" category="list-text">ASA A30</block>
   <block id="3c609b480f1311eaec9774146ac50e79" category="list-text">ASA A20</block>
-  <block id="eb020f30ead1b473ff4a75c9863c0d1a" category="summary">ASA R2（ASA A1K、A90、A70、A50、A30、A20）システムの使用を開始するには、ハードウェアの設置、クラスタのセットアップ、データアクセスのセットアップ、およびストレージのプロビジョニングを行います。</block>
-  <block id="e25344cc16f12d622f2af42aea8ed7a8" category="searchtitle">ASA A1K、A90、A70、A50、A30、A20ストレージシステムの設置とセットアップ</block>
   <block id="b3a1e3cfc607694cb423d46b8b23fa54" category="paragraph">ストレージシステムをネットワークスイッチに接続する方法については、ネットワーク管理者にお問い合わせください。</block>
   <block id="28c4b42113d6ebd3c5e6ca40929d04a6" category="list-text">ケーブル配線図には、ポートにコネクタを挿入する際のケーブルコネクタプルタブの正しい方向（上または下）を示す矢印アイコンがあります。</block>
   <block id="fd2cb99acafb4f0144bfb5e0e4c31373" category="paragraph">コネクタを挿入すると、カチッという音がしてコネクタが所定の位置に収まるはずです。カチッと音がしない場合は、コネクタを取り外し、裏返してもう一度試してください。</block>
@@ -1864,9 +1851,7 @@
   <block id="676b7066692787a119854c062d5f6c05" category="list-text">各コントローラまたは一部のシステムでは、各コントローラのシステム管理モジュール</block>
   <block id="3b2136486adac3ad66275a45c07c6ebf" category="image-alt">システムシリアル番号の例</block>
   <block id="6b127ae60215df1a5f77bc62deb0fa41" category="list-text">シリアル番号が表示されない場合は、NetAppの新規のお客様向けの手順に従います。</block>
-  <block id="556e0ee8174fe1dd298dfe165915e58f" category="summary">一部のONTAPコマンドは、ASA R2システム（ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20）ではサポートされていません。</block>
   <block id="d4b904a6ceddca0805b85998f1946d36" category="paragraph">ONTAP 9.16.1以降では、次のNetApp ASA R2システムがサポートされます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。</block>
-  <block id="1afab26d25573baff41c4a297e2b15fb" category="sidebar">NetApp ASA R2システム（ASA A1K、ASA A90、ASA A70、ASA A50、ASA A30、ASA A20）は、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを実現します。</block>
   <block id="9e607734cbe02d05fcbdf2a8bd579b3a" category="inline-link-macro">キー管理ツール間での暗号化キーの移行のサポート</block>
   <block id="c18d7ea3e180dd72f3fc8869a57e6376" category="cell"><block ref="c18d7ea3e180dd72f3fc8869a57e6376" category="inline-link-macro-rx"></block></block>
   <block id="86c79aae612f98a6019861f950eeb1a3" category="cell">クラスタレベルでONTAPのオンボードキーマネージャを外部キー管理ツールに切り替える場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用して、暗号化キーをあるキー管理ツールから別のキー管理ツールに簡単に移行できます。</block>
@@ -1960,4 +1945,20 @@
   <block id="d7c72b30313c5745f0e330939a9ac031" category="paragraph">ASA C30 ストレージ システムの重量は最大 61.5 ポンド (27.9 kg) になります。ストレージ・システムを持ち上げるには、2人で作業するか、油圧リフトを使用します。</block>
   <block id="7dcb9af2c1167cd0c65ac5b5a874a41d" category="image-alt">ASA A20 A30またはA50の重量注意アイコン</block>
   <block id="48931ca8df47e809f96404b5fc332cc1" category="list-text">ASA A20、A30、A50、および ASA C30 ストレージ システムの場合、システム シャーシの前面にあるシェルフ ID ディスプレイは点灯しません。</block>
+  <block id="39256e8b85463e186dc7bbc4daac9a22" category="list-text">*ソフトウェア更新*の下で*有効*を選択します。</block>
+  <block id="c06b2149bbe3e94f6eac8a64039cc025" category="list-text">EULA をお読みください。</block>
+  <block id="d6aeb9cf91111f522e0f1901518a3836" category="list-text">推奨される更新の通知を表示する（デフォルト）をそのまま使用します。必要に応じて、推奨される更新を「自動的に更新する」または「自動的に閉じる」を選択します。</block>
+  <block id="03e58722e5fd35b95b0154a42ee279d7" category="list-text">*ソフトウェア更新*の下で*無効*を選択します。</block>
+  <block id="e087c576f536a1cc1b027d2338ddf55d" category="list-text">*ソフトウェアアップデート*の横にある<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>をクリックし、[すべての自動更新を表示] を選択します。</block>
+  <block id="e3cdf65f6a174657c946f8da21d91054" category="list-text">*ソフトウェアアップデート*の横にある<block ref="5f3155aaa1f70c7a47a7d47ad66cef2b" category="inline-image-macro-rx" type="image"></block>を選択し、[*その他すべての更新プログラム*] を選択します。</block>
+  <block id="97edade986fff30cbc58d1915b7fc92b" category="list-text">System Manager で、*クラスター &gt; 概要* を選択し、*その他のすべての更新* を選択します。</block>
+  <block id="7d089e6b0cd0c4c6a9cc9f51d3933449" category="list-text">*手動更新*の下で、*ファームウェア ファイルの追加*を選択し、*サーバーからダウンロード*または*ローカル クライアントからアップロード*を選択します。</block>
+  <block id="a8e89726f0704bd34a60f163989365a7" category="list-text">ファームウェア更新ファイルをインストールします。</block>
+  <block id="7c0a9ac67bcf9f088200f570d11de5cb" category="summary">ASA r2 システム (ASA A1K、A90、A70、A50、A30、A20、C30) は、SAN のみの顧客向けに簡素化されたエクスペリエンスを実現する統合ハードウェアおよびソフトウェア ソリューションを提供します。</block>
+  <block id="9e6435d0d0e7d0459a63bf9be064a900" category="searchtitle">ASA A1K、A90、A70、A50、A30、A20、C30システムについて学ぶ</block>
+  <block id="14a1b02d9ac34f22a362671d392a3852" category="list-text">ASA C30</block>
+  <block id="e2c77d4bd35cfd8d81e8af62db4c144b" category="summary">ASA r2 (ASA A1K、A90、A70、A50、A30、A20、C30) システムの使用を開始するには、ハードウェアをインストールし、クラスターをセットアップし、データ アクセスをセットアップし、ストレージをプロビジョニングします。</block>
+  <block id="434872b119bd955476c150025f7da4b2" category="searchtitle">ASA A1K、A90、A70、A50、A30、A20、C30 ストレージ システムのインストールとセットアップ</block>
+  <block id="c3993bfac3ec8dac794fe31c3a3f3195" category="summary">特定の ONTAP コマンドは、ASA r2 システム (ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20、ASA C30) ではサポートされていません。</block>
+  <block id="13af08b425d55aad64c53d60ae2a530a" category="sidebar">NetApp ASA r2 システム (ASA A1K、ASA A90、ASA A70、ASA A50、ASA A30、ASA A20、ASA C30) は、SAN のみを利用するお客様のニーズに合わせた簡素化されたエクスペリエンスを実現する、統合されたハードウェアおよびソフトウェア ソリューションを提供します。</block>
 </blocks>

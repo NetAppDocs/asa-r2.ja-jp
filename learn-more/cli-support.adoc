@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: learn-more/cli-support.html 
-keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20cli 
-summary: 一部のONTAPコマンドは、ASA R2システム（ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20）ではサポートされていません。 
+keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, comand line interface 
+summary: '特定の ONTAP コマンドは、ASA r2 システム (ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20、ASA C30) ではサポートされていません。' 
 ---
 = ASA R2ストレージシステムのONTAP CLIサポート
 :allow-uri-read: 

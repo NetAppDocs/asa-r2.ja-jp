@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: administer/reboot-take-over-give-back-nodes.html 
-keywords: reboot, take over, give back, nodes, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20 
+keywords: reboot, take over, give back, nodes, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30 
 summary: メンテナンス、トラブルシューティング、ソフトウェアの更新、またはその他の管理上の理由で、ノードのリブートが必要になることがあります。 
 ---
 = ASA R2ストレージシステムでノードをリブートする

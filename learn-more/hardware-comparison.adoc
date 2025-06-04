@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: learn-more/hardware-comparison.html 
-keywords: compare asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, hardware comparison, asa r2 
+keywords: compare asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, hardware comparison, asa r2 
 summary: ASAシステムは、SANのみのソリューション向けに最適化されたハードウェアサポートを提供します。ASA R2システムは、ハードウェアとソフトウェアの最適化を提供します。 
 searchtitle: ASA R2システムを他のONTAPシステムと比較する 
 ---
@@ -62,6 +62,7 @@ ASA R2ストレージは、次の点で他のONTAPストレージシステムと
 * ASA A50
 * ASA A30
 * ASA A20
+* ASA C30
 
 
 .詳細情報
