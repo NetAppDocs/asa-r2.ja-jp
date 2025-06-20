@@ -545,7 +545,6 @@
   <block id="db202dbb9a4a22e347c683ae7290b969" category="list-text">ストレージユニット_を指定すると、SANホストでデータ処理に使用できるストレージスペースが確保されます。ストレージユニットとは、SCSIホストの場合はLUN、NVMeホストの場合はNVMeネームスペースを指します。</block>
   <block id="e2969be58319571a8d10cc30d53f9a3b" category="list-text">コンシステンシグループ_は、1つのユニットとして管理されるストレージユニットの集まりです。</block>
   <block id="db5d2125ba43a68e1d147723a1fd42d2" category="paragraph">ASA R2システムは、ストレージユニットとコンシステンシグループを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、10個のストレージユニットで構成されるデータベースが整合グループ内にあり、データベース全体をバックアップする必要があるとします。各ストレージユニットを個別にバックアップする代わりに、整合グループをバックアップすることでデータベース全体を保護できます。</block>
-  <block id="99d7a989df24ddfeaed42c100e841eea" category="paragraph">盗難やランサムウェアなどの悪意のある攻撃からデータを保護するために、ASA R2システムはオンボードキーマネージャ、デュアルレイヤ暗号化、改ざん防止スナップショット、多要素認証、マルチ管理者検証をサポートしています。</block>
   <block id="85af1289b342af44c3abb8f8013b47f6" category="paragraph">ASA R2システムでは、現在のASA、AFF、またはFASシステムとのクラスタ混在はサポートされていません。</block>
   <block id="989f2b4edace5981db8b18b1ad4a385f" category="list-text">ASA R2システムのサポートおよび制限の詳細については、を<block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>参照してください。</block>
   <block id="2b304856171196502641312a496c6d54" category="inline-link-macro">NetApp ASA</block>
@@ -1961,4 +1960,5 @@
   <block id="434872b119bd955476c150025f7da4b2" category="searchtitle">ASA A1K、A90、A70、A50、A30、A20、C30 ストレージ システムのインストールとセットアップ</block>
   <block id="c3993bfac3ec8dac794fe31c3a3f3195" category="summary">特定の ONTAP コマンドは、ASA r2 システム (ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20、ASA C30) ではサポートされていません。</block>
   <block id="13af08b425d55aad64c53d60ae2a530a" category="sidebar">NetApp ASA r2 システム (ASA A1K、ASA A90、ASA A70、ASA A50、ASA A30、ASA A20、ASA C30) は、SAN のみを利用するお客様のニーズに合わせた簡素化されたエクスペリエンスを実現する、統合されたハードウェアおよびソフトウェア ソリューションを提供します。</block>
+  <block id="3087fbc39029f766e18398db33407a03" category="paragraph">盗難やランサムウェアなどの悪意のある攻撃からデータを保護するために、ASA r2システムはオンボードキーマネージャー、二層暗号化、多要素認証、マルチ管理者認証をサポートしています。また、セカンダリASA r2システムでは改ざん防止スナップショットもサポートされています。</block>
 </blocks>
