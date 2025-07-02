@@ -26,9 +26,42 @@ ASA R2システムでは、ストレージシステムで使用可能な特定�
 * `lun move`
 * `lun move-in-volume`
 +
-このコマンドは、lun rename / vserver nvme namespace renameに置き換えられました。
+
+NOTE: その `lun move-in-volume`コマンドは、  `lun rename`そして `vserver nvme namespace rename`コマンド。
 
 * `lun transition`
+
+
+====
+.サポートされない<code> storage </code>コマンド
+[%collapsible]
+====
+* `storage failover show-takeover`
+* `storage failover show-giveback`
+* `storage aggregate relocation`
+* `storage disk assign`
+* `storage disk partition`
+* `storage disk reassign`
+
+
+====
+.サポートされない<code> Volume </code>コマンドセット
+[%collapsible]
+====
+* `volume activity-tracking`
+* `volume analytics`
+* `volume conversion`
+* `volume file`
+* `volume flexcache`
+* `volume flexgroup`
+* `volume inode-upgrade`
+* `volume object-store`
+* `volume qtree`
+* `volume quota`
+* `volume reallocation`
+* `volume rebalance`
+* `volume recovery-queue`
+* `volume schedule-style`
 
 
 ====
@@ -41,7 +74,7 @@ ASA R2システムでは、ストレージシステムで使用可能な特定�
 * `volume expand`
 * `volume modify`
 +
-このコマンドは、次のパラメータと組み合わせて使用する場合は使用できません。
+その `volume modify`このコマンドは、次のパラメータと組み合わせて使用する場合は使用できません。
 
 +
 ** `-anti-ransomware-state`
@@ -103,38 +136,6 @@ ASA R2システムでは、ストレージシステムで使用可能な特定�
 * `volume snapshot`
 * `volume snapshot autodelete modify`
 * `volume snapshot policy modify`
-
-
-====
-.サポートされない<code> Volume </code>コマンドセット
-[%collapsible]
-====
-* `volume activity-tracking`
-* `volume analytics`
-* `volume conversion`
-* `volume file`
-* `volume flexcache`
-* `volume flexgroup`
-* `volume inode-upgrade`
-* `volume object-store`
-* `volume qtree`
-* `volume quota`
-* `volume reallocation`
-* `volume rebalance`
-* `volume recovery-queue`
-* `volume schedule-style`
-
-
-====
-.サポートされない<code> storage </code>コマンド
-[%collapsible]
-====
-* `storage failover show-takeover`
-* `storage failover show-giveback`
-* `storage aggregate relocation`
-* `storage disk assign`
-* `storage disk partition`
-* `storage disk reassign`
 
 
 ====
