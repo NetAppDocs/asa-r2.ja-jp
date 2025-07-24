@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: data-protection/configure-snapmirror-active-sync.html 
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security 
+summary: 災害発生時にセカンダリ データ コピーを作成し、自動フェイルオーバーを有効にすることで、ビジネスの継続性を確保するためにSnapMirrorアクティブ シンクを構成する方法を学習します。 
+---
+= ASA r2 システムでSnapMirrorアクティブ同期を構成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirrorアクティブ同期を構成して、セカンダリ サイトにデータのコピーを作成し、災害発生時にホスト アプリケーションが自動的かつ透過的にフェイルオーバーできるようにします。
+
+ASA r2システムでは、 SnapMirror Active Syncは対称型アクティブ/アクティブ構成をサポートします。対称型アクティブ/アクティブ構成では、両方のサイトからアクティブI/O用のローカルストレージにアクセスできます。
+
+
+NOTE: iSCSIまたはFCプロトコルを使用しており、VMware Sphere用のONTAPツールを使用している場合は、オプションでlink:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["ONTAP Tools for VM ware を使用してSnapMirror Active Sync を設定する"^] 。
+
+.開始する前に
+link:create-snapshots.html#step-1-optionally-create-a-consistency-group["一貫性グループを作成する"]プライマリサイトに新しいストレージユニットを追加し、非均一な対称アクティブ/アクティブ構成を作成する場合は、セカンダリサイトにも新しいストレージユニットを追加して整合性グループを作成してください。
+
+詳細はこちら https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/#key-concepts["非均一"]対称アクティブ/アクティブ構成。
+
+.手順
+. System Managerで、*[保護]>[整合グループ]*を選択します。
+. SnapMirrorアクティブ同期で保護する整合性グループの名前にマウスを移動します。
+. 選択image:icon_kabob.gif["3つの垂直な青い点"]次に、[保護] を選択します。
+. [リモート保護]*で、*[リモートクラスタにレプリケート]*を選択します。
+. 既存のクラスター ピアを選択するか、*新しいクラスター ピアを追加*することを選択します。
+. Storage VMを選択します。
+. レプリケーション ポリシーには、*AutomatedFailOverDuplex* を選択します。
+. 非均一な対称アクティブ/アクティブ構成を作成する場合は、「*宛先設定*」を選択し、この手順を開始する前に作成する新しい宛先整合性グループの名前を入力します。
+. [ 保存（ Save ） ] を選択します。
+
+
+.結果
+SnapMirrorアクティブ同期は、災害発生時にゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。

@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-unplanned-failover.html 
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security 
+summary: ASA r2 クラスターの計画外のフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立する方法を学びます。 
+---
+= ASA r2 クラスタの予期しないフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立します。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自動計画外フェイルオーバー（AUFO）処理は、プライマリ クラスタが停止しているか分離されている場合に実行されます。メディエーターはフェイルオーバーが発生したことを検出し、セカンダリ クラスターへの計画外フェイルオーバーを自動的に実行します。セカンダリ クラスタがプライマリに変換されてクライアントへのデータの提供を開始します。
+
+.開始する前に
+* SnapMirrorアクティブ同期関係が同期されている必要があります。
+* ストレージ ユニットの移動などの中断を伴わない操作が進行中の場合は、計画されたフェイルオーバーを開始することはできません。
+* ONTAP Mediatorが設定されて接続され、クォーラムを構成している必要があります。
+
+
+.手順
+. *保護 > レプリケーション*を選択します。
+. 再確立する必要があるSnapMirrorアクティブ同期関係を選択します。
+. 関係ステータスに「*InSync*」と表示されるまで待ちます。
+. 選択image:icon_kabob.gif["3つの垂直な青い点"] ; 次に、[フェールオーバー] を選択して、元のプライマリ クラスターで操作を再開します。
+
+
+.次の手順
+ホストへの I/O パスが失われないようにするには、プライマリ クラスターで操作を再開した後、ホスト パスを再スキャンする必要があります。

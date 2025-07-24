@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-prepare.html 
+keywords: asa r2, data protection, business continuity, snapmirror active sync, protocol support, object limits, NVMe protocol limitations, prerequisites, interoperability, limits 
+summary: ASA r2 システムでSnapMirror Active Sync を設定するための準備として、設定の前提条件を確認し、ホストのオペレーティング システムのサポートを確認し、特定の設定に影響を与える可能性のあるオブジェクトの制限に注意する必要があります。 
+---
+= ASA r2 システムでSnapMirror Active Sync を設定するための準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA r2 システムでSnapMirror Active Sync を設定するための準備として、設定の前提条件を確認し、ホストのオペレーティング システムのサポートを確認し、特定の設定に影響を与える可能性のあるオブジェクトの制限に注意する必要があります。
+
+.手順
+. SnapMirrorのアクティブ同期を確認するlink:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html["前提条件"^] 。
+. link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html["ホストオペレーティングシステムがサポートされていることを確認する"^] SnapMirrorアクティブ同期用。
+. レビューlink:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html["オブジェクトの制限"]構成に影響する可能性があります。
+. ASA r2 システム上のSnapMirror Active Sync のホスト プロトコル サポートを確認します。
++
+ASA r2 システムでのSnapMirror Active Sync のサポートは、 ONTAP のバージョンとホスト プロトコルによって異なります。
+
++
+[cols="2,2"]
+|===
+| ONTAPバージョン | SnapMirrorアクティブ同期は以下をサポートします... 
+
+
+| 9.17.1  a| 
+** iSCSI
+** FC
+** NVMe/FC
+** NVMe/TCP
+
+
+
+
+| 9.16.0  a| 
+** iSCSI
+** FC
+
+
+|===
+
+
+
+
+== ASA r2 システムにおけるSnapMirror Active Sync の NVMe プロトコルの制限
+
+NVMe ホストを備えたASA r2 システムでSnapMirror Active Sync を設定する前に、特定の NVMe プロトコルの制限事項に注意する必要があります。
+
+NVMe サブシステム内のすべての NVMe ストレージ ユニットは、同じ整合性グループのメンバーである必要があり、すべてが同じSnapMirrorアクティブ同期関係の一部である必要があります。
+
+NVMe/FC および NVMe/TCP プロトコルは、 SnapMirrorアクティブ同期で次のようにサポートされます。
+
+* 2ノードクラスタのみ
+* ESXiホストのみ
+* 対称アクティブ/アクティブ構成のみ
++
+非対称アクティブ/アクティブ構成は、NVMe ホストではサポートされません。
+
+
+
+NVMe を使用したSnapMirrorアクティブ同期では、以下はサポートされません。
+
+* 複数の整合性グループにマッピングされたサブシステム
++
+整合性グループは複数のサブシステムにマップできますが、各サブシステムは 1 つの整合性グループにのみマップできます。
+
+* SnapMirrorアクティブ同期関係におけるコンシステンシグループの拡張
+* SnapMirrorアクティブ同期関係にない NVMe ストレージユニットを複製されたサブシステムにマッピングする
+* 整合性グループからストレージユニットを削除する
+* 一貫性グループのジオメトリの変更
+* link:https://docs.netapp.com/us-en/ontap/san-admin/microsoft-offloaded-data-transfer-odx-concept.html["Microsoftオフロード データ転送（ODX）"]
+
+
+.次の手順
+SnapMirrorアクティブ同期を有効にするために必要な準備が完了したら、 link:snapmirror-active-sync-confirm-cluster-configuration.html["クラスタ構成を確認する"] 。

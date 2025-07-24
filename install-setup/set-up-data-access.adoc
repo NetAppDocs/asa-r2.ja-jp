@@ -29,6 +29,18 @@ VMワークロードをASAストレージシステムからASA R2ストレージ
 
 
 
+== サードパーティのストレージシステムからデータを移行する
+
+ONTAP 9.17.1以降では、Foreign LUN Import（FLI）を使用して、サードパーティ製ストレージシステムのLUNからASA r2システムにデータを移行できます。データ移行にFLIを使用すると、移行プロセス中のデータ損失やダウンタイムのリスクを軽減できます。
+
+FLIはオンラインとオフラインの両方の移行をサポートしています。オンライン移行では、サードパーティ製ストレージシステムからONTAPストレージシステムへのデータのコピー中も、クライアントシステムはオンラインのままです。オンライン移行は、Windows、Linux、ESXiホストオペレーティングシステムでサポートされています。オフライン移行では、クライアントシステムがオフラインになり、LUNデータがサードパーティ製ストレージシステムからONTAPストレージシステムにコピーされた後、クライアントシステムがオンラインに戻ります。
+
+* 実行方法を学ぶlink:https://docs.netapp.com/us-en/ontap-fli/san-migration//concept_fli_offline_workflow.html["FLIオフライン移行"^] 。
+* 実行方法を学ぶlink:https://docs.netapp.com/us-en/ontap-fli/san-migration//concept_fli_online_workflow.html["FLIオンライン移行"^] 。
+
+
+
+
 == ASA R2システムをVMware環境のストレージプロバイダとして設定する
 
 ONTAP tools for VMwareを使用すると、ASA R2システムをVMware環境のストレージプロバイダとして簡単に有効にすることができます。

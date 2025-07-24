@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync.html 
+keywords: asa r2, data protection, business continuity, snapmirror active sync, zero rpo, zero rto, disaster recovery, symmetric active/active, workflow 
+summary: 'SnapMirrorアクティブ同期を使用して、ゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) を必要とするホスト アプリケーションを、予期しない中断やサイト災害による停止から保護します。' 
+---
+= SnapMirrorアクティブ同期のセットアップワークフロー
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP SnapMirrorアクティブ同期データ保護により、サイト全体の障害が発生してもビジネス サービスは継続して稼働でき、セカンダリ コピーを使用してアプリケーションを透過的にフェイルオーバーできます。SnapMirrorアクティブ同期でフェイルオーバーをトリガーするために、手動操作やカスタム スクリプトは必要ありません。
+
+ASA r2 システムでは、System Manager によるSnapMirror Active Sync の設定手順は、統合ONTAPパーソナリティを実行するNetApp FAS、 AFF、およびASAシステムとは異なりますが、 SnapMirror Active Sync の要件、アーキテクチャ、および操作は同じです。
+
+link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirrorアクティブ同期の詳細"^] 。
+
+ASA r2システムでは、 SnapMirror Active Syncは対称型アクティブ/アクティブ構成をサポートします。対称型アクティブ/アクティブ構成では、両方のサイトからアクティブI/O用のローカルストレージにアクセスできます。
+
+詳細はこちらlink:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive["対称アクティブ/アクティブ構成"^] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1つ"] SnapMirrorアクティブ同期を構成する準備をします。
+[role="quick-margin-para"]
+にlink:snapmirror-active-sync-prepare.html["SnapMirrorアクティブ同期の設定を準備する"] ASA r2 システムでは、構成の前提条件を確認し、ホスト オペレーティング システムのサポートを確認し、特定の構成に影響を与える可能性のあるオブジェクトの制限に注意する必要があります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2つ"]クラスターの構成を確認します。
+[role="quick-margin-para"]
+SnapMirror Active Syncを設定する前に、 link:snapmirror-active-sync-confirm-cluster-configuration.html["ASA r2 クラスタが適切なピアリング関係にあり、その他の構成要件を満たしていることを確認します。"] 。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["3つ"] ONTAP Mediator をインストールします。
+[role="quick-margin-para"]
+ONTAP MediatorまたはONTAP Cloud Mediatorを使用すると、クラスタの健全性を監視し、ビジネス継続性を確保できます。ONTAPONTAPを使用する場合は、 link:install-ontap-mediator.html["インストールする"]ホスト上で。ONTAPCloud Mediatorを使用している場合は、この手順をスキップできます。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4つ"]自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定します。
+[role="quick-margin-para"]
+絶対ですlink:configure-ontap-mediator.html["ONTAPメディエーターまたはONTAPクラウドメディエーターを構成する"]クラスタ監視のためにSnapMirror Active Sync を使用する前に、これを実行する必要があります。
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["5 つ"] SnapMirrorアクティブ同期を構成します。
+[role="quick-margin-para"]
+link:configure-snapmirror-active-sync.html["SnapMirrorアクティブ同期を構成する"]セカンダリ サイトにデータのコピーを作成し、災害発生時にホスト アプリケーションが自動的かつ透過的にフェイルオーバーできるようにします。

@@ -108,9 +108,6 @@ iSCSI LIFの自動フェイルオーバーを有効にする場合は、iSCSIの
 . [ネットワーク]>[概要]*を選択します。
 . [ネットワークインターフェイス]*を選択し、を選択しimage:icon_add_blue_bg.png["プラス記号が付いた青い四角形の後に「add in white letters」という単語が続く"]ます。
 . インターフェイスタイプとプロトコルを選択し、Storage VMを選択します。
-+
-iSCSI LIFのフェイルオーバーを有効にするには、IPプロトコルのみを選択します。
-
 . LIFの名前を入力するか、デフォルトの名前をそのまま使用します。
 . ネットワークインターフェイスのホームノードを選択し、IPアドレスとサブネットマスクを入力します。
 . [ 保存（ Save ） ] を選択します。
@@ -120,22 +117,81 @@ iSCSI LIFのフェイルオーバーを有効にするには、IPプロトコル
 データアクセス用のLIFを作成しておきます。
 
 .次の手順
-iSCSI用のIP LIFを作成した場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用してiSCSI LIFの自動フェイルオーバーを有効にすることができます。
+ONTAPコマンドライン インターフェイス (CLI) を使用して、自動フェイルオーバーを備えた iSCSI 専用 LIF を作成できます。
 
 
 
-=== iSCSI LIFの自動フェイルオーバーの有効化
+=== カスタムiSCSI専用LIFサービスポリシーを作成する
 
-SVM上にLIFの自動フェイルオーバーが有効になっていないiSCSI LIFがある場合、新しく作成したLIFでもLIFの自動フェイルオーバーは有効になりません。LIFの自動フェイルオーバーが有効になっていない状態でフェイルオーバーが発生すると、iSCSI LIFは移行されません。
+自動 LIF フェイルオーバーを備えた iSCSI 専用 LIF を作成する場合は、まずカスタム iSCSI 専用 LIF サービス ポリシーを作成する必要があります。
 
-iSCSI LIFの自動フェイルオーバーを有効にするには、ONTAPのコマンドラインインターフェイス（CLI）を使用する必要があります。
+カスタム サービス ポリシーを作成するには、 ONTAPコマンド ライン インターフェイス (CLI) を使用する必要があります。
 
 .ステップ
-. iSCSI LIFの自動フェイルオーバーを有効にします。
+. 権限レベルをadvancedに設定します。
 +
 [source, cli]
 ----
-network interface modify -vserver <SVM_name> -lif <iscsi_lif> -failover-policy sfo-partner-only -auto-revert true
+set -privilege advanced
+----
+. カスタム iSCSI 専用 LIF サービス ポリシーを作成します。
++
+[source, cli]
+----
+network interface service-policy create -vserver <SVM_name> -policy <service_policy_name> -services data-core,data-iscsi
+----
+. サービス ポリシーが作成されたことを確認します。
++
+[source, cli]
+----
+network interface service-policy show -policy <service_policy_name>
+----
+. 権限レベルを管理者に戻します。
++
+[source, cli]
+----
+set -privilege admin
+----
+
+
+
+
+=== 自動LIFフェイルオーバー機能を備えたiSCSI専用LIFを作成する
+
+SVM上にLIFの自動フェイルオーバーが有効になっていないiSCSI LIFがある場合、新しく作成したLIFでもLIFの自動フェイルオーバーは有効になりません。LIFの自動フェイルオーバーが有効になっていない状態でフェイルオーバーが発生すると、iSCSI LIFは移行されません。
+
+.開始する前に
+カスタム iSCSI 専用 LIF サービス ポリシーを作成しておく必要があります。
+
+.手順
+. 自動 LIF フェイルオーバーを備えた iSCSI 専用 LIF を作成します。
++
+[source, cli]
+----
+network interface create -vserver <SVM_name> -lif <iscsi_lif_name> -service-policy <service_policy_name> -home-node <home_node> -home-port <port_name> -address <ip_address> -netmask <netmask> -failover-policy sfo-partner-only -status-admin up
+----
++
+** 各ノードに2つのiSCSI LIF（ファブリックA用とファブリックB用）を作成することをお勧めします。これにより、iSCSIトラフィックの冗長性と負荷分散が実現します。次の例では、各ノードに2つ、各ファブリックに1つ、合計4つのiSCSI LIFが作成されます。
++
+[listing]
+----
+network interface create -vserver svm1 -lif iscsi-lif-01a -service-policy custom-data-iscsi -home-node node1 -home-port e2b -address <node01-iscsi-a–ip> -netmask 255.255.255.0 -failover-policy sfo-partner-only -status-admin up
+
+network interface create -vserver svm1 -lif iscsi-lif-01b -service-policy custom-data-iscsi -home-node node1 -home-port e4b -address <node01-iscsi-b–ip> -netmask 255.255.255.0 -failover-policy sfo-partner-only -status-admin up
+
+network interface create -vserver svm1 -lif iscsi-lif-02a -service-policy custom-data-iscsi -home-node node2 -home-port e2b -address <node02-iscsi-a–ip> -netmask 255.255.255.0 -failover-policy sfo-partner-only -status-admin up
+
+network interface create -vserver svm1 -lif iscsi-lif-02b -service-policy custom-data-iscsi -home-node node2 -home-port e4b -address <node02-iscsi-b–ip> -netmask 255.255.255.0 -failover-policy sfo-partner-only -status-admin up
+----
+** VLANを使用している場合は、  `home-port`それぞれのiSCSIファブリックのVLANポート情報を含めるパラメータ。例：  `-home-port e2b-<iSCSI-A-VLAN>` iSCSIファブリックAおよび `-home-port e4b-<iSCSI-B-VLAN>` 。
+** VLANでインターフェースグループ（ifgroup）を使用している場合は、  `home-port`適切なVLANポートを含めるためのパラメータ、例：  `-home-port a0a-<iSCSI-A-VLAN>` iSCSIファブリックAおよび `-home-port a0a-<iSCSI-B-VLAN>` iSCSIファブリックBの場合、  `a0a`は ifgroup であり、a0a-<iSCSI-A-VLAN> と a0a-<iSCSI-B-VLAN> はそれぞれ iSCSI A ファブリックと iSCSI B ファブリックの VLAN ポートです。
+
+
+. iSCSI LIF が作成されたことを確認します。
++
+[source, cli]
+----
+network interface show -lif iscsi*
 ----
 
 

@@ -2,6 +2,14 @@
 section: administer
 title: 管理と監視
 entries:
+- title: ONTAPのアップグレードと復元
+  entries:
+  - title: ONTAPのアップグレード
+    url: "/administer/upgrade-ontap.html"
+  - title: ONTAPのリバート
+    url: "/administer/revert-ontap.html"
+  - title: ファームウェアの更新
+    url: "/administer/update-firmware.html"
 - title: Storage VMへのクライアントアクセスの管理
   url: "/administer/manage-client-vm-access.html"
 - title: クラスタネットワークを管理します。
@@ -14,10 +22,6 @@ entries:
     url: "/monitor/monitor-storage.html"
   - title: ストレージ容量の拡張
     url: "/administer/increase-storage-capacity.html"
-- title: ONTAPのアップグレード
-  url: "/administer/upgrade-ontap.html"
-- title: ファームウェアの更新
-  url: "/administer/update-firmware.html"
 - title: 分析情報を表示
   url: "/monitor/view-insights.html"
 - title: クラスタのイベントとジョブを表示する
@@ -30,6 +34,8 @@ entries:
     url: "/administer/reboot-take-over-give-back-nodes.html"
   - title: ノードの名前変更
     url: "/administer/rename-nodes.html"
+  - title: ノード間のワークロードの再バランス
+    url: "/administer/rebalance-workloads.html"
 - title: ユーザアカウントとロールの管理
   url: "/administer/user-accounts-roles.html"
 - title: セキュリティ証明書を管理する

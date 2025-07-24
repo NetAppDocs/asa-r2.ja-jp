@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: secure-data/pause-resume-anti-ransomware-protection.html 
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, pause, resume, suspend 
+summary: 異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検知を防ぐために、ARP/AI分析を一時的に停止することができます。 
+---
+= ASA r2 ストレージシステムで AI を活用した自律ランサムウェア防御を一時停止または再開
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.17.1以降では、人工知能（ARP/AI）を活用した自律型ランサムウェア保護機能を使用して、 ASA r2システムのデータを保護できます。異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検知を防ぐため、ARP/AI分析を一時的に停止することができます。ワークロードイベントが完了したら、ARP/AI分析を再開できます。
+
+
+
+== ARP/AIを一時停止
+
+異常なワークロード イベントを開始する前に、ランサムウェア攻撃の誤検出を防ぐために、ARP/AI 分析を一時的に停止する必要がある場合があります。
+
+.手順
+. System Managerで、*[ストレージ]*を選択します。
+. ARP/AI を一時停止するストレージ ユニットを選択します。
+. *ランサムウェア対策を一時停止*を選択します。
+
+
+.結果
+選択したストレージ ユニットの ARP/AI 分析は一時停止され、ARP/AI を再開するまで System Manager で疑わしいアクティビティは報告されません。
+
+
+
+== ARP/AIを再開する
+
+異常なワークロード中に ARP/AI を一時停止した場合は、ワークロードが完了したら、ランサムウェア攻撃からデータを保護するために ARP/AI を再開する必要があります。
+
+.手順
+. System Managerで、*[ストレージ]*を選択します。
+. ARP/AI を再開するストレージ ユニットを選択します。
+. *ランサムウェア対策を再開*を選択します。
+
+
+.結果
+潜在的なランサムウェア攻撃の分析が再開され、疑わしいアクティビティが System Manager に報告されます。

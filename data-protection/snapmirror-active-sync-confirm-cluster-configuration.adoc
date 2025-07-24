@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.html 
+keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
+summary: 潜在的なランサムウェア攻撃の警告を表示し、System Manager でアクションを実行します。 
+---
+= SnapMirror Active Sync を設定する前に、 ASA r2 クラスタの設定を確認してください。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror Active Sync は、フェイルオーバー発生時にデータを保護するために、ピアリングされたクラスタを使用します。SnapMirrorActive Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。
+
+.手順
+. クラスタ間にクラスタ ピア関係が確立されていることを確認します。
++
+
+NOTE: SnapMirrorアクティブ同期でクラスタ ピア関係を確立するには、デフォルトのIPspaceが必要です。カスタム IPspace はサポートされていません。
+
++
+link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship["クラスタ ピア関係の作成"] 。
+
+. 各クラスターのストレージ仮想マシン (VM) 間にピア関係が存在することを確認します。
++
+link:create-svm-peer-relationship.html["クラスタ間ストレージVMピア関係を作成する"^] 。
+
+. クラスタ内の各ノードに少なくとも 1 つの LIF が作成されていることを確認します。
++
+link:../administer/manage-client-vm-access.html#create-a-lif-network-interface["LIFの作成"]
+
+. 必要なストレージ ユニットが作成され、ホスト グループにマップされていることを確認します。
++
+link:../manage-data/provision-san-storage.html#create-storage-units["ストレージユニットを作成する"]そしてlink:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host["ストレージユニットをホストグループにマップする"] 。
+
+. アプリケーション ホストを再スキャンして、新しいストレージ ユニットを検出します。
+
+
+.次の手順
+クラスタ構成を確認したら、 link:install-ontap-mediator.html["ONTAPメディエーターをインストールする"] 。

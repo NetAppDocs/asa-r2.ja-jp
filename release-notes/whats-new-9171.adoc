@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9171.html 
+keywords: 'what"s new, release notes, 9.17.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20' 
+summary: ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能について説明します。 
+---
+= ASA r2システム向けONTAP 9.17.1の新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能について説明します。
+
+
+
+== SANデータ移行
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../install-setup/set-up-data-access.html#migrate-data-from-a-third-party-storage-system["サードパーティのストレージシステムからのデータ移行のサポート"] | ASA r2 システムでは、Foreign LUN Import (FLI) を使用した SAN データ移行がサポートされています。FLIを使用すると、サードパーティ製ストレージシステム上の LUN からASA r2 システムにデータを移行できます。 
+|===
+
+
+== データ保護
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../secure-data/enable-anti-ransomware-protection.html["人工知能 (ARP/AI) による自律型ランサムウェア防御のサポート"] | ARP/AIはASA r2ストレージユニットで有効化できます。ARP/AIは、学習期間なしで潜在的なランサムウェア攻撃を検出して報告することで、追加のデータ保護を提供します。 
+
+
+| link:../data-protection/snapmirror-active-sync.html["SnapMirrorアクティブ同期"] | SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。 
+|===
+
+
+== Storage Efficiency
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/hardware-comparison.html["自動ワークロードバランスのサポート"] | ワークロードは HA ペアのノード間で自動的に分散され、パフォーマンスとリソース使用率が最適化されます。 
+|===

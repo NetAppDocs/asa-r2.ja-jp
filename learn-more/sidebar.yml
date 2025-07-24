@@ -12,3 +12,5 @@ entries:
     url: "/learn-more/cli-support.html"
   - title: REST APIをサポート
     url: "/learn-more/rest-api-support.html"
+  - title: 一般的なONTAP機能のサポート
+    url: "/learn-more/additional-supported-ontap-features.html"

@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: data-protection/install-ontap-mediator.html 
+keywords: asa r2, data protection, business continuity, install, ONTAP Mediator, installation 
+summary: ASA r2 システムにONTAP Mediator をインストールするには、他のすべてのONTAPシステムにONTAP Mediator をインストールする場合と同じ手順に従う必要があります。 
+---
+= ASA r2システムにONTAP Mediatorをインストールする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA r2 システムにONTAP Mediator をインストールするには、他のすべてのONTAPシステムにONTAP Mediator をインストールする場合と同じ手順に従う必要があります。
+
+ONTAP Mediator のインストールには、インストールの準備、リポジトリへのアクセスの有効化、 ONTAP Mediator パッケージのダウンロード、コード署名の検証、ホストへのパッケージのインストール、インストール後のタスクの実行が含まれます。
+
+https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html[]
+
+ONTAPメディエーターをインストールするには、 link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html["このワークフロー"^]
+
+.次のステップ
+ONTAPメディエーターをインストールしたら、 link:configure-ontap-mediator.html["自己署名証明書を使用してONTAPメディエーターを設定する"] 。

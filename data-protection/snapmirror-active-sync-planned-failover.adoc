@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-planned-failover.html 
+keywords: snapmirror active sync, planned failover, disaster recovery, business continuity, data replication, ONTAP, secondary site, continuous availability 
+summary: ビジネス継続性と災害復旧を確保するために、 SnapMirrorアクティブ同期関係の計画的なフェイルオーバーを実行する方法を学習します。 
+---
+= SnapMirrorアクティブ同期関係でASA r2 クラスタの計画されたフェイルオーバーを実行する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror Active Syncは、セカンダリサイトにデータのコピーを作成し、災害発生時にホストアプリケーションを自動的かつ透過的にフェイルオーバーさせることで、ビジネスクリティカルなアプリケーションの継続的な可用性を実現します。フェイルオーバープロセスをテストしたり、プライマリサイトでメンテナンスを実行したりするために、 SnapMirror Active Sync関係の計画的なフェイルオーバーを実行する必要がある場合があります。
+
+.開始する前に
+* SnapMirrorアクティブ同期関係が同期されている必要があります。
+* ストレージ ユニットの移動などの中断を伴わない操作が進行中の場合は、計画されたフェイルオーバーを開始することはできません。
+* ONTAP Mediator またはONTAP Cloud Mediator が設定され、接続され、クォーラム状態になっている必要があります。
+
+
+.手順
+. *保護 > レプリケーション*を選択します。
+. フェイルオーバーするSnapMirrorアクティブ同期関係を選択します。
+. 選択image:icon_kabob.gif["3つの垂直な青い点"] ; 次に、[フェイルオーバー] を選択します。
+
+
+.次の手順
+使用 `snapmirror failover show` ONTAPコマンドライン インターフェイス (CLI) でコマンドを使用して、フェイルオーバーのステータスを監視します。

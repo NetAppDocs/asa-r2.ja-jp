@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: secure-data/modify-arp-snapshot-retention-period.html 
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security 
+summary: ストレージとビジネス要件に合わせて ARP スナップショットの保持期間を変更する方法を学習します。 
+---
+= ASA r2 ストレージ システムの ARP/AI スナップショットの保持期間を変更する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+人工知能（ARP/AI）による自律ランサムウェア保護は、 ASA r2システムのストレージユニット1台以上で異常なアクティビティを検出すると、ストレージユニットのデータを保護するためにARPスナップショットを自動的に作成します。ストレージ容量とデータに対するビジネス要件に応じて、デフォルトのARPスナップショットの保持期間を増減できます。例えば、ビジネスクリティカルなアプリケーションの保持期間を延長して、必要に応じてデータ復旧のための保持期間を長くしたり、それほど重要でないアプリケーションの保持期間を短縮してストレージ容量を節約したりすることができます。
+
+ARP スナップショットのデフォルトの保持期間は、異常なアクティビティに応じて実行するアクションによって異なります。
+
+[cols="2,2"]
+|===
+| このアクションを実行すると... | ARP スナップショットは、デフォルトで次の期間保持されます... 
+
+
+| 誤検知としてマーク | 12 時間 
+
+
+| 潜在的なランサムウェア攻撃としてマーク | 7日間 
+
+
+| すぐに行動を起こさないでください | 10日間 
+|===
+デフォルトの保持期間は、 ONTAPコマンドラインインターフェイス（CLI）を使用して変更できます。  https://docs.netapp.com/us-en/ontap/anti-ransomware/modify-automatic-snapshot-options-task.html["ONTAP自動スナップショットのオプションを変更する"]デフォルトの保存期間を変更する手順については、こちらをご覧ください。

@@ -4,7 +4,7 @@ permalink: secure-data/ransomware-protection.html
 keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection 
 summary: 改ざんを防止するSnapshotを使用してデータを保護します。改ざんを防止するSnapshotは削除できません。また、ランサムウェア攻撃によって侵害されたデータをリカバリするために使用できます。 
 ---
-= ASA R2ストレージシステムに対するランサムウェア攻撃からデータを保護
+= ASA r2 ストレージ システムに対するランサムウェア攻撃から保護するために、改ざん防止スナップショットを作成します。
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

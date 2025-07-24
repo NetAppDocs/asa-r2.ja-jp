@@ -11,10 +11,10 @@ summary: Astra Controlを使用して、Kubernetesクラスタ間でアプリケ
 
 
 [role="lead"]
-Astra Control Centerを使用してKubernetesアプリケーションを保護します。Astra Control Centerを使用すると、Kubernetesクラスタ間でアプリケーションとデータを移行したり、NetApp SnapMirrorテクノロジを使用してリモートシステムにアプリケーションをレプリケートしたり、ステージング環境から本番環境にアプリケーションをクローニングしたりできます。
+Trident Protect を使用して Kubernetes アプリケーションを保護します。TridentTridentを使用すると、アプリケーションとデータを Kubernetes クラスター間で移行したり、 NetApp SnapMirrorテクノロジーを使用してアプリケーションをリモート システムに複製したり、ステージング環境から本番環境へアプリケーションをクローン化したりできます。
 
 
-NOTE: SnapMirror（非同期および同期）は、ASA R2システムからASA R2システムにのみサポートされます。SnapMirrorは、ASA R2システムからAFFまたはFASシステムにはサポートされていません。
+NOTE: SnapMirror （非同期および同期）は、 ASA r2 システムからASA r2 システムへの接続のみサポートされます。ASAr2 システムASAAFFまたはFASシステムへのSnapMirrorはサポートされません。
 
 .詳細情報
-link:https://docs.netapp.com/us-en/astra-control-service/use/protect-apps.html["Astra Controlを使用したKubernetesアプリケーションの保護の詳細"^]です。
+link:https://docs.netapp.com/us-en/trident/trident-protect/learn-about-trident-protect.html["Trident Protectを使用したKubernetesアプリケーションの保護について詳しくは、こちらをご覧ください。"^] 。
