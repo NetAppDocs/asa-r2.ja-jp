@@ -26,7 +26,7 @@ Snapshotレプリケーションを設定するには、ASA R2システムとリ
 データをリモートクラスタにレプリケートして保護するには、ローカルクラスタとリモートクラスタの間にクラスタピア関係を作成する必要があります。
 
 .開始する前に
-クラスタ ピアリングの前提条件は、 ASA r2 システムでも他のONTAPシステムと同じです。link:https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html["クラスタピアリングの前提条件を確認する"] 。
+クラスタ ピアリングの前提条件は、 ASA r2 システムでも他のONTAPシステムと同じです。link:https://docs.netapp.com/us-en/ontap/peering/prerequisites-cluster-peering-reference.html["クラスタピアリングの前提条件を確認する"^] 。
 
 .手順
 . ローカルクラスタで、System Managerで*[クラスタ]>[設定]*を選択します。

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/protect-kubernetes.html 
-keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication 
-summary: Astra Controlを使用して、Kubernetesクラスタ間でアプリケーションとデータを移行したり、アプリケーションをリモートシステムにレプリケートしたり、アプリケーションをクローニングしたりできます。 
+keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, kubernetes, trident protect 
+summary: Trident Protect を使用して、アプリケーションとデータを 1 つの Kubernetes クラスターから別の Kubernetes クラスターに移行したり、アプリケーションをリモート システムに複製したり、アプリケーションのクローンを作成したりします。 
 ---
 = ASA R2ストレージシステム上のKubernetesアプリケーションを保護
 :allow-uri-read: 

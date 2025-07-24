@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/snapmirror-active-sync-planned-failover.html 
-keywords: snapmirror active sync, planned failover, disaster recovery, business continuity, data replication, ONTAP, secondary site, continuous availability 
+keywords: snapmirror active sync, planned failover, disaster recovery 
 summary: ビジネス継続性と災害復旧を確保するために、 SnapMirrorアクティブ同期関係の計画的なフェイルオーバーを実行する方法を学習します。 
 ---
 = SnapMirrorアクティブ同期関係でASA r2 クラスタの計画されたフェイルオーバーを実行する

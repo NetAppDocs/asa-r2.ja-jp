@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: administer/rebalance-workloads.html 
-keywords: rename, node, renaming, asa r2 
+keywords: rebalance workload, workload rebalancing, node balancing, asa r2 
 summary: ONTAP 9.17.1 以降、 ONTAP はASA r2 システム HA ペアのノード間でワークロードを自動的に再調整し、パフォーマンスを最適化します。 
 ---
 = ASA r2 ストレージ システム上のノード間でワークロードを再分散する

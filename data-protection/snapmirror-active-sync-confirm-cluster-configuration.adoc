@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.html 
 keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
-summary: 潜在的なランサムウェア攻撃の警告を表示し、System Manager でアクションを実行します。 
+summary: Active Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。 
 ---
 = SnapMirror Active Sync を設定する前に、 ASA r2 クラスタの設定を確認してください。
 :allow-uri-read: 
@@ -24,7 +24,7 @@ link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship["クラ
 
 . 各クラスターのストレージ仮想マシン (VM) 間にピア関係が存在することを確認します。
 +
-link:create-svm-peer-relationship.html["クラスタ間ストレージVMピア関係を作成する"^] 。
+link:create-svm-peer-relationship.html["クラスタ間ストレージVMピア関係を作成する"] 。
 
 . クラスタ内の各ノードに少なくとも 1 つの LIF が作成されていることを確認します。
 +

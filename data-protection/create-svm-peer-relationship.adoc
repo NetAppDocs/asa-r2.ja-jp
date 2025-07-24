@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/create-svm-peer-relationship.html 
-keywords: restore data, asa r2, data restoration 
-summary: 整合性グループのデータが破損した場合や失われた場合は、リモートSnapshotから整合性グループ全体をリストアできます。 
+keywords: create, svm peer relationship, asa r2, data protection 
+summary: 異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。 
 ---
 = ASA r2 ストレージ システムでクラスタ間ストレージ VM ピア関係を作成する
 :allow-uri-read: 

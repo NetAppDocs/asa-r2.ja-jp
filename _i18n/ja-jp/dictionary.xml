@@ -393,7 +393,6 @@
   <block id="2aa13c213ee88c84d981559bd42eafe9" category="list-text">編集するレプリケーションポリシーにカーソルを合わせ、を選択します<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a5e06406af0ed5340393cd73877c6372" category="list-text">ポリシーを更新し、*[保存]*を選択します。</block>
   <block id="c3fcac5f888af495cdddd6f927ac06f4" category="paragraph">レプリケーションポリシーを変更しておきます。</block>
-  <block id="bbc80da4f9de51946791e7637ce0a3d6" category="summary">Astra Controlを使用して、Kubernetesクラスタ間でアプリケーションとデータを移行したり、アプリケーションをリモートシステムにレプリケートしたり、アプリケーションをクローニングしたりできます。</block>
   <block id="d24d04b05bbac5cac892cbefd2a83130" category="doc">ASA R2ストレージシステム上のKubernetesアプリケーションを保護</block>
   <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="paragraph-title">詳細情報</block>
   <block id="8833f2f06409ffe6dc4a7935b76b0754" category="summary">整合性グループのデータが破損した場合や失われた場合は、リモートSnapshotから整合性グループ全体をリストアできます。</block>
@@ -1989,8 +1988,6 @@
   <block id="2a8a59c901b916190a5f0c2fc9db590e" category="cell">アクティブなインポート関係を削除する</block>
   <block id="2d1eaa6efdb3bbcbeddb0390177c033f" category="cell">ランサムウェア対策が有効</block>
   <block id="e8718651f207e77e4c3719811e7c0cf4" category="cell">ランサムウェア対策を無効にする</block>
-  <block id="1996460c612249c4e9073063973db5cf" category="summary">ASA r2 システム用の自己署名証明書を使用してONTAP Mediator を設定する方法を学習します。</block>
-  <block id="438b149138b2eb032ac73f3ee85a50f1" category="doc">ASA r2 システムで自己署名証明書を使用して Mediator を構成する</block>
   <block id="46a90b9185317a19d7817a93ff7da452" category="paragraph">SnapMirror Active Sync をクラスタ監視に使用するには、 ONTAP Mediator またはONTAP Cloud Mediator を設定する必要があります。ONTAPONTAPとONTAP Cloud Mediator はどちらも、 SnapMirror Active Sync 関係にあるONTAPクラスタで使用される高可用性（HA）メタデータ用の永続的かつフェンスドなストアを提供します。さらに、どちらの Mediator も、クォーラムの決定を支援する同期ノードヘルスクエリ機能を提供し、コントローラの稼働状態検出のための ping プロキシとして機能します。</block>
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="e67055b6d8c65ffeed652e0147459791" category="list-text">ONTAP Cloud Mediatorを使用している場合は、 ASA r2システムが必要な要件を満たしていることを確認してください。 <block ref="efcd0c458e1c451926dd33228d1c1e37" category="inline-link-macro-rx"></block> 。</block>
@@ -2018,7 +2015,6 @@
   <block id="842dcef5223aaf88ec80c981db6281af" category="list-text">Storage VMを選択します。</block>
   <block id="533fb0f30c2a24bf44c7a68b00aed588" category="list-text">レプリケーション ポリシーには、*AutomatedFailOverDuplex* を選択します。</block>
   <block id="28dda6c6cd8928858d47bf343ece67f7" category="list-text">非均一な対称アクティブ/アクティブ構成を作成する場合は、「*宛先設定*」を選択し、この手順を開始する前に作成する新しい宛先整合性グループの名前を入力します。</block>
-  <block id="2669d1e1577667b5c6ef9d1d66a9d293" category="paragraph">SnapMirrorアクティブ同期は、災害発生時にゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。</block>
   <block id="9973b2dc6ff0d198b66645d9b9f56c95" category="doc">ASA r2 ストレージ システムでクラスタ間ストレージ VM ピア関係を作成する</block>
   <block id="2b85569d3702bb2d36113451710361a0" category="paragraph">ピア関係は、クラスタとストレージ仮想マシン（VM）が安全にデータを交換できるようにするネットワーク接続を定義します。異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。</block>
   <block id="96d54cd4dca11897495ae0700eabe4db" category="inline-link-macro">仲間関係についてもっと学ぶ</block>
@@ -2032,7 +2028,6 @@
   <block id="0fb74d2568d6cf20bc19115cdd606402" category="doc">ASA r2システムにONTAP Mediatorをインストールする</block>
   <block id="348ee35966a7b6c3421172402e2e9693" category="paragraph">ASA r2 システムにONTAP Mediator をインストールするには、他のすべてのONTAPシステムにONTAP Mediator をインストールする場合と同じ手順に従う必要があります。</block>
   <block id="061335c3997dbcabda35dde0127379e4" category="paragraph">ONTAP Mediator のインストールには、インストールの準備、リポジトリへのアクセスの有効化、 ONTAP Mediator パッケージのダウンロード、コード署名の検証、ホストへのパッケージのインストール、インストール後のタスクの実行が含まれます。</block>
-  <block id="093d47f75177924386f95fb70b12fd2a" category="paragraph"><block ref="093d47f75177924386f95fb70b12fd2a" category="inline-link-rx"></block></block>
   <block id="2750fca314c2c1638adaed4f8779bc87" category="inline-link-macro">このワークフロー</block>
   <block id="62c0f4c22bba3059d9f25e8564fbcaf6" category="paragraph">ONTAPメディエーターをインストールするには、 <block ref="282bbe8a51966ce59628339a2fff99b4" category="inline-link-macro-rx"></block></block>
   <block id="6fb5023500d2f772bfda250aee9189e3" category="inline-link-macro">自己署名証明書を使用してONTAPメディエーターを設定する</block>
@@ -2049,7 +2044,6 @@
   <block id="5ab8d08c17560d60176a3e3a7d40a7b3" category="paragraph"><block ref="524396f856e0b8dc25625395aeecb268" category="inline-link-macro-rx"></block> 。</block>
   <block id="ea0189f809d6b6d584c711fa45f5bd6a" category="list-text">各クラスターのストレージ仮想マシン (VM) 間にピア関係が存在することを確認します。</block>
   <block id="63f65589705e420ce3e3c84f5a73edea" category="inline-link-macro">クラスタ間ストレージVMピア関係を作成する</block>
-  <block id="4e42f19925c81428eeaa35fccac4f6f6" category="paragraph"><block ref="f6108a5d392cfcd53dcdf7e788e56bab" category="inline-link-macro-rx"></block> 。</block>
   <block id="0a1048623dcc4bf6a07e4f070c75b99a" category="list-text">クラスタ内の各ノードに少なくとも 1 つの LIF が作成されていることを確認します。</block>
   <block id="f0a8f8a4710c7aff45926e4c429a8cc0" category="inline-link-macro">LIFの作成</block>
   <block id="d57b4f0ac425b878d2f45da8c8c89d8d" category="paragraph"><block ref="d57b4f0ac425b878d2f45da8c8c89d8d" category="inline-link-macro-rx"></block></block>
@@ -2076,7 +2070,6 @@
   <block id="2d137e28030b86348fecb0ac2d1d45bc" category="inline-link-macro">ホストオペレーティングシステムがサポートされていることを確認する</block>
   <block id="35257f18ebb7c478bcbdcb1cb37d5a07" category="list-text"><block ref="64203d3afd5f3fdaa90aa5469bd8129b" category="inline-link-macro-rx"></block> SnapMirrorアクティブ同期用。</block>
   <block id="280d8b4f4ce474c32dbebfe78cd8c2c7" category="inline-link-macro">オブジェクトの制限</block>
-  <block id="ee2277c4271750d93880b2831e674a15" category="list-text">レビュー<block ref="65161ee8c272b1c94aad582682bf5791" category="inline-link-macro-rx"></block>構成に影響する可能性があります。</block>
   <block id="336e658898dafc01584991f35ca06ff9" category="list-text">ASA r2 システム上のSnapMirror Active Sync のホスト プロトコル サポートを確認します。</block>
   <block id="9d70dd832c82246e1a4170e782c9ee62" category="paragraph">ASA r2 システムでのSnapMirror Active Sync のサポートは、 ONTAP のバージョンとホスト プロトコルによって異なります。</block>
   <block id="bb946878eac9fb6750d6fedc775d6159" category="cell">ONTAPバージョン</block>
@@ -2139,7 +2132,6 @@
   <block id="62a4788f7c7724a21bfbeadbf6f4d9c0" category="inline-link-macro">SnapMirrorアクティブ同期を構成する</block>
   <block id="210c669df337d7e9ea8a63eaa073bee9" category="paragraph"><block ref="5732f343d340c87b03b110910fa5222c" category="inline-link-macro-rx"></block>セカンダリ サイトにデータのコピーを作成し、災害発生時にホスト アプリケーションが自動的かつ透過的にフェイルオーバーできるようにします。</block>
   <block id="bcde3dcffb78cbdd7bcc34a9e7872629" category="inline-link-macro">クラスタピアリングの前提条件を確認する</block>
-  <block id="8eaf3fcd5f4c28c6a30f743eb3006656" category="paragraph">クラスタ ピアリングの前提条件は、 ASA r2 システムでも他のONTAPシステムと同じです。<block ref="a853a7230b75a880e0aeca10aa7028e4" category="inline-link-macro-rx"></block> 。</block>
   <block id="1546c57263450319fef8d1d8de83e306" category="section-title">サードパーティのストレージシステムからデータを移行する</block>
   <block id="99657bc66973f189d87f6d702b300b6e" category="paragraph">ONTAP 9.17.1以降では、Foreign LUN Import（FLI）を使用して、サードパーティ製ストレージシステムのLUNからASA r2システムにデータを移行できます。データ移行にFLIを使用すると、移行プロセス中のデータ損失やダウンタイムのリスクを軽減できます。</block>
   <block id="cd7fc10aafbc563ec83b036726716d53" category="paragraph">FLIはオンラインとオフラインの両方の移行をサポートしています。オンライン移行では、サードパーティ製ストレージシステムからONTAPストレージシステムへのデータのコピー中も、クライアントシステムはオンラインのままです。オンライン移行は、Windows、Linux、ESXiホストオペレーティングシステムでサポートされています。オフライン移行では、クライアントシステムがオフラインになり、LUNデータがサードパーティ製ストレージシステムからONTAPストレージシステムにコピーされた後、クライアントシステムがオンラインに戻ります。</block>
@@ -2217,8 +2209,6 @@
   <block id="fc8d37b5de0a3458dc2fe8a1da741c5a" category="inline-link-macro">人工知能 (ARP/AI) による自律型ランサムウェア防御のサポート</block>
   <block id="3808c918aa048ef04ca543387e9d19bc" category="cell"><block ref="3808c918aa048ef04ca543387e9d19bc" category="inline-link-macro-rx"></block></block>
   <block id="ab3721eb6cf69168eba216763f76f9d8" category="cell">ARP/AIはASA r2ストレージユニットで有効化できます。ARP/AIは、学習期間なしで潜在的なランサムウェア攻撃を検出して報告することで、追加のデータ保護を提供します。</block>
-  <block id="319d07699c758b34ad0e77793fc529af" category="inline-link-macro">SnapMirrorアクティブ同期</block>
-  <block id="fc1121afc2b3c5f62592309d85da4ca5" category="cell"><block ref="fc1121afc2b3c5f62592309d85da4ca5" category="inline-link-macro-rx"></block></block>
   <block id="f231c7e641e6d267354740a6c9850600" category="cell">SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。</block>
   <block id="2595874d578967634d23bb05c5c7197c" category="inline-link-macro">自動ワークロードバランスのサポート</block>
   <block id="c33e823e9a93260b53fe781334bf0f34" category="cell"><block ref="c33e823e9a93260b53fe781334bf0f34" category="inline-link-macro-rx"></block></block>
@@ -2307,7 +2297,6 @@
   <block id="40fadaf9e9b5a2ea060ac57be669def8" category="sidebar">SnapMirrorアクティブ同期の設定準備</block>
   <block id="4dafe14c736e023b90f1e3edec0ec907" category="sidebar">クラスタ構成を確認する</block>
   <block id="305e7e49ade15c0cfc57375e188c0f62" category="sidebar">ONTAPメディエーターをインストールする</block>
-  <block id="61ef80ea8d9e92d0a652bb75148884d3" category="sidebar">ONTAPメディエーターの設定</block>
   <block id="9f2970594362084647462609d4b2d054" category="sidebar">SnapMirrorアクティブ同期を管理する</block>
   <block id="e39b47ff21b06cf5168c2115e34abb73" category="sidebar">SnapMirror Active Syncを使用して計画的なフェイルオーバーを実行する</block>
   <block id="e9a1e0623ef8495e8c5eb4f577eebc56" category="sidebar">計画外のフェイルオーバー後にSnapMirrorアクティブ同期を再確立する</block>
@@ -2317,4 +2306,16 @@
   <block id="2a1d671c971c0af470fbdc7401172b0f" category="sidebar">ARP/AIアラートに応答する</block>
   <block id="65af6614b420bd97b9cd190dea5aea32" category="sidebar">ARP/AIを一時停止または再開する</block>
   <block id="db63e5e7d34efa3840098020c2d030bc" category="sidebar">ONTAP 9.17.1の新機能</block>
+  <block id="7d456ea58781d907d2b20d5b2aca677d" category="summary">ASA r2 システム用の自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定する方法について説明します。</block>
+  <block id="851790a9f21b5ff71a9331c624658b8f" category="doc">ASA r2 システムで自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediatior を構成する</block>
+  <block id="3d1a9a8962bb1e463a972fd3eef1a2d7" category="paragraph">SnapMirrorアクティブ シンクは、災害発生時にほぼゼロのリカバリ ポイント目標 (RPO) とほぼゼロのリカバリ時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。</block>
+  <block id="19e274092e78148b7f8f40a16e4e4b47" category="summary">異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。</block>
+  <block id="ce17aceb2c7b8c41256df32bd57c85e3" category="summary">Trident Protect を使用して、アプリケーションとデータを 1 つの Kubernetes クラスターから別の Kubernetes クラスターに移行したり、アプリケーションをリモート システムに複製したり、アプリケーションのクローンを作成したりします。</block>
+  <block id="e7a712b62a3b9917efcf632c95771bf8" category="summary">Active Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。</block>
+  <block id="df990990a5ec1d2de43a7f0d3883ace1" category="paragraph"><block ref="518fe62c2bcad9680c7b9bc17854f068" category="inline-link-macro-rx"></block> 。</block>
+  <block id="fd2001c44ae139d4e281a0cdd502224a" category="list-text">レビュー<block ref="6fb29c3af745e27506f2b8729349d0f4" category="inline-link-macro-rx"></block>構成に影響する可能性があります。</block>
+  <block id="222e2cd23b65b26198298edef09e6653" category="paragraph">クラスタ ピアリングの前提条件は、 ASA r2 システムでも他のONTAPシステムと同じです。<block ref="bbba0a6c9386ee840a26b101e54e4db2" category="inline-link-macro-rx"></block> 。</block>
+  <block id="521fe9d2abe779913bdc56fbd86e8714" category="inline-link-macro">SnapMirror Active SyncのNVMeプロトコルのサポート</block>
+  <block id="e06d24391fbc504b412b98e695d20dac" category="cell"><block ref="e06d24391fbc504b412b98e695d20dac" category="inline-link-macro-rx"></block></block>
+  <block id="dea3a75107d7790747be36ffd87dfafd" category="sidebar">ONTAP MediatorまたはONTAP Cloud Mediatorを構成する</block>
 </blocks>

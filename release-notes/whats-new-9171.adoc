@@ -39,7 +39,7 @@ ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能につい
 | link:../secure-data/enable-anti-ransomware-protection.html["人工知能 (ARP/AI) による自律型ランサムウェア防御のサポート"] | ARP/AIはASA r2ストレージユニットで有効化できます。ARP/AIは、学習期間なしで潜在的なランサムウェア攻撃を検出して報告することで、追加のデータ保護を提供します。 
 
 
-| link:../data-protection/snapmirror-active-sync.html["SnapMirrorアクティブ同期"] | SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。 
+| link:../data-protection/snapmirror-active-sync.html["SnapMirror Active SyncのNVMeプロトコルのサポート"] | SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。 
 |===
 
 

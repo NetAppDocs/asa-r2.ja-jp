@@ -16,7 +16,7 @@ ASA r2 システムでSnapMirror Active Sync を設定するための準備と�
 .手順
 . SnapMirrorのアクティブ同期を確認するlink:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/prerequisites-reference.html["前提条件"^] 。
 . link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html["ホストオペレーティングシステムがサポートされていることを確認する"^] SnapMirrorアクティブ同期用。
-. レビューlink:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html["オブジェクトの制限"]構成に影響する可能性があります。
+. レビューlink:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/limits-reference.html["オブジェクトの制限"^]構成に影響する可能性があります。
 . ASA r2 システム上のSnapMirror Active Sync のホスト プロトコル サポートを確認します。
 +
 ASA r2 システムでのSnapMirror Active Sync のサポートは、 ONTAP のバージョンとホスト プロトコルによって異なります。

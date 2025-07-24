@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/snapmirror-active-sync-unplanned-failover.html 
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security 
+keywords: asa r2, reestablish, snapmirror active sync, unplanned failover, disaster recovery 
 summary: ASA r2 クラスターの計画外のフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立する方法を学びます。 
 ---
 = ASA r2 クラスタの予期しないフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立します。

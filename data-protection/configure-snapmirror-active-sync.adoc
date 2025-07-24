@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/configure-snapmirror-active-sync.html 
-keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, alerts, respond, warnings, security 
+keywords: asa r2, data protection, protect data, configure, snapmirror active sync, ,disaster recovery, symmetric active/active 
 summary: 災害発生時にセカンダリ データ コピーを作成し、自動フェイルオーバーを有効にすることで、ビジネスの継続性を確保するためにSnapMirrorアクティブ シンクを構成する方法を学習します。 
 ---
 = ASA r2 システムでSnapMirrorアクティブ同期を構成する
@@ -36,4 +36,4 @@ link:create-snapshots.html#step-1-optionally-create-a-consistency-group["一貫�
 
 
 .結果
-SnapMirrorアクティブ同期は、災害発生時にゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。
+SnapMirrorアクティブ シンクは、災害発生時にほぼゼロのリカバリ ポイント目標 (RPO) とほぼゼロのリカバリ時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。

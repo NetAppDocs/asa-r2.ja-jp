@@ -27,6 +27,8 @@ indexpage:
       url: "/data-protection/create-snapshots.html"
     - title: Snapshotレプリケーションのセットアップ
       url: "/data-protection/snapshot-replication.html"
+    - title: SnapMirrorアクティブ同期を設定する
+      url: "/data-protection/snapmirror-active-sync.html"
     - title: 保存データを暗号化
       url: "/secure-data/encrypt-data-at-rest.html"
   - title: ASA R2に関するその他のリソース
