@@ -35,6 +35,12 @@ indexpage:
     links:
     - title: ASAデータシート
       url: https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf
+    - title: NetApp ASAのベストプラクティス
+      url: https://www.netapp.com/pdf.html?item=/media/137426-tr-5009-best-practices-for-netapp-asa.pdf
+    - title: NetApp ASA上のFlexPod
+      url: https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf
+    - title: ASA/ AFFからASA r2 への RestfulAPI 移行ガイド
+      url: https://www.netapp.com/media/136585-tr-5008-restfulapi-transition-guide-asa-r2.pdf
   - title: その他のONTAPリソース
     links:
     - title: 他のONTAPシステムのドキュメント
