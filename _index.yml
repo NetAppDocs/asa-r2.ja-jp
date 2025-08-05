@@ -41,6 +41,12 @@ indexpage:
       url: https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf
     - title: ASA/ AFFからASA r2 への RestfulAPI 移行ガイド
       url: https://www.netapp.com/media/136585-tr-5008-restfulapi-transition-guide-asa-r2.pdf
+    - title: ASA r2 システムのSnapCenter操作
+      url: https://docs.netapp.com/us-en/snapcenter/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html
+    - title: NetApp ASA上の Oracle データベースのパフォーマンス
+      url: https://www.netapp.com/pdf.html?item=/media/138087-tr-5015-oracle-perf-on-asa.pdf
+    - title: FCP を搭載したNetApp ASAシステム上の SAP HANA
+      url: https://docs.netapp.com/us-en/netapp-solutions-sap/bp/hana-asa-fc-introduction.html
   - title: その他のONTAPリソース
     links:
     - title: 他のONTAPシステムのドキュメント
