@@ -51,3 +51,9 @@ indexpage:
     links:
     - title: 他のONTAPシステムのドキュメント
       url: https://docs.netapp.com/us-en/ontap-family/
+    - title: ONTAP for vSphere を使用する利点について学ぶ
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html
+    - title: ONTAPを使用した VMware ライブ サイト リカバリ
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html
+    - title: vSphere 環境向けの継続的な可用性ソリューションについて学習します
+      url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html
