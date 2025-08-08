@@ -54,8 +54,6 @@ entries:
       url: "/data-protection/snapmirror-active-sync-planned-failover.html"
     - title: 計画外のフェイルオーバー後にSnapMirrorアクティブ同期を再確立する
       url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
-  - title: Kubernetesを保護
-    url: "/data-protection/protect-kubernetes.html"
   - title: データのリストア
     url: "/data-protection/restore-data.html"
   - title: 整合性グループの管理

@@ -393,7 +393,6 @@
   <block id="2aa13c213ee88c84d981559bd42eafe9" category="list-text">編集するレプリケーションポリシーにカーソルを合わせ、を選択します<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a5e06406af0ed5340393cd73877c6372" category="list-text">ポリシーを更新し、*[保存]*を選択します。</block>
   <block id="c3fcac5f888af495cdddd6f927ac06f4" category="paragraph">レプリケーションポリシーを変更しておきます。</block>
-  <block id="d24d04b05bbac5cac892cbefd2a83130" category="doc">ASA R2ストレージシステム上のKubernetesアプリケーションを保護</block>
   <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="paragraph-title">詳細情報</block>
   <block id="8833f2f06409ffe6dc4a7935b76b0754" category="summary">整合性グループのデータが破損した場合や失われた場合は、リモートSnapshotから整合性グループ全体をリストアできます。</block>
   <block id="042d689a0af446510e1c4b24dd9c2fb3" category="doc">ASA R2ストレージシステム上のデータのリストア</block>
@@ -1447,7 +1446,6 @@
   <block id="7ade4491330b8b909764f7743d2141bc" category="sidebar">ストレージユニットの削除</block>
   <block id="150a34e7bbdf7765066eae5fadb9f919" category="sidebar">ストレージの制限</block>
   <block id="222e11fb018a824c05f5fc6a922f5240" category="sidebar">データを保護</block>
-  <block id="a674730095a9b5140cc595ad52f943c7" category="sidebar">Kubernetesを保護</block>
   <block id="f4b3d5acc9c8ae0d4f905c0fb1312ab2" category="sidebar">データのリストア</block>
   <block id="9712f400eacfd75178398ff6c28bb880" category="sidebar">整合性グループの管理</block>
   <block id="75a949e17bd9625c11dfe6d712fe4599" category="sidebar">保護ポリシーとスケジュールの管理</block>
@@ -2032,10 +2030,6 @@
   <block id="62c0f4c22bba3059d9f25e8564fbcaf6" category="paragraph">ONTAPメディエーターをインストールするには、 <block ref="282bbe8a51966ce59628339a2fff99b4" category="inline-link-macro-rx"></block></block>
   <block id="6fb5023500d2f772bfda250aee9189e3" category="inline-link-macro">自己署名証明書を使用してONTAPメディエーターを設定する</block>
   <block id="61ad23b638716bf0a345ab306b490801" category="paragraph">ONTAPメディエーターをインストールしたら、 <block ref="32ce91cb98769079c3f189462b53f48e" category="inline-link-macro-rx"></block> 。</block>
-  <block id="ddf49c4cfb922a55d5ae77024dc951e6" category="paragraph">Trident Protect を使用して Kubernetes アプリケーションを保護します。TridentTridentを使用すると、アプリケーションとデータを Kubernetes クラスター間で移行したり、 NetApp SnapMirrorテクノロジーを使用してアプリケーションをリモート システムに複製したり、ステージング環境から本番環境へアプリケーションをクローン化したりできます。</block>
-  <block id="2d98ac6197ce7235679e7e90cddb1dda" category="admonition">SnapMirror （非同期および同期）は、 ASA r2 システムからASA r2 システムへの接続のみサポートされます。ASAr2 システムASAAFFまたはFASシステムへのSnapMirrorはサポートされません。</block>
-  <block id="56f4b0ee2b0cd78ca1156e4943ab47ed" category="inline-link-macro">Trident Protectを使用したKubernetesアプリケーションの保護について詳しくは、こちらをご覧ください。</block>
-  <block id="9328f9c985b501db4be547926c0b985e" category="paragraph"><block ref="bd9cba975d45b938e743d6863731f0ab" category="inline-link-macro-rx"></block> 。</block>
   <block id="1d4e19ef25fe54c490c90b84de5b941b" category="summary">潜在的なランサムウェア攻撃の警告を表示し、System Manager でアクションを実行します。</block>
   <block id="ffebabaf8051c5f32f02bdc0ef022af1" category="doc">SnapMirror Active Sync を設定する前に、 ASA r2 クラスタの設定を確認してください。</block>
   <block id="317b640808ec09a0efa427a71506d876" category="paragraph">SnapMirror Active Sync は、フェイルオーバー発生時にデータを保護するために、ピアリングされたクラスタを使用します。SnapMirrorActive Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。</block>
@@ -2310,7 +2304,6 @@
   <block id="851790a9f21b5ff71a9331c624658b8f" category="doc">ASA r2 システムで自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediatior を構成する</block>
   <block id="3d1a9a8962bb1e463a972fd3eef1a2d7" category="paragraph">SnapMirrorアクティブ シンクは、災害発生時にほぼゼロのリカバリ ポイント目標 (RPO) とほぼゼロのリカバリ時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。</block>
   <block id="19e274092e78148b7f8f40a16e4e4b47" category="summary">異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。</block>
-  <block id="ce17aceb2c7b8c41256df32bd57c85e3" category="summary">Trident Protect を使用して、アプリケーションとデータを 1 つの Kubernetes クラスターから別の Kubernetes クラスターに移行したり、アプリケーションをリモート システムに複製したり、アプリケーションのクローンを作成したりします。</block>
   <block id="e7a712b62a3b9917efcf632c95771bf8" category="summary">Active Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。</block>
   <block id="df990990a5ec1d2de43a7f0d3883ace1" category="paragraph"><block ref="518fe62c2bcad9680c7b9bc17854f068" category="inline-link-macro-rx"></block> 。</block>
   <block id="fd2001c44ae139d4e281a0cdd502224a" category="list-text">レビュー<block ref="6fb29c3af745e27506f2b8729349d0f4" category="inline-link-macro-rx"></block>構成に影響する可能性があります。</block>
@@ -2318,9 +2311,7 @@
   <block id="521fe9d2abe779913bdc56fbd86e8714" category="inline-link-macro">SnapMirror Active SyncのNVMeプロトコルのサポート</block>
   <block id="e06d24391fbc504b412b98e695d20dac" category="cell"><block ref="e06d24391fbc504b412b98e695d20dac" category="inline-link-macro-rx"></block></block>
   <block id="dea3a75107d7790747be36ffd87dfafd" category="sidebar">ONTAP MediatorまたはONTAP Cloud Mediatorを構成する</block>
-  <block id="ff84680c6870c10f3e11228ef86a9955" category="sidebar">NetApp ASAのベストプラクティス</block>
   <block id="0a297cc4d1df6ddee9072cd47dca7791" category="sidebar">NetApp ASA上のFlexPod</block>
-  <block id="03e4aa0349d001bf969e3c9a3664119c" category="sidebar">ASA/ AFFからASA r2 への RestfulAPI 移行ガイド</block>
   <block id="4ff3b8b9056fdd67969fe5f7de99f262" category="inline-link-macro">ASA r2システムでのSnapMirror Active Syncを使用した災害復旧の詳細</block>
   <block id="a4d3fa0a90b98ed30452a119486e6ae3" category="paragraph"><block ref="a4d3fa0a90b98ed30452a119486e6ae3" category="inline-link-macro-rx"></block></block>
   <block id="1e96162d7ffea43bde6c07852ffff8cb" category="inline-link-macro">ONTAP for vSphere を使用する利点</block>
@@ -2334,4 +2325,6 @@
   <block id="bf50aa40e09203b6bd2725746556edee" category="sidebar">FCP を搭載したNetApp ASAシステム上の SAP HANA</block>
   <block id="d7542c1281d95fd9eabd52424689de9a" category="sidebar">ONTAP for vSphere を使用する利点について学ぶ</block>
   <block id="4a9d271be00cfe80ccf9f2ae1e86c4ff" category="sidebar">vSphere 環境向けの継続的な可用性ソリューションについて学習します</block>
+  <block id="07deeffbd26ae347c81cfaf3e2169044" category="sidebar">NetApp ASAシステムのベストプラクティス</block>
+  <block id="65393a1b15c3a63904bb446f4a99001a" category="sidebar">REST API移行ガイド</block>
 </blocks>
