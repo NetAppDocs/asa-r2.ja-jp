@@ -539,7 +539,6 @@
   <block id="8ba78ca0516a69b587aca58206efc01f" category="paragraph">ASA R2システムでは、ストレージユニットとコンシステンシグループを使用できます。</block>
   <block id="db202dbb9a4a22e347c683ae7290b969" category="list-text">ストレージユニット_を指定すると、SANホストでデータ処理に使用できるストレージスペースが確保されます。ストレージユニットとは、SCSIホストの場合はLUN、NVMeホストの場合はNVMeネームスペースを指します。</block>
   <block id="e2969be58319571a8d10cc30d53f9a3b" category="list-text">コンシステンシグループ_は、1つのユニットとして管理されるストレージユニットの集まりです。</block>
-  <block id="db5d2125ba43a68e1d147723a1fd42d2" category="paragraph">ASA R2システムは、ストレージユニットとコンシステンシグループを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、10個のストレージユニットで構成されるデータベースが整合グループ内にあり、データベース全体をバックアップする必要があるとします。各ストレージユニットを個別にバックアップする代わりに、整合グループをバックアップすることでデータベース全体を保護できます。</block>
   <block id="85af1289b342af44c3abb8f8013b47f6" category="paragraph">ASA R2システムでは、現在のASA、AFF、またはFASシステムとのクラスタ混在はサポートされていません。</block>
   <block id="989f2b4edace5981db8b18b1ad4a385f" category="list-text">ASA R2システムのサポートおよび制限の詳細については、を<block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>参照してください。</block>
   <block id="2b304856171196502641312a496c6d54" category="inline-link-macro">NetApp ASA</block>
@@ -2330,4 +2329,5 @@
   <block id="a7063f74bf99069f53792368bf5ddbe3" category="admonition">自動ワークロード再バランスを有効にすると、 ASA r2 システムでONTAP 9.17.1 から復帰できなくなります。</block>
   <block id="1d7bf5cce50a0aa006e2b9e2f1d44b49" category="admonition"><block ref="8ec31ee3652bc36cd00ea6f536446af7" category="inline-link-macro-rx"></block>ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。自動ワークロード再バランスが有効になった後、 ASA r2 システムでONTAP 9.17.1 から復帰することはできません。</block>
   <block id="bbf7c82f4e9f186f627b8c659682a8e1" category="admonition">ASA r2 システムでは、SED は NVMe プロトコルに対してのみサポートされます。</block>
+  <block id="f0929283036207a854392f9eaeb45be4" category="paragraph">ASA r2 システムは、一貫性グループを持つストレージ ユニットを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、整合性グループ内の 10 個のストレージ ユニットで構成されるデータベースがあり、データベース全体をバックアップする必要があるとします。各ストレージ ユニットを個別にバックアップする代わりに、整合性グループをバックアップすることでデータベース全体を保護できます。</block>
 </blocks>
