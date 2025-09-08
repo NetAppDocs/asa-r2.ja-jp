@@ -14,7 +14,7 @@ summary: ストレージユニットを削除して、必要な物理ストレ�
 ユニットに含まれるデータを維持する必要がなくなった場合は、ストレージユニットを削除します。不要になったストレージユニットを削除すると、他のホストアプリケーションに必要なスペースを解放できます。
 
 .開始する前に
-削除するストレージユニットがレプリケーション関係にあるコンシステンシグループに含まれている場合はlink:../data-protection/manage-consistency-groups.html#remove-a-storage-unit-from-a-consistency-group["コンシステンシ・グループからのストレージ・ユニットの削除"]、削除する前にストレージユニットを削除する必要があります。
+削除したいストレージユニットがレプリケーション関係にあるコンシステンシーグループ内にある場合は、link:../data-protection/manage-consistency-groups-add-remove-storage-units.html#remove-a-storage-unit-from-a-consistency-group["コンシステンシ・グループからのストレージ・ユニットの削除"]削除する前に。
 
 .手順
 . System Managerで、*[ストレージ]*を選択します。

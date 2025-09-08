@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: data-protection/manage-consistency-groups-delete.html 
+keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace 
+summary: 整合性グループのメンバーを単一のユニットとして管理する必要がなくなった場合は、整合性グループを削除できます。 
+---
+= ASA r2システム上の整合性グループを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+整合性グループのメンバーを単一のユニットとして管理する必要がなくなった場合は、整合性グループを削除できます。整合性グループが削除された後も、以前グループ内にあったストレージ ユニットはクラスター上でアクティブなままになります。整合性グループがレプリケーション関係にあった場合、レプリケートされたコピーはリモート クラスターに残ります。
+
+.開始する前に
+ONTAP 9.16.1を実行していて、削除するコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、link:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"]整合性グループを削除する前に。  ONTAP 9.17.1 以降のリリースでは、コンシステンシー グループを変更する前にこの関係を削除する必要はありません。
+
+.手順
+. System Managerで、*[保護]>[整合グループ]*を選択します。
+. 削除する整合グループにカーソルを合わせます。
+. を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、* Delete *を選択します。
+. 警告を受け入れ、*[削除]*を選択します。
+
+
+.次の手順
+整合グループを削除すると、その整合グループに含まれていたストレージユニットはSnapshotによって保護されなくなります。これらのストレージユニットをデータ損失から保護するために、別の整合グループに追加することを検討してください。

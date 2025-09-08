@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: data-protection/manage-consistency-groups-add-remove-snapshots.html 
+keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity 
+summary: 整合性グループのスナップショットを作成して、整合性グループの一部であるストレージ ユニット内のデータを保護します。整合性グループ内のいずれかのストレージ ユニットのデータを保護する必要がなくなった場合は、スナップショット保護を削除できます。 
+---
+= スナップショットを使用してASA r2 システムの整合性グループを保護する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA r2 ストレージ システム内のコンシステンシー グループのスナップショットを作成し、コンシステンシー グループの一部であるストレージ ユニット内のデータを保護します。整合性グループ内のいずれかのストレージ ユニットのデータを保護する必要がなくなった場合は、整合性グループからスナップショット保護を削除できます。
+
+整合性グループ内の特定のストレージ ユニットのデータを保護する必要がなくなった場合は、整合性グループからそれらのストレージ ユニットを削除できます。
+
+
+
+== 整合性グループへのSnapshotデータ保護の追加
+
+整合性グループにSnapshotデータ保護を追加すると、事前定義されたスケジュールに基づいて、整合性グループのローカルSnapshotが一定の間隔で作成されます。
+
+link:restore-data.html["データのリストア"]失われたスナップショットまたは破損したスナップショットをに使用できます。
+
+.手順
+. System Managerで、*[保護]>[整合グループ]*を選択します。
+. 保護する整合グループにカーソルを合わせます。
+. を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、*[編集]*を選択します。
+. [ローカル保護]*で、*[ Snapshotのスケジュール設定]*を選択します。
+. Snapshot ポリシーを選択します。
++
+デフォルトのSnapshotポリシーをそのまま使用するか、既存のポリシーを選択するか、新しいポリシーを作成します。
+
++
+[cols="2,6a"]
+|===
+| オプション | 手順 
+
+
+| 既存のSnapshotポリシーを選択します  a| 
+image:icon_dropdown_arrow.gif["下向きの青い矢印"]デフォルトポリシーの横にあるを選択し、使用する既存のポリシーを選択します。
+
+
+
+| 新しいSnapshotポリシーを作成します。  a| 
+.. を選択しimage:icon_add.gif["青のプラス記号の後に「add」という単語が続く"]、新しいポリシー名を入力します。
+.. ポリシーのスコープを選択します。
+.. [スケジュール]*でを選択しますimage:icon_add.gif["青のプラス記号の後に「add」という単語が続く"]。
+.. [スケジュール名]*に表示される名前を選択します。
++
+次に、を選択しますimage:icon_dropdown_arrow.gif["下向きの青い矢印"]。
+
+.. ポリシースケジュールを選択します。
+.. [Maximum snapshots]*で、整合グループで保持するSnapshotの最大数を入力します。
+.. 必要に応じて、* SnapMirror label *の下にSnapMirrorラベルを入力します。
+.. [ 保存（ Save ） ] を選択します。
+
+
+|===
+. [ 保存（ Save ） ] を選択します。
+
+
+.次のステップ
+Snapshotでデータを保護したのでlink:../secure-data/encrypt-data-at-rest.html["Snapshotレプリケーションのセットアップ"]、バックアップとディザスタリカバリのために、地理的に離れた場所に整合グループをコピーする必要があります。
+
+
+
+== 整合性グループからのSnapshotデータ保護の削除
+
+整合性グループからSnapshotデータ保護を解除すると、整合性グループ内のすべてのストレージユニットのSnapshotが無効になります。
+
+.手順
+. System Managerで、*[保護]>[整合グループ]*を選択します。
+. 保護を停止する整合グループにカーソルを合わせます。
+. を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、*[編集]*を選択します。
+. [Local protection]*で、[Schedule snapshots]の選択を解除します。
+. 「 * 編集 * 」を選択します。
+
+
+.結果
+整合グループ内のどのストレージユニットに対してもSnapshotは作成されません。

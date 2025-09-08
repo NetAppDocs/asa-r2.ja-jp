@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: administer/revert-ontap.html 
 keywords: update, revert, ontap, asa r2 
-summary: ONTAPは、ASA R2システムのファームウェアを自動的に更新します。System Managerを使用して、自動更新を無効にし、インストール前に更新を確認することができます。 
+summary: ASA r2 システムのONTAPソフトウェアの復元は、他のONTAPシステムの復元と同じプロセスに従います。ONTAPクラスタのリバートはシステム停止を伴います。 
 ---
 = ASA r2 ストレージシステム上のONTAPを元に戻す
 :allow-uri-read: 
@@ -30,14 +30,14 @@ link:https://docs.netapp.com/us-en/ontap/revert/task_reverting_an_ontap_cluster.
 ASA r2 システムでONTAP 9.17.1 から復元する場合は、復元を開始する前に次の操作を実行する必要があります。
 
 
-NOTE: link:../administer/rebalance-workloads.html["自動ワークロード再調整"]ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。自動ワークロード再バランスが有効になった後、 ASA r2 システムでONTAP 9.17.1 から復帰することはできません。
+NOTE: link:rebalance-workloads.html["自動ワークロード再調整"]ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。自動ワークロード再バランスが有効になった後、 ASA r2 システムでONTAP 9.17.1 から復帰することはできません。
 
 [cols="2"]
 |===
 | 構成 | 元に戻す前に、次の操作を行ってください... 
 
 
-| SnapMirrorアクティブ同期関係における階層的整合性グループ | SnapMirrorのアクティブ同期関係を削除します 
+| SnapMirrorアクティブ同期関係における階層的整合性グループ | link:../data-protection/snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除します"] 
 
 
 | アクティブなインポート関係 | アクティブなインポート関係を削除する 

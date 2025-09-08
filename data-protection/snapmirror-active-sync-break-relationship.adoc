@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-break-relationship.html 
+keywords: asa r2, data protection, business continuity, remove, delete, break, relationship, snapmirror active sync, disaster recovery 
+summary: 状況によっては、非同期レプリケーション関係を解除する必要がある場合があります。 
+---
+= ASA r2システム上の非同期レプリケーション関係を解除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+状況によっては、非同期レプリケーション関係を解除する必要がある場合があります。たとえば、 ONTAP 9.16.1 を実行していて、非同期レプリケーション関係にあるコンシステンシー グループのサイズを増やす場合は、コンシステンシー グループのサイズを変更する前に関係を解除する必要があります。
+
+.手順
+. System Managerで、*[保護]>[レプリケーション]*を選択します。
+. *ローカルの送信先*または*ローカルのソース*を選択します。
+. 解除したい関係の横にあるimage:icon_kabob.gif["3つの垂直な青い点"]; 次に、[ブレーク] を選択します。
+. *中断*を選択します。
+
+
+.結果
+プライマリ コンシステンシ グループとセカンダリ コンシステンシ グループ間の非同期関係が壊れています。

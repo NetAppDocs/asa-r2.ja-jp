@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: data-protection/pre-defined-protection-policies.html 
+keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication, policy, pre-defined, default, custom, policies 
+summary: レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。 
+---
+= 事前定義されたONTAPデータ保護ポリシーについて学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。
+
+事前定義されたポリシーがニーズを満たしていない場合は、link:snapshot-replication.html#step-2-optionally-create-a-custom-replication-policy["カスタムレプリケーションポリシーを作成する"] 。
+
+ASA r2 システムは、次の定義済み保護ポリシーをサポートしています。
+
+[cols="3,4,1"]
+|===
+| ポリシー | 説明 | ポリシー タイプ 
+
+
+| 非同期 | 最新のアクティブ ファイルシステムと日単位および週単位のSnapshotを時間単位の転送スケジュールでミラーリングするための、ユニファイドSnapMirror非同期およびバックアップ ポリシー | 非同期 
+
+
+| AutomatedFailOverDuplex | RTOゼロ保証と双方向同期レプリケーションを備えたSnapMirror同期用ポリシー | SnapMirrorアクティブ同期 
+
+
+| CloudBackupDefault | 日単位ルールを使用したバックアップ ポリシー | 非同期 
+
+
+| DailyBackup | 日単位ルールと日単位転送スケジュールを使用したバックアップ ポリシー | 非同期 
+
+
+| DPDefault | すべてのSnapshotと最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー | 非同期 
+
+
+| MirrorAllSnapshots | すべてのSnapshotと最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー | 非同期 
+
+
+| MirrorAllSnapshotsDiscardNetwork | ネットワーク設定を除くすべてのSnapshotと最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー | 非同期 
+
+
+| MirrorAndVault | 最新のアクティブ ファイルシステムと日単位および週単位のSnapshotをミラーリングするための、ユニファイドSnapMirror非同期およびバックアップ ポリシー | 非同期 
+
+
+| MirrorAndVaultDiscardNetwork | ネットワーク設定を除く最新のアクティブ ファイルシステムと日単位および週単位のSnapshotをミラーリングするための、ユニファイドSnapMirror非同期およびバックアップ ポリシー | 非同期 
+
+
+| MirrorLatest | 最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー | 非同期 
+
+
+| 統一7年 | 保持期間が7年のユニファイドSnapMirrorポリシー | 非同期 
+
+
+| XDPDefault | 日単位および週単位ルールを使用したバックアップ ポリシー | 非同期 
+|===

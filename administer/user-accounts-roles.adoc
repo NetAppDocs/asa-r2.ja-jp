@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: administer/user-accounts-roles.html 
-keywords:  
-summary:  
+keywords: manage, user accounts, admin account, roles, active directory, ad, saml, authentication 
+summary: System Managerを使用して、Active Directoryドメインコントローラアクセス、LDAPおよびSAML認証をユーザアカウントに設定します。ユーザアカウントロールを作成して、そのロールに割り当てられたユーザがクラスタで実行できる特定の機能を定義します。 
 ---
 = ASA R2ストレージシステムでのユーザアカウントとロールの管理
 :allow-uri-read: 

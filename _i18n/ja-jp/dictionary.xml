@@ -301,8 +301,6 @@
   <block id="7a9a61ee2297500e102394139e96e623" category="inline-link-macro">Snapshotレプリケーションのセットアップ</block>
   <block id="a63371f95cb6727e19c23f03f570df80" category="paragraph">Snapshotでデータを保護したので<block ref="c9073dd826fc7721b98f9930c55d01b2" category="inline-link-macro-rx"></block>、バックアップとディザスタリカバリのために、地理的に離れた場所に整合グループをコピーする必要があります。</block>
   <block id="28e240e6173e34f1942b6fae18eece4d" category="summary">整合グループを使用すると、ユニットごとに個別に操作を実行するのではなく、複数のストレージユニットに対して同時にさまざまな操作を実行できます。</block>
-  <block id="940cbe886b23355545e54a8e670dccf2" category="doc">ASA R2ストレージシステム上のONTAP整合性グループを管理します。</block>
-  <block id="3ec3496fc24d43fe7d9be310975cd088" category="paragraph">整合グループは、1つのユニットとして管理されるストレージユニットの集まりです。ストレージ管理を簡易化するために、整合グループを使用します。たとえば、10個のストレージユニットで構成されるデータベースが整合グループ内にあり、データベース全体をバックアップする必要があるとします。各ストレージユニットをバックアップする代わりに、整合性グループにSnapshotデータ保護を追加するだけで、データベース全体をバックアップできます。ストレージユニットを個別にではなくコンシステンシグループとしてバックアップすると、すべてのユニットの整合性のあるバックアップが提供されます。ユニットを個別にバックアップすると、不整合が発生する可能性があります。</block>
   <block id="756274998bfddb9ee5aca3ce09a0d910" category="section-title">整合性グループへのSnapshotデータ保護の追加</block>
   <block id="ef96230e3fb35067c9001214ca84a12c" category="paragraph">整合性グループにSnapshotデータ保護を追加すると、事前定義されたスケジュールに基づいて、整合性グループのローカルSnapshotが一定の間隔で作成されます。</block>
   <block id="e96ea80e31853245a2bf947241dc2cee" category="inline-link-macro">データのリストア</block>
@@ -350,8 +348,6 @@
   <block id="c7908abb23b7065aef5b318dd60abe7b" category="list-text">[概要]*セクションの*[ストレージユニット]*で、削除するストレージユニットを選択し、*[整合グループから削除]*を選択します。</block>
   <block id="f3a864061c7c167216cb7e02d3f90cf4" category="paragraph">ストレージユニットはコンシステンシグループのメンバーではなくなりました。</block>
   <block id="9c09f709a9761f564907022b7331dbb1" category="paragraph">ストレージユニットのデータ保護を継続する必要がある場合は、別のコンシステンシグループにストレージユニットを追加します。</block>
-  <block id="793fd1e28f15d34822702f9d70403404" category="section-title">整合グループを削除する</block>
-  <block id="2cd894b6ee2553a527a03b1a9086238b" category="paragraph">整合グループのメンバーを1つのユニットとして管理する必要がなくなった場合は、整合グループを削除できます。整合グループを削除すると、そのグループに含まれていたストレージユニットはクラスタ上でアクティブなままになります。</block>
   <block id="3e905f617938aef0b388912bce87f2e2" category="list-text">削除する整合グループにカーソルを合わせます。</block>
   <block id="b32275e0392f5cbab8806c7ce85e42f5" category="list-text">警告を受け入れ、*[削除]*を選択します。</block>
   <block id="dde86492e27a0d7b75963e7c4b928397" category="paragraph">整合グループを削除すると、その整合グループに含まれていたストレージユニットはSnapshotによって保護されなくなります。これらのストレージユニットをデータ損失から保護するために、別の整合グループに追加することを検討してください。</block>
@@ -438,8 +434,6 @@
   <block id="c48a364bcfea9942c880a707be66baf8" category="list-text">を選択<block ref="750f4f104efd8460cc9c38b724a23fe2" category="inline-image-macro-rx" type="image"></block>し、クラスタ間ネットワークインターフェイスのIPアドレスを入力します。</block>
   <block id="8c0b8a980a5fccf0d26e14839c9636e5" category="list-text">[クラスタピアリングの開始]*を選択します。</block>
   <block id="128a86d6606d71775364b984ff92953c" category="paragraph">ローカルASA R2クラスタとリモートクラスタのピア関係を設定しておきます。レプリケーション関係を作成できるようになりました。</block>
-  <block id="20a02863b5c5716bf567035b35c78ac6" category="section-title">手順2：必要に応じて、レプリケーションポリシーを作成します。</block>
-  <block id="55a0affd4bb6a25bd38b35691abd1df0" category="paragraph">Snapshotレプリケーションポリシーは、ASA R2クラスタで実行される更新をリモートサイトにレプリケートするタイミングを定義します。</block>
   <block id="99ce99ecf863ff8fe2a9cbb3426c1e80" category="list-text">System Managerで、*[保護]&gt;[ポリシー]*を選択し、*[レプリケーションポリシー]*を選択します。</block>
   <block id="b03db2a30a32c3ac8c0f123bffb1ece4" category="list-text">レプリケーションポリシーの名前を入力するか、デフォルトの名前をそのまま使用してから、説明を入力します。</block>
   <block id="ca8308195da9e8f1aaa6981179fa1910" category="list-text">[ポリシーの範囲]*を選択します。</block>
@@ -539,7 +533,6 @@
   <block id="8ba78ca0516a69b587aca58206efc01f" category="paragraph">ASA R2システムでは、ストレージユニットとコンシステンシグループを使用できます。</block>
   <block id="db202dbb9a4a22e347c683ae7290b969" category="list-text">ストレージユニット_を指定すると、SANホストでデータ処理に使用できるストレージスペースが確保されます。ストレージユニットとは、SCSIホストの場合はLUN、NVMeホストの場合はNVMeネームスペースを指します。</block>
   <block id="e2969be58319571a8d10cc30d53f9a3b" category="list-text">コンシステンシグループ_は、1つのユニットとして管理されるストレージユニットの集まりです。</block>
-  <block id="85af1289b342af44c3abb8f8013b47f6" category="paragraph">ASA R2システムでは、現在のASA、AFF、またはFASシステムとのクラスタ混在はサポートされていません。</block>
   <block id="989f2b4edace5981db8b18b1ad4a385f" category="list-text">ASA R2システムのサポートおよび制限の詳細については、を<block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>参照してください。</block>
   <block id="2b304856171196502641312a496c6d54" category="inline-link-macro">NetApp ASA</block>
   <block id="b4e5592d9ac502884e059b5eb31d6bf6" category="list-text">の詳細については、を<block ref="7ca9eeacedc91cf0cb26acef9d99ecbd" category="inline-link-macro-rx"></block>参照してください。</block>
@@ -826,7 +819,6 @@
   <block id="d27cce4a42b7ea8d15ff3f8607643e33" category="paragraph"><block ref="68f9f8f8e616f0e7ec59af9e1234ec7e" category="inline-link-macro-rx"></block><block ref="f2d6116a997a68be72ff8c2617977350" category="inline-link-macro-rx"></block><block ref="0066ce7dad22194ab05b9b3e8c713a35" category="inline-link-macro-rx"></block>ASA R2システムに接続するようにホストを適切に設定するには、ONTAP SANホストのマニュアルを参照してください。</block>
   <block id="5d17193df18fedb451e3f5b9f064ef2f" category="section-title">VMware仮想マシンの移行</block>
   <block id="112622c85a9cbee01c13e67b0b568c78" category="inline-link-macro">VMware vSphere vMotion</block>
-  <block id="36b30e26ad350b193fa96577b859aa6b" category="paragraph">VMワークロードをASAストレージシステムからASA R2ストレージシステムに移行する必要がある場合はNetApp、を使用し<block ref="97ce748bde1d0df326ab308ffcedbe79" category="inline-link-macro-rx"></block>て、データのライブ移行を無停止で実行することを推奨します。</block>
   <block id="d76fc5ee6d641846e5835d32d7f85b4f" category="inline-link-macro">ストレージのプロビジョニング</block>
   <block id="e397caa258e5d83ec68542ada3868a88" category="paragraph">これで、<block ref="16349da302f4151e8c9d8212eacbac27" category="inline-link-macro-rx"></block>SANホストがストレージユニットに対してデータの読み取りと書き込みを実行できるようになります。</block>
   <block id="504d463c80199fc8015db827acb89c07" category="doc">ASA R2ストレージシステムのONTAP CLIサポート</block>
@@ -933,7 +925,6 @@
   <block id="b8d343a2d9dfd7386b6b373e6050b930" category="searchtitle">ASA R2システムを他のONTAPシステムと比較する</block>
   <block id="cf4ae521a2a16cdd073860fee0fbab96" category="paragraph">ONTAPストレージのパーソナリティは、System ManagerまたはONTAP CLIを使用して確認できます。</block>
   <block id="c3e4be39d2ab89664b205dd7d0bb6510" category="list-text">System Managerのメニューで、*[クラスタ]&gt;[概要]*を選択します。</block>
-  <block id="8fb6b6206aca4aa491419e270ea3424d" category="list-text">CLIから、次のように入力します。<block ref="9228fcbc2cb846682f56e98989045eaa" prefix=" " category="inline-code"></block></block>
   <block id="8369fc694deadf80f5d106ef41b6e7b2" category="paragraph">ONTAPストレージシステムのパーソナリティは変更できません。</block>
   <block id="df5b8332c344a8d1a2ca6124ea06defe" category="cell">ASA r2</block>
   <block id="b7b46ce5d1a547db89c0bc615ff272a5" category="cell">ASA</block>
@@ -1078,7 +1069,6 @@
   <block id="130d99f3155a9524fbcee1b66d372637" category="doc">ASA R2ストレージシステム上のストレージユニットの削除</block>
   <block id="a43d503903bc397cb05151409b4aa0ee" category="paragraph">ユニットに含まれるデータを維持する必要がなくなった場合は、ストレージユニットを削除します。不要になったストレージユニットを削除すると、他のホストアプリケーションに必要なスペースを解放できます。</block>
   <block id="149f67073e73a0379b210512f9ae9b34" category="inline-link-macro">コンシステンシ・グループからのストレージ・ユニットの削除</block>
-  <block id="e2401ad7b6793e511075543831eaf193" category="paragraph">削除するストレージユニットがレプリケーション関係にあるコンシステンシグループに含まれている場合は<block ref="1bfd409ef7a0e58efec5d57a46fff2f5" category="inline-link-macro-rx"></block>、削除する前にストレージユニットを削除する必要があります。</block>
   <block id="3b82021e0930da2e3b1fe1bfe2aa2f70" category="list-text">削除するストレージユニットの名前にカーソルを合わせます。</block>
   <block id="a04511306488004fe2e50b58479b8bc6" category="list-text">削除を元に戻せないことを承認します。</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">「 * 削除」を選択します。</block>
@@ -1206,7 +1196,6 @@
   <block id="cbb4ea3ae0ace3dd5cedae78f9d2a805" category="paragraph">プロビジョニングプロセスが完了し、データの提供を開始する準備ができました。これで、<block ref="13282ab1c43cc291d62099de29c76969" category="inline-link-macro-rx"></block>ASA R2システム上のデータを保護できます。</block>
   <block id="94751ffa48a4135b11ac22ac2dae643e" category="inline-link-macro">ONTAP SANホストのドキュメント</block>
   <block id="88e865c72412e4a1327806858c6d2784" category="paragraph">ホスト側の設定の詳細については<block ref="5045572e3d187366935cbd2a743bcd07" category="inline-link-macro-rx"></block>、使用しているホストのを参照してください。</block>
-  <block id="1baa07f2ade9c6d963643a794d4825f3" category="summary">ASA R2構成では、FC、iSCSI、NVMe/FC、NVMe/TCPの各プロトコルを実行するクラスタあたり最大2ノードがサポートされます。</block>
   <block id="b6e8a44e2a75e79622ab8bca1270a5ce" category="doc">ASA R2ストレージの制限</block>
   <block id="abe1583ce937db07d8d0619331789f3c" category="paragraph">最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。</block>
   <block id="d0bb632fcdb31cf3c729c1c59f826d4f" category="cell">128TB</block>
@@ -1458,7 +1447,6 @@
   <block id="c2520bb5c23501e13bc7e06dde3ae9fd" category="list-text">*一部接続済み*：一部のイニシエータが両方のノードに接続されていないことを示します。</block>
   <block id="031e3ca05bd720350a450cc6267211e2" category="list-text">*接続なし*：イニシエータが接続されていないことを示します。</block>
   <block id="d28f4031342956661d79f1274d2a395c" category="paragraph">ASA R2システム向けのONTAP 9 .16.0の新機能について説明します。</block>
-  <block id="6913e721908f172fd672e46e9459c4ad" category="paragraph">削除する整合グループがレプリケーション関係にある場合は、整合グループを削除する前に関係を解除する必要があります。レプリケーションコンシステンシグループを削除すると、コンシステンシグループに含まれていたストレージユニットはクラスタでアクティブなままになり、それらのレプリケートコピーはリモートクラスタに残ります。</block>
   <block id="22a4c2b7564a7f7d551ab23d23fbcac8" category="paragraph">テクニカルサポートがASA R2システムからAutoSupportメッセージを受信できることを確認し、問題が発生した場合に支援するために必要なデータをテクニカルサポートが受け取っていることを確認しておきます。</block>
   <block id="3ae7feb5d9cb2335f10922aa1130319d" category="paragraph">ストレージユニットは、常にASA R2ストレージシステム上でシンプロビジョニングされます。シックプロビジョニングはサポートされません。</block>
   <block id="c43d68b5b8370d3423bfb0b13dfe0abe" category="inline-link">ASA R2メンテナンスマニュアル</block>
@@ -1474,7 +1462,6 @@
   <block id="253b40ae359ba25b56231803430c4873" category="section-title">ONTAP</block>
   <block id="7634d59040fd3f0630abac42ed05842e" category="inline-link-macro">ASA R2システムとASAシステムの比較</block>
   <block id="0a1c5c73cbf93d4b2d88ff0be84d2900" category="list-text">詳細については、をご覧ください <block ref="c736257475481e43d317d6d66a81a5cb" category="inline-link-macro-rx"></block>。</block>
-  <block id="420a0f9e5b6b25901e8477f2031c4f09" category="admonition">ASA R2ストレージシステムのSnapshotレプリケーションは、別のASA R2ストレージシステムとの間でのみサポートされます。ASA R2システムから現在のASA、AFF、またはFASシステムに、または現在のASA、AFF、またはFASシステムからASA R2システムにSnapshotをレプリケートすることはできません。</block>
   <block id="3f808654ebfed6aae875b71a402ac91b" category="inline-link-macro">ONTAP 9.16.1に関する注意事項</block>
   <block id="ccde34ed9a96a11b25c1db2a8c9acb87" category="paragraph"><block ref="ccde34ed9a96a11b25c1db2a8c9acb87" category="inline-link-macro-rx"></block></block>
   <block id="82f8a3cbf0a93791bbbfc70a1b650bcf" category="paragraph">スナップショットは、オンデマンドで作成することも、に基づいて定期的に自動的に作成することもできます<block ref="83bfa2dc5e6407223dca634141b43309" category="inline-link-macro-rx"></block>。Snapshotポリシーとスケジュールは、Snapshotを作成するタイミング、保持するコピーの数、Snapshotに名前を付ける方法、およびSnapshotにレプリケーション用のラベルを付ける方法を指定します。たとえば、毎日午前12時10分にSnapshotを1つ作成し、最新の2つのコピーを保持して「daily」（タイムスタンプが付加された）という名前を付け、レプリケーション用に「daily」というラベルを付けるとします。</block>
@@ -1534,7 +1521,6 @@
   <block id="c32fddd27ad2252ef230f0871f34068f" category="paragraph">ASA R2システムでは、デフォルトのネットワークLIFがNVMeホストとSCSIホストの間で共有されるため、自動フェイルオーバーはサポートされません。iSCSI LIFの自動フェイルオーバーを有効にするには、が必要です<block ref="80674e801e3a84767641d7c52bb7dcab" category="inline-link-macro-rx"></block>。自動フェイルオーバーは、iSCSIのみのLIFではデフォルトで有効になっています。</block>
   <block id="22f4d4e3ef9ad886ae95608e10f828cb" category="paragraph">iSCSI LIFの自動フェイルオーバーを有効にしている場合、ストレージフェイルオーバーが発生すると、iSCSI LIFはホームノードまたはポートからHAパートナーノードまたはポートに自動的に移行され、フェイルオーバーの完了後に再び移行されます。または、iSCSI LIFのポートが正常な状態でなくなった場合、そのLIFは現在のホームノードの正常なポートに自動的に移行され、ポートが正常な状態に戻った時点で元のポートに戻ります。</block>
   <block id="e51f73897cef482e683893c74ad0aebf" category="doc">ONTAPクラスタへのASA R2ノードの追加</block>
-  <block id="be36547b484c259b8e39cb4b17bdac83" category="paragraph">ONTAP 9.16.1以降では、ASA R2ストレージシステムでクラスタあたり最大12ノードがサポートされます。HAペアの新しいノードをケーブル接続して電源をオンにしたら、ノードをクラスタに追加する必要があります。</block>
   <block id="97a5a9f5366a279a2160c428ad458079" category="list-text">ノードのIPアドレス</block>
   <block id="d08cd309dd95d7aa27f8f977cf1a060e" category="list-text">クラスタ間ネットワークインターフェイスのIPアドレス</block>
   <block id="20f5ca91f6dbeac15890f67c9a4cb751" category="list-text">クラスタ間ネットワークサブネットマスク</block>
@@ -1565,16 +1551,10 @@
   <block id="fe36b3d0747e41e736245b1f2f016f37" category="paragraph">[パフォーマンスサービスレベル]*で、別のサービスレベルを選択します。</block>
   <block id="e39fb54244b4e7e5902cf86f104eae5f" category="paragraph">子整合グループを作成する</block>
   <block id="df30ab788ddab119f1a9a52f397c1578" category="paragraph">[子整合グループの追加]*を選択します。</block>
-  <block id="47f30cf1dbc386b695e587c89d934679" category="paragraph">ONTAP 9.16.1以降では、System Managerを使用してASA R2システムに階層型整合グループを作成できます。階層構造では、1つ以上の整合グループが親整合グループの子として設定されます。</block>
   <block id="accc48ba80dae134714334f9974f857c" category="paragraph">階層型整合性グループを使用すると、各子整合性グループに個別のSnapshotポリシーを適用し、親をレプリケートしてすべての子整合性グループのSnapshotを1つのユニットとしてリモートクラスタにレプリケートできます。これにより、複雑なデータ構造のデータ保護と管理が簡易化されます。たとえば、という名前の親整合グループを作成し、このグループには、アプリケーションデータ用と<block ref="0f23ff9c78f3eb5ab959d518e111d2f4" prefix=" " category="inline-code"></block>アプリケーションログ用の2つの子整合グループが含まれている<block ref="234223ee2714e5f18034660862262d11" prefix=" " category="inline-code"></block>とし<block ref="f4834f6322c13f96b4d06d74fae1bbee" prefix=" " category="inline-code"></block>ます。のスナップショット<block ref="234223ee2714e5f18034660862262d11" prefix=" " category="inline-code"></block>は15分ごとに作成され、のスナップショット<block ref="0f23ff9c78f3eb5ab959d518e111d2f4" prefix=" " category="inline-code"></block>は1時間ごとに作成されます。親整合グループ<block ref="d6faa7ca58e81c6f13095e4f9ff20e81" prefix=" " category="inline-code"></block>には、との<block ref="0f23ff9c78f3eb5ab959d518e111d2f4" prefix=" " category="inline-code"></block>両方のSnapshotを24時間ごとにリモートクラスタにレプリケートするSnapMirrorポリシーがあります。<block ref="234223ee2714e5f18034660862262d11" prefix=" " category="inline-code"></block>親整合グループは<block ref="f4834f6322c13f96b4d06d74fae1bbee" prefix=" " category="inline-code"></block>単一のユニットとして管理され、子整合グループは個別のユニットとして管理されます。</block>
-  <block id="5c31d135ad789e411ad759e0c134e359" category="section-title">既存の整合グループを親整合グループに変換する</block>
-  <block id="ab5220486193aa4a04c53d18e19056fc" category="paragraph">ストレージユニットを親整合グループに直接関連付けることはできません。既存の整合グループを親に変換すると、新しい子整合グループが作成され、変換された整合グループに属するストレージユニットが新しい子整合グループに移動されます。</block>
   <block id="9bb9a0458dabe990942bf493592cb497" category="list-text">親整合グループに変換する整合グループにカーソルを合わせます。</block>
   <block id="ec57f29bebbe66441595e764308d00a6" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[親整合グループに昇格]*を選択します。</block>
-  <block id="e0e1d719c3169a36adccf812d315cc3d" category="list-text">親整合グループの名前を入力するか、デフォルトの名前をそのまま使用して、整合グループのコンポーネントタイプを選択します。</block>
   <block id="3073e32eb6f2f0cb69e9248a5f0c848c" category="list-text">[昇格]*を選択します。</block>
-  <block id="f61d709beaccfca851c4fd737b049a61" category="paragraph">親整合グループの下に追加の子整合グループを作成できます。また、バックアップやディザスタリカバリ用に、地理的に離れた場所に親整合グループをコピーすることもできます<block ref="c9073dd826fc7721b98f9930c55d01b2" category="inline-link-macro-rx"></block>。</block>
-  <block id="f28898d3cd8988ff697e782c8449eb18" category="paragraph">子整合性グループを作成すると、個 々 のSnapshotポリシーを各子に適用しながら、レプリケーションポリシーを親レベルのすべての子整合性グループに適用できます。</block>
   <block id="34dd18f2c196dd45fa9dfab7e7517350" category="paragraph">新規または既存の整合グループから子整合グループを作成できます。</block>
   <block id="643328739ada7596678f9066cec81be9" category="open-title">シンシイコンシステンシクルウフカラ</block>
   <block id="d7c5fedb6bb1501de8279366644bdd86" category="list-text">子整合グループを追加する親整合グループにカーソルを合わせます。</block>
@@ -1586,30 +1566,24 @@
   <block id="3fb56bc224d2a0ac3d902de4d323e71a" category="open-title">キソンノコンシステンシクルウフ</block>
   <block id="9e532008425c88c7f9f600e01feb942c" category="list-text">子整合グループにする既存の整合グループを選択します。</block>
   <block id="7ab1a538b156a84c113e1b25aa016aef" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[別の整合グループの下に移動]*を選択します。</block>
-  <block id="f50d0d6201337aee6a17962f21e42153" category="paragraph">すでに別の整合グループの子として使用する整合グループを新しい親整合グループに移動する場合は、その整合グループを既存の親整合グループから切り離す必要があります。</block>
   <block id="b13aafb46acdbda66ede2f929c14fff7" category="list-text">子整合グループの新しい名前を入力するか、デフォルトの名前をそのまま使用して、整合グループのコンポーネントタイプを選択します。</block>
   <block id="767e4528802b2fbd53126bfeffbfbb47" category="list-text">親整合グループにする既存の整合グループを選択するか、新しい親整合グループを作成する場合に選択します。</block>
   <block id="36a7554cab29967611589d7eefa20c88" category="paragraph">新しい親整合グループの作成を選択した場合は、親整合グループの名前を入力するかデフォルトの名前をそのまま使用してから、整合性アプリケーションコンポーネントのタイプを選択します。</block>
   <block id="c3eb9435da3ee7c0ac02ef30983ba9d2" category="list-text">[移動]*を選択します。</block>
   <block id="1aebd2565785840796b5b11c1362918f" category="inline-link-macro">個 々 のスナップショット保護ポリシーを適用する</block>
-  <block id="27f6c159b783eaece3b27009d252861f" category="inline-link-macro">レプリケーションポリシーの設定</block>
-  <block id="5584e5580824a6a612aaebc7cae0dc13" category="paragraph">子整合グループを作成したら、各子整合グループを作成できます<block ref="b20e7e9a535f6a3244da85f4587a0502" category="inline-link-macro-rx"></block>。また、親整合グループ上で、すべての子整合グループのSnapshotを1つのユニットとしてリモートクラスタにレプリケートすることもできます<block ref="cbc7b65bc979a0ca08aaa98e2dc63eda" category="inline-link-macro-rx"></block>。</block>
   <block id="4aafb19b9676db4e8aa85eb3131ac5f4" category="section-title">親整合グループを単一の整合グループに降格する</block>
-  <block id="5837ba118b622a1f9ee732410e451284" category="paragraph">親整合グループを単一の整合グループに降格すると、関連付けられた子整合グループのストレージユニットが親整合グループに追加されます。子整合グループが削除され、親が単一の整合グループとして管理されます。</block>
   <block id="dd487eacf1aba6e2726ce73064acff7b" category="list-text">降格する親整合性グループにカーソルを合わせます。</block>
   <block id="d26a37885a1db03d1d33fa1b32e74c25" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[単一の整合グループに降格]*を選択します。</block>
   <block id="0b886822f169d28b04dc34a1cb55c402" category="list-text">[降格]*を選択します。</block>
   <block id="8eea35138709fe7cf5caaf5b5fb53a4d" category="inline-link-macro">Snapshotポリシーを追加します。</block>
   <block id="a4cc38b952e58f7fac916d3297d86f9f" category="paragraph"><block ref="9b6117933a7d1c9745a65ab485bb26f2" category="inline-link-macro-rx"></block>降格された整合グループに追加して、子整合グループによって以前管理されていたストレージユニットを保護します。</block>
   <block id="e8289e36e948e36d5aeb9297cf2c6712" category="section-title">親整合グループから子整合グループの接続解除</block>
-  <block id="a98e8367b6b0b1bc6b9fdb2658c07a83" category="paragraph">親整合グループから子整合グループを切り離すと、子整合グループは親整合グループから削除され、単一の整合グループとして管理されます。親に適用されたレプリケーションポリシーは、切り離された子コンシステンシグループに適用されなくなります。</block>
   <block id="94db0ec67f710fec5c7f775e299a2d6e" category="list-text">親整合グループを選択します。</block>
   <block id="77b355d4c3903a5367febffb1d5fb080" category="list-text">接続を解除する子整合グループから選択します。</block>
   <block id="baffc5619c6b92cfb8bd0f06efe69615" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[親から切り離し]*を選択します。</block>
   <block id="43faed766403b7432cc59c42e8d49ebf" category="list-text">接続を解除する整合グループの新しい名前を入力するか、デフォルトの名前をそのまま使用してから、整合グループのアプリケーションタイプを選択します。</block>
   <block id="f9e81700c82de44e7b8b9b6bfcfbba80" category="list-text">[切り離し]*を選択します。</block>
   <block id="3fe9697b148df0f9994a0c38ed482555" category="inline-link-macro">レプリケーションポリシーの設定</block>
-  <block id="ee498a1797cb05156ed6a63b8ff17543" category="paragraph"><block ref="2e81c1e2e7e67baddc7dd1eab1535a95" category="inline-link-macro-rx"></block>切り離された子整合性グループのSnapshotを、単一の整合性グループとしてリモートクラスタにレプリケートする場合。</block>
   <block id="e5c51f544e69319bec042113911e203e" category="paragraph"><block ref="1284f4e581f500fae0f4daa3e9543a0c" category="inline-link-macro-rx"></block>ASA R2システムをONTAP環境に導入します。</block>
   <block id="9a5e67864d1a0cbd6f43034e561f51a2" category="summary">ASA R2ストレージシステムのインストールとセットアップを開始し、ONTAP環境に導入します。</block>
   <block id="bf0f6aa21aec3e349179a68aa2cb89e0" category="section-title">整合グループクローンのスプリット</block>
@@ -1829,7 +1803,6 @@
   <block id="676b7066692787a119854c062d5f6c05" category="list-text">各コントローラまたは一部のシステムでは、各コントローラのシステム管理モジュール</block>
   <block id="3b2136486adac3ad66275a45c07c6ebf" category="image-alt">システムシリアル番号の例</block>
   <block id="6b127ae60215df1a5f77bc62deb0fa41" category="list-text">シリアル番号が表示されない場合は、NetAppの新規のお客様向けの手順に従います。</block>
-  <block id="d4b904a6ceddca0805b85998f1946d36" category="paragraph">ONTAP 9.16.1以降では、次のNetApp ASA R2システムがサポートされます。これらのプラットフォームは、ハードウェアとソフトウェアの統合ソリューションを提供し、SANのみのお客様のニーズに合わせてシンプルなエクスペリエンスを提供します。</block>
   <block id="9e607734cbe02d05fcbdf2a8bd579b3a" category="inline-link-macro">キー管理ツール間での暗号化キーの移行のサポート</block>
   <block id="c18d7ea3e180dd72f3fc8869a57e6376" category="cell"><block ref="c18d7ea3e180dd72f3fc8869a57e6376" category="inline-link-macro-rx"></block></block>
   <block id="86c79aae612f98a6019861f950eeb1a3" category="cell">クラスタレベルでONTAPのオンボードキーマネージャを外部キー管理ツールに切り替える場合は、ONTAPのコマンドラインインターフェイス（CLI）を使用して、暗号化キーをあるキー管理ツールから別のキー管理ツールに簡単に移行できます。</block>
@@ -1980,7 +1953,6 @@
   <block id="b3c7be37f134696368fa3ec257e47dca" category="cell">構成</block>
   <block id="4c018311b80f4cb91ab6f57f2e32f309" category="cell">元に戻す前に、次の操作を行ってください...</block>
   <block id="e270dd0b11b4d60d2faa3a4912f99f8e" category="cell">SnapMirrorアクティブ同期関係における階層的整合性グループ</block>
-  <block id="43d42e4f9f1f7ec46c3863b8a0151f7b" category="cell">SnapMirrorのアクティブ同期関係を削除します</block>
   <block id="5ac0fbbc053ed720aacdf3f3af276820" category="cell">アクティブなインポート関係</block>
   <block id="2a8a59c901b916190a5f0c2fc9db590e" category="cell">アクティブなインポート関係を削除する</block>
   <block id="2d1eaa6efdb3bbcbeddb0390177c033f" category="cell">ランサムウェア対策が有効</block>
@@ -1989,11 +1961,9 @@
   <block id="b5b8e67d6a37d24ad73c89e4c7ac8c9e" category="inline-link-macro">前提条件</block>
   <block id="e67055b6d8c65ffeed652e0147459791" category="list-text">ONTAP Cloud Mediatorを使用している場合は、 ASA r2システムが必要な要件を満たしていることを確認してください。 <block ref="efcd0c458e1c451926dd33228d1c1e37" category="inline-link-macro-rx"></block> 。</block>
   <block id="8d8b639ec8160491c90dea5c1c1c3da9" category="list-text">システム マネージャーで、*保護 &gt; 概要* を選択します。</block>
-  <block id="51b848336c7f7b6646ffd4f9bac5fba0" category="list-text">右側のペインで、*メディエーター*の横にある<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block> ; 次に、[*メディエーターを追加*] を選択します。</block>
   <block id="7656aa254dd0e2eeb0bb2b5791fc4ce9" category="list-text">*メディエータータイプ*を選択します。</block>
   <block id="d9bdcb07b569b6e25edbe03768dae198" category="list-text">*クラウド*メディエーターの場合は、組織ID、クライアントID、クライアントシークレットを入力してください。*オンプレミス*メディエーターの場合は、IPアドレス、ポート、メディエーターユーザー名、メディエーターパスワードを入力してください。</block>
   <block id="8645f14d86ca95088f9677a7ab1aa3db" category="list-text">適格なクラスター ピアのリストからクラスター ピアを選択するか、[クラスター ピアの追加] を選択して新しいクラスター ピアを追加します。</block>
-  <block id="b949fce785965e8564d56844e56492e6" category="list-text">の内容をコピーします<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>ファイルをダウンロードして*証明書*欄に貼り付けるか、*インポート*を選択して<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>ファイルを作成し、証明書情報をインポートします。</block>
   <block id="30b5aba1e43ab775f5ea2145687df2a6" category="inline-link-macro">SnapMirrorアクティブ同期を設定する</block>
   <block id="dc159caf94b39eeebe38d89cea963f19" category="paragraph">メディエーターを初期化したら、 <block ref="972d16674ae44824ac2ebd5c1f400dda" category="inline-link-macro-rx"></block>セカンダリ サイトにデータのコピーを作成し、災害発生時にホスト アプリケーションが自動的かつ透過的にフェイルオーバーできるようにします。</block>
   <block id="ac467f776ee651744b052418ba147ac6" category="summary">災害発生時にセカンダリ データ コピーを作成し、自動フェイルオーバーを有効にすることで、ビジネスの継続性を確保するためにSnapMirrorアクティブ シンクを構成する方法を学習します。</block>
@@ -2186,11 +2156,7 @@
   <block id="6fc817dfbe9e8303d43dd345dfc8d0a6" category="list-text">*その他*を選択し、*削除*を選択します。</block>
   <block id="d1dde57285c34e792a5945a2584acc2e" category="list-text">続行することを確認してから、[削除] を選択します。</block>
   <block id="d8c055944ceedab265fa23bd4dac431a" category="paragraph">ホストグループが削除されます。グループに属していたホストは、ホストグループにマッピングされていたストレージユニットにアクセスできなくなります。</block>
-  <block id="40082e45e855dbdb3de68aec6ef1aa78" category="cell">クラスターあたりの最大ノード数</block>
-  <block id="a3df4c04a46b1ebef6ac5fcea3ddb66f" category="cell">クラスターあたりのストレージユニットの最大数</block>
   <block id="8487699fb65ed58bf886a609cc850b23" category="cell">30,000</block>
-  <block id="b20d291d0592458b40c373636c7571ef" category="cell">最大ストレージユニットサイズ</block>
-  <block id="68a0ea87389f1222fb3b843ccfd2c0fb" category="cell">最大ストレージ可用性ゾーンサイズ</block>
   <block id="4d1d2462172575416e653835e7623c79" category="cell">2 PB</block>
   <block id="246838e6a2baa5417bc2bb181dffaefd" category="cell"><block ref="246838e6a2baa5417bc2bb181dffaefd" category="inline-link-macro-rx"></block></block>
   <block id="b41dd2df01d053ae559a639dee1a223a" category="summary">ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能について説明します。</block>
@@ -2299,8 +2265,6 @@
   <block id="2a1d671c971c0af470fbdc7401172b0f" category="sidebar">ARP/AIアラートに応答する</block>
   <block id="65af6614b420bd97b9cd190dea5aea32" category="sidebar">ARP/AIを一時停止または再開する</block>
   <block id="db63e5e7d34efa3840098020c2d030bc" category="sidebar">ONTAP 9.17.1の新機能</block>
-  <block id="7d456ea58781d907d2b20d5b2aca677d" category="summary">ASA r2 システム用の自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定する方法について説明します。</block>
-  <block id="851790a9f21b5ff71a9331c624658b8f" category="doc">ASA r2 システムで自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediatior を構成する</block>
   <block id="3d1a9a8962bb1e463a972fd3eef1a2d7" category="paragraph">SnapMirrorアクティブ シンクは、災害発生時にほぼゼロのリカバリ ポイント目標 (RPO) とほぼゼロのリカバリ時間目標 (RTO) で運用を継続できるようにデータを保護するように構成されています。</block>
   <block id="19e274092e78148b7f8f40a16e4e4b47" category="summary">異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。</block>
   <block id="e7a712b62a3b9917efcf632c95771bf8" category="summary">Active Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。</block>
@@ -2329,5 +2293,217 @@
   <block id="a7063f74bf99069f53792368bf5ddbe3" category="admonition">自動ワークロード再バランスを有効にすると、 ASA r2 システムでONTAP 9.17.1 から復帰できなくなります。</block>
   <block id="bbf7c82f4e9f186f627b8c659682a8e1" category="admonition">ASA r2 システムでは、SED は NVMe プロトコルに対してのみサポートされます。</block>
   <block id="f0929283036207a854392f9eaeb45be4" category="paragraph">ASA r2 システムは、一貫性グループを持つストレージ ユニットを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、整合性グループ内の 10 個のストレージ ユニットで構成されるデータベースがあり、データベース全体をバックアップする必要があるとします。各ストレージ ユニットを個別にバックアップする代わりに、整合性グループをバックアップすることでデータベース全体を保護できます。</block>
-  <block id="85eb2c19fe63353c756dd7a692d4b4f1" category="admonition"><block ref="46c41179928c756a06811404e3a5ce1c" category="inline-link-macro-rx"></block>ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。自動ワークロード再バランスが有効になった後、 ASA r2 システムでONTAP 9.17.1 から復帰することはできません。</block>
+  <block id="eaeb215b56b171344d62780dd997477e" category="paragraph">ONTAP 9.16.1 以降、 ASA r2 ストレージ システムはクラスタごとに最大 12 個のノードをサポートします。  HA ペアの新しいノードがケーブル接続され、電源がオンになった後、それらをクラスターに参加させる必要があります。</block>
+  <block id="b8838348a8da924f377a5d293230f4f4" category="summary">ASA r2 システムのONTAPソフトウェアの復元は、他のONTAPシステムの復元と同じプロセスに従います。ONTAPクラスタのリバートはシステム停止を伴います。</block>
+  <block id="4145a02c95a799fdae111c620990d210" category="admonition"><block ref="78cd7e79034e394d9b3e1aacaa777a70" category="inline-link-macro-rx"></block>ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。自動ワークロード再バランスが有効になった後、 ASA r2 システムでONTAP 9.17.1 から復帰することはできません。</block>
+  <block id="b4a4e19f8caa5675ed75c7e4c2f95379" category="inline-link-macro">SnapMirrorのアクティブ同期関係を削除します</block>
+  <block id="3151003a976b1d39b8d92ef0ca3c387c" category="cell"><block ref="3151003a976b1d39b8d92ef0ca3c387c" category="inline-link-macro-rx"></block></block>
+  <block id="79bc5a42c0ce5e77f02d040d055dfae3" category="summary">ASA r2 システムのONTAPソフトウェア アップグレードは、他のONTAPシステムのアップグレードと同じプロセスに従います。  ASA r2 システムでONTAPソフトウェアをアップグレードすると、新しい ONTAP 機能と強化されたONTAP機能を利用できるようになります。</block>
+  <block id="676b55575e438300a6a0242a0e2d75e1" category="summary">ASA r2 システム用の自己署名証明書またはサードパーティ証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定する方法について説明します。</block>
+  <block id="891f36b135a18ccbdefecd4dd19a3c84" category="doc">ASA r2 システムでONTAP Mediator またはONTAP Cloud Mediatior を構成する</block>
+  <block id="97bae85f844627b195ba9e949527cd8e" category="list-text">右側のペインの「メディエーター」の下で、「メディエーターの追加」を選択します。</block>
+  <block id="42d4a1ca1a8c97aaab863879660365c9" category="list-text">証明書情報を追加する</block>
+  <block id="d766068c7f16a578ba3f54cfb9431541" category="list-text">自己署名証明書を使用している場合は、<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>ファイルをダウンロードして*証明書*欄に貼り付けるか、*インポート*を選択して<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>ファイルを作成し、証明書情報をインポートします。</block>
+  <block id="063f94639a5aabb84156e8516de0cab6" category="list-text">サードパーティの証明書を使用している場合は、*証明書*フィールドに証明書情報を入力します。</block>
+  <block id="305f7299b1b227306c97e175ddfb373e" category="summary">整合性グループのスナップショットを作成して、整合性グループの一部であるストレージ ユニット内のデータを保護します。整合性グループ内のいずれかのストレージ ユニットのデータを保護する必要がなくなった場合は、スナップショット保護を削除できます。</block>
+  <block id="8536e4b244760f25ededb010c00effa2" category="doc">スナップショットを使用してASA r2 システムの整合性グループを保護する</block>
+  <block id="4b4f911a862c022d119e438c44aa0a17" category="paragraph">ASA r2 ストレージ システム内のコンシステンシー グループのスナップショットを作成し、コンシステンシー グループの一部であるストレージ ユニット内のデータを保護します。整合性グループ内のいずれかのストレージ ユニットのデータを保護する必要がなくなった場合は、整合性グループからスナップショット保護を削除できます。</block>
+  <block id="d48c07ef0c202dfbe8cb1a9f0d858fd3" category="paragraph">整合性グループ内の特定のストレージ ユニットのデータを保護する必要がなくなった場合は、整合性グループからそれらのストレージ ユニットを削除できます。</block>
+  <block id="41711fcdbb5f638e0c8240940a59ef75" category="summary">整合性グループ内のストレージ ユニットの数を変更して、整合性グループのサイズを増減します。</block>
+  <block id="c27a5962c7e7ec66189a305a5f5ad38b" category="doc">ASA r2システムの整合性グループのサイズを変更する</block>
+  <block id="833a4354cb68f3cdd7ed3c7ae637dd10" category="inline-link-macro">SnapMirrorのアクティブ同期関係を削除する</block>
+  <block id="02fe6464a41941805587a0bb0fd6bc1b" category="inline-link-macro">関係を断つ</block>
+  <block id="befe4ba543ef5becd7b16f7e36af9a30" category="paragraph">ONTAP 9.16.1を実行していて、拡張したいコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>ストレージユニットを追加する前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、<block ref="34346ff5cca42944a4ed431b70afdf69" category="inline-link-macro-rx"></block>整合性グループを拡張する前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。</block>
+  <block id="7ac95df708e1e6c23d71cd9393b3bc84" category="summary">整合性グループのメンバーを単一のユニットとして管理する必要がなくなった場合は、整合性グループを削除できます。</block>
+  <block id="fad786d01c26418babfb8f46c9213322" category="doc">ASA r2システム上の整合性グループを削除する</block>
+  <block id="6488fd27ab28c1a614285c0fcab40be4" category="paragraph">整合性グループのメンバーを単一のユニットとして管理する必要がなくなった場合は、整合性グループを削除できます。整合性グループが削除された後も、以前グループ内にあったストレージ ユニットはクラスター上でアクティブなままになります。整合性グループがレプリケーション関係にあった場合、レプリケートされたコピーはリモート クラスターに残ります。</block>
+  <block id="d6b9eb2d38523b60202862949d11678f" category="paragraph">ONTAP 9.16.1を実行していて、削除するコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>整合性グループを削除する前に。  ONTAP 9.17.1 以降のリリースでは、コンシステンシー グループを変更する前にこの関係を削除する必要はありません。</block>
+  <block id="fded2ecb467047cfa87cd2389472c754" category="doc">ASA r2 ストレージシステム上のONTAP整合性グループについて学習します</block>
+  <block id="89a3dbc1e61db3375313b0a46b8b2d38" category="paragraph">整合性グループとは、単一のユニットとして管理されるストレージ ユニットの集合です。ストレージ管理を簡素化するには、整合性グループを使用します。</block>
+  <block id="209c4e104de4e93b212390238bb51b0c" category="paragraph">たとえば、整合性グループ内の 10 個のストレージ ユニットで構成されるデータベースがあり、データベース全体をバックアップする必要があるとします。各ストレージ ユニットをバックアップする代わりに、整合性グループにスナップショット データ保護を追加するだけで、データベース全体をバックアップできます。ストレージ ユニットを個別にバックアップするのではなく、一貫性グループとしてバックアップすると、すべてのユニットの一貫性のあるバックアップが提供されますが、ユニットを個別にバックアップすると不整合が生じる可能性があります。</block>
+  <block id="a50d9fbff117cd678c55c63a5bb02d0e" category="paragraph">ONTAP 9.16.1 以降では、System Manager を使用してASA r2 システムに階層型コンシステンシ グループを作成できます。階層構造では、1 つ以上の整合性グループが親整合性グループの下の子として構成されます。</block>
+  <block id="b677e3124d6e40579970e7053d53c4e0" category="section-title">レプリケーション関係における一貫性グループ</block>
+  <block id="e2b2e30a32098f6916a6a7a2d004a136" category="paragraph">ONTAP 9.17.1 以降では、非同期レプリケーション関係またはSnapMirrorアクティブ同期関係内のコンシステンシ グループに対して、関係を破棄または削除することなく、次のジオメトリ変更を行うことができます。プライマリ整合性グループでジオメトリの変更が発生すると、その変更はセカンダリ整合性グループに複製されます。</block>
+  <block id="118a76b2a17ade397c36b94ff6a5a4f9" category="inline-link-macro">ストレージユニットのサイズを変更する</block>
+  <block id="fde8c58298e02019969dd954b97dda6d" category="list-text"><block ref="ecd9b37bb6564d4b0eaac3a523e99149" category="inline-link-macro-rx"></block>ストレージユニットを追加または削除することによって。</block>
+  <block id="0d6c55064bffe94e0d38693f932c9d03" category="inline-link-macro">単一の整合性グループを昇格する</block>
+  <block id="318e50939b290a8ad26496081e4b79f3" category="list-text"><block ref="0e09b761b21c40af56c936feefb34032" category="inline-link-macro-rx"></block>親整合性グループに追加します。</block>
+  <block id="2ddce4766410ba2d023ff2601b6035e1" category="inline-link-macro">親整合性グループを降格する</block>
+  <block id="76596c109755e8f490e1a34e3fca97eb" category="list-text"><block ref="031a438e26bd812ae216f241f1df7f63" category="inline-link-macro-rx"></block>単一の整合性グループに。</block>
+  <block id="a797d8d67c33e2518148fc6832aec727" category="inline-link-macro">子整合性グループの接続解除</block>
+  <block id="85e66a81f7243f5fed3876c39ee88b00" category="list-text"><block ref="a0f6fb7e18585da27ebd1469c65b0bf0" category="inline-link-macro-rx"></block>親整合性グループから。</block>
+  <block id="fbc1e4537d7272daa084d09b0b6518c9" category="list-text"><block ref="49d09aacb53e588992bf3059e10179a4" category="inline-link-macro-rx"></block>既存の整合性グループを使用します。</block>
+  <block id="4b5530f7d3ae98b0b72f47ff0f799d71" category="inline-link-macro">非同期レプリケーション関係を解除する</block>
+  <block id="a04062ef828580f220b683895b5ff7f0" category="paragraph">ONTAP 9.16.1では、<block ref="a469377170b905c6c9ecc6ebb0e09607" category="inline-link-macro-rx"></block>そして<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>整合性グループにジオメトリ変更を加える前に。</block>
+  <block id="9a00996d223c374eb701de258a3d4762" category="summary">整合性グループを使用すると、各ユニットに対して個別にアクションを実行するのではなく、複数のストレージ ユニットに対して同時にさまざまなアクションを実行できます。階層構造では、1 つ以上の整合性グループが親整合性グループの下の子として構成されます。</block>
+  <block id="cfb33d071831c4697b80956e95fabe77" category="doc">ASA r2 システム上の階層的整合性グループを管理する</block>
+  <block id="12f83c4c3fb13a965f88dab1ae3eb2c0" category="paragraph">ONTAP 9.16.1 以降では、System Manager を使用してASA r2 システムに階層型コンシステンシ グループを作成できます。階層構造では、1 つ以上の整合性グループが親整合性グループの下の子として構成されます。各子コンシステンシ グループに個別のスナップショット ポリシーを適用し、親を複製することで、すべての子コンシステンシ グループのスナップショットを単一のユニットとしてリモート クラスターに複製できます。これにより、複雑なデータ構造のデータ保護と管理が簡素化されます。</block>
+  <block id="3ac8299c6e8aa389c4671969717ba58f" category="section-title">既存の整合性グループを親整合性グループに昇格する</block>
+  <block id="66ee6561a99b073d54f9e83ee7b09dac" category="paragraph">既存の整合性グループを親に昇格すると、新しい子整合性グループが作成され、昇格された整合性グループに属するストレージ ユニットが新しい子整合性グループに移動されます。ストレージ ユニットを親整合性グループに直接関連付けることはできません。</block>
+  <block id="12cda3c54df5ed8c4eb98ffac475155b" category="paragraph">ONTAP 9.16.1を実行していて、昇格したいコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>整合性グループを昇格する前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、<block ref="34346ff5cca42944a4ed431b70afdf69" category="inline-link-macro-rx"></block>整合性グループを昇格する前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを昇格する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。</block>
+  <block id="9301bf3266067cf2800be3bd2bfaa3de" category="list-text">新しい子コンシステンシー グループの名前を入力するか、デフォルト名を受け入れ、コンシステンシー グループのコンポーネント タイプを選択します。</block>
+  <block id="f8caf636e3b8fa0f56119352de2f4e4f" category="paragraph">親コンシステンシー グループの下に追加の子コンシステンシー グループを作成できます。また、<block ref="c9073dd826fc7721b98f9930c55d01b2" category="inline-link-macro-rx"></block>バックアップと災害復旧のために、親と子の整合性グループを地理的に離れた場所にコピーします。</block>
+  <block id="488eb097613bea3d7193264b5d8bde4f" category="paragraph">親整合性グループを単一の整合性グループに降格すると、関連付けられている子整合性グループのストレージ ユニットが親整合性グループに追加されます。子の整合性グループは削除され、親は単一の整合性グループとして管理されます。</block>
+  <block id="38f17853f3794e07578f727204a0dbe3" category="paragraph">ONTAP 9.16.1を実行していて、降格したいコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>整合性グループを降格する前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、<block ref="34346ff5cca42944a4ed431b70afdf69" category="inline-link-macro-rx"></block>整合性グループを降格する前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。</block>
+  <block id="648ef31970ca0486a78c62c1ba3d6ea4" category="paragraph">子整合性グループを作成すると、各子に個別のスナップショット ポリシーを適用できます。  ONTAP 9.17.1 以降では、個別のレプリケーション ポリシーを各子に直接適用することもできます。  ONTAP 9.16.1 では、レプリケーション ポリシーは親レベルでのみ適用できます。</block>
+  <block id="55544ce2458cf41daf84e717a42e7150" category="inline-link-macro">既存の親コンシステンシグループから切り離す</block>
+  <block id="61ea9d980857627872f7e7b8d57a7e3b" category="paragraph">使用したいコンシステンシーグループがすでに別のコンシステンシーグループの子である場合は、<block ref="669756fc250d6dea21366c7b25a2790e" category="inline-link-macro-rx"></block>新しい親整合性グループに移動する前に。</block>
+  <block id="7e337096e80859cb6898cfb8384f18f6" category="inline-link-macro">レプリケーションポリシーを設定する</block>
+  <block id="ff18feea12af53720295342101080588" category="paragraph">子コンシステンシーグループを作成したら、<block ref="b20e7e9a535f6a3244da85f4587a0502" category="inline-link-macro-rx"></block>各子整合性グループに。また、<block ref="4b00dbe31f77fc04f4dbf5d9b3e1fca3" category="inline-link-macro-rx"></block>親および子の整合性グループに対して、整合性グループをリモートの場所に複製します。</block>
+  <block id="a0a49d94e214fa3e16bbaffb341668c7" category="paragraph">子コンシステンシ グループを親コンシステンシ グループからデタッチすると、子コンシステンシ グループは親コンシステンシ グループから削除され、単一のコンシステンシ グループとして管理されます。親に適用されたレプリケーション ポリシーは、分離された子の整合性グループには適用されなくなりました。</block>
+  <block id="85bef1d1a49cbb3a5a043ae91ac899f5" category="paragraph">ONTAP 9.16.1を実行していて、デタッチするコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>整合性グループをデタッチする前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、<block ref="34346ff5cca42944a4ed431b70afdf69" category="inline-link-macro-rx"></block>整合性グループをデタッチする前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。</block>
+  <block id="8e735c2c6a3f530bcf5ec1e68dcead8d" category="paragraph"><block ref="2e81c1e2e7e67baddc7dd1eab1535a95" category="inline-link-macro-rx"></block>切り離された子コンシステンシー グループのスナップショットをリモート クラスターに複製します。</block>
+  <block id="69476e145701ec47dd0e3181118ad91d" category="summary">レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。</block>
+  <block id="3de0089e51a9f451f4891a9694b94d7e" category="doc">事前定義されたONTAPデータ保護ポリシーについて学ぶ</block>
+  <block id="9f69e96ba899e0e31a6aada411ff602e" category="paragraph">レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。</block>
+  <block id="ed8bdaffa7dc68cc8c956646c4e8fe55" category="inline-link-macro">カスタムレプリケーションポリシーを作成する</block>
+  <block id="cd84790f97e4e9beb448a5f86dfdf828" category="paragraph">事前定義されたポリシーがニーズを満たしていない場合は、<block ref="780c8d0d6612638332edd501d17289ee" category="inline-link-macro-rx"></block> 。</block>
+  <block id="80ff29be3d84d7435018e866ecd124a6" category="paragraph">ASA r2 システムは、次の定義済み保護ポリシーをサポートしています。</block>
+  <block id="51359e8b51c63b87d50cb1bab73380e2" category="cell">ポリシー</block>
+  <block id="551e9178cd3ea95d0d7df735e2e30c6f" category="cell">ポリシー タイプ</block>
+  <block id="288aae25bc408055f50c21c991903a44" category="cell">非同期</block>
+  <block id="ecffab924c73081f7a5daa0fcf137bcc" category="cell">最新のアクティブ ファイルシステムと日単位および週単位のSnapshotを時間単位の転送スケジュールでミラーリングするための、ユニファイドSnapMirror非同期およびバックアップ ポリシー</block>
+  <block id="ab82ab1ac857305b532ae893c6df13b1" category="cell">AutomatedFailOverDuplex</block>
+  <block id="5fbde80869a5354222f418b5f3af46dd" category="cell">RTOゼロ保証と双方向同期レプリケーションを備えたSnapMirror同期用ポリシー</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="cell">SnapMirrorアクティブ同期</block>
+  <block id="3fc99abc5dee77df7e706bb391cf7258" category="cell">CloudBackupDefault</block>
+  <block id="eb6c3e84822f94714c7eb065c30117b0" category="cell">日単位ルールを使用したバックアップ ポリシー</block>
+  <block id="4e4df311376e4a403b9614c810b7a3b9" category="cell">DailyBackup</block>
+  <block id="c69f7c05d06e3e478b8e5ff198ac35b2" category="cell">日単位ルールと日単位転送スケジュールを使用したバックアップ ポリシー</block>
+  <block id="7e09f5121e9c61e839183558ddb0f17d" category="cell">DPDefault</block>
+  <block id="5272b9b0c5ca7c95f915c2080fe8946d" category="cell">すべてのSnapshotと最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー</block>
+  <block id="549e9a8369377ab9bda71541111ca2f9" category="cell">MirrorAllSnapshots</block>
+  <block id="60bf0a8329b28f710536d60850cb1ad2" category="cell">MirrorAllSnapshotsDiscardNetwork</block>
+  <block id="3b60626161332cd48fe2f9fe9c41de1f" category="cell">ネットワーク設定を除くすべてのSnapshotと最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー</block>
+  <block id="37e459201e5691c90f616e05271f4ba3" category="cell">MirrorAndVault</block>
+  <block id="41f889b90a2417e1c56ca295730ea1dc" category="cell">最新のアクティブ ファイルシステムと日単位および週単位のSnapshotをミラーリングするための、ユニファイドSnapMirror非同期およびバックアップ ポリシー</block>
+  <block id="5f79bf5ea1c4cd25b49cd8a7fb4f5455" category="cell">MirrorAndVaultDiscardNetwork</block>
+  <block id="6ee73deec679305aa1494717fbf9a5a6" category="cell">ネットワーク設定を除く最新のアクティブ ファイルシステムと日単位および週単位のSnapshotをミラーリングするための、ユニファイドSnapMirror非同期およびバックアップ ポリシー</block>
+  <block id="e162cfb3e9ccdaa06cb8c6b686825bee" category="cell">MirrorLatest</block>
+  <block id="c76de16c1b3ed0faebadf362f3a06ca9" category="cell">最新のアクティブ ファイルシステムをミラーリングするためのSnapMirror非同期ポリシー</block>
+  <block id="4403b8bed8329a1a1ba838d590fec221" category="cell">統一7年</block>
+  <block id="e2f3a8e2d9dbebebccfd5c2dd674a96c" category="cell">保持期間が7年のユニファイドSnapMirrorポリシー</block>
+  <block id="a56c1780b810accc7f0bc23193dc16aa" category="cell">XDPDefault</block>
+  <block id="6b56815783be20f0a82bd8f4880fefa5" category="cell">日単位および週単位ルールを使用したバックアップ ポリシー</block>
+  <block id="83d91de2f52b22872c66e363d396d82b" category="summary">自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定する場合は、サードパーティの証明書を使用するように Mediator を再設定できます。セキュリティ上の理由から、組織ではサードパーティの証明書が推奨または要求される場合があります。</block>
+  <block id="8212aa9e3969d005df60d6c0a8d03da9" category="doc">ASA r2 システムでサードパーティの証明書を使用するようにONTAP Mediator またはONTAP Cloud Mediator を再設定します。</block>
+  <block id="6fa9fd24f49ecdb135d0af635134c226" category="section-title">ステップ1: メディエーター構成を削除する</block>
+  <block id="1b017ccd17d10e80ac7e3b702a530790" category="paragraph">メディエーターを再構成するには、まずクラスターから現在の構成を削除する必要があります。</block>
+  <block id="d76107f3fb2c3c33ee326f5ddecf626e" category="list-text">右側のペインの*メディエーター*の下で、<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>削除するメディエーター構成を持つクラスター ピアの横にあるをクリックし、[*削除*] を選択します。</block>
+  <block id="191ff56bf6dbd5b81a76ca16a571530b" category="paragraph">複数のメディエータがインストールされていて、すべての構成を削除する場合は、<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block> *メディエーター*の横にある[削除]を選択します。</block>
+  <block id="e39086306b3ce16632ca22b3d751ea42" category="list-text">*削除* を選択して、メディエーター構成を削除することを確認します。</block>
+  <block id="5bcb93f5956975bda7762923600a7fde" category="section-title">ステップ2: 自己署名証明書を削除する</block>
+  <block id="8a9aa417ea3834cc47269177f63df38a" category="paragraph">メディエーター構成を削除した後、関連付けられている自己署名証明書をクラスターから削除する必要があります。</block>
+  <block id="de4a13d9c204bbdf4795aff9b1aea3de" category="list-text">*セキュリティ*の下で、*証明書*を選択します。</block>
+  <block id="edb693006e34a8858ad03c5f33e98d9d" category="list-text">削除する証明書を選択します。</block>
+  <block id="9199037ebac20c4a4b4df287b49db254" category="section-title">ステップ3: サードパーティの証明書を使用してメディエーターを再インストールする</block>
+  <block id="18ef85a2d2a7cbed5f82df9e88cd62b5" category="paragraph">関連付けられている自己署名証明書を削除した後、サードパーティの証明書を使用してメディエーターを再構成できます。</block>
+  <block id="cf57dce9dd33d0745f81c3a98ac4cebd" category="list-text">*保護 &gt; 概要*を選択します。</block>
+  <block id="86e6674acae395f5cc81d371bae88908" category="list-text">右側のペインの「メディエーター」の下で、「メディエーターの追加」を選択します。</block>
+  <block id="c1b9b64ffaa32827ddafe986795b3948" category="list-text">*クラウド*メディエーターの場合は、組織ID、クライアントID、クライアントシークレットを入力してください。*オンプレミス* メディエーターの場合は、IP アドレス、ポート、メディエーター ユーザー名、およびメディエーター パスワードを入力します。</block>
+  <block id="2048f18acbfe9e97f51562432ae87b1b" category="list-text">適格なクラスター ピアのリストからクラスター ピアを選択するか、[クラスター ピアの追加] を選択して新しいクラスター ピアを追加します。</block>
+  <block id="530a7053200e8c038cc3768f24cad13a" category="list-text">*証明書*の下に、サードパーティの証明書情報を入力します。</block>
+  <block id="8c7c5e0c07d872b6c139a5f526a70088" category="paragraph">ONTAP Mediator またはONTAP Cloud Mediator は、サードパーティの証明書を使用するように再設定されます。メディエーターを使用してSnapMirrorアクティブ同期関係を管理できるようになりました。</block>
+  <block id="9c12112fa6fe43d99a3e32f651b5372b" category="summary">状況によっては、非同期レプリケーション関係を解除する必要がある場合があります。</block>
+  <block id="3c5ec2c1f45c326c6c3f48f99f51c4a6" category="doc">ASA r2システム上の非同期レプリケーション関係を解除する</block>
+  <block id="b8d7df6139bf4421b2174362465b943b" category="paragraph">状況によっては、非同期レプリケーション関係を解除する必要がある場合があります。たとえば、 ONTAP 9.16.1 を実行していて、非同期レプリケーション関係にあるコンシステンシー グループのサイズを増やす場合は、コンシステンシー グループのサイズを変更する前に関係を解除する必要があります。</block>
+  <block id="e8105e55290d2bd97b66e26bffa52344" category="list-text">*ローカルの送信先*または*ローカルのソース*を選択します。</block>
+  <block id="6f88a4bfa275f474fcb3cb724356e219" category="list-text">解除したい関係の横にある<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>; 次に、[ブレーク] を選択します。</block>
+  <block id="750c75545b932eb3b3f834231bf644fa" category="list-text">*中断*を選択します。</block>
+  <block id="bcde3b1cf285960c73a0e8d33b54f7a4" category="paragraph">プライマリ コンシステンシ グループとセカンダリ コンシステンシ グループ間の非同期関係が壊れています。</block>
+  <block id="773d72c5baf92c9f6d2eab4f0c78e8d5" category="summary">ビジネス アプリケーションに対してほぼゼロの RPO と RTO が必要なくなった場合は、関連付けられているSnapMirrorアクティブ 同期関係を削除して、 SnapMirrorアクティブ 同期保護を削除します。</block>
+  <block id="c420820f889b469c295427f98993af3d" category="doc">ASA r2 システム上のSnapMirrorアクティブ同期関係を削除します</block>
+  <block id="bdf6db955e768b925afda0bf17928432" category="paragraph">ビジネス アプリケーションに対してほぼゼロの RPO と RTO が必要なくなった場合は、関連付けられているSnapMirrorアクティブ 同期関係を削除して、 SnapMirrorアクティブ 同期保護を削除する必要があります。  ASA r2 システムでONTAP 9.16.1 を実行している場合は、 SnapMirrorアクティブ同期関係の整合性グループに特定のジオメトリ変更を加える前に、 SnapMirrorアクティブ同期関係を削除する必要がある場合もあります。</block>
+  <block id="fc3507abe06965431063d14ce7c02644" category="section-title">ステップ1: ホストレプリケーションを終了する</block>
+  <block id="236e942ee46ff6fdc6429108dfa6b2a8" category="paragraph">ソース クラスタのホスト グループが宛先クラスタにレプリケートされ、宛先コンシステンシ グループがレプリケートされたホスト グループにマップされている場合は、 SnapMirrorアクティブ同期関係を削除する前に、ソース クラスタでホスト レプリケーションを終了する必要があります。</block>
+  <block id="e46872dc43cf698a1767ad4ee94efd72" category="list-text">複製を停止したいホストグループを含むホストの横にある<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>をクリックし、[*編集*] を選択します。</block>
+  <block id="ff17da9c94bc0fe522b8188aa4a849e5" category="list-text">*ホスト構成の複製*の選択を解除し、*更新*を選択します。</block>
+  <block id="5c6cc670a07524f68c4bab921db44b89" category="section-title">ステップ2: SnapMirrorのアクティブ同期関係を削除する</block>
+  <block id="ba6cf398b50069e6a0c7728e584724e7" category="paragraph">整合性グループからSnapMirrorアクティブ同期保護を削除するには、 SnapMirrorアクティブ同期関係を削除する必要があります。</block>
+  <block id="bae21a909697b1407238dcd4402f4a23" category="list-text">削除したいSnapMirrorアクティブ同期関係の横にある<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>; 次に、[削除] を選択します。</block>
+  <block id="fde1120f73c8605556947918e93e79f8" category="list-text">*ソース整合性グループのベーススナップショットを解放する*を選択します。</block>
+  <block id="4df02675ad049e30b90413ee776f8ecb" category="paragraph">SnapMirrorアクティブ同期関係が削除され、ソース整合性グループのベース スナップショットが解放されます。整合性グループ内のストレージ ユニットは、 SnapMirror Active Sync によって保護されなくなりました。</block>
+  <block id="f6163f963e9e2a3c70abc5c5c501ae0a" category="paragraph"><block ref="ac7c9d4c42447f2eb78cd56bb53dad12" category="inline-link-macro-rx"></block>バックアップと災害復旧のために、整合性グループを地理的に離れた場所にコピーします。</block>
+  <block id="66b12cace5672f234227566918c5b83b" category="summary">ASA r2 システム上のSnapMirrorアクティブ同期では、一度に 1 種類の Mediator のみ使用できます。  Mediator のタイプを変更する場合は、別のインスタンスをインストールする前に現在のインスタンスを削除する必要があります。</block>
+  <block id="8cef0304e7896be7e19b0be0728e810a" category="doc">ASA r2 システムからONTAP Mediator またはONTAP Cloud Mediator を削除します。</block>
+  <block id="a12e1fb016d3f58ba251d00fbf0dbac9" category="paragraph">ASA r2 システム上のSnapMirrorアクティブ同期では、一度に 1 種類のメディエーターのみ使用できます。メディエーターの種類を変更する場合は、別のインスタンスをインストールする前に現在のインスタンスを削除する必要があります。</block>
+  <block id="99127984a5c3d7bef01ffcbab958d63d" category="paragraph">ONTAP Mediator またはONTAP Cloud Mediator を削除するには、 ONTAPコマンドライン インターフェイス (CLI) を使用する必要があります。</block>
+  <block id="58dc7db50a2e11a9de9e6cc092c59d4d" category="open-title">ONTAP Mediator</block>
+  <block id="4022346be332d2c49a8fdee2c2bed18b" category="list-text">ONTAP Mediatorを削除します。</block>
+  <block id="b922d3d8c6c03b28bb6f684f1ae2ed3c" category="paragraph"><block ref="d6493b8beb28940749572984cf77c520" prefix="" category="inline-code"></block></block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">例：</block>
+  <block id="b3aa67ea8b077eb2b67ff9a0651b5426" category="open-title">ONTAPクラウドメディエーター</block>
+  <block id="e60a33e3338ad246ad4ab11727141276" category="list-text">ONTAP Cloud Mediatorを削除します。</block>
+  <block id="08fb4ffca88bc0f6461c362f968d394f" category="paragraph"><block ref="6fa56bfab318c33e6446a2520c50c09f" prefix="" category="inline-code"></block></block>
+  <block id="913e3fb6005d79d1e7e5eb2046a6fa4c" category="inline-link-macro">スナップミラーメディエーターの削除</block>
+  <block id="55394a49231c00367e205c42b064e980" category="list-text"><block ref="55394a49231c00367e205c42b064e980" category="inline-link-macro-rx"></block></block>
+  <block id="7827b7923d6e45ba19022ef0a9878628" category="inline-link-macro">ONTAPパーソナリティの詳細</block>
+  <block id="67cc47e8f050e98e23b1a714f17238ec" category="paragraph"><block ref="2d2c01d97863e3fdde3b4275018cf566" category="inline-link-macro-rx"></block> 。</block>
+  <block id="e9afa2f162b90f572cc67d4d4b43b24f" category="admonition">ASA r2 システムの場合、 SnapMirrorアクティブ同期は 2 ノード クラスタ構成でのみサポートされます。</block>
+  <block id="2e50e3f8a8554bd854e544e6dc52462d" category="admonition">ASA r2 ストレージ システムのスナップショット レプリケーションは、別のASA r2 ストレージ システムとの間のみサポートされます。  ASA r2 システムからASA、 AFF 、またはFASシステムに、あるいはASA、 AFF 、またはFASシステムからASA r2 システムにスナップショットを複製することはできません。</block>
+  <block id="8e0a212a3ccb8f506b309ea2b6cbd1f7" category="paragraph">ONTAP 9.17.1 以降では、階層関係にあるコンシステンシー グループに非同期レプリケーション ポリシーを適用できます。  ONTAP 9.16.1 では、階層関係の整合性グループでは非同期レプリケーションはサポートされません。</block>
+  <block id="de095ac7880431e9449dcced8cecbd9a" category="inline-link-macro">階層型（親/子）整合性グループの詳細</block>
+  <block id="9bd28dad99082e4759b37cc288641beb" category="paragraph"><block ref="2c27991fbdb899d0303dcd6d776c47a4" category="inline-link-macro-rx"></block> 。</block>
+  <block id="823690d53f135eca513f93c93a174cb1" category="section-title">ステップ2: オプションでカスタムレプリケーションポリシーを作成する</block>
+  <block id="202f82422187107b48c76b4f1093f37b" category="paragraph">レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。 ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。事前定義されたポリシーがニーズを満たさない場合は、カスタム レプリケーション ポリシーを作成できます。</block>
+  <block id="9e0b9f51445e376b8e8b748e02d479d5" category="inline-link-macro">事前定義されたONTAPデータ保護ポリシー</block>
+  <block id="f68cabc6603a5173a52adc0789172ad3" category="paragraph">学ぶ<block ref="7807ad443b4479d6979a7fffa34492fb" category="inline-link-macro-rx"></block>。</block>
+  <block id="87531525c3b816a3a29dbbcbcd9e58b1" category="inline-link-macro">レプリケーションポリシーについて学ぶ</block>
+  <block id="3014b2db79594ac1202cd88300196335" category="list-text"><block ref="143654464f8325f80e4706e133fabf02" category="inline-link-macro-rx"></block> 。</block>
+  <block id="820e745f4ceb298ff41836e6ae6e0376" category="paragraph">レプリケーション関係を作成するときは、レプリケーション関係に適切なレプリケーション ポリシーを選択する必要があります。事前定義されたポリシーを使用することも、カスタム ポリシーを作成することもできます。</block>
+  <block id="39f2cc2c7247fe111861f8e1e350fca5" category="paragraph">ASA r2 システムは、 ASA、 AFF、またはFASシステムとのクラスターの混在をサポートしていません。</block>
+  <block id="bec1e41aa312239c590ea19d2cd648e2" category="paragraph">VMワークロードをASAストレージシステムからASA r2ストレージシステムに移行する必要がある場合、 NetApp以下を使用することを推奨しています。<block ref="5e3823885235dce61c55802a90e4bf09" category="inline-link-macro-rx"></block>中断なくライブでデータの移行を実行します。</block>
+  <block id="8472fc4ccb1079c9fe1f338f10dae548" category="list-text">CLI から次のように入力します。<block ref="f0af09467abded8f889764e0118fc371" prefix=" " category="inline-code"></block></block>
+  <block id="6e3ec6c33e748e95fcc9a00b80c75047" category="paragraph">ASA r2 システムの場合、_personality_ は _ASA r2_ であり、_is-disaggregated_ のステータスは _true_ です。</block>
+  <block id="0212dda5b736d4e3ac685d52c9fe59e3" category="paragraph">削除したいストレージユニットがレプリケーション関係にあるコンシステンシーグループ内にある場合は、<block ref="741fafaed1397e844d655f1c5d2c2470" category="inline-link-macro-rx"></block>削除する前に。</block>
+  <block id="c2870e89f5360d8c60cf537f2608a42a" category="paragraph">ASA r2 システムは、次のストレージ制限をサポートします。</block>
+  <block id="6d6dc550f66f75893e42478842ea745f" category="cell">上限制限</block>
+  <block id="690fbea35c70c2451fa2a171900ea6a7" category="cell">HAあたり</block>
+  <block id="dd1714009b4f40cdf1943390ef2782eb" category="cell">クラスターごと</block>
+  <block id="ae9e13b66877a85be97724063f459ec2" category="cell">一貫性グループ</block>
+  <block id="f718499c1c8cef6730f9fd03c8125cab" category="cell">256</block>
+  <block id="b0dae11b82e63781abdc8f893c41b3c0" category="cell">エンタープライズアプリケーション</block>
+  <block id="f899139df5e1059396431415e770c6dd" category="cell">100</block>
+  <block id="9de6d14fff9806d4bcd1ef555be766cd" category="cell">350</block>
+  <block id="187c6ad3a74cc93ac6c2229d398e383e" category="cell">ノード</block>
+  <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2</block>
+  <block id="d5fbc4c880281f3e9c4fff78066996a5" category="cell">レプリケーショングループ</block>
+  <block id="c0c7c76d30bd3dcaefc96f40275bdc0a" category="cell">50</block>
+  <block id="8ee7e496c0e2a65e2ee8666fe7de92f0" category="cell">ストレージ可用性ゾーンのサイズ</block>
+  <block id="76a4dd9b098f9a8877b8b79d0c80c5d3" category="cell">2PB</block>
+  <block id="04207e7bb62b9b5d14bdb603f74e683c" category="cell">10,000</block>
+  <block id="40b9cfa6016513b4c254ea34fe34198c" category="cell">ストレージユニットのサイズ</block>
+  <block id="9afb5dac442eac92e8a891cc81c846f3" category="cell">整合性グループあたりのストレージユニット</block>
+  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
+  <block id="137f19e6e2dc1219f33553b812627bc2" category="cell">仮想マシン</block>
+  <block id="7a53928fa4dd31e82c6ef826f341daec" category="cell">800</block>
+  <block id="fe2d010308a6b3799a3d9c728ee74244" category="cell">1200</block>
+  <block id="e935f176337f588ca3f944c87464e3be" category="section-title">SnapMirror非同期関係の制限</block>
+  <block id="9148fad1f9a8b37e9527a1f329b82af2" category="paragraph">SnapMirror非同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="cell">一貫性グループ</block>
+  <block id="6c9882bbac1c7093bd25041881277658" category="cell">250</block>
+  <block id="b137fdd1f79d56c7edf3365fea7520f2" category="cell">750</block>
+  <block id="a078c2a6f2d4313df0b942ebf9d6b940" category="cell">4,000</block>
+  <block id="3339aa4f121546a4cdc082621ff25a06" category="cell">6,000</block>
+  <block id="2500434603f5238c62790336bd12c2b3" category="section-title">SnapMirrorアクティブ同期関係の制限</block>
+  <block id="a4f389e6acbb4e2e523aabcd827ac730" category="paragraph">SnapMirrorアクティブ同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。  SnapMirrorアクティブ同期は、 ONTAP 9.17.1 以降、2 ノード クラスタでのみサポートされます。</block>
+  <block id="18d8042386b79e2c279fd162df0205c8" category="cell">400</block>
+  <block id="520d35e96fb17bcc138fb02a60b18935" category="paragraph">ONTAP 9.16.1 以降では、次のNetApp ASA r2 システムがサポートされています。これらのプラットフォームは、SAN のみを利用する顧客のニーズに特化した簡素化されたエクスペリエンスを実現する、統合されたハードウェアおよびソフトウェア ソリューションを提供します。</block>
+  <block id="b50f5f8469f7f4269e80570d419c9f8e" category="inline-link-macro">レプリケーション関係における一貫性グループへのジオメトリ変更のサポート</block>
+  <block id="42071aa0f3867fbd6baf2685ca27c2ff" category="cell"><block ref="42071aa0f3867fbd6baf2685ca27c2ff" category="inline-link-macro-rx"></block></block>
+  <block id="65476b287593ea7b99cab3c73a759847" category="cell">ASA r2 システムは、 SnapMirrorアクティブ同期関係を削除したり、非同期関係を破棄したりすることなく、 SnapMirrorアクティブ同期または非同期レプリケーション関係の整合性グループへのジオメトリ変更をサポートします。プライマリ整合性グループでジオメトリの変更が発生すると、その変更はセカンダリ整合性グループに複製されます。</block>
+  <block id="40a82e39058981afc99290ca5e2fabbc" category="inline-link-macro">子コンシステンシグループの非同期レプリケーションのサポート</block>
+  <block id="4c8a5f5490ffb0c0214d67b43bb5c57d" category="cell"><block ref="4c8a5f5490ffb0c0214d67b43bb5c57d" category="inline-link-macro-rx"></block></block>
+  <block id="f003fc5d30b5290d37cac05051c256e6" category="cell">非同期レプリケーション ポリシーは、階層関係の整合性グループに適用できます。</block>
+  <block id="91715b561990cbfd9ba4178d340cb226" category="sidebar">スナップショットをリモート クラスタに複製する</block>
+  <block id="92f555951e4f6a083cb57b83ec67f682" category="sidebar">事前定義された保護ポリシーについて学ぶ</block>
+  <block id="daaf076f14b6b8c90addc214d8626a42" category="sidebar">レプリケーション関係を解除する</block>
+  <block id="e346ab9201083b9d1dfbd7c4e0aee470" category="sidebar">サードパーティの証明書を使用するようにONTAP Mediator またはONTAP Cloud Mediator を再設定します</block>
+  <block id="32c34e31139f2f25d0497ef8291abcdd" category="sidebar">SnapMirrorのアクティブ同期関係を削除する</block>
+  <block id="f1b05804c01daada2fa93ccd165477c1" category="sidebar">ONTAP MediatorまたはONTAP Cloud Mediatorを削除します</block>
+  <block id="644c01b44d0b7cd48a350e168c66653e" category="sidebar">整合性グループについて</block>
+  <block id="ae3acb91b5af425bf5d85275f018efe4" category="sidebar">スナップショットを使用して整合性グループを保護する</block>
+  <block id="f9e11d9c895b9f2de1a25a03e810d34d" category="sidebar">整合性グループへのストレージユニットの追加または削除</block>
+  <block id="5a0dfc6f986e17a79c038bc9a2aeec2d" category="sidebar">一貫性グループを削除する</block>
+  <block id="36bed646725e085252916c3131fbf1b2" category="sidebar">階層的整合性グループの管理</block>
 </blocks>

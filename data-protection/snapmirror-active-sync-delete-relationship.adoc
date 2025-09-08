@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-delete-relationship.html 
+keywords: asa r2, data protection, business continuity, delete, snapmirror active sync, disaster recovery 
+summary: ビジネス アプリケーションに対してほぼゼロの RPO と RTO が必要なくなった場合は、関連付けられているSnapMirrorアクティブ 同期関係を削除して、 SnapMirrorアクティブ 同期保護を削除します。 
+---
+= ASA r2 システム上のSnapMirrorアクティブ同期関係を削除します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ビジネス アプリケーションに対してほぼゼロの RPO と RTO が必要なくなった場合は、関連付けられているSnapMirrorアクティブ 同期関係を削除して、 SnapMirrorアクティブ 同期保護を削除する必要があります。  ASA r2 システムでONTAP 9.16.1 を実行している場合は、 SnapMirrorアクティブ同期関係の整合性グループに特定のジオメトリ変更を加える前に、 SnapMirrorアクティブ同期関係を削除する必要がある場合もあります。
+
+
+
+== ステップ1: ホストレプリケーションを終了する
+
+ソース クラスタのホスト グループが宛先クラスタにレプリケートされ、宛先コンシステンシ グループがレプリケートされたホスト グループにマップされている場合は、 SnapMirrorアクティブ同期関係を削除する前に、ソース クラスタでホスト レプリケーションを終了する必要があります。
+
+.手順
+. System Managerで、*[ホスト]*を選択します。
+. 複製を停止したいホストグループを含むホストの横にあるimage:icon_kabob.gif["3つの垂直な青い点"]をクリックし、[*編集*] を選択します。
+. *ホスト構成の複製*の選択を解除し、*更新*を選択します。
+
+
+
+
+== ステップ2: SnapMirrorのアクティブ同期関係を削除する
+
+整合性グループからSnapMirrorアクティブ同期保護を削除するには、 SnapMirrorアクティブ同期関係を削除する必要があります。
+
+.手順
+. System Managerで、*[保護]>[レプリケーション]*を選択します。
+. *ローカルの送信先*または*ローカルのソース*を選択します。
+. 削除したいSnapMirrorアクティブ同期関係の横にあるimage:icon_kabob.gif["3つの垂直な青い点"]; 次に、[削除] を選択します。
+. *ソース整合性グループのベーススナップショットを解放する*を選択します。
+. 「 * 削除」を選択します。
+
+
+.結果
+SnapMirrorアクティブ同期関係が削除され、ソース整合性グループのベース スナップショットが解放されます。整合性グループ内のストレージ ユニットは、 SnapMirror Active Sync によって保護されなくなりました。
+
+.次の手順
+link:snapshot-replication.html["Snapshotレプリケーションのセットアップ"]バックアップと災害復旧のために、整合性グループを地理的に離れた場所にコピーします。

@@ -33,7 +33,13 @@ entries:
   - title: SVMピア関係を作成する
     url: "/data-protection/create-svm-peer-relationship.html"
   - title: Snapshotレプリケーションのセットアップ
-    url: "/data-protection/snapshot-replication.html"
+    entries:
+    - title: スナップショットをリモート クラスタに複製する
+      url: "/data-protection/snapshot-replication.html"
+    - title: 事前定義された保護ポリシーについて学ぶ
+      url: "/data-protection/pre-defined-protection-policies.html"
+    - title: レプリケーション関係を解除する
+      url: "/data-protection/snapmirror-active-sync-break-relationship.html"
   - title: SnapMirrorアクティブ同期を設定する
     entries:
     - title: ワークフロー
@@ -50,14 +56,30 @@ entries:
       url: "/data-protection/configure-snapmirror-active-sync.html"
   - title: SnapMirrorアクティブ同期を管理する
     entries:
+    - title: サードパーティの証明書を使用するようにONTAP Mediator またはONTAP Cloud Mediator を再設定します
+      url: "/data-protection/reconfigure-ontap-mediator-ca-certificate.html"
     - title: SnapMirror Active Syncを使用して計画的なフェイルオーバーを実行する
       url: "/data-protection/snapmirror-active-sync-planned-failover.html"
     - title: 計画外のフェイルオーバー後にSnapMirrorアクティブ同期を再確立する
       url: "/data-protection/snapmirror-active-sync-unplanned-failover.html"
+    - title: SnapMirrorのアクティブ同期関係を削除する
+      url: "/data-protection/snapmirror-active-sync-delete-relationship.html"
+    - title: ONTAP MediatorまたはONTAP Cloud Mediatorを削除します
+      url: "/data-protection/snapmirror-active-sync-remove-mediator.html"
   - title: データのリストア
     url: "/data-protection/restore-data.html"
   - title: 整合性グループの管理
-    url: "/data-protection/manage-consistency-groups.html"
+    entries:
+    - title: 整合性グループについて
+      url: "/data-protection/manage-consistency-groups.html"
+    - title: スナップショットを使用して整合性グループを保護する
+      url: "/data-protection/manage-consistency-groups-add-remove-snapshots.html"
+    - title: 整合性グループへのストレージユニットの追加または削除
+      url: "/data-protection/manage-consistency-groups-add-remove-storage-units.html"
+    - title: 一貫性グループを削除する
+      url: "/data-protection/manage-consistency-groups-delete.html"
+    - title: 階層的整合性グループの管理
+      url: "/data-protection/manage-hierarchical-consistency-groups.html"
   - title: 保護ポリシーとスケジュールの管理
     url: "/data-protection/policies-schedules.html"
 - title: データセキュリティ

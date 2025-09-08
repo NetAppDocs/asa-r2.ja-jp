@@ -25,7 +25,7 @@ link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html["VMware vSphe
 
 == VMware仮想マシンの移行
 
-VMワークロードをASAストレージシステムからASA R2ストレージシステムに移行する必要がある場合はNetApp、を使用しlink:https://www.vmware.com/products/cloud-infrastructure/vsphere/vmotion["VMware vSphere vMotion"^]て、データのライブ移行を無停止で実行することを推奨します。
+VMワークロードをASAストレージシステムからASA r2ストレージシステムに移行する必要がある場合、 NetApp以下を使用することを推奨しています。link:https://www.vmware.com/products/cloud-infrastructure/vsphere-foundation["VMware vSphere vMotion"^]中断なくライブでデータの移行を実行します。
 
 .関連情報
 * 詳細はこちらlink:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html["ONTAP for vSphere を使用する利点"^] 。

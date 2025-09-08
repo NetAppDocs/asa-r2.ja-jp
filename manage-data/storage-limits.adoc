@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/storage-limits.html 
 keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20,asa c30 
-summary: ASA R2構成では、FC、iSCSI、NVMe/FC、NVMe/TCPの各プロトコルを実行するクラスタあたり最大2ノードがサポートされます。 
+summary: 最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。 
 ---
 = ASA R2ストレージの制限
 :allow-uri-read: 
@@ -13,22 +13,67 @@ summary: ASA R2構成では、FC、iSCSI、NVMe/FC、NVMe/TCPの各プロトコ�
 [role="lead"]
 最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。
 
-ASA R2システムは、次の機能をサポートしています。
+ASA r2 システムは、次のストレージ制限をサポートします。
 
-[cols="1h, 1"]
+[cols="3"]
+|===
+| 上限制限 | HAあたり | クラスターごと 
+
+
+| 一貫性グループ | 256 | 256 
+
+
+| エンタープライズアプリケーション | 100 | 350 
+
+
+| ノード | 2 | 12 
+
+
+| レプリケーショングループ | 50 | 50 
+
+
+| ストレージ可用性ゾーンのサイズ | 2PB | 2 PB 
+
+
+| ストレージユニット | 10,000 | 30,000 
+
+
+| ストレージユニットのサイズ | 128TB | 128TB 
+
+
+| 整合性グループあたりのストレージユニット | 80 | 80 
+
+
+| 仮想マシン | 800 | 1200 
 |===
 
 
-| クラスターあたりの最大ノード数 | 12 
+== SnapMirror非同期関係の制限
+
+SnapMirror非同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。
+
+[cols="3"]
+|===
+| 上限制限 | HAあたり | クラスターごと 
 
 
-| クラスターあたりのストレージユニットの最大数 | 30,000 
+| 一貫性グループ | 250 | 750 
 
 
-| 最大ストレージユニットサイズ | 128TB 
+| ストレージユニット | 4,000 | 6,000 
+|===
 
 
-| 最大ストレージ可用性ゾーンサイズ | 2 PB 
+== SnapMirrorアクティブ同期関係の制限
+
+SnapMirrorアクティブ同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。  SnapMirrorアクティブ同期は、 ONTAP 9.17.1 以降、2 ノード クラスタでのみサポートされます。
+
+[cols="3"]
+|===
+| 上限制限 | HAあたり | 一貫性グループ 
+
+
+| 50 | ストレージユニット | 400 
 |===
 .詳細情報
 ASA R2ストレージの最新の制限の一覧については、を参照してくださいlink:https://hwu.netapp.com/["NetApp Hardware Universe"^]。

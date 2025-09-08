@@ -34,8 +34,10 @@ ASA R2システムでは、ONTAPソフトウェアが合理化され、SAN関連
 ONTAPストレージのパーソナリティは、System ManagerまたはONTAP CLIを使用して確認できます。
 
 * System Managerのメニューで、*[クラスタ]>[概要]*を選択します。
-* CLIから、次のように入力します。 `san config show`
+* CLI から次のように入力します。 `system node show -personality -is-disaggregated`
 
+
+ASA r2 システムの場合、_personality_ は _ASA r2_ であり、_is-disaggregated_ のステータスは _true_ です。
 
 ONTAPストレージシステムのパーソナリティは変更できません。
 

@@ -40,6 +40,12 @@ ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能につい
 
 
 | link:../data-protection/snapmirror-active-sync.html["SnapMirror Active SyncのNVMeプロトコルのサポート"] | SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。 
+
+
+| link:../data-protection/manage-consistency-groups.html["レプリケーション関係における一貫性グループへのジオメトリ変更のサポート"] | ASA r2 システムは、 SnapMirrorアクティブ同期関係を削除したり、非同期関係を破棄したりすることなく、 SnapMirrorアクティブ同期または非同期レプリケーション関係の整合性グループへのジオメトリ変更をサポートします。プライマリ整合性グループでジオメトリの変更が発生すると、その変更はセカンダリ整合性グループに複製されます。 
+
+
+| link:../data-protection/snapshot-replication.html["子コンシステンシグループの非同期レプリケーションのサポート"] | 非同期レプリケーション ポリシーは、階層関係の整合性グループに適用できます。 
 |===
 
 

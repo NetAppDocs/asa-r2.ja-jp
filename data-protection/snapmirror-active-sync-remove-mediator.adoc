@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: data-protection/snapmirror-active-sync-remove-mediator.html 
+keywords: asa r2, data protection, business continuity, remove, delete, ontap mediator, ontap cloud mediator 
+summary: ASA r2 システム上のSnapMirrorアクティブ同期では、一度に 1 種類の Mediator のみ使用できます。  Mediator のタイプを変更する場合は、別のインスタンスをインストールする前に現在のインスタンスを削除する必要があります。 
+---
+= ASA r2 システムからONTAP Mediator またはONTAP Cloud Mediator を削除します。
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA r2 システム上のSnapMirrorアクティブ同期では、一度に 1 種類のメディエーターのみ使用できます。メディエーターの種類を変更する場合は、別のインスタンスをインストールする前に現在のインスタンスを削除する必要があります。
+
+.手順
+ONTAP Mediator またはONTAP Cloud Mediator を削除するには、 ONTAPコマンドライン インターフェイス (CLI) を使用する必要があります。
+
+[role="tabbed-block"]
+====
+.ONTAP Mediator
+--
+. ONTAP Mediatorを削除します。
++
+`snapmirror mediator remove -mediator-address <address> -peer-cluster <peerClusterName>`
+
++
+例：
+
++
+[listing]
+----
+snapmirror mediator remove -mediator-address 12.345.678.90 -peer-cluster cluster_xyz
+----
+
+
+--
+.ONTAPクラウドメディエーター
+--
+. ONTAP Cloud Mediatorを削除します。
++
+`snapmirror mediator remove -peer-cluster <peerClusterName> -type cloud`
+
++
+例：
+
++
+[listing]
+----
+snapmirror mediator remove -peer-cluster cluster_xyz -type cloud
+----
+
+
+--
+====
+.関連情報
+* link:https://docs.netapp.com/us-en/ontap-cli/snapmirror-mediator-remove.html["スナップミラーメディエーターの削除"^]
+

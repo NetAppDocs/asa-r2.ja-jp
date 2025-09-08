@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/move-storage-units.html 
 keywords: move lun, lun move, move namespace, move storage unit, asa r2 
-summary: ストレージユニットを削除して、必要な物理ストレージの量を減らしたり、他のホストアプリケーションに必要なスペースを解放したりします。 
+summary: ストレージ可用性ゾーンのスペースが少なくなってきた場合は、ストレージユニットを別のストレージ可用性ゾーンに移動して、クラスタ全体でストレージ利用率を分散させることができます。 
 ---
 = ASA R2ストレージシステムでのストレージユニットの移動
 :allow-uri-read: 
