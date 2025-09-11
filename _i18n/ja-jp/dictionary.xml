@@ -2506,4 +2506,6 @@
   <block id="f9e11d9c895b9f2de1a25a03e810d34d" category="sidebar">整合性グループへのストレージユニットの追加または削除</block>
   <block id="5a0dfc6f986e17a79c038bc9a2aeec2d" category="sidebar">一貫性グループを削除する</block>
   <block id="36bed646725e085252916c3131fbf1b2" category="sidebar">階層的整合性グループの管理</block>
+  <block id="e130096a0ace158c7893eedbd19e7115" category="inline-link-macro">LIF IPの変更後にNTP同期が失敗する</block>
+  <block id="31fea35e33141cfa7edd94a1254d7007" category="paragraph">ONTAP は、ネットワーク タイム プロトコル (NTP) を使用してクラスタ全体の時間を同期します。LIF IP アドレスを変更した後、同期の失敗を防ぐために NTP 設定を更新する必要がある場合があります。詳細については、ナレッジベースの記事を参照してください。<block ref="eb416b4e77f6226862164baac134c11c" category="inline-link-macro-rx"></block> 。</block>
 </blocks>
