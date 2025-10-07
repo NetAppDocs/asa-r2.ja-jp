@@ -1106,7 +1106,6 @@
   <block id="3d7c12f3e6019c2627798720f2876385" category="paragraph">複数のストレージ・ユニットを作成する場合'各ユニットは同じ容量'ホスト・オペレーティング・システム'ホスト・マッピングを使用して作成されます</block>
   <block id="4ce211e7f3238dc2a7e5fc38f7096d99" category="list-text">ストレージユニットの容量を入力し、ホストオペレーティングシステムを選択します。</block>
   <block id="4a12fcafc1a3c4f57a718c8ca92efc50" category="list-text">自動選択された*ホストマッピング*を受け入れるか、マッピング先のストレージユニットに別のホストグループを選択してください。</block>
-  <block id="3a880a9aa73ca2acefaaddbfcdb6e4e5" category="paragraph">*ホスト・マッピング*は'新しいストレージ・ユニットのマッピング先となるホスト・グループを示します新しいストレージ・ユニット用に選択したホスト・タイプに対して既存のホスト・グループが存在する場合は'既存のホスト・グループがホスト・マッピング用に自動的に選択されますホストマッピング用に自動選択されたホストグループを受け入れることも、別のホストグループを選択することもできます。</block>
   <block id="ec00cac618e2a8983fc71ca2a711519c" category="list-text">次のいずれかを実行する場合は、*[その他のオプション]*を選択し、必要な手順を実行します。</block>
   <block id="7e8304ed8a1d7b1d5ea3d023833084ac" category="paragraph">デフォルトのQoSポリシーを変更する</block>
   <block id="670420248bfae86c26e9659cd428df4a" category="paragraph">ストレージユニットを作成するStorage Virtual Machine（VM）にデフォルトのQoSポリシーがまだ設定されていない場合、このオプションは使用できません。</block>
@@ -1600,10 +1599,8 @@
   <block id="75c802412c81363d98f12df3afdd41ee" category="list-text">System Managerで*[ストレージ]*を選択し、移動するストレージユニットを選択します。</block>
   <block id="d5ea13be4cb9332cce8fc578618d94de" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*移動*を選択します。</block>
   <block id="fdc877319615730d39477cdaa8dc7207" category="list-text">ストレージユニットの移動先のストレージアベイラビリティゾーンを選択し、*[移動]*を選択します。</block>
-  <block id="a48688c54c854235d38fe4b42f162152" category="paragraph">指定したオペレーティングシステムで実行されているホストのホストグループが存在しない場合、ONTAPは自動的に新しいホストグループを作成します。</block>
   <block id="12a1557d26fa34ac5e904bc3e60b0bf4" category="list-text">[ストレージと最適化]*で、*[Quality of Service（QoS）]*の横にあるを選択します<block ref="b3b2ed9f542d1ec15ba7a198ec58e0b4" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="2cb253331363d78b30ad71dd5d7edd19" category="paragraph">デフォルトのパフォーマンスサービスレベルを変更</block>
-  <block id="550794613b3e2574a3e7ea8c2b3d0529" category="paragraph">ASA R2システムには、2つのパフォーマンスレベルがあります。デフォルトのパフォーマンスレベルは* Extreme *で、使用可能な最高レベルです。パフォーマンスレベルを* Performance *に下げることができます。</block>
   <block id="337c483d117ff7e78ed214b1799b666f" category="list-text">[ストレージと最適化]*で、*[パフォーマンスサービスレベル]*の横にあるを選択します<block ref="b3b2ed9f542d1ec15ba7a198ec58e0b4" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="06a4e0373e144570a83a3fcfaa55ff46" category="list-text">[パフォーマンス]*を選択します。</block>
   <block id="c20ad4d76fe97759aa27a0c99bff6710" category="cell">12</block>
@@ -2508,4 +2505,7 @@
   <block id="e130096a0ace158c7893eedbd19e7115" category="inline-link-macro">LIF IPの変更後にNTP同期が失敗する</block>
   <block id="31fea35e33141cfa7edd94a1254d7007" category="paragraph">ONTAP は、ネットワーク タイム プロトコル (NTP) を使用してクラスタ全体の時間を同期します。LIF IP アドレスを変更した後、同期の失敗を防ぐために NTP 設定を更新する必要がある場合があります。詳細については、ナレッジベースの記事を参照してください。<block ref="eb416b4e77f6226862164baac134c11c" category="inline-link-macro-rx"></block> 。</block>
   <block id="5971035c0734629ac0d154a4b60ca9e9" category="paragraph">ASA r2 システムは、すべての SAN プロトコル (iSCSI、FC、NVMe/FC、NVMe/TCP) をサポートします。  iSCSI、FC、NVMe/FC、NVMe/TCP プロトコルは、マルチパス用の対称アクティブ/アクティブ アーキテクチャをサポートしているため、ホストとストレージ間のすべてのパスがアクティブ/最適化されます。 iSCSI および NVMe/TCP プロトコルは、ホストとストレージ間の直接接続をサポートします。ファイバーチャネルおよび NVMe/FC プロトコルでは、直接接続はサポートされていません。</block>
+  <block id="d55bb9dedbbb937989198b01ce6688da" category="paragraph">*ホスト マッピング* は、新しいストレージ ユニットがマップされるホスト グループを指します。新しいストレージ ユニットに選択したホストの種類に既存のホスト グループがある場合は、その既存のホスト グループがホスト マッピングに自動的に選択されます。自動的に選択されたホスト グループを受け入れることも、別のホスト グループを選択することもできます。</block>
+  <block id="abeb4ea342287af6fb99335900add67e" category="paragraph">指定したオペレーティング システムで実行されているホストに既存のホスト グループが存在しない場合は、 ONTAPによって新しいホスト グループが自動的に作成されます。</block>
+  <block id="83e804a6917baea37d43dfd34c66ac73" category="paragraph">ASA r2 システムには 2 つのパフォーマンス レベルがあります。デフォルトのパフォーマンス レベルは *Extreme* で、これは利用可能な最高レベルです。レベルを*パフォーマンス*に下げることもできます。</block>
 </blocks>
