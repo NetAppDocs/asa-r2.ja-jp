@@ -1920,7 +1920,6 @@
   <block id="35e215d46dc9e9777b80a47726a059fc" category="list-text">iSCSI LIF が作成されたことを確認します。</block>
   <block id="504efdae1b6cba4150ef59f621aedab1" category="summary">ONTAP 9.17.1 以降、 ONTAP はASA r2 システム HA ペアのノード間でワークロードを自動的に再調整し、パフォーマンスを最適化します。</block>
   <block id="83d0ebaee455b02e3b225c751a3ddb60" category="doc">ASA r2 ストレージ システム上のノード間でワークロードを再分散する</block>
-  <block id="de83a5264e365a5d427ba141c2e6fece" category="paragraph">ONTAP 9.17.1以降、 ONTAPはASA r2システムのHAペア内のノード間でワークロードを自動的にリバランスし、最適なパフォーマンスを実現します。例えば、一方のノードの使用率が70%に上昇したのに対し、そのHAペアのノードの使用率が30%にとどまっている場合、 ONTAPは各ノードの使用率がより均等になるようにワークロードを自動的にシフトします。HAペアのノードは同じストレージ・アベイラビリティ・ゾーンを共有しているため、ワークロードのリバランスはコピーフリーの操作であり、パフォーマンスに影響を与えません。</block>
   <block id="705b08e838354472c2696f058ccf7e63" category="section-title">自動ワークロード再調整のデフォルトの評価期間を変更する</block>
   <block id="e5c17665820b0729109c666d990f8a03" category="paragraph">自動ワークロードリバランシングは、 ONTAP 9.17.1へのアップグレード後、または新しいONTAP 9.17.1 ASA r2クラスタの初期化後14日で、デフォルトで有効になります。ONTAPONTAPラインインターフェイス（CLI）を使用して、運用ニーズに合わせてデフォルトの評価期間を延長または短縮できます。</block>
   <block id="bdba97a2c63e362302c1c6b384c83f50" category="list-text">評価期間の残り日数を確認します。</block>
@@ -2510,4 +2509,5 @@
   <block id="4a1975a1a386f2f3f28c4859f5ea4976" category="paragraph">クラスタ/HA のケーブル接続例は、一般的な構成を示しています。</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">ここにあなたの設定が表示されない場合は、 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> ストレージ システムをケーブル接続するための包括的な構成とスロットの優先順位に関する情報。</block>
   <block id="8c3a29fca49d6a772e0a2f8ab6ab7280" category="paragraph">ホスト ネットワークのケーブル接続の例は、一般的な構成を示しています。</block>
+  <block id="47209a3f622b3d093f126e58491097c5" category="paragraph">ONTAP 9.17.1以降、 ONTAPはASA r2システムのHAペア内のノード間でワークロードを自動的に再調整し、最適なパフォーマンスを実現します。たとえば、あるノードのスペース使用率が 70% に増加したのに対し、その HA パートナーの使用率が 30% しかない場合、 ONTAP は各ノードのスペース使用率がより一致するようにワークロードを自動的にシフトします。ペアのノードは同じストレージアベイラビリティゾーンを共有しているため、ワークロードの再調整はコピーフリーの操作であり、パフォーマンスに影響を与えません。</block>
 </blocks>
