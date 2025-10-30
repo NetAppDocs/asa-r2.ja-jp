@@ -47,9 +47,12 @@ SnapMirrorレプリケーションは、次の制限付きでASA r2 システム
 
 * SnapMirror同期レプリケーションはサポートされていません。
 * SnapMirrorアクティブ同期は、2 つのASA r2 システム間でのみサポートされます。
++
+詳細はこちらlink:../data-protection/snapmirror-active-sync.html["ASA r2 システムでのSnapMirrorアクティブ同期"]。
+
 * SnapMirror非同期レプリケーションは、2 つのASA r2 システム間でのみサポートされます。SnapMirror非同期レプリケーションは、 ASA r2 システムとASA、 AFF 、 FASシステムまたはクラウド間ではサポートされません。
 +
-詳細はこちらlink:data-protection/pre-defined-protection-policies.html["ASA r2 システムでサポートされるSnapMirrorレプリケーション ポリシー"]。
+詳細はこちらlink:../data-protection/pre-defined-protection-policies.html["ASA r2 システムでサポートされるSnapMirrorレプリケーション ポリシー"]。
 
 
 
