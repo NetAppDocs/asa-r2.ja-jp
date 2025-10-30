@@ -26,8 +26,6 @@ iSCSI LIFの自動フェイルオーバーを有効にしている場合、ス�
 * MetroCluster
 * オブジェクトプロトコル
 * ONTAP S3 SnapMirrorとS3 API
-* SnapMirror（非同期および同期）からクラウドへ
-* SnapMirror（非同期および同期）からASA R2以外のシステムへ
 
 
 .ASA R2システムは、次の機能をサポートしています。
@@ -38,6 +36,20 @@ link:../secure-data/ransomware-protection.html["Snapshotをロックする方法
 * デュアルレイヤ暗号化
 +
 link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA R2システム上のデータに接続します。
+
+
+
+
+
+== SnapMirrorレプリケーションのサポート
+
+SnapMirrorレプリケーションは、次の制限付きでASA r2 システムでサポートされます。
+
+* SnapMirror同期レプリケーションはサポートされていません。
+* SnapMirrorアクティブ同期は、2 つのASA r2 システム間でのみサポートされます。
+* SnapMirror非同期レプリケーションは、2 つのASA r2 システム間でのみサポートされます。SnapMirror非同期レプリケーションは、 ASA r2 システムとASA、 AFF 、 FASシステムまたはクラウド間ではサポートされません。
++
+詳細はこちらlink:data-protection/pre-defined-protection-policies.html["ASA r2 システムでサポートされるSnapMirrorレプリケーション ポリシー"]。
 
 
 

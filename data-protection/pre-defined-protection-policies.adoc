@@ -15,6 +15,9 @@ summary: レプリケーション ポリシーは、 ASA r2 クラスタで実�
 
 事前定義されたポリシーがニーズを満たしていない場合は、link:snapshot-replication.html#step-2-optionally-create-a-custom-replication-policy["カスタムレプリケーションポリシーを作成する"] 。
 
+
+NOTE: ASA r2 システムは同期レプリケーションをサポートしていません。
+
 ASA r2 システムは、次の定義済み保護ポリシーをサポートしています。
 
 [cols="3,4,1"]
