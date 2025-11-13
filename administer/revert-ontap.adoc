@@ -37,11 +37,11 @@ NOTE: link:rebalance-workloads.html["自動ワークロード再調整"]ONTAP 9.
 | 構成 | 元に戻す前に、次の操作を行ってください... 
 
 
-| SnapMirrorアクティブ同期関係における階層的整合性グループ | link:../data-protection/snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除します"] 
+| SnapMirrorアクティブ同期関係における階層的整合性グループ | link:../data-protection/snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除します"]。 
 
 
-| アクティブなインポート関係 | アクティブなインポート関係を削除する 
+| アクティブなインポート関係 | アクティブなインポート関係を削除します。link:../install-setup/set-up-data-access.html#migrate-data-from-a-third-party-storage-system["輸入関係について学ぶ"]。 
 
 
-| ランサムウェア対策が有効 | ランサムウェア対策を無効にする 
+| ランサムウェア対策が有効 | link:../secure-data/pause-resume-anti-ransomware-protection.html["ランサムウェア対策を一時停止する"]。 
 |===

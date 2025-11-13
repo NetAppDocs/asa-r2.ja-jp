@@ -17,11 +17,37 @@ ASA R2システムでは、iSCSIホストとNVMe/TCPホストでIPSecを使用�
 
 一部のASA R2システムでは、暗号化や整合性チェックなどの暗号化処理の一部を、サポートされているネットワークインターフェイスコントローラ（NIC）カードにオフロードできます。NICカードにオフロードされた処理のスループットは約5%以下です。これにより、IPsecで保護されるネットワークトラフィックのパフォーマンスとスループットが大幅に向上します。
 
-次のNICカードは、次のASA R2システムのハードウェアオフロードでサポートされています。
+ONTAP 9.18.1 以降では、IPsec ハードウェア オフロードのサポートが IPv6 トラフィックに拡張されています。
 
-[cols="2"]
+次の NIC カードは、次のASA r2 システムおよびONTAPバージョンでのハードウェア オフロードでサポートされています。
+
+[cols="3"]
 |===
-| サポートされているNICカード | ASA r2システム 
+| サポートされているNICカード | ASA r2システム | ONTAPバージョン 
+
+
+ a| 
+X50135A (2p、40G/100G イーサネット コントローラ)
+ a| 
+* ASA A1K
+* ASA A90
+* ASA A70
+
+ a| 
+ONTAP 9.17.1以降
+
+
+
+ a| 
+X60135A (2p、40G/100G イーサネット コントローラ)
+ a| 
+* ASA A50
+* ASA A30
+* ASA A20
+
+ a| 
+ONTAP 9.17.1以降
+
 
 
  a| 
@@ -31,6 +57,8 @@ X50131A -（2p、40G/100G/200G/400Gイーサネットコントローラ）
 * ASA A90
 * ASA A70
 
+ a| 
+ONTAP 9.16.1以降
 
 
 
@@ -41,7 +69,11 @@ X60132A -（4p、10G / 25Gイーサネットコントローラ）
 * ASA A30
 * ASA A20
 
+ a| 
+ONTAP 9.16.1以降
 
 |===
+参照link:https://hwu.netapp.com/["NetApp Hardware Universe"^]サポートされているシステムとカードの詳細については、こちらをご覧ください。
+
 .次の手順
-link:https://docs.netapp.com/us-en/ontap/networking/ipsec-configure.html["ONTAPネットワークのIPセキュリティの設定"]
+IPsec は、他のONTAPシステムと同じようにASA r2 システムでも設定されます。詳細については、 link:https://docs.netapp.com/us-en/ontap/networking/ipsec-prepare.html["ONTAPネットワークのIPセキュリティを設定するための準備"^]。

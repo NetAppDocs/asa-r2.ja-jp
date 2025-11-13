@@ -23,11 +23,11 @@ summary: データ暗号化キーは、ASA R2システム上のONTAPオンボー
 
 
 
-| SVMレベルのみ | 外部キー管理ツールのみ 
+| ストレージVMレベルのみ | 外部キー管理ツールのみ 
 
 
  a| 
-クラスタレベルとSVMレベルの両方
+クラスタとストレージVMレベルの両方
  a| 
 次のいずれかのキー管理ツールの組み合わせ：
 
@@ -36,14 +36,14 @@ summary: データ暗号化キーは、ASA R2システム上のONTAPオンボー
 クラスタレベル：オンボードキーマネージャ
 
 +
-SVMレベル：外部キー管理ツール
+ストレージVMレベル: 外部キーマネージャー
 
 * オプション2
 +
 クラスタレベル：外部キー管理ツール
 
 +
-SVMレベル：外部キー管理ツール
+ストレージVMレベル: 外部キーマネージャー
 
 
 
@@ -75,13 +75,13 @@ security key-manager external create-config
 +
 [source, cli]
 ----
-security key-manager keystore enable -vserver <svm_name> -type KMIP
+security key-manager keystore enable -vserver <storage_vm_name> -type KMIP
 ----
 . オンボードキーマネージャの設定を削除します。
 +
 [source, cli]
 ----
-security key-manager keystore delete-config -vserver <svm_name> -type OKM
+security key-manager keystore delete-config -vserver <storage_vm_name> -type OKM
 ----
 . 権限レベルをadminに設定します。
 +
@@ -111,13 +111,13 @@ security key-manager onboard create-config
 +
 [source, cli]
 ----
-security key-manager keystore enable -vserver <svm_name> -type OKM
+security key-manager keystore enable -vserver <storage_vm_name> -type OKM
 ----
 . 外部キー管理ツールの設定を削除します。
 +
 [source, cli]
 ----
-security key-manager keystore delete-config -vserver <svm_name> -type KMIP
+security key-manager keystore delete-config -vserver <storage_vm_name> -type KMIP
 ----
 . 権限レベルをadminに設定します。
 +
@@ -146,7 +146,7 @@ set -privilege advanced
 +
 [source, cli]
 ----
-security key-manager key migrate -from-vserver <svm_name> -to-vserver <svm_name>
+security key-manager key migrate -from-vserver <storage_vm_name> -to-vserver <storage_vm_name>
 ----
 . 権限レベルをadminに設定します。
 +

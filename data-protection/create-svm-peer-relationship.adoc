@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/create-svm-peer-relationship.html 
-keywords: create, svm peer relationship, asa r2, data protection 
+keywords: create, svm peer relationship, storage vm, asa r2, data protection 
 summary: 異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。 
 ---
 = ASA r2 ストレージ システムでクラスタ間ストレージ VM ピア関係を作成する

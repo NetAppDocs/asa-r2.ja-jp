@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9181.html 
+keywords: 'what"s new, release notes, 9.18.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20' 
+summary: ASA r2 システム用のONTAP 9.18.1 で利用できる新しい機能について説明します。 
+---
+= ASA r2システム向けONTAP 9.18.1の新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ASA r2 システム用のONTAP 9.18.1 で利用できる新しい機能について説明します。
+
+
+
+== データ保護
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../data-protection/snapmirror-active-sync.html["SnapMirrorアクティブ同期構成のサポートが強化されました"] | SnapMirrorアクティブ同期のサポートが 2 ノード クラスタから 4 ノード クラスタに拡大されました。 
+|===
+
+
+== ネットワーク
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../secure-data/iscsi-nvme-tcp-connections.html["IPsec ハードウェア オフロード IPv6 サポート"] | IPsec ハードウェア オフロードのサポートが IPv6 に拡張されました。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#fips-compliance["OpenSSL PQCアルゴリズム"] | ONTAP は、SSL 用のポスト量子コンピューティング暗号化アルゴリズムをサポートしています。これらのアルゴリズムは、将来の潜在的な量子コンピューティング攻撃に対する追加の保護を提供し、SSL FIPS モードが無効になっている場合に利用できます。 
+|===
+
+
+== SANデータ移行
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../manage-data/migrate-svm.html["ストレージVM移行のサポート"] | ストレージ仮想マシン (VM) をASAクラスタからASA r2 クラスタに中断なく移行できます。これにより、データの整合性を維持し、アプリケーションに影響を与えずに、ブロック ワークロードをASA r2 システムに移動できるようになります。移行プロセスは、既存のホスト マッピングと LUN 構成を維持するように設計されており、移行中の運用上の労力とリスクが軽減されます。 
+|===
+
+
+== Storage Efficiency
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#san-protocols["NVMeコピーオフロードのサポート"] | NVMe コピー オフロードにより、NVMe ホストはコピー操作をその CPU からONTAPストレージ コントローラの CPU にオフロードできるようになります。ホストは、CPU リソースをアプリケーション ワークロード用に予約しながら、ある NVMe 名前空間から別の NVMe 名前空間にデータをコピーできます。 
+
+
+| link:../data-protection/snapshot-reserve-modify.html["スナップショット予約の変更とスナップショットの自動削除のサポート"] | スナップショット予約を変更し、自動スナップショット削除を有効にして、 ASA r2 ストレージ ユニット内のスナップショットに使用されるスペースの量を制限できます。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。これにより、スナップショットがユーザー データ用のストレージ ユニット内のスペースを消費しないようにして、アプリケーションの中断を防止できます。 
+|===

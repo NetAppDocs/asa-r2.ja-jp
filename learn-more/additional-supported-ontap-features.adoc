@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: learn-more/additional-supported-ontap-features.html 
-keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, comand line interface 
+keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, command line interface, clustered external key servers, external key management, encryption at rest, administrator access management, client authentication, oauth 2.0, saml authentication, fips compliance, link aggregation groups, iscsi, fibre channel, fc, nvme, nvme unmap, hole punch, deallocation, system manager 
 summary: ASA r2 システムはONTAPの合理化されたバージョンを実行するため、多くの一般的なONTAPタスクと System Manager 機能は、 ASA r2 システムでも他のONTAPシステムと同じように実行されます。 
 ---
 = ASA r2 システムでサポートされる一般的なONTAP機能
@@ -17,28 +17,118 @@ ASA r2 システムはONTAPの合理化されたバージョンを実行する�
 
 
 
-== ONTAP管理
+== データ保護
 
-* link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["ONTAP System Managerで情報を検索、フィルタリング、並べ替える方法を学びます"^] 。
-* link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html["物理ポートを組み合わせたインターフェイス グループの作成"^] 。
-* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html["NVMe over Fabrics（NVMe-oF）プロビジョニングについて学ぶ"^] 。
+ASA r2 システムでサポートされている一般的なデータ保護機能の詳細について説明します。
+
+
+
+=== クラスタ化された外部キーサーバー
+
+ストレージ VM 上のクラスター化された外部キー管理サーバーへの接続を構成できます。クラスター化されたキー サーバーを使用すると、ストレージ VM 上にプライマリ キー サーバーとセカンダリ キー サーバーを指定できます。キーを登録する際、ONTAPは最初にプライマリ キー サーバへのアクセスを試行し、その後処理が正常に完了するまで各セカンダリ サーバへのアクセスを順次試行して、キーの重複を回避します。
+
+link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html["クラスタ化された外部キーサーバーの構成方法を学ぶ"^]。
+
+
+
+=== 保存時の暗号化のための外部キー管理
+
+1つ以上のKMIPサーバを使用して、暗号化されたデータにアクセスする際にクラスタで使用するキーを安全に保管できます。
+
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html["外部キー管理の有効化"^]。
+* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html["外部キー管理（NVE）を有効にする"^] 。
 
 
 
 
 == データセキュリティ
 
-* link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["OAuth 2.0認証について学ぶ"^] 。
-* link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html["クライアントの認証と承認について学ぶ"^] 。
-* link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html["SAML認証の設定方法を学ぶ"^] 。
-* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html["ONTAP管理者アクセスを管理する"^] 。
+ASA r2 システムでサポートされている一般的なデータ セキュリティ機能の詳細について説明します。
+
+
+
+=== 管理者アクセス管理
+
+管理者に割り当てられたロールによって、管理者が実行できる機能が決まります。System Managerには、クラスタ管理者およびStorage VM管理者向けの事前定義されたロールが用意されています。ロールは管理者のアカウントを作成するときに割り当てますが、あとで別のロールを割り当てることもできます。
+
+* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html["System Manager を使用して管理者アクセスを管理する方法を学びます"^]。
 
 
 
 
-== データ保護
+=== クライアント認証と許可
 
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-key-server-task.html["ONTAPでクラスタ化された外部キーサーバを構成する"^] 。
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html["外部キー管理を有効にする（HWベース）"^] 。
-* link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html["外部キー管理（NVE）を有効にする"^] 。
+ONTAPでは、標準的な手段を使用して、クライアントや管理者によるストレージへのアクセスを保護し、またウイルスから守ります。保存データの暗号化やWORMストレージでは、高度なテクノロジも使用できます。ONTAPでは、信頼できるソースでIDを検証してクライアント マシンおよびユーザを認証します。ユーザのクレデンシャルとファイルまたはディレクトリに対して設定されているアクセス許可を比較し、ユーザにファイルやディレクトリへのアクセスを許可します。
 
+link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html["クライアントの認証と承認について学ぶ"^] 。
+
+
+
+=== OAuth 2.0認証
+
+Open Authorization（OAuth 2.0）フレームワークを使用して、 ONTAPクラスターへのアクセスを制御できます。  OAuth 2.0 は、署名されたアクセス トークンを使用して、保護されたリソースへのアクセスを制限および制御します。
+
+link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["OAuth 2.0認証について学ぶ"^] 。
+
+
+
+=== SAML認証と管理者アクセス
+
+Web サービスに対して Security Assertion Markup Language (SAML) 認証を構成して有効にすることができます。  SAML は、Active Directory や LDAP などのディレクトリ サービス プロバイダーではなく、外部 ID プロバイダー (IdP) によってユーザーを認証します。
+
+link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html["SAML認証の設定方法を学ぶ"^] 。
+
+
+
+== ネットワーク
+
+ASA r2 システムでサポートされている一般的なネットワーク機能の詳細について説明します。
+
+
+
+=== FIPS準拠
+
+ONTAPは、すべてのSSL接続に対する連邦情報処理標準（FIPS）140-2に準拠しています。ONTAP内で SSL FIPS モードをオン/オフにしたり、SSL プロトコルをグローバルに設定したり、RC4 などの弱い暗号をオフにしたりすることができます。
+
+ONTAP 9.18.1 以降では、SSL でポスト量子コンピューティング暗号化アルゴリズムがサポートされます。これらのアルゴリズムは、将来の潜在的な量子コンピューティング攻撃に対する追加の保護を提供し、SSL FIPS モードが無効になっている場合に利用できます。
+
+* link:https://docs.netapp.com/us-en/ontap/networking/configure_network_security_using_federal_information_processing_standards_fips.html["すべてのSSL接続にFIPSを構成する方法を学ぶ"^]。
+
+
+
+
+=== リンク アグリゲーション グループ（LAG）
+
+インターフェイス グループ（別名リンク アグリゲーション グループ[LAG]）は、同じノード上の2つ以上の物理ポートを1つの論理ポートに組み合わせて作成します。論理ポートを使用すると、耐障害性と可用性が向上し、負荷も共有できます。
+
+link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_create_interface_groups.html["リンクアグリゲーショングループについて学ぶ"^]。
+
+
+
+== SANプロトコル
+
+ASA r2 システムは、すべての SAN プロトコル (iSCSI、FC、NVMe/FC、NVMe/TCP) をサポートします。
+
+* link:https://docs.netapp.com/us-en/ontap/san-admin/san-host-provisioning-concept.html["iSCSIプロトコルの詳細"^]。
+* link:https://docs.netapp.com/us-en/ontap/san-admin/san-provisioning-fc-concept.html["ファイバーチャネル（FC）プロトコルの詳細"^]。
+* link:https://docs.netapp.com/us-en/ontap/concept_nvme_provision_overview.html["NVMeプロトコルについて学ぶ"^]。
++
+** link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html["NVMeコピーオフロードの設定方法を学ぶ"^]。
++
+ONTAP 9.18.1 以降では、NVMe コピー オフロードがサポートされます。 NVMe コピー オフロードにより、NVMe ホストはコピー操作をその CPU からONTAPストレージ コントローラの CPU にオフロードできるようになります。ホストは、CPU リソースをアプリケーション ワークロード用に予約しながら、ある NVMe 名前空間から別の NVMe 名前空間にデータをコピーできます。
+
+** link:https://docs.netapp.com/us-en/ontap/san-admin/enable-space-allocation.html["NVMeのスペース割り当て（アンマップ）の詳細"^]。
++
+ONTAP 9.16.1 以降では、NVMe 名前空間のスペース割り当て解除 (「ホール パンチ」または「アンマップ」とも呼ばれます) がデフォルトで有効になっています。スペース割り当て解除機能により、ホストはネームスペースで使用されていないブロックの割り当てを解除してスペースを再利用できます。
+
+
+
+
+
+
+
+== System Manager
+
+System Manager では、さまざまなアクション、オブジェクト、情報トピックを検索できます。表示されたデータの中から特定のエントリを検索することもできます。
+
+link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["システム マネージャーで情報を検索、フィルタリング、並べ替える方法を学びます"^]。

@@ -21,6 +21,8 @@ indexpage:
       url: "/manage-data/data-cloning.html"
     - title: ストレージユニットの変更
       url: "/manage-data/modify-storage-units.html"
+    - title: ストレージVMの移行
+      url: "/manage-data/migrate-svm.html"
   - title: データの保護とセキュリティ
     links:
     - title: スナップショットの作成
@@ -31,6 +33,8 @@ indexpage:
       url: "/data-protection/snapmirror-active-sync.html"
     - title: 保存データを暗号化
       url: "/secure-data/encrypt-data-at-rest.html"
+    - title: ARP/AIの有効化
+      url: "/secure-data/enable-anti-ransomware-protection.html"
   - title: ASA R2に関するその他のリソース
     links:
     - title: ASAデータシート

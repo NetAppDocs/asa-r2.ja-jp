@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/storage-limits.html 
 keywords: storage limits, cluster limits, maximum lun size, maximum, nodes per cluster, storage unit size, supported protocols, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20,asa c30 
-summary: 最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。 
+summary: 最適なパフォーマンス、構成、サポートを得るには、 ASA r2 のストレージ制限に注意する必要があります。 
 ---
 = ASA R2ストレージの制限
 :allow-uri-read: 
@@ -11,13 +11,15 @@ summary: 最適なパフォーマンス、構成、サポートを実現する�
 
 
 [role="lead"]
-最適なパフォーマンス、構成、サポートを実現するには、ASA R2ストレージの制限を確認しておく必要があります。
+最適なパフォーマンス、構成、サポートを得るには、ASA r2 のストレージ制限に注意する必要があります。
+
+ASA R2ストレージの最新の制限の一覧については、を参照してくださいlink:https://hwu.netapp.com/["NetApp Hardware Universe"^]。
 
 ASA r2 システムは、次のストレージ制限をサポートします。
 
 [cols="3"]
 |===
-| 上限制限 | HAあたり | クラスターごと 
+|  | HAペアあたりの最大数 | クラスタあたりの最大数 
 
 
 | 一貫性グループ | 256 | 256 
@@ -32,7 +34,7 @@ ASA r2 システムは、次のストレージ制限をサポートします。
 | レプリケーショングループ | 50 | 50 
 
 
-| ストレージ可用性ゾーンのサイズ | 2PB | 2 PB 
+| ストレージ可用性ゾーンのサイズ | 2 PB | 2 PB 
 
 
 | ストレージユニット | 10,000 | 30,000 
@@ -44,13 +46,24 @@ ASA r2 システムは、次のストレージ制限をサポートします。
 | 整合性グループあたりのストレージユニット | 256 | 256 
 
 
+| ストレージ仮想マシン  a| 
+* 256（ONTAP 9.18.1以降）
+* 32（ONTAP 9.17.1以前）
+
+ a| 
+* 256（ONTAP 9.18.1以降）
+* 32（ONTAP 9.17.1以前）
+
+
+
+
 | 仮想マシン | 800 | 1200 
 |===
 
 
 == SnapMirror非同期関係の制限
 
-SnapMirror非同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。
+SnapMirror非同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。最新のASA r2ストレージ制限の完全なリストについては、link:https://hwu.netapp.com/["NetApp Hardware Universe"^] 。
 
 [cols="3"]
 |===
@@ -66,7 +79,9 @@ SnapMirror非同期レプリケーション関係のストレージ ユニット
 
 == SnapMirrorアクティブ同期関係の制限
 
-SnapMirrorアクティブ同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。  SnapMirrorアクティブ同期は、 ONTAP 9.17.1 以降、2 ノード クラスタでのみサポートされます。
+SnapMirrorアクティブ同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。SnapMirrorアクティブ同期は、 ONTAP 9.17.1 以降、2 ノード クラスタでのみサポートされます。  ONTAP 9.18.1 以降では、4 ノード クラスタでSnapMirrorアクティブ シンクがサポートされます。
+
+最新のASA r2ストレージ制限の完全なリストについては、link:https://hwu.netapp.com/["NetApp Hardware Universe"^] 。
 
 [cols="2"]
 |===
@@ -78,5 +93,3 @@ SnapMirrorアクティブ同期レプリケーション関係のストレージ 
 
 | ストレージユニット | 400 
 |===
-.詳細情報
-ASA R2ストレージの最新の制限の一覧については、を参照してくださいlink:https://hwu.netapp.com/["NetApp Hardware Universe"^]。

@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: manage-data/svm-post-migrate-cutover-cleanup.html 
+keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine, manual cutover, manual cleanup, remove source svm 
+summary: ストレージ可用性ゾーンのスペースが少なくなってきた場合は、ストレージユニットを別のストレージ可用性ゾーンに移動して、クラスタ全体でストレージ利用率を分散させることができます。 
+---
+= ASA r2 システムへの移行後にクライアントをカットオーバーし、ソース ストレージ VM をクリーンアップする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ仮想マシン (VM) がASAクラスタからASA r2 クラスタに移行されると、デフォルトでは、クライアントは自動的にASA r2 クラスタにカットオーバーされ、 ASAクラスタ上のストレージ VM は自動的に削除されます。移行中にASAストレージ VM の自動カットオーバーと削除を無効にすることを選択した場合は、移行が完了した後にこれらの手順を手動で実行する必要があります。
+
+
+
+== ストレージ VM の移行後にクライアントをASA r2 システムに手動で切り替える
+
+ASAクラスタからASA r2 クラスタへのストレージ VM の移行中に自動クライアント カットオーバーを無効にした場合は、移行が正常に完了した後、 ASA r2 ストレージ VM がクライアントにデータを提供できるように手動でカットオーバーを実行します。
+
+.手順
+. ASA r2 クラスタで、クライアントのカットオーバーを手動で実行します。
++
+[source, cli]
+----
+vserver migrate cutover -vserver <storage_VM_name>
+----
+. カットオーバー操作が完了したことを確認します。
++
+[source, cli]
+----
+vserver migrate show
+----
+
+
+.結果
+データは、 ASA r2 クラスター上のストレージ VM からクライアントに提供されます。
+
+.次の手順
+これで、ソースASAクラスタからストレージ VM を削除する準備が整いました。
+
+
+
+== ASA r2 クラスタへの移行後にASAストレージ VM を手動で削除する
+
+ASAクラスタからASA r2 クラスタへのストレージ VM の移行中に自動ソース クリーンアップを無効にした場合は、移行が完了したら、ストレージ VM をASAクラスタから削除して、ストレージ領域を解放します。
+
+.開始する前に
+クライアントはASA r2 クラスターからデータを提供する必要があります。
+
+.手順
+. ASAクラスタから、 ASAストレージ VM のステータスが *ソース クリーンアップの準備完了* であることを確認します。
++
+[source, cli]
+----
+vserver migrate show
+----
+. ASAストレージ VM を削除します。
++
+[source, cli]
+----
+vserver migrate source-cleanup -vserver <storage_VM_name>
+----
+
+
+.結果
+ASAクラスタ上のストレージ VM が削除されます。

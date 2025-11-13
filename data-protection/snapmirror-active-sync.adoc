@@ -18,7 +18,7 @@ ASA r2 システムでは、System Manager によるSnapMirror Active Sync の�
 link:../learn-more/hardware-comparison.html#personality-differences["ONTAPパーソナリティの詳細"] 。
 
 
-NOTE: ASA r2 システムの場合、 SnapMirrorアクティブ同期は 2 ノード クラスタ構成でのみサポートされます。
+NOTE: ONTAP 9.18.1 以降では、4 ノード構成でSnapMirrorアクティブ シンクがサポートされます。  ONTAP 9.17.1 では、 SnapMirrorアクティブ同期は 2 ノード構成でのみサポートされます。
 
 link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html["SnapMirrorアクティブ同期の詳細"^] 。
 

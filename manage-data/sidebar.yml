@@ -24,13 +24,25 @@ entries:
       url: "/manage-data/move-storage-units.html"
     - title: ストレージユニットの削除
       url: "/manage-data/delete-storage-units.html"
+  - title: ストレージVMの移行
+    entries:
+    - title: ASAクラスタからストレージ VM を移行する
+      url: "/manage-data/migrate-svm.html"
+    - title: クライアントのカットオーバーとソースストレージVMのクリーンアップ
+      url: "/manage-data/svm-post-migrate-cutover-cleanup.html"
   - title: ストレージの制限
     url: "/manage-data/storage-limits.html"
 - title: データを保護
   entries:
   - title: スナップショットの作成
     url: "/data-protection/create-snapshots.html"
-  - title: SVMピア関係を作成する
+  - title: スナップショット予約の管理
+    entries:
+    - title: スナップショットリザーブについて学ぶ
+      url: "/data-protection/snapshot-reserve.html"
+    - title: スナップショット予約の変更
+      url: "/data-protection/snapshot-reserve-modify.html"
+  - title: ストレージVMピア関係を作成する
     url: "/data-protection/create-svm-peer-relationship.html"
   - title: Snapshotレプリケーションのセットアップ
     entries:
