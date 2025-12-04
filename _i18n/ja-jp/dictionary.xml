@@ -1076,9 +1076,7 @@
   <block id="21ba50dbf4007619e7e1e3d1d4890d04" category="doc">ASA R2システムでのONTAP SANストレージのプロビジョニング</block>
   <block id="5130efcbab54e3de0826ab521946e46d" category="paragraph">ストレージをプロビジョニングするときに、SANホストがASA R2ストレージシステムに対してデータの読み取りと書き込みを実行できるようにします。ストレージをプロビジョニングするには、ONTAPシステムマネージャを使用して、ストレージユニットを作成し、ホストイニシエータを追加し、ホストをストレージユニットにマッピングします。また、読み取り/書き込み処理を有効にするために、ホストで手順を実行する必要があります。</block>
   <block id="765e871d79c6c686febb0d212efcee42" category="section-title">ストレージユニットの作成</block>
-  <block id="2c9e1fb1b8b3b0713d51e8ae575f96cf" category="paragraph"><block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>ASA R2システムの最新のストレージ制限については、を参照してください。</block>
   <block id="1d78dc8ed51214e518b5114fe24490ae" category="inline-link-macro">マッピング</block>
-  <block id="07de3115f268ee32f824fa17392a0fcc" category="paragraph">ホストイニシエータは、ストレージユニットの作成プロセスの一環としてストレージユニットに追加およびマッピングされます。また、<block ref="8a23e2c4e7cc30673e8b314a4ba4f4ed" category="inline-link-macro-rx"></block><block ref="261a27e7b6f81c3f2b0eb2a43b4fcddb" category="inline-link-macro-rx"></block>ストレージユニットの作成後にそれらをストレージユニットに追加することもできます。</block>
   <block id="b6ef92a5067caea07262eb16524826b6" category="inline-image-macro">青い背景を持つ長方形のアイコンと、白い文字の中央に「add」という単語が表示されます。</block>
   <block id="b5f594084b71d3aa55abadbedf670f86" category="list-text">System Managerで、*[ストレージ]*を選択し、を選択します<block ref="da7582bfb005458d3066421df78a060d" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="51a192101931ecb5b57cbe0c93814a0f" category="list-text">新しいストレージ・ユニットの名前を入力します</block>
@@ -1117,7 +1115,6 @@
   <block id="86d44c7101e25ca99d38670a1efa356e" category="paragraph">インバンド認証を使用すると、NVMeホストとASA R2システムの間でセキュアな双方向認証と一方向認証を確立できます。</block>
   <block id="a56968accba6c23d9088678742dc323d" category="paragraph">TLSは、NVMe/TCPホストとASA R2システムの間でネットワーク経由で送信されるすべてのデータを暗号化します。</block>
   <block id="b2006a7dcb49ba27d412bf7c975d494e" category="list-text">イニシエータをさらに追加する場合は、*[イニシエータの追加]*</block>
-  <block id="5d009b24bd2dd29f315f5549d323dd20" category="paragraph">ホストNQNの形式は、&lt;nqn.yyyy-mm&gt;のあとに完全修飾ドメイン名を指定する必要があります。年は1970年以降である必要があります。合計最大長は223である必要があります。有効なNVMeイニシエータの例はnqn.2014-08.com.example:stringです。</block>
   <block id="22d9ca4f3f9229c260ae1d1236d3d11c" category="paragraph">ストレージユニットが作成され、ホストにマッピングされます。これで、<block ref="13282ab1c43cc291d62099de29c76969" category="inline-link-macro-rx"></block>ASA R2システム上のデータを保護できます。</block>
   <block id="87c964622ab29664363b4b2888f1b356" category="inline-link-macro">ASA R2システムでのStorage Virtual Machineの使用方法</block>
   <block id="6afbcb648aad0c257ca7905b9d403b79" category="paragraph">詳細については、をご覧ください <block ref="f6474162100d04c74dacf0c12cf75d7f" category="inline-link-macro-rx"></block>。</block>
@@ -1158,7 +1155,6 @@
   <block id="b7a9ab8dab2826ab36bbf1a3559850cc" category="list-text">[ホストグループに追加]*を選択します。</block>
   <block id="0f53db9803696214ded0a88c8b0f7339" category="list-text">ホストを追加するホストグループを検索して選択します。</block>
   <block id="e4588db94d1d12fcf26071d43abfb9c8" category="section-title">ストレージ・ユニットのホストへのマッピング</block>
-  <block id="62ce85edaaef586187e6e1454db66f3c" category="paragraph">ASA R2ストレージユニットを作成し、ホストイニシエータを追加したら、データの提供を開始するために、ホストをストレージユニットにマッピングする必要があります。ストレージ・ユニットは'ストレージ・ユニット作成プロセスの一環としてホストにマッピングされますまた、既存のストレージユニットを新規または既存のホストにいつでもマッピングできます。</block>
   <block id="8de000c670cb75a778efcd7807338e06" category="list-text">[ストレージ]*を選択します。</block>
   <block id="1b9ba9248585970cf009d0cea53f480c" category="list-text">マッピングするストレージ・ユニットの名前にカーソルを合わせます</block>
   <block id="d966085aed4aa82e0f344d0a574996c4" category="list-text">を選択し<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>、*[ホストにマッピング]*を選択します。</block>
@@ -2440,7 +2436,6 @@
   <block id="31fea35e33141cfa7edd94a1254d7007" category="paragraph">ONTAP は、ネットワーク タイム プロトコル (NTP) を使用してクラスタ全体の時間を同期します。LIF IP アドレスを変更した後、同期の失敗を防ぐために NTP 設定を更新する必要がある場合があります。詳細については、ナレッジベースの記事を参照してください。<block ref="eb416b4e77f6226862164baac134c11c" category="inline-link-macro-rx"></block> 。</block>
   <block id="5971035c0734629ac0d154a4b60ca9e9" category="paragraph">ASA r2 システムは、すべての SAN プロトコル (iSCSI、FC、NVMe/FC、NVMe/TCP) をサポートします。  iSCSI、FC、NVMe/FC、NVMe/TCP プロトコルは、マルチパス用の対称アクティブ/アクティブ アーキテクチャをサポートしているため、ホストとストレージ間のすべてのパスがアクティブ/最適化されます。 iSCSI および NVMe/TCP プロトコルは、ホストとストレージ間の直接接続をサポートします。ファイバーチャネルおよび NVMe/FC プロトコルでは、直接接続はサポートされていません。</block>
   <block id="d55bb9dedbbb937989198b01ce6688da" category="paragraph">*ホスト マッピング* は、新しいストレージ ユニットがマップされるホスト グループを指します。新しいストレージ ユニットに選択したホストの種類に既存のホスト グループがある場合は、その既存のホスト グループがホスト マッピングに自動的に選択されます。自動的に選択されたホスト グループを受け入れることも、別のホスト グループを選択することもできます。</block>
-  <block id="abeb4ea342287af6fb99335900add67e" category="paragraph">指定したオペレーティング システムで実行されているホストに既存のホスト グループが存在しない場合は、 ONTAPによって新しいホスト グループが自動的に作成されます。</block>
   <block id="83e804a6917baea37d43dfd34c66ac73" category="paragraph">ASA r2 システムには 2 つのパフォーマンス レベルがあります。デフォルトのパフォーマンス レベルは *Extreme* で、これは利用可能な最高レベルです。レベルを*パフォーマンス*に下げることもできます。</block>
   <block id="4a1975a1a386f2f3f28c4859f5ea4976" category="paragraph">クラスタ/HA のケーブル接続例は、一般的な構成を示しています。</block>
   <block id="11695514a878032b3fb5ecdf5e659b5b" category="paragraph">ここにあなたの設定が表示されない場合は、 <block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block> ストレージ システムをケーブル接続するための包括的な構成とスロットの優先順位に関する情報。</block>
@@ -2641,8 +2636,6 @@
   <block id="903547f07fd29a1a471a450bf6698e9a" category="paragraph">ストレージ VM はASAクラスタからASA r2 クラスタに移行されます。ストレージ VM の名前と UUID、データ LIF 名、IP アドレス、ボリューム名などのオブジェクト名は変更されません。ストレージ VM 内の移行されたオブジェクトの UUID が更新されます。</block>
   <block id="8dc31ca5dc4646efeb787bf14002d2d0" category="inline-link-macro">ASAクライアントをASA r2 クラスタに手動で切り替え、 ASAクラスタからストレージ VM を削除します。</block>
   <block id="9577daaa5fbfbab99b56d58ee2c172df" category="paragraph">自動カットオーバーと自動ストレージVM削除を無効にした場合、<block ref="76ae15ac4a72520ba2cd15274463fca3" category="inline-link-macro-rx"></block> 。</block>
-  <block id="9582e4c48479798f4f4f9ce46d09c93b" category="paragraph">ASA r2 システムでは、ストレージ ユニットにより、SAN ホストがデータ操作に使用できるストレージ スペースが提供されます。ストレージ ユニットとは、SCSI ホストの場合は LUN、NVMe ホストの場合は NVMe 名前空間を指します。クラスターが SCSI ホストをサポートするように構成されている場合は、LUN を作成するように求められます。クラスターが NVMe ホストをサポートするように構成されている場合は、NVMe 名前空間を作成するように求められます。  ASA r2 ストレージ ユニットの最大容量は 128 TB です。</block>
-  <block id="c9c3efe2f110833ad53d587066554d58" category="paragraph">ONTAP 9.18.1 以降では、ストレージ ユニットの作成時にスナップショット リザーブを変更し、スナップショットの自動削除を有効にすることができます。スナップショット予約とは、スナップショット専用に予約されているストレージ ユニット内のスペースの量です。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。</block>
   <block id="7501352b37c8930919c10e645c388272" category="inline-link-macro">ASA r2 システムのスナップショット予約の詳細</block>
   <block id="7fdd4a506c158d387464fd16f4e65f8e" category="paragraph"><block ref="614a34b4f7a807cea02dd4507adb351a" category="inline-link-macro-rx"></block>。</block>
   <block id="819b58028cbb8d32e35c5a6d2a9ed247" category="list-text">QoS 制限、QoS 保証、またはその両方を設定します。</block>
@@ -2726,4 +2719,19 @@
   <block id="343eac7cd99cc683c46468c5b11af7ac" category="sidebar">スナップショット予約の変更</block>
   <block id="d36af7beb354a2c45f47821d695da277" category="sidebar">ストレージVMピア関係を作成する</block>
   <block id="d529398546b94e10169c1e6f6f8aed12" category="sidebar">ONTAP 9.18.1の新機能</block>
+  <block id="5aa793bbbd0a039a24351b96f67f0529" category="paragraph">ASA r2 ストレージ ユニットは、デフォルトでシン プロビジョニングされます。  VM ワークロードを移行する場合は、仮想ディスク (VMDK) もシン プロビジョニングする必要があります。</block>
+  <block id="7b848eb8039379df12baae059a9ee8ea" category="inline-link-macro">ONTAP SAN ASAストレージシステムでBroadcom VMware ESXi iSCSI MPIOを設定する方法</block>
+  <block id="b91b0ae22fa5ae9c0dedfb1c2ea0123d" category="list-text">詳細はこちら<block ref="a32ebc6e0510ec3f73b137570cd9df09" category="inline-link-macro-rx"></block>。</block>
+  <block id="f1391ddb40293878f5f1aec84cd95a9d" category="paragraph">ASA r2 システムでは、ストレージ ユニットにより、SAN ホストがデータ操作に使用できるストレージ スペースが提供されます。ストレージ ユニットとは、SCSI ホストの場合は LUN、NVMe ホストの場合は NVMe 名前空間を指します。クラスターが SCSI ホストをサポートするように構成されている場合は、LUN を作成するように求められます。クラスターが NVMe ホストをサポートするように構成されている場合は、NVMe 名前空間を作成するように求められます。</block>
+  <block id="4314cb010b84f564860a7b2fee2cb4ab" category="paragraph">ASA r2 ストレージ ユニットの最大容量は 128 TB です。参照<block ref="41f66f34b3a905f864500c9319fdff8f" category="inline-link-macro-rx"></block>ASA r2 システムの最新のストレージ制限については、こちらをご覧ください。</block>
+  <block id="34ec78fcc91ffb1e54cd85e4a0924332" category="inline-link-macro">追加</block>
+  <block id="48e33f950546e0f98a6cda6ec059d508" category="paragraph">ストレージ ユニット作成プロセスの一環として、ホスト イニシエーターをストレージ ユニットに追加してマップします。また、<block ref="7d43bd55c0467bfd35b09864ee6c0663" category="inline-link-macro-rx"></block>そして<block ref="261a27e7b6f81c3f2b0eb2a43b4fcddb" category="inline-link-macro-rx"></block>ストレージ ユニットを作成した後、ホスト イニシエーターを作成します。</block>
+  <block id="daacdfe6a9c965f99bb919daaf922d41" category="paragraph">ONTAP 9.18.1 以降では、ストレージ ユニットの作成時にスナップショット リザーブを変更し、スナップショットの自動削除を有効にすることができます。スナップショット予約とは、スナップショット専用に予約されているストレージ ユニット内のスペースの量です。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。</block>
+  <block id="cd70e38e090afe4dfe68269857720d8c" category="inline-link-macro">シンプロビジョニング</block>
+  <block id="6afea9ca1f178aea254d3f9ac79d8dbc" category="paragraph">ストレージ ユニットは、デフォルトでシン プロビジョニングされます。シン プロビジョニングでは、ストレージ ユニットは割り当てられたサイズまで拡張できますが、事前にスペースを予約しません。必要に応じて、使用可能な空き領域からスペースが動的に割り当てられます。これにより、使用可能なスペースを過剰にプロビジョニングすることで、ストレージ効率を向上させることができます。たとえば、1 TB の空き容量があり、4 つの 1 TB ストレージ ユニットを作成する必要があるとします。システムに 3 TB の追加ストレージ容量をすぐに追加する代わりに、ストレージ ユニットを作成し、スペースの使用率を監視し、ストレージ ユニットが実際のスペースを消費するにつれてストレージ容量を増やすことができます。詳細はこちら<block ref="37a5a7f95b66d852ea39cef83793bc4b" category="inline-link-macro-rx"></block>。</block>
+  <block id="235edd79b1fce1af069d9278c91366b9" category="paragraph">ストレージ可用性ゾーン全体でのワークロード分散を最適化するには、偶数個のストレージ ユニットを作成します。</block>
+  <block id="c82bffc1986369b2cd4e0c02a3eb4336" category="admonition">複数のストレージ ユニットを作成する場合、各ユニットは同じ容量で作成されます。作成するストレージ ユニットの数に必要な容量を掛けて、使用可能なスペースが十分にあることを確認します。十分な空き容量がなく、過剰にプロビジョニングすることを選択した場合は、容量不足やデータの損失を回避するために、使用率を注意深く監視してください。</block>
+  <block id="574d314c515cf3a8473a1e97b72f3409" category="paragraph">指定したオペレーティング システムで実行されているホストに既存のホスト グループが存在しない場合は、 ONTAP新しいホスト グループが自動的に作成されます。</block>
+  <block id="bcba813b1b55d0253fcd84e63b13b621" category="paragraph">ホスト NQN を &lt;nqn.yyyy-mm&gt; の後に完全修飾ドメイン名を続けてフォーマットします。年は 1970 年以降である必要があります。合計最大長は 223 になります。有効なNVMeイニシエーターの例はnqn.2014-08.com.example:stringです。</block>
+  <block id="34870fc34c4d7d31040582c184ed973a" category="paragraph">ASA r2 ストレージ ユニットを作成し、ホスト イニシエーターを追加したら、ホストをストレージ ユニットにマップしてデータの提供を開始します。ストレージ ユニットは、ストレージ ユニット作成プロセスの一環としてホストにマップされます。既存のストレージ ユニットをいつでも新規または既存のホストにマップすることもできます。</block>
 </blocks>

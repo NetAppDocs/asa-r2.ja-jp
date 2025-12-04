@@ -27,10 +27,13 @@ link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html["VMware vSphe
 
 VMワークロードをASAストレージシステムからASA r2ストレージシステムに移行する必要がある場合、 NetApp以下を使用することを推奨しています。link:https://www.vmware.com/products/cloud-infrastructure/vsphere-foundation["VMware vSphere vMotion"^]中断なくライブでデータの移行を実行します。
 
+ASA r2 ストレージ ユニットは、デフォルトでシン プロビジョニングされます。  VM ワークロードを移行する場合は、仮想ディスク (VMDK) もシン プロビジョニングする必要があります。
+
 .関連情報
 * 詳細はこちらlink:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-why.html["ONTAP for vSphere を使用する利点"^] 。
 * 学ぶlink:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-srm-overview.html["ONTAPを使用した VMware ライブ サイト リカバリ"^]。
 * 学ぶlink:https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware_vmsc_overview.html#continuous-availability-solutions-for-vsphere-environments["vSphere環境向けの継続的な可用性ソリューション"^]。
+* 詳細はこちらlink:https://kb.netapp.com/on-prem/ontap/da/SAN/SAN-KBs/How_to_setup_Broadcom_VMware_ESXi_iSCSI_MPIO_with_ONTAP_SAN_ASA["ONTAP SAN ASAストレージシステムでBroadcom VMware ESXi iSCSI MPIOを設定する方法"^]。
 
 
 
