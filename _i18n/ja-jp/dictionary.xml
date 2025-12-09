@@ -2225,7 +2225,6 @@
   <block id="07deeffbd26ae347c81cfaf3e2169044" category="sidebar">NetApp ASAシステムのベストプラクティス</block>
   <block id="65393a1b15c3a63904bb446f4a99001a" category="sidebar">REST API移行ガイド</block>
   <block id="a7063f74bf99069f53792368bf5ddbe3" category="admonition">自動ワークロード再バランスを有効にすると、 ASA r2 システムでONTAP 9.17.1 から復帰できなくなります。</block>
-  <block id="bbf7c82f4e9f186f627b8c659682a8e1" category="admonition">ASA r2 システムでは、SED は NVMe プロトコルに対してのみサポートされます。</block>
   <block id="f0929283036207a854392f9eaeb45be4" category="paragraph">ASA r2 システムは、一貫性グループを持つストレージ ユニットを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、整合性グループ内の 10 個のストレージ ユニットで構成されるデータベースがあり、データベース全体をバックアップする必要があるとします。各ストレージ ユニットを個別にバックアップする代わりに、整合性グループをバックアップすることでデータベース全体を保護できます。</block>
   <block id="eaeb215b56b171344d62780dd997477e" category="paragraph">ONTAP 9.16.1 以降、 ASA r2 ストレージ システムはクラスタごとに最大 12 個のノードをサポートします。  HA ペアの新しいノードがケーブル接続され、電源がオンになった後、それらをクラスターに参加させる必要があります。</block>
   <block id="b8838348a8da924f377a5d293230f4f4" category="summary">ASA r2 システムのONTAPソフトウェアの復元は、他のONTAPシステムの復元と同じプロセスに従います。ONTAPクラスタのリバートはシステム停止を伴います。</block>
@@ -2734,4 +2733,5 @@
   <block id="574d314c515cf3a8473a1e97b72f3409" category="paragraph">指定したオペレーティング システムで実行されているホストに既存のホスト グループが存在しない場合は、 ONTAP新しいホスト グループが自動的に作成されます。</block>
   <block id="bcba813b1b55d0253fcd84e63b13b621" category="paragraph">ホスト NQN を &lt;nqn.yyyy-mm&gt; の後に完全修飾ドメイン名を続けてフォーマットします。年は 1970 年以降である必要があります。合計最大長は 223 になります。有効なNVMeイニシエーターの例はnqn.2014-08.com.example:stringです。</block>
   <block id="34870fc34c4d7d31040582c184ed973a" category="paragraph">ASA r2 ストレージ ユニットを作成し、ホスト イニシエーターを追加したら、ホストをストレージ ユニットにマップしてデータの提供を開始します。ストレージ ユニットは、ストレージ ユニット作成プロセスの一環としてホストにマップされます。既存のストレージ ユニットをいつでも新規または既存のホストにマップすることもできます。</block>
+  <block id="e5e9f89a4e81cd1c64531c80eba2e77e" category="admonition">ASA r2 システムでは、SED は NVMe ベースの SSD でのみサポートされます。</block>
 </blocks>
