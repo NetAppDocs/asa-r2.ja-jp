@@ -34,8 +34,6 @@ entries:
     url: "/administer/reboot-take-over-give-back-nodes.html"
   - title: ノードの名前変更
     url: "/administer/rename-nodes.html"
-  - title: ノード間のワークロードの再バランス
-    url: "/administer/rebalance-workloads.html"
 - title: ユーザアカウントとロールの管理
   url: "/administer/user-accounts-roles.html"
 - title: セキュリティ証明書を管理する
