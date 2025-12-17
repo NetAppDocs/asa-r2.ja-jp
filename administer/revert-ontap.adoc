@@ -30,7 +30,7 @@ link:https://docs.netapp.com/us-en/ontap/revert/task_reverting_an_ontap_cluster.
 ASA r2 システムでONTAP 9.17.1 から復元する場合は、復元を開始する前に次の操作を実行する必要があります。
 
 
-NOTE: link:rebalance-workloads.html["自動ワークロード再調整"]ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。自動ワークロード再バランスが有効になった後、 ASA r2 システムでONTAP 9.17.1 から復帰することはできません。
+NOTE: link:space-balancing.html["ダイナミックな空間バランス"]ONTAP 9.17.1 にアップグレードするか、新しいONTAP 9.17.1 ASA r2 クラスタを初期化してから 14 日後に、デフォルトで有効になります。動的スペース バランシングを有効にした後、 ASA r2 システムでONTAP 9.17.1 から戻すことはできません。
 
 [cols="2"]
 |===
