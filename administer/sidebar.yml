@@ -17,7 +17,7 @@ entries:
 - title: 使用状況の監視と容量の拡張
   entries:
   - title: 空間バランスについて学ぶ
-    url: administer/space-balancing.html
+    url: "/administer/space-balancing.html"
   - title: ストレージパフォーマンスを監視
     url: "/monitor/monitor-performance.html"
   - title: ストレージ利用率の監視
