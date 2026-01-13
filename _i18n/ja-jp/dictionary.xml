@@ -2085,7 +2085,6 @@
   <block id="ab3721eb6cf69168eba216763f76f9d8" category="cell">ARP/AIはASA r2ストレージユニットで有効化できます。ARP/AIは、学習期間なしで潜在的なランサムウェア攻撃を検出して報告することで、追加のデータ保護を提供します。</block>
   <block id="f231c7e641e6d267354740a6c9850600" category="cell">SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。</block>
   <block id="2595874d578967634d23bb05c5c7197c" category="inline-link-macro">自動ワークロードバランスのサポート</block>
-  <block id="c33e823e9a93260b53fe781334bf0f34" category="cell"><block ref="c33e823e9a93260b53fe781334bf0f34" category="inline-link-macro-rx"></block></block>
   <block id="f5f208592c87b0ba3e87b3ad6fad7fa6" category="cell">ワークロードは HA ペアのノード間で自動的に分散され、パフォーマンスとリソース使用率が最適化されます。</block>
   <block id="cc9afe53172875d5c9c85e52f0ecbf07" category="summary">ARP/AI を有効にすると、潜在的なランサムウェアの脅威を検出し、データを保護するためのアクションを自動的に実行し、疑わしいアクティビティを警告するメッセージをシステム マネージャーに表示します。</block>
   <block id="7cd792910eb45c6b7d750838a44c4fe3" category="doc">ASA r2 ストレージシステムで AI を活用した自律型ランサムウェア防御を有効化</block>
@@ -2735,4 +2734,5 @@
   <block id="354d3bc6178c825e83ed9c7eb99644cb" category="paragraph">ストレージ VM 内のすべてのストレージ ユニットで ARP/AI を有効にしたくない場合は、有効にする特定のユニットを選択できます。</block>
   <block id="6938dcbd34a520f0105bf12cf29cbdce" category="sidebar">空間バランスについて学ぶ</block>
   <block id="72f3763acb9cf34e72f0598e6d1bebf8" category="sidebar">ストレージVMピア関係を作成する</block>
+  <block id="bbaf1d1dee5098cd15496cd4ba1a66da" category="cell"><block ref="bbaf1d1dee5098cd15496cd4ba1a66da" category="inline-link-macro-rx"></block></block>
 </blocks>
