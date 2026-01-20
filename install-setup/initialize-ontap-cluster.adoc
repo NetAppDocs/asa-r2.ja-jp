@@ -16,6 +16,8 @@ ONTAP System Managerの手順に従って、ONTAP ASA R2クラスタのセット
 
 クラスタのセットアップ時に、デフォルトのデータStorage Virtual Machine（VM）が作成されます。必要に応じて、Domain Name System（DNS；ドメインネームシステム）を有効にしてホスト名を解決したり、Network Time Protocol（NTP；ネットワークタイムプロトコル）を使用して時刻を同期するようにクラスタを設定したり、保存データの暗号化を有効にしたりできます。
 
+場合によっては、 link:../learn-more/cli-support.html#set-up-an-ontap-asa-r2-cluster-using-the-cli["ONTAPコマンドラインインターフェイス (CLI) を使用してクラスタをセットアップします"]。たとえば、セキュリティ プロトコルによってラップトップを管理スイッチに接続できない場合や、Windows 以外のオペレーティング システムを使用している場合は、CLI を使用する必要があります。
+
 .開始する前に
 次の情報を収集します。
 
