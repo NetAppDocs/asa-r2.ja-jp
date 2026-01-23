@@ -1999,7 +1999,6 @@
   <block id="de03dfd1ae9f6be9d8b9a3908591e8b8" category="paragraph">SnapMirrorアクティブ同期を有効にするために必要な準備が完了したら、 <block ref="04df4bf09ed66e3358600cfc6c24fb99" category="inline-link-macro-rx"></block> 。</block>
   <block id="d611938cbbf8e09d8cffb8d50d6f69d7" category="summary">ASA r2 クラスターの計画外のフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立する方法を学びます。</block>
   <block id="d9f4c40f0a9837797bd436d8c81aa4aa" category="doc">ASA r2 クラスタの予期しないフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立します。</block>
-  <block id="0e0d0122b629fb0e54343aa34c487fc4" category="paragraph">自動計画外フェイルオーバー（AUFO）処理は、プライマリ クラスタが停止しているか分離されている場合に実行されます。メディエーターはフェイルオーバーが発生したことを検出し、セカンダリ クラスターへの計画外フェイルオーバーを自動的に実行します。セカンダリ クラスタがプライマリに変換されてクライアントへのデータの提供を開始します。</block>
   <block id="4e85ef85cff46642712b0ee2dcf46ebb" category="list-text">ONTAP Mediatorが設定されて接続され、クォーラムを構成している必要があります。</block>
   <block id="5d356c397f5a143daadc1597a8fd7a34" category="list-text">再確立する必要があるSnapMirrorアクティブ同期関係を選択します。</block>
   <block id="9f4215830573390fcfe4dab1715a643e" category="list-text">関係ステータスに「*InSync*」と表示されるまで待ちます。</block>
@@ -2737,4 +2736,6 @@
   <block id="91d54d0d46ef33d2bbd727e59b537fee" category="list-text">失われた I/O パスを回復したり、ホスト上の I/O パスの状態を更新したりするには、プライマリ ストレージ クラスターが操作を再開した後、ホスト上でストレージ/アダプタの再スキャンを実行する必要があります。</block>
   <block id="682aa2cee69ce16837ee717d9beba117" category="inline-link-macro">ONTAPコマンドラインインターフェイス (CLI) を使用してクラスタをセットアップします</block>
   <block id="ac1a39b823c12e10449f448872a387b1" category="paragraph">場合によっては、 <block ref="b88ab746f7be66e2ab53ecac4b9fd72e" category="inline-link-macro-rx"></block>。たとえば、セキュリティ プロトコルによってラップトップを管理スイッチに接続できない場合や、Windows 以外のオペレーティング システムを使用している場合は、CLI を使用する必要があります。</block>
+  <block id="f216ce14a016872d4ebd01d56ac0f6c4" category="paragraph">ASA r2 システムでは、SnapMirror Active Sync は対称型アクティブ / アクティブ構成をサポートします。対称型アクティブ / アクティブ構成では、両方のサイトがアクティブ I/O のためにローカル ストレージにアクセスできます。ソース クラスタに障害が発生した場合、またはソース クラスタが分離された場合、メディエーターは自動計画外フェイルオーバー（AUFO）をトリガーし、ソース クラスタが回復するまで、デスティネーション クラスタからのすべての I/O を処理します。</block>
+  <block id="5f163ae9655a06ffcd7d72f99c857efa" category="paragraph">SnapMirror アクティブ同期関係の AUFO が発生した場合は、関係を再確立し、元のソース クラスタがオンラインに戻った後に操作を再開する必要があります。</block>
 </blocks>
