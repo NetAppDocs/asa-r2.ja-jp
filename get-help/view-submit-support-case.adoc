@@ -13,7 +13,7 @@ summary:
 [role="lead"]
 サポートが必要な問題が発生した場合は、ONTAPシステムマネージャを使用してテクニカルサポートにケースを送信できます。ONTAPシステムマネージャを使用して、完了したケースや進行中のケースを確認することもできます。
 
-link:https://activeiq-link.netapp.com/["Active IQに登録済み"]ASA R2システムのサポートケースを表示する必要があります。
+link:https://docs.netapp.com/us-en/active-iq/task_login_activeiq.html["Active IQに登録済み"^]ASA r2 システムのサポートケースを表示する必要があります。
 
 .手順
 . サポートケースを送信するには、System Managerで*[クラスタ]>[サポート]*を選択し、*[Go to NetApp Support]*を選択します。

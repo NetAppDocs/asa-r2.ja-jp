@@ -106,6 +106,8 @@ entries:
       url: "/secure-data/ransomware-protection.html"
     - title: ARP/AIの有効化
       url: "/secure-data/enable-anti-ransomware-protection.html"
+    - title: デフォルトのARP/AIの有効化を無効にする
+      url: "/secure-data/disable-default-anti-ransomware-protection.html"
     - title: ARP/AIスナップショットの保持期間を変更する
       url: "/secure-data/modify-arp-snapshot-retention-period.html"
     - title: ARP/AIアラートに応答する

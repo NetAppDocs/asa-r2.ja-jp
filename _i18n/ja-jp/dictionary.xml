@@ -510,7 +510,6 @@
   <block id="095767130effe9a44b7d3ff367eda1fa" category="doc">ASA R2ストレージシステムのサポートケースの送信と確認</block>
   <block id="98c449686f1bb755fdc3ec64c1f3ea2e" category="paragraph">サポートが必要な問題が発生した場合は、ONTAPシステムマネージャを使用してテクニカルサポートにケースを送信できます。ONTAPシステムマネージャを使用して、完了したケースや進行中のケースを確認することもできます。</block>
   <block id="ce04aba89455a6f59cf366030c2056ab" category="inline-link-macro">Active IQに登録済み</block>
-  <block id="871826e1588c93437ae23af0a8c5c29e" category="paragraph"><block ref="2d57bedaf7449221ca7cf6e2da6e5236" category="inline-link-macro-rx"></block>ASA R2システムのサポートケースを表示する必要があります。</block>
   <block id="18aec681e94562add9f015e57e17b8d0" category="list-text">サポートケースを送信するには、System Managerで*[クラスタ]&gt;[サポート]*を選択し、*[Go to NetApp Support]*を選択します。</block>
   <block id="ce3bbf8e2056eaff8c2c9a52eb4ce4dc" category="list-text">以前に送信されたケースを表示するには、System Managerで*[クラスタ]&gt;[サポート]*を選択し、*[ケースを表示]*を選択します。</block>
   <block id="e995d56efd9e31d97825dd79be4d1383" category="doc">ASA R2ストレージシステムの詳細</block>
@@ -2088,7 +2087,6 @@
   <block id="7cd792910eb45c6b7d750838a44c4fe3" category="doc">ASA r2 ストレージシステムで AI を活用した自律型ランサムウェア防御を有効化</block>
   <block id="e8b71c667f5920e249288a672ea7f999" category="paragraph">ONTAP 9.17.1以降では、人工知能（ARP/AI）を搭載したAutonomous Ransomware Protectionを使用して、 ASA r2システムのデータを保護できます。ARP/AIは、潜在的なランサムウェアの脅威を迅速に検出し、データ保護のためのARPスナップショットを自動的に作成し、疑わしいアクティビティを警告するメッセージをSystem Managerに表示します。</block>
   <block id="7331e9472b69421ea7995df5df0b5754" category="inline-link-macro">学習期間</block>
-  <block id="c23c5941acca34f7955743c2115ef87e" category="admonition">ランサムウェア攻撃からの保護を完全に保証できるランサムウェア検出 / 防御システムはありません。攻撃が検出されない可能性もありますが、ウイルス対策ソフトウェアが侵入を検出できなかった場合に、ARP/AI は重要な追加防御層として機能します。</block>
   <block id="ad09d4f074e5e7f7524d8960ed675311" category="inline-link-macro">ONTAP Oneライセンス</block>
   <block id="4098ab2b124dfc2ac9a7199398f039bf" category="paragraph">ARP/AIサポートは、 <block ref="eac36fc822e433078e178d83ea6ed140" category="inline-link-macro-rx"></block> 。</block>
   <block id="7c5c3f99ed72f08e7f6f630c025f7421" category="inline-link-macro">セキュリティファイルの自動更新を有効にする</block>
@@ -2658,7 +2656,6 @@
   <block id="c65375b9e9461021110e7878164c1353" category="inline-link-macro">スナップショット予約の変更とスナップショットの自動削除のサポート</block>
   <block id="74bb636063257a476aa70d6beb1b78a0" category="cell"><block ref="74bb636063257a476aa70d6beb1b78a0" category="inline-link-macro-rx"></block></block>
   <block id="bb6f2042d7b561ef22513dcacc071c68" category="cell">スナップショット予約を変更し、自動スナップショット削除を有効にして、 ASA r2 ストレージ ユニット内のスナップショットに使用されるスペースの量を制限できます。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。これにより、スナップショットがユーザー データ用のストレージ ユニット内のスペースを消費しないようにして、アプリケーションの中断を防止できます。</block>
-  <block id="05e7e1680bf144077a0c95dc04ecfe70" category="paragraph">ストレージ仮想マシン（VM）内に作成されたすべてのストレージユニットで、ARP/AIをデフォルトで有効化できます。つまり、ストレージ VM に作成された新しいストレージ ユニットでは、ARP/AI が自動的に有効になります。ストレージ VM 内の既存のストレージ ユニットに ARP/AI を適用することもできます。</block>
   <block id="afc9ff5f825988208f6c59ba04c2c2d2" category="paragraph">ストレージ VM 上に作成するすべての新しいストレージ ユニットは、デフォルトでランサムウェア攻撃から保護されており、疑わしいアクティビティは System Manager で報告されます。</block>
   <block id="8ae754caf3a2f6cacd2c696b8292a020" category="paragraph">ONTAP 9.18.1 以降では、IPsec ハードウェア オフロードのサポートが IPv6 トラフィックに拡張されています。</block>
   <block id="39fa9e9872335fa886f58deacacdaf75" category="paragraph">次の NIC カードは、次のASA r2 システムおよびONTAPバージョンでのハードウェア オフロードでサポートされています。</block>
@@ -2726,10 +2723,8 @@
   <block id="d480af7e6686a5e56e9006fab126c8e7" category="section-title">ASA r2システムの違いのまとめ</block>
   <block id="2be27a1e2f13957646665cd7fef8000d" category="cell">親整合性グループあたりの子整合性グループ</block>
   <block id="ea5d2f1c4608232e07d3aa3d998e5135" category="cell">64</block>
-  <block id="d24ed4821c2e547301d0c31d918da4ea" category="paragraph">ONTAP 9.17.1以降、ARPはランサムウェア対策分析に機械学習モデルを採用することでサイバーレジリエンス（回復力）を向上させます。このモデルは、SAN環境において常に進化するランサムウェアを98%の精度で検出します。ARPの機械学習モデルは、シミュレーションされたランサムウェア攻撃の前後両方の大規模なファイル データセットで事前にトレーニングされています。このリソース集約型のトレーニングはONTAPの外部で行われ、このトレーニングから得られる事前トレーニング済みモデルはONTAPに同梱されています。このモデルはアクセスも変更もできません。  ARP/AIは有効化後すぐにアクティブになります。<block ref="3fa1bfd584351c2c430a6346ba4b1ef3" category="inline-link-macro-rx"></block> 。</block>
   <block id="542b4f4e36f442f64960052e5e90dc97" category="section-title">ストレージVM内のすべてのストレージユニットでARP/AIを有効にする</block>
   <block id="4a8ba6399b21b6bd034b8e0eaf51d276" category="section-title">ストレージVM内の特定のストレージユニットでARP/AIを有効にする</block>
-  <block id="354d3bc6178c825e83ed9c7eb99644cb" category="paragraph">ストレージ VM 内のすべてのストレージ ユニットで ARP/AI を有効にしたくない場合は、有効にする特定のユニットを選択できます。</block>
   <block id="6938dcbd34a520f0105bf12cf29cbdce" category="sidebar">空間バランスについて学ぶ</block>
   <block id="72f3763acb9cf34e72f0598e6d1bebf8" category="sidebar">ストレージVMピア関係を作成する</block>
   <block id="bbaf1d1dee5098cd15496cd4ba1a66da" category="cell"><block ref="bbaf1d1dee5098cd15496cd4ba1a66da" category="inline-link-macro-rx"></block></block>
@@ -2738,4 +2733,39 @@
   <block id="ac1a39b823c12e10449f448872a387b1" category="paragraph">場合によっては、 <block ref="b88ab746f7be66e2ab53ecac4b9fd72e" category="inline-link-macro-rx"></block>。たとえば、セキュリティ プロトコルによってラップトップを管理スイッチに接続できない場合や、Windows 以外のオペレーティング システムを使用している場合は、CLI を使用する必要があります。</block>
   <block id="f216ce14a016872d4ebd01d56ac0f6c4" category="paragraph">ASA r2 システムでは、SnapMirror Active Sync は対称型アクティブ / アクティブ構成をサポートします。対称型アクティブ / アクティブ構成では、両方のサイトがアクティブ I/O のためにローカル ストレージにアクセスできます。ソース クラスタに障害が発生した場合、またはソース クラスタが分離された場合、メディエーターは自動計画外フェイルオーバー（AUFO）をトリガーし、ソース クラスタが回復するまで、デスティネーション クラスタからのすべての I/O を処理します。</block>
   <block id="5f163ae9655a06ffcd7d72f99c857efa" category="paragraph">SnapMirror アクティブ同期関係の AUFO が発生した場合は、関係を再確立し、元のソース クラスタがオンラインに戻った後に操作を再開する必要があります。</block>
+  <block id="329e726c526800c2f75bf6d3e2260fe6" category="paragraph"><block ref="f1b69e50633569a9d4ff998335d87123" category="inline-link-macro-rx"></block>ASA r2 システムのサポートケースを表示する必要があります。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">セキュリティ</block>
+  <block id="560b852910a0e98466ea0bc41a896549" category="inline-link-macro">自動ARP/AI有効化のサポート</block>
+  <block id="e9a88c72c24e4398f874d2f4af5b49e8" category="cell"><block ref="e9a88c72c24e4398f874d2f4af5b49e8" category="inline-link-macro-rx"></block></block>
+  <block id="689aa35f9f1eec56b70643199a8682d8" category="cell">新しい 9.18.1 ASA r2 クラスタを初期化するか、クラスタを 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、新しく作成されたすべてのストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間の終了時に、新しく作成されたストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。</block>
+  <block id="1a96b0b4e7eeb5c869def87fe1b46270" category="summary">ASA r2クラスタにAutonomous Ransomware Protection（ARP）ライセンスがインストールされている場合、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、既存および新しく作成されたすべてのストレージユニットでARPがデフォルトで有効になります。</block>
+  <block id="47db8421e482de0cb387c25e02ac95ad" category="doc">ASA r2ストレージシステムでデフォルトの自律ランサムウェア保護を無効にする</block>
+  <block id="ada9a568ab6a5d18c006a2f881dad45e" category="paragraph">新しい ONTAP 9.18.1 ASA r2 クラスタを初期化するか、クラスタを ONTAP 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、すべての新規ストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間終了時に新規ストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。</block>
+  <block id="15a35bbf98ecdf50ebbe830c9150b1fa" category="inline-link-macro">手動で有効化</block>
+  <block id="2c5bf6d23c3b237a161f10e7a30084bf" category="paragraph">ONTAP 9.17.1で作成されたストレージユニットは、ARP/AI用に<block ref="e30e679666ce4b86d4d0fe351918a7bf" category="inline-link-macro-rx"></block>する必要があります。</block>
+  <block id="89282cacdaeec6ad949d1fee8ef83b96" category="paragraph">最初の12時間の猶予期間中または猶予期間後に、デフォルトの有効化を無効にすることができます。</block>
+  <block id="06f738cd9e1ffd61cee9f2f7298af898" category="list-text">ARPを無効にする：</block>
+  <block id="9aa3a30140e694c88ae8dc5d1d6baeb9" category="list-text">12時間の猶予期間中に無効にするには：</block>
+  <block id="3f89c840d19029a97a24bc85a1f4bc2a" category="list-text">*Anti-ransomware*で、*Don't enable*を選択してから*Disable*を選択します。</block>
+  <block id="8a142e162a74e2269d6374226b8deab8" category="list-text">12時間の猶予期間後に無効にするには：</block>
+  <block id="7dce122004969d56ae2e0245cb754d35" category="inline-image-macro">編集</block>
+  <block id="3506bfed41b9e706367e09a6ee264e4a" category="list-text">*ランサムウェア対策*の下で、<block ref="cd4fada87571e8da586532fce60b382a" category="inline-image-macro-rx" type="image"></block>を選択してから、*新しいストレージユニットに対して有効にする*の選択を解除します。</block>
+  <block id="969d795be0732afa7c8d6bc59c89a090" category="list-text">*保存*を選択します</block>
+  <block id="91af5705f16502125e8b2187e64202c0" category="open-title">CLI</block>
+  <block id="2789285c59c5d3b50b0af44eb0af9d83" category="list-text">デフォルトの有効化ステータスを確認します：</block>
+  <block id="51ea13505527485e8ad1964193e9ac5d" category="list-text">既存および新規ボリュームのデフォルトの有効化を無効にします：</block>
+  <block id="8dec9eba7de20cf1b8ccafba1cfae901" category="paragraph">ARPは、SAN環境において常に進化するランサムウェアを98%の精度で検出するランサムウェア対策分析用の機械学習モデルを採用することで、サイバーレジリエンス（回復力）を向上させます。ARPの機械学習モデルは、ランサムウェア攻撃のシミュレーション前後の大規模なファイルデータセットを用いて事前トレーニングされています。このリソース集約型のトレーニングはONTAPの外部で実行され、このトレーニングから得られる事前トレーニング済みモデルはONTAPに搭載されています。このモデルはアクセスも変更もできません。ARP/AIは有効化後すぐにアクティブになります。<block ref="3fa1bfd584351c2c430a6346ba4b1ef3" category="inline-link-macro-rx"></block>はありません。</block>
+  <block id="f2927aad75b0aa15b973bf19aae3a066" category="admonition">ランサムウェアの検出・防止システムは、ランサムウェア攻撃からの完全な安全を保証することはできません。攻撃が検知されない可能性はありますが、アンチウイルスソフトウェアが侵入を検知できなかった場合、ARP/AIは重要な追加防御層として機能します。</block>
+  <block id="613dcccc80c6c70a2f7f3bbba3e85635" category="list-text">ARP/AI はSnapMirror アクティブ同期、SnapMirror 同期、またはSnapLockによって保護されているストレージ ユニットではサポートされません。</block>
+  <block id="d818371e54d5db7f0b123dad9f0741fa" category="list-text">ONTAP 9.18.1以降では、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、新しく作成されたすべてのストレージユニットでARP/AIがデフォルトで有効になります。</block>
+  <block id="4ebb5f6bb42f5000c86113152e6fc7b8" category="section-title">クラスター内のすべてのストレージユニットでARP/AIを有効にする</block>
+  <block id="4a30706558af49bc475c9076f39c5043" category="paragraph">ONTAP 9.17.1を実行している場合は、クラスタ内に作成されたすべてのストレージユニットでARP/AIをデフォルトで有効にすることができます。</block>
+  <block id="b3d26117cd7cf369132a7f5c1b0e1b21" category="paragraph">ONTAP 9.18.1以降では、すべての新規ストレージユニットでARP/AIがデフォルトで有効になっています。ONTAP 9.17.1で作成されたストレージユニットでARP/AIが有効になっていない場合は、手動で有効にすることができます。</block>
+  <block id="1ce5b5693fce06d8eab0db104f812a23" category="inline-image-macro">ランサムウェア対策設定を編集する</block>
+  <block id="50d605f03d486d36ef3d11420980afa9" category="list-text">*ランサムウェア対策*の横にある<block ref="09996779530a0566a9742876e9ffd4f1" category="inline-image-macro-rx" type="image"></block>を選択してから、*既存のすべてのストレージユニットで有効にする*を選択します。</block>
+  <block id="1d6ca6ff92e87645e0e1be4c8c4254c1" category="paragraph">ONTAP 9.17.1 を使用している場合、ストレージ仮想マシン（VM）内に作成されたすべてのストレージユニットで ARP/AI をデフォルトで有効化できます。つまり、ストレージVM内に新規に作成されたストレージユニットでは、ARP/AI が自動的に有効化されます。また、ストレージVM内の既存のストレージユニットに ARP/AI を適用することもできます。</block>
+  <block id="f3a115988cb09dfd534467f2d9511859" category="paragraph">ONTAP 9.17.1 を実行していて、ストレージ VM 内のすべてのストレージユニットで ARP/AI を有効にしたくない場合は、有効にする特定のユニットを選択できます。</block>
+  <block id="b86583f9a9fc89f434a369308432e10e" category="inline-link-macro">既知のARP/AIサージを報告する</block>
+  <block id="114bbec71af5be00be6f74b75bcf02d1" category="paragraph">ストレージユニットのアクティビティに急増が見られる場合（一時的な急増、または新たな常態を特徴づける急増のいずれか）は、それらを安全として報告する必要があります。これらの急増を手動で安全として報告することで、ARPの脅威評価の精度向上に役立ちます。<block ref="8dee558f5c9b6bedf916b9781132862f" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
+  <block id="b27281dcf866cc70bd075c0d39310671" category="sidebar">デフォルトのARP/AIの有効化を無効にする</block>
 </blocks>

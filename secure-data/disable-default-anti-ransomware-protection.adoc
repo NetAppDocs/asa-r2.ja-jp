@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: secure-data/disable-default-anti-ransomware-protection.html 
+keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, disable 
+summary: ASA r2クラスタにAutonomous Ransomware Protection（ARP）ライセンスがインストールされている場合、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、既存および新しく作成されたすべてのストレージユニットでARPがデフォルトで有効になります。 
+---
+= ASA r2ストレージシステムでデフォルトの自律ランサムウェア保護を無効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しい ONTAP 9.18.1 ASA r2 クラスタを初期化するか、クラスタを ONTAP 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、すべての新規ストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間終了時に新規ストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。
+
+ONTAP 9.17.1で作成されたストレージユニットは、ARP/AI用にlink:enable-anti-ransomware-protection.html["手動で有効化"]する必要があります。
+
+.手順
+最初の12時間の猶予期間中または猶予期間後に、デフォルトの有効化を無効にすることができます。
+
+[role="tabbed-block"]
+====
+.System Manager
+--
+. [* Cluster]>[Settings]（設定）*を選択します。
+. ARPを無効にする：
++
+** 12時間の猶予期間中に無効にするには：
++
+... *Anti-ransomware*で、*Don't enable*を選択してから*Disable*を選択します。
+
+
+** 12時間の猶予期間後に無効にするには：
++
+... *ランサムウェア対策*の下で、image:icon_pencil.gif["編集"]を選択してから、*新しいストレージユニットに対して有効にする*の選択を解除します。
+... *保存*を選択します
+
+
+
+
+
+
+--
+.CLI
+--
+. デフォルトの有効化ステータスを確認します：
++
+[source, cli]
+----
+security anti-ransomware auto-enable show
+----
+. 既存および新規ボリュームのデフォルトの有効化を無効にします：
++
+[source, cli]
+----
+security anti-ransomware auto-enable modify -default-existing-volume-state false -default-new-volume-state false
+----
+
+
+--
+====
