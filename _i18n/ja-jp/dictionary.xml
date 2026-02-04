@@ -2768,4 +2768,5 @@
   <block id="b86583f9a9fc89f434a369308432e10e" category="inline-link-macro">既知のARP/AIサージを報告する</block>
   <block id="114bbec71af5be00be6f74b75bcf02d1" category="paragraph">ストレージユニットのアクティビティに急増が見られる場合（一時的な急増、または新たな常態を特徴づける急増のいずれか）は、それらを安全として報告する必要があります。これらの急増を手動で安全として報告することで、ARPの脅威評価の精度向上に役立ちます。<block ref="8dee558f5c9b6bedf916b9781132862f" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
   <block id="b27281dcf866cc70bd075c0d39310671" category="sidebar">デフォルトのARP/AIの有効化を無効にする</block>
+  <block id="74c34cd79314b0b0543df58dce891912" category="cell">SnapMirror アクティブ同期のサポートが、2 ノード クラスタから 4 ノード クラスタに拡張されました。</block>
 </blocks>
