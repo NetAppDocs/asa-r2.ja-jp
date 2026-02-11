@@ -184,7 +184,6 @@
   <block id="17ac6cdd9934a4f4aca00f5228a64555" category="list-text">更新の変更が現在および将来のすべての更新に適用されることを承認する場合に選択します。</block>
   <block id="7ae6e72fcf95f7e0b8f4dbe1153d8398" category="paragraph">推奨されるアップデートは、選択したアップデートに基づいて、ASA R2システムに自動的にダウンロードされ、インストールされます。</block>
   <block id="5de0adb95551ff3c1458ae6247a4959f" category="section-title">自動更新を無効にする</block>
-  <block id="6141cdc0ba26479d87d6b8c24af9fc18" category="paragraph">推奨されるアップデートをインストール前に表示できるようにするには、自動アップデートを無効にします。自動更新を無効にした場合は、ファームウェアとシステムファイルの更新を手動で実行する必要があります。</block>
   <block id="3a73131e5e1a3a498c8e055e84a30f60" category="paragraph">自動更新は無効になっています。推奨される更新プログラムを定期的に確認し、手動インストールを実行するかどうかを決定する必要があります。</block>
   <block id="e8b8aa5f70e0a4459ca2284f8da3b813" category="section-title">自動更新の表示</block>
   <block id="6edf33a55c81d08e5aac13aae918832c" category="paragraph">クラスタにダウンロードされ、自動インストールがスケジュールされているファームウェアおよびシステムファイルの更新のリストを表示します。また、以前に自動的にインストールされたアップデートも表示します。</block>
@@ -1943,7 +1942,6 @@
   <block id="63f65589705e420ce3e3c84f5a73edea" category="inline-link-macro">クラスタ間ストレージVMピア関係を作成する</block>
   <block id="0a1048623dcc4bf6a07e4f070c75b99a" category="list-text">クラスタ内の各ノードに少なくとも 1 つの LIF が作成されていることを確認します。</block>
   <block id="f0a8f8a4710c7aff45926e4c429a8cc0" category="inline-link-macro">LIFの作成</block>
-  <block id="d57b4f0ac425b878d2f45da8c8c89d8d" category="paragraph"><block ref="d57b4f0ac425b878d2f45da8c8c89d8d" category="inline-link-macro-rx"></block></block>
   <block id="b04d1fe353930783cf68fb978624b212" category="list-text">必要なストレージ ユニットが作成され、ホスト グループにマップされていることを確認します。</block>
   <block id="12aa04a968692be25285a9fc7234d0d5" category="inline-link-macro">ストレージユニットを作成する</block>
   <block id="0dcd2c45a0db6a5c91ed22efb559bd29" category="inline-link-macro">ストレージユニットをホストグループにマップする</block>
@@ -2769,4 +2767,6 @@
   <block id="114bbec71af5be00be6f74b75bcf02d1" category="paragraph">ストレージユニットのアクティビティに急増が見られる場合（一時的な急増、または新たな常態を特徴づける急増のいずれか）は、それらを安全として報告する必要があります。これらの急増を手動で安全として報告することで、ARPの脅威評価の精度向上に役立ちます。<block ref="8dee558f5c9b6bedf916b9781132862f" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
   <block id="b27281dcf866cc70bd075c0d39310671" category="sidebar">デフォルトのARP/AIの有効化を無効にする</block>
   <block id="74c34cd79314b0b0543df58dce891912" category="cell">SnapMirror アクティブ同期のサポートが、2 ノード クラスタから 4 ノード クラスタに拡張されました。</block>
+  <block id="b930776d8572e5f3c1d7294d9809974c" category="paragraph">更新を完全に自分で管理する場合にのみ、自動更新を無効にしてください。自動更新をオフにすると、システムは更新の通知、ダウンロード、またはインストールを行いません。すべての更新プログラムを手動で監視、ダウンロード、スケジュール、およびインストールするのはお客様の責任となります。</block>
+  <block id="26f7abc505f53b85cb219303544259d3" category="paragraph"><block ref="d57b4f0ac425b878d2f45da8c8c89d8d" category="inline-link-macro-rx"></block>。</block>
 </blocks>
