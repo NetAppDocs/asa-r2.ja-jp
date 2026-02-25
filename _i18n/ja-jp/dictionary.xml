@@ -1054,7 +1054,6 @@
   <block id="4af5b851dfcd374944ce285278985595" category="paragraph">削除されたストレージユニットから解放されたスペースを、<block ref="f623a169728c03b0e232ffad71f851b4" category="inline-link-macro-rx"></block>追加の容量が必要なストレージユニットに使用できます。</block>
   <block id="d144ceb11715b5ffc74a8293d3aa8303" category="summary">ストレージユニットを編集して容量の拡張、サービス品質（QoS）ポリシーの更新、ホストマッピングの変更を行うことで、ストレージシステムのパフォーマンスやデータの変更に対応します。</block>
   <block id="ceff03bfa1a8dafc5e617407d14564d3" category="doc">ASA R2ストレージシステムのストレージユニットの変更</block>
-  <block id="e6f1f5b43dd2b3e740c42c5f1623750d" category="paragraph">ASA R2システムのパフォーマンスを最適化するには、容量の拡張、QoSポリシーの更新、ユニットにマッピングされているホストの変更など、ストレージユニットの変更が必要になる場合があります。たとえば、新しい重要なアプリケーションワークロードを既存のストレージユニットに追加した場合、新しいアプリケーションに必要なパフォーマンスレベルをサポートするために、ストレージユニットに適用されているサービス品質（QoS）ポリシーの変更が必要になることがあります。</block>
   <block id="261c95ed5d454ef55df25657c605d472" category="paragraph-title">容量の拡張</block>
   <block id="9c4dfedb8190eb2128e8185aff1c8e51" category="paragraph">ストレージユニットの書き込み可能なスペースが不足した場合にデータアクセスが失われないように、ストレージユニットの容量がフルに達する前にサイズを拡張します。ストレージユニットの容量は、ONTAPで許可されている最大サイズである128TBに拡張できます。</block>
   <block id="e2bcdafb5edd46c07debdaff4977f47e" category="paragraph-title">ホストマッピングの変更</block>
@@ -2334,7 +2333,6 @@
   <block id="913e3fb6005d79d1e7e5eb2046a6fa4c" category="inline-link-macro">スナップミラーメディエーターの削除</block>
   <block id="55394a49231c00367e205c42b064e980" category="list-text"><block ref="55394a49231c00367e205c42b064e980" category="inline-link-macro-rx"></block></block>
   <block id="7827b7923d6e45ba19022ef0a9878628" category="inline-link-macro">ONTAPパーソナリティの詳細</block>
-  <block id="67cc47e8f050e98e23b1a714f17238ec" category="paragraph"><block ref="2d2c01d97863e3fdde3b4275018cf566" category="inline-link-macro-rx"></block> 。</block>
   <block id="2e50e3f8a8554bd854e544e6dc52462d" category="admonition">ASA r2 ストレージ システムのスナップショット レプリケーションは、別のASA r2 ストレージ システムとの間のみサポートされます。  ASA r2 システムからASA、 AFF 、またはFASシステムに、あるいはASA、 AFF 、またはFASシステムからASA r2 システムにスナップショットを複製することはできません。</block>
   <block id="8e0a212a3ccb8f506b309ea2b6cbd1f7" category="paragraph">ONTAP 9.17.1 以降では、階層関係にあるコンシステンシー グループに非同期レプリケーション ポリシーを適用できます。  ONTAP 9.16.1 では、階層関係の整合性グループでは非同期レプリケーションはサポートされません。</block>
   <block id="de095ac7880431e9449dcced8cecbd9a" category="inline-link-macro">階層型（親/子）整合性グループの詳細</block>
@@ -2684,10 +2682,7 @@
   <block id="48e33f950546e0f98a6cda6ec059d508" category="paragraph">ストレージ ユニット作成プロセスの一環として、ホスト イニシエーターをストレージ ユニットに追加してマップします。また、<block ref="7d43bd55c0467bfd35b09864ee6c0663" category="inline-link-macro-rx"></block>そして<block ref="261a27e7b6f81c3f2b0eb2a43b4fcddb" category="inline-link-macro-rx"></block>ストレージ ユニットを作成した後、ホスト イニシエーターを作成します。</block>
   <block id="daacdfe6a9c965f99bb919daaf922d41" category="paragraph">ONTAP 9.18.1 以降では、ストレージ ユニットの作成時にスナップショット リザーブを変更し、スナップショットの自動削除を有効にすることができます。スナップショット予約とは、スナップショット専用に予約されているストレージ ユニット内のスペースの量です。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。</block>
   <block id="cd70e38e090afe4dfe68269857720d8c" category="inline-link-macro">シンプロビジョニング</block>
-  <block id="6afea9ca1f178aea254d3f9ac79d8dbc" category="paragraph">ストレージ ユニットは、デフォルトでシン プロビジョニングされます。シン プロビジョニングでは、ストレージ ユニットは割り当てられたサイズまで拡張できますが、事前にスペースを予約しません。必要に応じて、使用可能な空き領域からスペースが動的に割り当てられます。これにより、使用可能なスペースを過剰にプロビジョニングすることで、ストレージ効率を向上させることができます。たとえば、1 TB の空き容量があり、4 つの 1 TB ストレージ ユニットを作成する必要があるとします。システムに 3 TB の追加ストレージ容量をすぐに追加する代わりに、ストレージ ユニットを作成し、スペースの使用率を監視し、ストレージ ユニットが実際のスペースを消費するにつれてストレージ容量を増やすことができます。詳細はこちら<block ref="37a5a7f95b66d852ea39cef83793bc4b" category="inline-link-macro-rx"></block>。</block>
   <block id="235edd79b1fce1af069d9278c91366b9" category="paragraph">ストレージ可用性ゾーン全体でのワークロード分散を最適化するには、偶数個のストレージ ユニットを作成します。</block>
-  <block id="c82bffc1986369b2cd4e0c02a3eb4336" category="admonition">複数のストレージ ユニットを作成する場合、各ユニットは同じ容量で作成されます。作成するストレージ ユニットの数に必要な容量を掛けて、使用可能なスペースが十分にあることを確認します。十分な空き容量がなく、過剰にプロビジョニングすることを選択した場合は、容量不足やデータの損失を回避するために、使用率を注意深く監視してください。</block>
-  <block id="574d314c515cf3a8473a1e97b72f3409" category="paragraph">指定したオペレーティング システムで実行されているホストに既存のホスト グループが存在しない場合は、 ONTAP新しいホスト グループが自動的に作成されます。</block>
   <block id="bcba813b1b55d0253fcd84e63b13b621" category="paragraph">ホスト NQN を &lt;nqn.yyyy-mm&gt; の後に完全修飾ドメイン名を続けてフォーマットします。年は 1970 年以降である必要があります。合計最大長は 223 になります。有効なNVMeイニシエーターの例はnqn.2014-08.com.example:stringです。</block>
   <block id="34870fc34c4d7d31040582c184ed973a" category="paragraph">ASA r2 ストレージ ユニットを作成し、ホスト イニシエーターを追加したら、ホストをストレージ ユニットにマップしてデータの提供を開始します。ストレージ ユニットは、ストレージ ユニット作成プロセスの一環としてホストにマップされます。既存のストレージ ユニットをいつでも新規または既存のホストにマップすることもできます。</block>
   <block id="e5e9f89a4e81cd1c64531c80eba2e77e" category="admonition">ASA r2 システムでは、SED は NVMe ベースの SSD でのみサポートされます。</block>
@@ -2769,4 +2764,9 @@
   <block id="74c34cd79314b0b0543df58dce891912" category="cell">SnapMirror アクティブ同期のサポートが、2 ノード クラスタから 4 ノード クラスタに拡張されました。</block>
   <block id="b930776d8572e5f3c1d7294d9809974c" category="paragraph">更新を完全に自分で管理する場合にのみ、自動更新を無効にしてください。自動更新をオフにすると、システムは更新の通知、ダウンロード、またはインストールを行いません。すべての更新プログラムを手動で監視、ダウンロード、スケジュール、およびインストールするのはお客様の責任となります。</block>
   <block id="26f7abc505f53b85cb219303544259d3" category="paragraph"><block ref="d57b4f0ac425b878d2f45da8c8c89d8d" category="inline-link-macro-rx"></block>。</block>
+  <block id="889dd2634c57a80d5ff345be8b87b394" category="list-text"><block ref="2d2c01d97863e3fdde3b4275018cf566" category="inline-link-macro-rx"></block>。*</block>
+  <block id="330a40ed2b3f8affc9b2ba9dda95e7d2" category="paragraph">ASA r2 システムのパフォーマンスを最適化するには、ストレージ ユニットを変更して容量を増やしたり、QoS ポリシーを更新したり、ユニットにマップされているホストを変更したりする必要がある場合があります。たとえば、新しい重要なアプリケーション ワークロードが既存のストレージ ユニットに追加された場合、新しいアプリケーションに必要なパフォーマンス レベルをサポートするために、ストレージ ユニットに適用されているサービス品質（QoS）ポリシーを変更する必要がある場合があります。</block>
+  <block id="3fda8ce05b50b72371c5f4cb65657861" category="paragraph">ストレージ ユニットは、デフォルトでシン プロビジョニングされます。シン プロビジョニングでは、ストレージ ユニットは割り当てられたサイズまで拡張できますが、事前にスペースを予約しません。必要に応じて、使用可能な空き領域からスペースが動的に割り当てられます。これにより、使用可能なスペースを_過剰にプロビジョニング_することで、ストレージ効率を向上させることができます。たとえば、1 TB の空き容量があり、4 つの 1 TB ストレージ ユニットを作成する必要があるとします。システムに 3 TB の追加ストレージ容量をすぐに追加する代わりに、ストレージ ユニットを作成し、スペースの使用率を監視し、ストレージ ユニットが実際のスペースを消費するにつれてストレージ容量を増やすことができます。<block ref="37a5a7f95b66d852ea39cef83793bc4b" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="d6e1856d58417da15c8f45bb5225a284" category="admonition">複数のストレージ ユニットを作成する場合、各ユニットは同じ容量で作成されます。作成するストレージ ユニットの数に必要な容量を掛けて、使用可能なスペースが十分にあることを確認します。十分な空き容量がなく、過剰にプロビジョニングすることを選択した場合は、容量不足やデータの損失を回避するために、使用率を注意深く監視してください。</block>
+  <block id="aa716862002e83866a499a0f5aaa467f" category="paragraph">指定したオペレーティングシステムで実行されているホストの既存のホストグループが存在しない場合は、ONTAP が新しいホスト グループを自動的に作成します。</block>
 </blocks>
