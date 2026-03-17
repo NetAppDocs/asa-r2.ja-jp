@@ -1500,9 +1500,6 @@
   <block id="a5f04ac5782b3b4db001475a2ce8f1f8" category="paragraph">新しいHAペアをクラスタに追加したら、新しいノードに追加できます<block ref="180fb7c364ff620a7da1de634e394af5" category="inline-link-macro-rx"></block>。</block>
   <block id="f142a152601a952c440aa742ae54d56c" category="doc">ASA R2ストレージシステムでのONTAPのアップグレード</block>
   <block id="f46c905b973360f57c509a5dac0d6aca" category="paragraph">ASA R2システムでONTAPソフトウェアをアップグレードすると、ONTAPの新機能や強化された機能を活用して、コストの削減、重要なワークロードの高速化、セキュリティの強化、組織で利用できるデータ保護の範囲の拡大を実現できます。</block>
-  <block id="1609fb0c876b70bfae98d1cafa399784" category="inline-link-macro">Upgrade Advisorを使用してアップグレードを準備する</block>
-  <block id="e4b24f4689bdc8358c4d409b6a9d4103" category="inline-link-macro">Upgrade Advisorを使用せずにアップグレードを準備</block>
-  <block id="715a6cc9b89f202d46f87d2b8ae93e8e" category="paragraph">ASA R2システムのONTAPソフトウェアのアップグレードは、他のONTAPシステムのアップグレードと同じプロセスに従います。Active IQデジタルアドバイザ(デジタルアドバイザとも呼ばれます)の有効なSupportEdge契約がある場合は、次の<block ref="1117d34674fd91a6ee3c7506ddc3a8f0" category="inline-link-macro-rx"></block>手順を実行してください。Upgrade Advisorは、クラスタを評価し、構成に固有のアップグレードプランを作成することで、不確実性とリスクを最小限に抑えるためのインテリジェンスを提供します。Active IQデジタルアドバイザの有効なSupportEdge契約をお持ちでない場合は、次の<block ref="66ecb4b248d940ec34981282ad334ce1" category="inline-link-macro-rx"></block>手順を実行してください。</block>
   <block id="46629b819dff531a5a2a49fcda5443dd" category="inline-link-macro">System Managerからの自動無停止アップグレード（ANDU）</block>
   <block id="d351531ad851e21d1ccbc812e54540ff" category="paragraph">アップグレードの準備が完了したら、を使用してアップグレードを実行することを推奨し<block ref="a93595527d1144b0b27a701c939efa63" category="inline-link-macro-rx"></block>ます。ANDUは、ONTAPの高可用性（HA）フェイルオーバーテクノロジを活用して、アップグレード中もクラスタが中断することなくデータを提供し続けます。</block>
   <block id="8b7f4f92636306e034e67a0098393065" category="inline-link-macro">ONTAPソフトウェアのアップグレード</block>
@@ -2769,4 +2766,7 @@
   <block id="3fda8ce05b50b72371c5f4cb65657861" category="paragraph">ストレージ ユニットは、デフォルトでシン プロビジョニングされます。シン プロビジョニングでは、ストレージ ユニットは割り当てられたサイズまで拡張できますが、事前にスペースを予約しません。必要に応じて、使用可能な空き領域からスペースが動的に割り当てられます。これにより、使用可能なスペースを_過剰にプロビジョニング_することで、ストレージ効率を向上させることができます。たとえば、1 TB の空き容量があり、4 つの 1 TB ストレージ ユニットを作成する必要があるとします。システムに 3 TB の追加ストレージ容量をすぐに追加する代わりに、ストレージ ユニットを作成し、スペースの使用率を監視し、ストレージ ユニットが実際のスペースを消費するにつれてストレージ容量を増やすことができます。<block ref="37a5a7f95b66d852ea39cef83793bc4b" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
   <block id="d6e1856d58417da15c8f45bb5225a284" category="admonition">複数のストレージ ユニットを作成する場合、各ユニットは同じ容量で作成されます。作成するストレージ ユニットの数に必要な容量を掛けて、使用可能なスペースが十分にあることを確認します。十分な空き容量がなく、過剰にプロビジョニングすることを選択した場合は、容量不足やデータの損失を回避するために、使用率を注意深く監視してください。</block>
   <block id="aa716862002e83866a499a0f5aaa467f" category="paragraph">指定したオペレーティングシステムで実行されているホストの既存のホストグループが存在しない場合は、ONTAP が新しいホスト グループを自動的に作成します。</block>
+  <block id="a8e81b2ccd42d59459e94b66c7e93b33" category="inline-link-macro">Active IQ Digital AdvisorのUpgrade AdvisorまたはUpgrade Health Checkerを使用してアップグレードの準備をする</block>
+  <block id="3bd021c9fab6ece4503050272dff524d" category="paragraph">ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。<block ref="a44687563e089a36f625493635099b07" category="inline-link-macro-rx"></block>から始めることをお勧めします。</block>
+  <block id="8e06442a81408e5b3d9d881ee34604d9" category="list-text">ポートe10bをシェルフ1のNSM Bポートe0bに接続します。</block>
 </blocks>
