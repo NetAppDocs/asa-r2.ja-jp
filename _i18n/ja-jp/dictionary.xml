@@ -2078,7 +2078,6 @@
   <block id="2595874d578967634d23bb05c5c7197c" category="inline-link-macro">自動ワークロードバランスのサポート</block>
   <block id="f5f208592c87b0ba3e87b3ad6fad7fa6" category="cell">ワークロードは HA ペアのノード間で自動的に分散され、パフォーマンスとリソース使用率が最適化されます。</block>
   <block id="cc9afe53172875d5c9c85e52f0ecbf07" category="summary">ARP/AI を有効にすると、潜在的なランサムウェアの脅威を検出し、データを保護するためのアクションを自動的に実行し、疑わしいアクティビティを警告するメッセージをシステム マネージャーに表示します。</block>
-  <block id="7cd792910eb45c6b7d750838a44c4fe3" category="doc">ASA r2 ストレージシステムで AI を活用した自律型ランサムウェア防御を有効化</block>
   <block id="e8b71c667f5920e249288a672ea7f999" category="paragraph">ONTAP 9.17.1以降では、人工知能（ARP/AI）を搭載したAutonomous Ransomware Protectionを使用して、 ASA r2システムのデータを保護できます。ARP/AIは、潜在的なランサムウェアの脅威を迅速に検出し、データ保護のためのARPスナップショットを自動的に作成し、疑わしいアクティビティを警告するメッセージをSystem Managerに表示します。</block>
   <block id="7331e9472b69421ea7995df5df0b5754" category="inline-link-macro">学習期間</block>
   <block id="ad09d4f074e5e7f7524d8960ed675311" category="inline-link-macro">ONTAP Oneライセンス</block>
@@ -2110,7 +2109,6 @@
   <block id="6071a17c985fe00a9fb93ceb8b43b31c" category="inline-link">ONTAP自動スナップショットのオプションを変更する</block>
   <block id="945b91477a64c6c005e774606fec4bd9" category="paragraph">デフォルトの保持期間は、 ONTAPコマンドラインインターフェイス（CLI）を使用して変更できます。 <block ref="02f493e3d4b2ac47f6e229a1ce055166" category="inline-link-rx"></block>デフォルトの保存期間を変更する手順については、こちらをご覧ください。</block>
   <block id="c10d1e8c9c33d289c596032f6f9fdb66" category="summary">異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検知を防ぐために、ARP/AI分析を一時的に停止することができます。</block>
-  <block id="307c4460ae352b43e1c3405e18bfda56" category="doc">ASA r2 ストレージシステムで AI を活用した自律ランサムウェア防御を一時停止または再開</block>
   <block id="6a775ca760bff9fbc6c0ed5905022d26" category="paragraph">ONTAP 9.17.1以降では、人工知能（ARP/AI）を活用した自律型ランサムウェア保護機能を使用して、 ASA r2システムのデータを保護できます。異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検知を防ぐため、ARP/AI分析を一時的に停止することができます。ワークロードイベントが完了したら、ARP/AI分析を再開できます。</block>
   <block id="d6a9a7257f4378316af056ede012c0ab" category="section-title">ARP/AIを一時停止</block>
   <block id="84354dab4dfd74a63f53750e80507db9" category="paragraph">異常なワークロード イベントを開始する前に、ランサムウェア攻撃の誤検出を防ぐために、ARP/AI 分析を一時的に停止する必要がある場合があります。</block>
@@ -2123,7 +2121,6 @@
   <block id="8e1667e545dde536a2a34599f2a208a4" category="list-text">*ランサムウェア対策を再開*を選択します。</block>
   <block id="18a871e39c4db6e8fdaffd71c7141248" category="paragraph">潜在的なランサムウェア攻撃の分析が再開され、疑わしいアクティビティが System Manager に報告されます。</block>
   <block id="0dd10bd0f2a6a0ae25f679d61fe6376d" category="doc">ASA r2 ストレージ システムに対するランサムウェア攻撃から保護するために、改ざん防止スナップショットを作成します。</block>
-  <block id="1ffdbc09128fd9a7a38adc196844275d" category="doc">ASA r2 ストレージ システムの AI アラートによる自律的なランサムウェア防御に対応</block>
   <block id="a779502493c8672d764e9893228ff604" category="paragraph">人工知能（ARP/AI）を活用した自律ランサムウェア保護機能が、 ASA r2システムのストレージユニット1台以上で異常なアクティビティを検知した場合、System Managerダッシュボードに警告が表示されます。警告を確認し、アクティビティを確認し、必要に応じてデータへの潜在的な脅威を阻止するための措置を講じてください。</block>
   <block id="c0e52aa291208452d8e4daf52f19e352" category="paragraph">ARP/AI警告メッセージが表示された場合は、対処する前に、適切なアプリケーション整合性チェッカーを使用して、ストレージユニット上のデータの整合性を確認してください。ストレージユニットのデータ整合性を確認することで、アクティビティが許容できるものなのか、それともランサムウェア攻撃の可能性があるものなのかを判断するのに役立ちます。</block>
   <block id="d72f2cfc4586d8ec238fbb54c4e19dfb" category="cell">異常な活動が...</block>
@@ -2729,7 +2726,6 @@
   <block id="e9a88c72c24e4398f874d2f4af5b49e8" category="cell"><block ref="e9a88c72c24e4398f874d2f4af5b49e8" category="inline-link-macro-rx"></block></block>
   <block id="689aa35f9f1eec56b70643199a8682d8" category="cell">新しい 9.18.1 ASA r2 クラスタを初期化するか、クラスタを 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、新しく作成されたすべてのストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間の終了時に、新しく作成されたストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。</block>
   <block id="1a96b0b4e7eeb5c869def87fe1b46270" category="summary">ASA r2クラスタにAutonomous Ransomware Protection（ARP）ライセンスがインストールされている場合、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、既存および新しく作成されたすべてのストレージユニットでARPがデフォルトで有効になります。</block>
-  <block id="47db8421e482de0cb387c25e02ac95ad" category="doc">ASA r2ストレージシステムでデフォルトの自律ランサムウェア保護を無効にする</block>
   <block id="ada9a568ab6a5d18c006a2f881dad45e" category="paragraph">新しい ONTAP 9.18.1 ASA r2 クラスタを初期化するか、クラスタを ONTAP 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、すべての新規ストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間終了時に新規ストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。</block>
   <block id="15a35bbf98ecdf50ebbe830c9150b1fa" category="inline-link-macro">手動で有効化</block>
   <block id="2c5bf6d23c3b237a161f10e7a30084bf" category="paragraph">ONTAP 9.17.1で作成されたストレージユニットは、ARP/AI用に<block ref="e30e679666ce4b86d4d0fe351918a7bf" category="inline-link-macro-rx"></block>する必要があります。</block>
@@ -2761,7 +2757,6 @@
   <block id="74c34cd79314b0b0543df58dce891912" category="cell">SnapMirror アクティブ同期のサポートが、2 ノード クラスタから 4 ノード クラスタに拡張されました。</block>
   <block id="b930776d8572e5f3c1d7294d9809974c" category="paragraph">更新を完全に自分で管理する場合にのみ、自動更新を無効にしてください。自動更新をオフにすると、システムは更新の通知、ダウンロード、またはインストールを行いません。すべての更新プログラムを手動で監視、ダウンロード、スケジュール、およびインストールするのはお客様の責任となります。</block>
   <block id="26f7abc505f53b85cb219303544259d3" category="paragraph"><block ref="d57b4f0ac425b878d2f45da8c8c89d8d" category="inline-link-macro-rx"></block>。</block>
-  <block id="889dd2634c57a80d5ff345be8b87b394" category="list-text"><block ref="2d2c01d97863e3fdde3b4275018cf566" category="inline-link-macro-rx"></block>。*</block>
   <block id="330a40ed2b3f8affc9b2ba9dda95e7d2" category="paragraph">ASA r2 システムのパフォーマンスを最適化するには、ストレージ ユニットを変更して容量を増やしたり、QoS ポリシーを更新したり、ユニットにマップされているホストを変更したりする必要がある場合があります。たとえば、新しい重要なアプリケーション ワークロードが既存のストレージ ユニットに追加された場合、新しいアプリケーションに必要なパフォーマンス レベルをサポートするために、ストレージ ユニットに適用されているサービス品質（QoS）ポリシーを変更する必要がある場合があります。</block>
   <block id="3fda8ce05b50b72371c5f4cb65657861" category="paragraph">ストレージ ユニットは、デフォルトでシン プロビジョニングされます。シン プロビジョニングでは、ストレージ ユニットは割り当てられたサイズまで拡張できますが、事前にスペースを予約しません。必要に応じて、使用可能な空き領域からスペースが動的に割り当てられます。これにより、使用可能なスペースを_過剰にプロビジョニング_することで、ストレージ効率を向上させることができます。たとえば、1 TB の空き容量があり、4 つの 1 TB ストレージ ユニットを作成する必要があるとします。システムに 3 TB の追加ストレージ容量をすぐに追加する代わりに、ストレージ ユニットを作成し、スペースの使用率を監視し、ストレージ ユニットが実際のスペースを消費するにつれてストレージ容量を増やすことができます。<block ref="37a5a7f95b66d852ea39cef83793bc4b" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
   <block id="d6e1856d58417da15c8f45bb5225a284" category="admonition">複数のストレージ ユニットを作成する場合、各ユニットは同じ容量で作成されます。作成するストレージ ユニットの数に必要な容量を掛けて、使用可能なスペースが十分にあることを確認します。十分な空き容量がなく、過剰にプロビジョニングすることを選択した場合は、容量不足やデータの損失を回避するために、使用率を注意深く監視してください。</block>
@@ -2769,4 +2764,9 @@
   <block id="a8e81b2ccd42d59459e94b66c7e93b33" category="inline-link-macro">Active IQ Digital AdvisorのUpgrade AdvisorまたはUpgrade Health Checkerを使用してアップグレードの準備をする</block>
   <block id="3bd021c9fab6ece4503050272dff524d" category="paragraph">ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。<block ref="a44687563e089a36f625493635099b07" category="inline-link-macro-rx"></block>から始めることをお勧めします。</block>
   <block id="8e06442a81408e5b3d9d881ee34604d9" category="list-text">ポートe10bをシェルフ1のNSM Bポートe0bに接続します。</block>
+  <block id="67cc47e8f050e98e23b1a714f17238ec" category="list-text"><block ref="2d2c01d97863e3fdde3b4275018cf566" category="inline-link-macro-rx"></block>。</block>
+  <block id="a21739611cdd87f44b21b69f2d1255c4" category="doc">ASA r2ストレージシステムでデフォルトの自律型ランサムウェア保護を無効にします</block>
+  <block id="8a7cfb8fa6ea38ee5f0146687bddcd42" category="doc">ASA r2ストレージシステムでAIを使用した自律型ランサムウェア対策を有効にする</block>
+  <block id="a9adededf161bd5d8bb9db9309976ce3" category="doc">ASA r2ストレージシステムでAIによる自律型ランサムウェア対策を一時停止または再開します</block>
+  <block id="bd38f3869f7e640b90d83fffd4208955" category="doc">ASA r2ストレージシステムでAIアラートを使用した自律型ランサムウェア対策に対応</block>
 </blocks>

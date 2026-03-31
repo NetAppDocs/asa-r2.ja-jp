@@ -15,8 +15,8 @@ SnapMirrorアクティブ同期を構成して、セカンダリ サイトにデ
 
 ASA r2システムでは、 SnapMirror Active Syncは対称型アクティブ/アクティブ構成をサポートします。対称型アクティブ/アクティブ構成では、両方のサイトからアクティブI/O用のローカルストレージにアクセスできます。
 
-
-NOTE: iSCSIまたはFCプロトコルを使用しており、VMware Sphere用のONTAPツールを使用している場合は、オプションでlink:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["ONTAP Tools for VM ware を使用してSnapMirror Active Sync を設定する"^] 。
+.タスクの内容
+iSCSIまたはFCプロトコルを使用しており、VMware Sphere用のONTAPツールを使用している場合は、オプションでlink:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["ONTAP Tools for VM ware を使用してSnapMirror Active Sync を設定する"^] 。
 
 .開始する前に
 link:create-snapshots.html#step-1-optionally-create-a-consistency-group["一貫性グループを作成する"]プライマリサイトに新しいストレージユニットを追加し、非均一な対称アクティブ/アクティブ構成を作成する場合は、セカンダリサイトにも新しいストレージユニットを追加して整合性グループを作成してください。

@@ -4,7 +4,7 @@ permalink: secure-data/disable-default-anti-ransomware-protection.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, arp/ai, disable 
 summary: ASA r2クラスタにAutonomous Ransomware Protection（ARP）ライセンスがインストールされている場合、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、既存および新しく作成されたすべてのストレージユニットでARPがデフォルトで有効になります。 
 ---
-= ASA r2ストレージシステムでデフォルトの自律ランサムウェア保護を無効にする
+= ASA r2ストレージシステムでデフォルトの自律型ランサムウェア保護を無効にします
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
