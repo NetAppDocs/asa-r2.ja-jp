@@ -1692,7 +1692,6 @@
   <block id="3e42ab3fbc066a1e09943ca314bf3205" category="paragraph">各コントローラで、ポートe2a、e2b、e2c、e2dをイーサネットホストネットワークスイッチに接続します。</block>
   <block id="c053ea984f8ec26545ef5a0f8e3c516b" category="paragraph">* 10/25GbEケーブル*</block>
   <block id="b8382f91ab365521fe8568f720b6ddd4" category="paragraph">* FCホストケーブル接続*</block>
-  <block id="945fde23e0c7ac9dc52f131c48ef5861" category="paragraph">各コントローラで、ポート1a、1b、1c、1dをFCホストネットワークスイッチに接続します。</block>
   <block id="241c17a1be2cc4feae5c8c6007f8aed3" category="paragraph">* 64 Gb/秒FCケーブル*</block>
   <block id="176084e0e3d1d8b98919ade28704bd7b" category="inline-image-macro">64Gb FCケーブル、幅= 100px</block>
   <block id="0174aef3c6edce25256f90638a06bdca" category="paragraph"><block ref="0174aef3c6edce25256f90638a06bdca" category="inline-image-macro-rx" type="image"></block></block>
@@ -1819,7 +1818,6 @@
   <block id="7358d22f4186a5e126b0fada0a666115" category="example-title">ASA C30：4ポート10 / 25GbE I/Oモジュール×1</block>
   <block id="baae66b5065d8c53c84d82ba2175779d" category="list-text">各コントローラで、ポートe2a、e2b、e2c、e2dをイーサネットホストネットワークスイッチにケーブル接続します。</block>
   <block id="84f30e54db618597e0548b01a8f9bb23" category="example-title">4ポート64 Gb/s FC I/Oモジュール1個を搭載したASA C30</block>
-  <block id="8f03269dbdbab70bab244893051fb6ec" category="list-text">各コントローラで、ポート1a、1b、1c、および1dをFCホストネットワークスイッチにケーブル接続します。</block>
   <block id="02b0ddc9c51a6fd3d072763fb5b859f3" category="paragraph">ストレージシステムでサポートされるシェルフの最大数、および光ファイバやスイッチ接続などのすべてのケーブル接続オプションについては、を参照してください<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>。</block>
   <block id="ed57089257c5bf0e9855c2abce5e2f2c" category="paragraph">AFF A1Kストレージシステムは、NSM100またはNSM100Bモジュールを搭載したNS224シェルフをサポートします。モジュール間の主な違いは次のとおりです。</block>
   <block id="bee9bdef55e93399a97d85b3925cfca2" category="list-text">NSM100 シェルフ モジュールは、組み込みポート e0a および e0b を使用します。</block>
@@ -2706,7 +2704,6 @@
   <block id="625927359c6ff98754dcdfda6d0f8d77" category="paragraph">コピーベースのワークロード再バランスのデフォルト設定を変更する必要がある場合は、 NetAppサポートにお問い合わせください。</block>
   <block id="299c5db3cbde057ebd5a919711b1d2e1" category="paragraph">ストレージ VM 上のクラスター化された外部キー管理サーバーへの接続を構成できます。クラスター化されたキー サーバーを使用すると、ストレージ VM 上にプライマリ キー サーバーとセカンダリ キー サーバーを指定できます。キーを登録する際、ONTAPは最初にプライマリ キー サーバへのアクセスを試行し、その後処理が正常に完了するまで各セカンダリ サーバへのアクセスを順次試行して、キーの重複を回避します。</block>
   <block id="9f71ddf310db058a3a89122693392a68" category="inline-link-macro">ASA r2 クラスタの容量バランスについて学習します</block>
-  <block id="be2bfcecf308b1d3a417456024096c75" category="paragraph">ストレージユニット（LUNまたはNVMeネームスペースベース）が作成されると、 ONTAPは適切なストレージアベイラビリティゾーンにストレージユニットを格納するボリュームを自動的に作成します。新しく作成されたボリュームは、最適なパフォーマンスとバランスの取れた容量利用率を実現するために、ストレージアベイラビリティゾーン内に自動的に配置されます。ONTAP容量使用率は、 ONTAPのバージョンに基づいてストレージ可用性ゾーン内でバランスが取られます。<block ref="9689a3d9a5cc82eb930985adacfe9343" category="inline-link-macro-rx"></block>。</block>
   <block id="d480af7e6686a5e56e9006fab126c8e7" category="section-title">ASA r2システムの違いのまとめ</block>
   <block id="2be27a1e2f13957646665cd7fef8000d" category="cell">親整合性グループあたりの子整合性グループ</block>
   <block id="ea5d2f1c4608232e07d3aa3d998e5135" category="cell">64</block>
@@ -2769,4 +2766,8 @@
   <block id="8a7cfb8fa6ea38ee5f0146687bddcd42" category="doc">ASA r2ストレージシステムでAIを使用した自律型ランサムウェア対策を有効にする</block>
   <block id="a9adededf161bd5d8bb9db9309976ce3" category="doc">ASA r2ストレージシステムでAIによる自律型ランサムウェア対策を一時停止または再開します</block>
   <block id="bd38f3869f7e640b90d83fffd4208955" category="doc">ASA r2ストレージシステムでAIアラートを使用した自律型ランサムウェア対策に対応</block>
+  <block id="7c9f18ab5a6d9bddcd86839795bbf631" category="paragraph">各コントローラで、ポート2a、2b、2c、2dをFCホストネットワークスイッチに接続します。</block>
+  <block id="e075a310e0208871f253ed1786f7aa85" category="list-text">各コントローラで、ポート2a、2b、2c、2dをFCホストネットワークスイッチにケーブル接続します。</block>
+  <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">設置およびメンテナンス手順中は、検証済みの接地点に接続された接地リストストラップを常に着用してください。適切なESD予防措置に従わないと、コントローラーノード、ストレージシェルフ、およびネットワークスイッチに永久的な損傷が発生する可能性があります。</block>
+  <block id="fc4a9f6cd00df6dfa4d8144f15b57af3" category="paragraph">ストレージユニット（LUNまたはNVMeネームスペースに基づく）が作成されると、ONTAPは適切なストレージの可用性ゾーンにボリュームを自動的に作成し、ストレージユニットを格納します。新しく作成されたボリュームは、最適なパフォーマンスとバランスの取れた容量利用を実現するために、ストレージの可用性ゾーン内に自動的に配置されます。容量利用率は、ONTAPのバージョンに基づいて、ストレージの可用性ゾーン内でバランスが取られます。<block ref="44cab674f8c9e72d3dcaedde750c6695" category="inline-link-macro-rx"></block>。</block>
 </blocks>
