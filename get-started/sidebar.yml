@@ -17,7 +17,17 @@ entries:
   - title: ハードウェアを設置
     url: "/install-setup/deploy-hardware.html"
   - title: ハードウェアのケーブル接続
-    url: "/install-setup/cable-hardware.html"
+    entries:
+    - title: ケーブル配線の概要
+      url: "/install-setup/cable-hardware.html"
+    - title: ケーブルASA A1K
+      url: "/install-setup/cable-hardware-a1k.html"
+    - title: ケーブルASA A70およびA90
+      url: "/install-setup/cable-hardware-a70-90.html"
+    - title: ケーブルASA A20、A30、A50
+      url: "/install-setup/cable-hardware-a20-30-50.html"
+    - title: ケーブルASA C30
+      url: "/install-setup/cable-hardware-c30.html"
   - title: システムの電源を入れる
     url: "/install-setup/power-on-hardware.html"
 - title: ASA R2システムのセットアップ
