@@ -84,7 +84,7 @@ link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authenticat
 
 サポートされているイーサネットカードに、クラスタ全体のトランスポート層セキュリティ（TLS）の暗号化と復号化をオフロードできます。これにより CPU 負荷が軽減され、TLS を使用するシステムのパフォーマンスが向上します。
 
-link:https://docs.netapp.com/us-en/ontap/networking/configure_tls_hardware_offload.html["TLS ハードウェアオフロードの設定方法"^]。
+link:https://docs.netapp.com/us-en/ontap/networking/configure-tls-offload.html["TLS ハードウェアオフロードの設定方法"^]。
 
 
 

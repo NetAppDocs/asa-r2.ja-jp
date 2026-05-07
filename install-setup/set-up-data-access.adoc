@@ -46,7 +46,7 @@ FLIはオンラインとオフラインの両方の移行をサポートして�
 
 ONTAP 9.19.1以降、FLIはバックエンド接続用のiSCSIプロトコルをサポートしています。
 
-* リンクの詳細については、https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html[ONTAP FLI migrations^]を参照してください。
+* link:https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html["ONTAP FLI 移行"^]の詳細をご覧ください。
 
 
 
