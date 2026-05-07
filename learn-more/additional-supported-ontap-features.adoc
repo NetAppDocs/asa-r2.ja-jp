@@ -80,6 +80,14 @@ link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authenticat
 
 
 
+=== TLSハードウェアオフロード
+
+サポートされているイーサネットカードに、クラスタ全体のトランスポート層セキュリティ（TLS）の暗号化と復号化をオフロードできます。これにより CPU 負荷が軽減され、TLS を使用するシステムのパフォーマンスが向上します。
+
+link:https://docs.netapp.com/us-en/ontap/networking/configure_tls_hardware_offload.html["TLS ハードウェアオフロードの設定方法"^]。
+
+
+
 == ネットワーク
 
 ASA r2 システムでサポートされている一般的なネットワーク機能の詳細について説明します。
@@ -105,6 +113,35 @@ link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_cr
 
 
 
+== Performance
+
+ASA r2システムでサポートされている一般的なパフォーマンス機能の詳細については、こちらをご覧ください。
+
+
+
+=== QoS スループット上限の自動増加を制御するデフォルト設定を変更します
+
+適応型および非適応型のQoSポリシーグループは、デフォルトで自動的に有効化され、ワークロードのスループット上限を1秒間、一時的に50%増加させることで、短期的なパフォーマンス向上要求に対応します。ONTAP 9.19.1以降では、これらのデフォルト設定を変更できます。ONTAP 9.18.1以前では、これらの設定を変更することはできません。
+
+link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["QoS スループット上限の詳細"^]。
+
+
+
+== SANの構成
+
+ストレージ エリア ネットワーク（SAN）は、iSCSIやFCなどのSAN転送プロトコルを介してホストに接続されるストレージ ソリューションで構成されます。1つ以上のスイッチを介してホストにストレージ ソリューションを接続するように、SANを構成できます。iSCSIを使用している場合は、スイッチを使用せずにホストにストレージ ソリューションを直接接続するように、SANを構成することもできます。
+
+
+
+=== SAN ダイレクトアタッチメント
+
+ONTAP 9.19.1以降、FCスイッチは、FCおよびFC-NVMeホストとONTAPストレージ間の接続を確立するために必要ありません。ホストは、ASA r2システムのFCアダプタポートに直接接続できます。ダイレクト接続機能は、シンプルさが重要なリモートサイトやハイブリッド環境において特に有用です。
+
+* link:https://docs.netapp.com/us-en/ontap/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html#direct-attach-fc-and-fc-nvme-configurations["SAN ダイレクトアタッチメントの詳細"^]。
+
+
+
+
 == SANプロトコル
 
 ASA r2 システムは、すべての SAN プロトコル (iSCSI、FC、NVMe/FC、NVMe/TCP) をサポートします。
@@ -124,6 +161,22 @@ ONTAP 9.16.1 以降では、NVMe 名前空間のスペース割り当て解除 (
 
 
 
+
+
+
+== Storage Efficiency
+
+ストレージ効率とは、ストレージ リソースを最適化し、無駄なスペースを最小限に抑え、書き込まれたデータの物理的なフットプリントを削減することで、ストレージ システムが利用可能なスペースをどれだけ効率的に使用しているかを示す指標です。
+
+ONTAPは、ストレージ使用量の最適化とコスト削減に役立つ、さまざまなストレージ効率化技術を提供します。
+
+link:https://docs.netapp.com/us-en/ontap/concepts/storage-efficiency-overview.html["ONTAP ストレージ効率化テクノロジの詳細"]。
+
+
+
+=== グローバル重複排除
+
+ONTAP 9.19.1以降、_グローバル重複排除_は、ストレージユニットレベルのlink:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html["既存の ONTAP 重複排除によるスペース削減効果"^]をStorage Availability Zone（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除は、機能ライセンスを必要とせず、デフォルトで有効になっており、既存のストレージ効率化テクノロジとシームレスに統合され、最小限のパフォーマンスへの影響で透過的に動作し、管理設定も不要です。
 
 
 

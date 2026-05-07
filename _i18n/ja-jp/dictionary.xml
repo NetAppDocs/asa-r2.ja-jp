@@ -1252,7 +1252,6 @@
   <block id="a2d38e07f32f557705115c0e67b1cf0c" category="list-text">[デュアルレイヤ暗号化]*を選択して、ソフトウェア暗号化を有効にします。</block>
   <block id="3adddf5fb61118db0851698e94df9d20" category="inline-link-macro">ネットワーク経由で送信されるすべてのデータを暗号化</block>
   <block id="7d48eac362573df2fed01eb80f7d4ec2" category="paragraph">保存データの暗号化が完了したので、NVMe/TCPプロトコルを使用している場合は<block ref="74cf61e3a0c52691fd5b474676f672e9" category="inline-link-macro-rx"></block>、NVMe/TCPホストとASA R2システムの間でデータを暗号化できます。</block>
-  <block id="5c2176542e490214bcd9614880d942f0" category="summary">NVMe/TCPホストとONTAPの間でネットワーク経由で送信されるすべてのデータを暗号化するようにNVMe/TCP over TLSを設定して、データセキュリティを強化します。</block>
   <block id="5bdd1772c315e3d023ef23531e6172d5" category="doc">ASA R2ストレージシステム上のセキュアなNVMe接続</block>
   <block id="4bbb8f0466027ba41f7760a28b31c469" category="paragraph">NVMeプロトコルを使用している場合は、インバンド認証を設定してデータセキュリティを強化できます。インバンド認証を使用すると、NVMeホストとASA R2システムの間でセキュアな双方向認証と一方向認証を確立できます。インバンド認証はすべてのNVMeホストで使用できます。NVMe/TCPプロトコルを使用している場合は、NVMe/TCPホストとASA R2システムの間でネットワーク経由で送信されるすべてのデータを暗号化するようにトランスポートレイヤセキュリティ（TLS）を設定することで、データセキュリティをさらに強化できます。</block>
   <block id="24e4b19fe20674545837cd1f5514b5cc" category="list-text">[ホスト]*を選択し、*[NVMe]*を選択します。</block>
@@ -1475,9 +1474,7 @@
   <block id="f142a152601a952c440aa742ae54d56c" category="doc">ASA R2ストレージシステムでのONTAPのアップグレード</block>
   <block id="f46c905b973360f57c509a5dac0d6aca" category="paragraph">ASA R2システムでONTAPソフトウェアをアップグレードすると、ONTAPの新機能や強化された機能を活用して、コストの削減、重要なワークロードの高速化、セキュリティの強化、組織で利用できるデータ保護の範囲の拡大を実現できます。</block>
   <block id="46629b819dff531a5a2a49fcda5443dd" category="inline-link-macro">System Managerからの自動無停止アップグレード（ANDU）</block>
-  <block id="d351531ad851e21d1ccbc812e54540ff" category="paragraph">アップグレードの準備が完了したら、を使用してアップグレードを実行することを推奨し<block ref="a93595527d1144b0b27a701c939efa63" category="inline-link-macro-rx"></block>ます。ANDUは、ONTAPの高可用性（HA）フェイルオーバーテクノロジを活用して、アップグレード中もクラスタが中断することなくデータを提供し続けます。</block>
   <block id="8b7f4f92636306e034e67a0098393065" category="inline-link-macro">ONTAPソフトウェアのアップグレード</block>
-  <block id="db24448a282517925d7637e0ab57fb35" category="paragraph">詳細については、をご覧ください <block ref="ee50b0384392ffd34e721693cf1abb90" category="inline-link-macro-rx"></block>。</block>
   <block id="06b783ccc728f89654eb406f121a920e" category="paragraph">複数のユニットを作成する場合、各ユニットはデフォルトで同じ容量と同じホストオペレーティングシステムで作成されます。必要に応じて、各ユニットに異なる容量を割り当てることができます。</block>
   <block id="c714809f14fa9d9c65c38961426d89e3" category="paragraph">各ストレージユニットに異なる容量を割り当てる</block>
   <block id="b079c5d39925229ba3c754aec7200bfe" category="paragraph">[別の容量を追加する]*を選択します。</block>
@@ -1540,15 +1537,12 @@
   <block id="06a4e0373e144570a83a3fcfaa55ff46" category="list-text">[パフォーマンス]*を選択します。</block>
   <block id="c20ad4d76fe97759aa27a0c99bff6710" category="cell">12</block>
   <block id="455f024d5e786170a224f947b09bd74a" category="section-title">ストレージアベイラビリティゾーンの使用状況の監視</block>
-  <block id="9cf3716a035447d7f3920daf3ae979bd" category="paragraph">ASA R2システムの各HAペアは、_ストレージ可用性ゾーン_と呼ばれる共通のストレージプールを使用します。ストレージのアベイラビリティゾーンは、ストレージシステム内の使用可能なすべてのディスクにアクセスでき、HAペアの両方のノードから認識できます。</block>
   <block id="c54830fa97aef91a8bc830d439dc004a" category="paragraph">クラスタにノードが4つ以上ある場合は、各HAペアのストレージアベイラビリティゾーンで使用されているスペースの量を表示できます。この指標は2ノードクラスタでは使用できません。</block>
   <block id="dd7cd8aba78024bcc6ec1c67f3987760" category="list-text">System Managerで、*[クラスタ]*を選択し、*[概要]*を選択します。</block>
   <block id="0ce03f9ea97502f3a10721575d8a9696" category="paragraph">クラスタ内の各HAペアについて、ストレージアベイラビリティゾーンの利用率の概要が表示されます。</block>
   <block id="3670021e257ef0702d763c08d8b9c8b3" category="list-text">より詳細な指標が必要な場合は、特定のストレージの可用性を選択します。</block>
   <block id="b8e5e4895e260a0a4eeab6a3c66ae9b3" category="paragraph">[概要]*には、ストレージ可用性ゾーンの容量、使用済みスペース、およびデータ削減率が表示されます。</block>
-  <block id="97803d08cef50f43e58f978c9b2e1f08" category="paragraph">[ストレージユニット]*には、ストレージアベイラビリティゾーン内のすべてのストレージユニットのリストが表示されます。</block>
   <block id="c5b460be9264c217ff7aa949f8f26aab" category="inline-link-macro">ストレージユニットの移動</block>
-  <block id="7245821daa5af47d8243d8eee3f64b1e" category="paragraph">ストレージ可用性ゾーンのスペースが不足している場合は、別のストレージ可用性ゾーンへの接続を計画して、クラスタ全体でストレージ利用率のバランスを調整する必要があります<block ref="a3223fe003597dcfd7b6d75426783c5a" category="inline-link-macro-rx"></block>。</block>
   <block id="8010ab2f71c733c1a8013b31b901be79" category="cell">クラスタあたりのノード数</block>
   <block id="c7ae27ad054ff4d389e7c15cc82b0866" category="paragraph">クラスタあたりの最大ノード数が2から12に拡張されました。</block>
   <block id="f35462670e9b95d1e4a8748ba6872f91" category="admonition">クラスタ内の3つ以上のノードでONTAP 9.16.1を実行している場合、ONTAP 9.16.0にリバートすることはできません。</block>
@@ -1709,7 +1703,6 @@
   <block id="b78c98e70e341751d6f58db28ecec461" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> <block ref="29aaf1b4e7e6610ae4790f0740e69e4e" category="inline-link-macro-rx"></block></block>
   <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">5 つ</block>
   <block id="77aa123fc5c68731cdf628d8e9c75afc" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> <block ref="69d31d64dbed246448f394257b05fdb9" category="inline-link-macro-rx"></block></block>
-  <block id="43be05fcb9765d24f8081a2284f82de7" category="summary">ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。</block>
   <block id="95f5e5110bbbc9d987c115097008c227" category="doc">ASA R2ストレージシステム上のセキュアなIP接続</block>
   <block id="c10f6cdf89366933afe9e0a05f726423" category="paragraph">ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。IPsecは、転送中データの暗号化、IPレベルでのネットワークエンドポイント間のトラフィックの認証、およびデータに対するリプレイおよび悪意のある中間者攻撃からの保護を提供するインターネット標準です。</block>
   <block id="602c5938acf67898ca9af2011ec2c721" category="paragraph">ASA R2システムでは、iSCSIホストとNVMe/TCPホストでIPSecを使用できます。</block>
@@ -1919,12 +1912,9 @@
   <block id="4e815228ca61a1f75181e7efe619c495" category="summary">SnapMirrorアクティブ同期を使用して、ゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) を必要とするホスト アプリケーションを、予期しない中断やサイト災害による停止から保護します。</block>
   <block id="497c72a2f611a19c23299b5daea37215" category="doc">SnapMirrorアクティブ同期のセットアップワークフロー</block>
   <block id="c0da5a4756d4ac1721f7418cfa0145da" category="paragraph">ONTAP SnapMirrorアクティブ同期データ保護により、サイト全体の障害が発生してもビジネス サービスは継続して稼働でき、セカンダリ コピーを使用してアプリケーションを透過的にフェイルオーバーできます。SnapMirrorアクティブ同期でフェイルオーバーをトリガーするために、手動操作やカスタム スクリプトは必要ありません。</block>
-  <block id="496bd86dd8bb62f9490750bc6a2bd331" category="paragraph">ASA r2 システムでは、System Manager によるSnapMirror Active Sync の設定手順は、統合ONTAPパーソナリティを実行するNetApp FAS、 AFF、およびASAシステムとは異なりますが、 SnapMirror Active Sync の要件、アーキテクチャ、および操作は同じです。</block>
   <block id="e5aa1050a01e875d0fd4839753c22c3a" category="inline-link-macro">SnapMirrorアクティブ同期の詳細</block>
   <block id="c42fce7fb66798714860f8785e01c4fd" category="paragraph"><block ref="a408e5a82a63466cbd34839f021414e3" category="inline-link-macro-rx"></block> 。</block>
-  <block id="d2d4f7014e3da9faf0b74dfe30ffa3d4" category="paragraph">ASA r2システムでは、 SnapMirror Active Syncは対称型アクティブ/アクティブ構成をサポートします。対称型アクティブ/アクティブ構成では、両方のサイトからアクティブI/O用のローカルストレージにアクセスできます。</block>
   <block id="fa2f5b44a6ee8f9c7d43efc8bb1daca1" category="inline-link-macro">対称アクティブ/アクティブ構成</block>
-  <block id="523dd06e2c0961b1020a5b70b22d7611" category="paragraph">詳細はこちら<block ref="cd08e89ddecf5772544f56e955b2d721" category="inline-link-macro-rx"></block> 。</block>
   <block id="1075f9a2bdd0eec8a237b62c855adf87" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> SnapMirrorアクティブ同期を構成する準備をします。</block>
   <block id="a8f00bd7503de5f4a45e28b2e197cc39" category="inline-link-macro">SnapMirrorアクティブ同期の設定を準備する</block>
   <block id="b4147f15364f77411931933a225c44d5" category="paragraph">に<block ref="cc0b3a933662ec3d582d20420f8b2a10" category="inline-link-macro-rx"></block> ASA r2 システムでは、構成の前提条件を確認し、ホスト オペレーティング システムのサポートを確認し、特定の構成に影響を与える可能性のあるオブジェクトの制限に注意する必要があります。</block>
@@ -1944,10 +1934,6 @@
   <block id="1546c57263450319fef8d1d8de83e306" category="section-title">サードパーティのストレージシステムからデータを移行する</block>
   <block id="99657bc66973f189d87f6d702b300b6e" category="paragraph">ONTAP 9.17.1以降では、Foreign LUN Import（FLI）を使用して、サードパーティ製ストレージシステムのLUNからASA r2システムにデータを移行できます。データ移行にFLIを使用すると、移行プロセス中のデータ損失やダウンタイムのリスクを軽減できます。</block>
   <block id="cd7fc10aafbc563ec83b036726716d53" category="paragraph">FLIはオンラインとオフラインの両方の移行をサポートしています。オンライン移行では、サードパーティ製ストレージシステムからONTAPストレージシステムへのデータのコピー中も、クライアントシステムはオンラインのままです。オンライン移行は、Windows、Linux、ESXiホストオペレーティングシステムでサポートされています。オフライン移行では、クライアントシステムがオフラインになり、LUNデータがサードパーティ製ストレージシステムからONTAPストレージシステムにコピーされた後、クライアントシステムがオンラインに戻ります。</block>
-  <block id="5c85b34ddc611aad4c1c95da5183b039" category="inline-link-macro">FLIオフライン移行</block>
-  <block id="f70b44cd993cd2c931b66a3448afab81" category="list-text">実行方法を学ぶ<block ref="035b0b09e519739eed6266400ab97686" category="inline-link-macro-rx"></block> 。</block>
-  <block id="1001999583c199f3eb49c903e2498b5d" category="inline-link-macro">FLIオンライン移行</block>
-  <block id="357051192b540d86651f3bccdefa9666" category="list-text">実行方法を学ぶ<block ref="5ed7d3d6c0241f338e5a28a232e76e56" category="inline-link-macro-rx"></block> 。</block>
   <block id="97deade833d7f54a1cb2037da41d63c5" category="summary">ASA r2 システムはONTAPの合理化されたバージョンを実行するため、多くの一般的なONTAPタスクと System Manager 機能は、 ASA r2 システムでも他のONTAPシステムと同じように実行されます。</block>
   <block id="f01fcb252b22a1393a193f28b22135fc" category="doc">ASA r2 システムでサポートされる一般的なONTAP機能</block>
   <block id="8b9b16acd91241c2b1259b842284faa4" category="paragraph">共通の機能の詳細については、次のONTAPドキュメントを参照してください。</block>
@@ -1997,7 +1983,6 @@
   <block id="f231c7e641e6d267354740a6c9850600" category="cell">SnapMirror Active Syncは、2ノードONTAPクラスタにおけるNVMe/TCPおよびNVMe/FCホストアクセスによるVMwareワークロードのサポートを追加します。NVMe/TCPのVMwareワークロードサポートは、VMwareバグID: TR1049746の解決に依存します。</block>
   <block id="2595874d578967634d23bb05c5c7197c" category="inline-link-macro">自動ワークロードバランスのサポート</block>
   <block id="f5f208592c87b0ba3e87b3ad6fad7fa6" category="cell">ワークロードは HA ペアのノード間で自動的に分散され、パフォーマンスとリソース使用率が最適化されます。</block>
-  <block id="cc9afe53172875d5c9c85e52f0ecbf07" category="summary">ARP/AI を有効にすると、潜在的なランサムウェアの脅威を検出し、データを保護するためのアクションを自動的に実行し、疑わしいアクティビティを警告するメッセージをシステム マネージャーに表示します。</block>
   <block id="e8b71c667f5920e249288a672ea7f999" category="paragraph">ONTAP 9.17.1以降では、人工知能（ARP/AI）を搭載したAutonomous Ransomware Protectionを使用して、 ASA r2システムのデータを保護できます。ARP/AIは、潜在的なランサムウェアの脅威を迅速に検出し、データ保護のためのARPスナップショットを自動的に作成し、疑わしいアクティビティを警告するメッセージをSystem Managerに表示します。</block>
   <block id="7331e9472b69421ea7995df5df0b5754" category="inline-link-macro">学習期間</block>
   <block id="ad09d4f074e5e7f7524d8960ed675311" category="inline-link-macro">ONTAP Oneライセンス</block>
@@ -2028,7 +2013,6 @@
   <block id="2d836c595463e39451f4bc5201b13c16" category="cell">10日間</block>
   <block id="6071a17c985fe00a9fb93ceb8b43b31c" category="inline-link">ONTAP自動スナップショットのオプションを変更する</block>
   <block id="945b91477a64c6c005e774606fec4bd9" category="paragraph">デフォルトの保持期間は、 ONTAPコマンドラインインターフェイス（CLI）を使用して変更できます。 <block ref="02f493e3d4b2ac47f6e229a1ce055166" category="inline-link-rx"></block>デフォルトの保存期間を変更する手順については、こちらをご覧ください。</block>
-  <block id="c10d1e8c9c33d289c596032f6f9fdb66" category="summary">異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検知を防ぐために、ARP/AI分析を一時的に停止することができます。</block>
   <block id="6a775ca760bff9fbc6c0ed5905022d26" category="paragraph">ONTAP 9.17.1以降では、人工知能（ARP/AI）を活用した自律型ランサムウェア保護機能を使用して、 ASA r2システムのデータを保護できます。異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検知を防ぐため、ARP/AI分析を一時的に停止することができます。ワークロードイベントが完了したら、ARP/AI分析を再開できます。</block>
   <block id="d6a9a7257f4378316af056ede012c0ab" category="section-title">ARP/AIを一時停止</block>
   <block id="84354dab4dfd74a63f53750e80507db9" category="paragraph">異常なワークロード イベントを開始する前に、ランサムウェア攻撃の誤検出を防ぐために、ARP/AI 分析を一時的に停止する必要がある場合があります。</block>
@@ -2089,7 +2073,6 @@
   <block id="dea3a75107d7790747be36ffd87dfafd" category="sidebar">ONTAP MediatorまたはONTAP Cloud Mediatorを構成する</block>
   <block id="0a297cc4d1df6ddee9072cd47dca7791" category="sidebar">NetApp ASA上のFlexPod</block>
   <block id="4ff3b8b9056fdd67969fe5f7de99f262" category="inline-link-macro">ASA r2システムでのSnapMirror Active Syncを使用した災害復旧の詳細</block>
-  <block id="a4d3fa0a90b98ed30452a119486e6ae3" category="paragraph"><block ref="a4d3fa0a90b98ed30452a119486e6ae3" category="inline-link-macro-rx"></block></block>
   <block id="1e96162d7ffea43bde6c07852ffff8cb" category="inline-link-macro">ONTAP for vSphere を使用する利点</block>
   <block id="c3650233fcb8a7a607d25a5c0f5a5493" category="list-text">詳細はこちら<block ref="1b2505f7e592731db42e95f3d10a015e" category="inline-link-macro-rx"></block> 。</block>
   <block id="05d7c63979cf1697d07b8942ba9871b7" category="inline-link-macro">ONTAPを使用した VMware ライブ サイト リカバリ</block>
@@ -2246,7 +2229,6 @@
   <block id="08fb4ffca88bc0f6461c362f968d394f" category="paragraph"><block ref="6fa56bfab318c33e6446a2520c50c09f" prefix="" category="inline-code"></block></block>
   <block id="913e3fb6005d79d1e7e5eb2046a6fa4c" category="inline-link-macro">スナップミラーメディエーターの削除</block>
   <block id="55394a49231c00367e205c42b064e980" category="list-text"><block ref="55394a49231c00367e205c42b064e980" category="inline-link-macro-rx"></block></block>
-  <block id="7827b7923d6e45ba19022ef0a9878628" category="inline-link-macro">ONTAPパーソナリティの詳細</block>
   <block id="2e50e3f8a8554bd854e544e6dc52462d" category="admonition">ASA r2 ストレージ システムのスナップショット レプリケーションは、別のASA r2 ストレージ システムとの間のみサポートされます。  ASA r2 システムからASA、 AFF 、またはFASシステムに、あるいはASA、 AFF 、またはFASシステムからASA r2 システムにスナップショットを複製することはできません。</block>
   <block id="8e0a212a3ccb8f506b309ea2b6cbd1f7" category="paragraph">ONTAP 9.17.1 以降では、階層関係にあるコンシステンシー グループに非同期レプリケーション ポリシーを適用できます。  ONTAP 9.16.1 では、階層関係の整合性グループでは非同期レプリケーションはサポートされません。</block>
   <block id="de095ac7880431e9449dcced8cecbd9a" category="inline-link-macro">階層型（親/子）整合性グループの詳細</block>
@@ -2641,7 +2623,6 @@
   <block id="560b852910a0e98466ea0bc41a896549" category="inline-link-macro">自動ARP/AI有効化のサポート</block>
   <block id="e9a88c72c24e4398f874d2f4af5b49e8" category="cell"><block ref="e9a88c72c24e4398f874d2f4af5b49e8" category="inline-link-macro-rx"></block></block>
   <block id="689aa35f9f1eec56b70643199a8682d8" category="cell">新しい 9.18.1 ASA r2 クラスタを初期化するか、クラスタを 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、新しく作成されたすべてのストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間の終了時に、新しく作成されたストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。</block>
-  <block id="1a96b0b4e7eeb5c869def87fe1b46270" category="summary">ASA r2クラスタにAutonomous Ransomware Protection（ARP）ライセンスがインストールされている場合、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、既存および新しく作成されたすべてのストレージユニットでARPがデフォルトで有効になります。</block>
   <block id="ada9a568ab6a5d18c006a2f881dad45e" category="paragraph">新しい ONTAP 9.18.1 ASA r2 クラスタを初期化するか、クラスタを ONTAP 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、すべての新規ストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間終了時に新規ストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。</block>
   <block id="15a35bbf98ecdf50ebbe830c9150b1fa" category="inline-link-macro">手動で有効化</block>
   <block id="2c5bf6d23c3b237a161f10e7a30084bf" category="paragraph">ONTAP 9.17.1で作成されたストレージユニットは、ARP/AI用に<block ref="e30e679666ce4b86d4d0fe351918a7bf" category="inline-link-macro-rx"></block>する必要があります。</block>
@@ -2656,9 +2637,7 @@
   <block id="91af5705f16502125e8b2187e64202c0" category="open-title">CLI</block>
   <block id="2789285c59c5d3b50b0af44eb0af9d83" category="list-text">デフォルトの有効化ステータスを確認します：</block>
   <block id="51ea13505527485e8ad1964193e9ac5d" category="list-text">既存および新規ボリュームのデフォルトの有効化を無効にします：</block>
-  <block id="8dec9eba7de20cf1b8ccafba1cfae901" category="paragraph">ARPは、SAN環境において常に進化するランサムウェアを98%の精度で検出するランサムウェア対策分析用の機械学習モデルを採用することで、サイバーレジリエンス（回復力）を向上させます。ARPの機械学習モデルは、ランサムウェア攻撃のシミュレーション前後の大規模なファイルデータセットを用いて事前トレーニングされています。このリソース集約型のトレーニングはONTAPの外部で実行され、このトレーニングから得られる事前トレーニング済みモデルはONTAPに搭載されています。このモデルはアクセスも変更もできません。ARP/AIは有効化後すぐにアクティブになります。<block ref="3fa1bfd584351c2c430a6346ba4b1ef3" category="inline-link-macro-rx"></block>はありません。</block>
   <block id="f2927aad75b0aa15b973bf19aae3a066" category="admonition">ランサムウェアの検出・防止システムは、ランサムウェア攻撃からの完全な安全を保証することはできません。攻撃が検知されない可能性はありますが、アンチウイルスソフトウェアが侵入を検知できなかった場合、ARP/AIは重要な追加防御層として機能します。</block>
-  <block id="613dcccc80c6c70a2f7f3bbba3e85635" category="list-text">ARP/AI はSnapMirror アクティブ同期、SnapMirror 同期、またはSnapLockによって保護されているストレージ ユニットではサポートされません。</block>
   <block id="d818371e54d5db7f0b123dad9f0741fa" category="list-text">ONTAP 9.18.1以降では、ONTAP 9.18.1にアップグレードしてから12時間後、または新しいONTAP 9.18.1 ASA r2クラスタを初期化してから12時間後に、新しく作成されたすべてのストレージユニットでARP/AIがデフォルトで有効になります。</block>
   <block id="4ebb5f6bb42f5000c86113152e6fc7b8" category="section-title">クラスター内のすべてのストレージユニットでARP/AIを有効にする</block>
   <block id="4a30706558af49bc475c9076f39c5043" category="paragraph">ONTAP 9.17.1を実行している場合は、クラスタ内に作成されたすべてのストレージユニットでARP/AIをデフォルトで有効にすることができます。</block>
@@ -2678,9 +2657,7 @@
   <block id="d6e1856d58417da15c8f45bb5225a284" category="admonition">複数のストレージ ユニットを作成する場合、各ユニットは同じ容量で作成されます。作成するストレージ ユニットの数に必要な容量を掛けて、使用可能なスペースが十分にあることを確認します。十分な空き容量がなく、過剰にプロビジョニングすることを選択した場合は、容量不足やデータの損失を回避するために、使用率を注意深く監視してください。</block>
   <block id="aa716862002e83866a499a0f5aaa467f" category="paragraph">指定したオペレーティングシステムで実行されているホストの既存のホストグループが存在しない場合は、ONTAP が新しいホスト グループを自動的に作成します。</block>
   <block id="a8e81b2ccd42d59459e94b66c7e93b33" category="inline-link-macro">Active IQ Digital AdvisorのUpgrade AdvisorまたはUpgrade Health Checkerを使用してアップグレードの準備をする</block>
-  <block id="3bd021c9fab6ece4503050272dff524d" category="paragraph">ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。<block ref="a44687563e089a36f625493635099b07" category="inline-link-macro-rx"></block>から始めることをお勧めします。</block>
   <block id="8e06442a81408e5b3d9d881ee34604d9" category="list-text">ポートe10bをシェルフ1のNSM Bポートe0bに接続します。</block>
-  <block id="67cc47e8f050e98e23b1a714f17238ec" category="list-text"><block ref="2d2c01d97863e3fdde3b4275018cf566" category="inline-link-macro-rx"></block>。</block>
   <block id="a21739611cdd87f44b21b69f2d1255c4" category="doc">ASA r2ストレージシステムでデフォルトの自律型ランサムウェア保護を無効にします</block>
   <block id="8a7cfb8fa6ea38ee5f0146687bddcd42" category="doc">ASA r2ストレージシステムでAIを使用した自律型ランサムウェア対策を有効にする</block>
   <block id="a9adededf161bd5d8bb9db9309976ce3" category="doc">ASA r2ストレージシステムでAIによる自律型ランサムウェア対策を一時停止または再開します</block>
@@ -2793,4 +2770,101 @@
   <block id="8cd58c89ff3d51a256ecfe3fe8bab20f" category="section-title">その他のリソース</block>
   <block id="e8a159e2ff115b18e83ff77937ef6345" category="paragraph">配線手順には、一般的な構成例が示されています。具体的なケーブルの種類は、ストレージシステム用に注文したコンポーネントによって異なります。包括的な構成とスロット優先順位の詳細については、<block ref="43b42c26c42f7c6fe4ef77f9f2ed17ff" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="3b1d6e6330ca5bf54a0c22beaa407de9" category="sidebar">ケーブル配線の概要</block>
+  <block id="2c8eecf979e6fd790e493d164307b594" category="paragraph">ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。<block ref="6ef617cad96624aff48188ee9c2d2af4" category="inline-link-macro-rx"></block>から始めることをお勧めします。</block>
+  <block id="64653b9fd94570b308a1c2ed04a37c62" category="paragraph">アップグレードの準備ができたら、<block ref="e26ea1c18f478c08bac49629d6c7055f" category="inline-link-macro-rx"></block>を使用してアップグレードを実行することをお勧めします。ANDUでは、ONTAPのハイアベイラビリティ（HA）フェイルオーバー テクノロジを利用して、アップグレード中もクラスタからデータが提供されます。</block>
+  <block id="a9a92968dbd42b1c6a98d69ef29dff86" category="paragraph"><block ref="dbcdfdb6de3365861229d4de54f3e7c8" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="0000dac1f1d7d52694ae1c57ec4c4952" category="section-title">自動アップグレード前チェックの実行 - 計画的アップグレード前</block>
+  <block id="1e136489f0f4579da4728cecbc41c760" category="paragraph">ONTAPソフトウェアのアップグレード プロセス中でなくても、ONTAPの自動アップグレード前チェックは実行できます。アップグレード前チェックをONTAPの自動アップグレード プロセスとは別に実行することで、クラスタに対して実行されたチェックを把握して、アップグレードを実際に開始する前に修正しておくべきエラーや警告のリストを入手できます。</block>
+  <block id="97b8d819cd6f1c3d1e12d20c69bc9343" category="paragraph">ONTAP 9.19.1以降では、エラーと警告が個別に表示されるため、アップグレード前に解決する必要がある問題を簡単に特定できます。</block>
+  <block id="7dadbaefb3cf1bd5b8a86802fac0839a" category="inline-link-macro">ONTAP 自動アップグレード前チェックを実行</block>
+  <block id="c240788f59668332d5c171cbe489376a" category="paragraph"><block ref="9c7fdd39bc5019d6cec3e908fec6a772" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
+  <block id="9917a58904f13efdde588f2978fd93b9" category="inline-link-macro">AIによる自律型ランサムウェア対策を有効にする</block>
+  <block id="fb1b02686213ed6e031c1f039708270a" category="admonition">ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIを有効にするには、<block ref="1ee41ad3123e5db18e6fae76e28afe9f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="b71329b670dac542862012007751fd6f" category="summary">ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。</block>
+  <block id="e7afd2cc385e151dc252f52489678be6" category="doc">ASA r2システムでのSnapMirrorアクティブ同期保護に向けたAIXホストの準備</block>
+  <block id="16624daae6b7659680047c4fc428fec2" category="paragraph">ONTAP 9.19.1以降、AIXの透過的アプリケーションフェイルオーバーは、対称アクティブ/アクティブ構成のSnapMirror active syncでサポートされています。SnapMirror active syncデータ保護により、完全なサイト障害が発生した場合でもビジネスサービスの稼働を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。</block>
+  <block id="ba38f5c107e42f69bfac0d9f7824f8c9" category="inline-link-macro">SnapMirror アクティブ同期の相互運用性</block>
+  <block id="f80d8776833174e556c56272ce794684" category="paragraph">ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。他のホストタイプでは、アクセスモードの選択は不要です。<block ref="987f5b7a840f16d7e10b014311f90ef1" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="13cf50fcf318293df5a3adeadda4221c" category="paragraph">ONTAP 9.19.1以降を実行している必要があります。ONTAP 9.18.1以前を実行している場合、SnapMirrorアクティブ同期のAIXホストサポートには機能ポリシー変更要求（FPVR）が必要です。</block>
+  <block id="49c7424b52c7ec83e7da5d72f7f13764" category="list-text">SnapMirror アクティブ同期保護用に準備するAIXストレージユニットの名前にカーソルを合わせます。</block>
+  <block id="89b5596dc218f237904b988c0f8904cc" category="inline-image-macro">メニュー選択アイコン</block>
+  <block id="21a7f37e0aaf9ac924df65177afb8228" category="list-text"><block ref="2bf8f430922192bda6865bad87ff2a74" category="inline-image-macro-rx" type="image"></block>を選択し、* Edit *を選択します。</block>
+  <block id="02b80ac4962fa1aa89a11e655a3bd996" category="list-text">* ホスト情報 * で、* アクセスモード * に * local * を選択し、* 編集 * を選択します。</block>
+  <block id="6d33f82590752283d027e2c7394ab829" category="paragraph">AIXホスト用のストレージユニットは、SnapMirrorアクティブ同期保護に対応できる状態です。</block>
+  <block id="55aa696f6eeaf20f8cd5f18a42f214dd" category="paragraph">ASA r2 システムで SnapMirror アクティブ同期を設定するための System Manager の手順は、統合 ONTAP パーソナリティを実行している NetApp FAS 、 AFF 、および ASA システムとは異なりますが、 SnapMirror アクティブ同期の要件、アーキテクチャ、および動作は同じです。<block ref="a4d3fa0a90b98ed30452a119486e6ae3" category="inline-link-macro-rx"></block></block>
+  <block id="1783622f273954ab75caf352332b94b9" category="paragraph">ASA r2システムでは、SnapMirror Active Syncは対称アクティブ / アクティブ構成をサポートしています。対称アクティブ / アクティブ構成では、両方のサイトがアクティブI/O用のローカルストレージにアクセスできます。<block ref="cd08e89ddecf5772544f56e955b2d721" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="98c953c1bb66d85c490522bafc5c85b5" category="list-text">ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み取り/書き込みストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIの有効化手順については、<block ref="1ee41ad3123e5db18e6fae76e28afe9f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="f6948bd1b416e70ac7297904c89918c2" category="inline-link-macro">AIXホストを準備する</block>
+  <block id="9f3699fb5ae95cc656437f0d40316b3a" category="paragraph">ONTAP 9.19.1以降を実行していて、AIXホストに対してSnapMirrorアクティブ同期を有効にする場合は、<block ref="a1eb09700bb6039b09944ad4a8beb294" category="inline-link-macro-rx"></block>してください。</block>
+  <block id="d844604326e9cd2c315729a7379f2f39" category="paragraph">ONTAP 9.19.1以降、FLIはバックエンド接続用のiSCSIプロトコルをサポートしています。</block>
+  <block id="01ec680b4387bb404e72e15247c25cc6" category="list-text">リンクの詳細については、https://docs.netapp.com/us-en/ontap-fli/get-started/learn-about-data-migration.html[ONTAP FLI migrations^]を参照してください。</block>
+  <block id="2f99f456cfdb820f75a7c3148365f63b" category="section-title">TLSハードウェアオフロード</block>
+  <block id="0cb676b13f3e5b88d1d96f6dc967fbf0" category="paragraph">サポートされているイーサネットカードに、クラスタ全体のトランスポート層セキュリティ（TLS）の暗号化と復号化をオフロードできます。これにより CPU 負荷が軽減され、TLS を使用するシステムのパフォーマンスが向上します。</block>
+  <block id="6fa5dce098144939c83d2d3fe4ca7e8d" category="inline-link-macro">TLS ハードウェアオフロードの設定方法</block>
+  <block id="9433af924bd16d2b5d6282d91d613926" category="paragraph"><block ref="669de2e9a90723c75d4b935770e4df97" category="inline-link-macro-rx"></block>。</block>
+  <block id="9446a98ad14416153cc4d45ab8b531bf" category="section-title">Performance</block>
+  <block id="2f7da8b0d24f58aae7a1dc8db2ca277d" category="paragraph">ASA r2システムでサポートされている一般的なパフォーマンス機能の詳細については、こちらをご覧ください。</block>
+  <block id="61dd3b29ebbda633eaa5595a4948d71f" category="section-title">QoS スループット上限の自動増加を制御するデフォルト設定を変更します</block>
+  <block id="a05bc26fbb935d2a28e26f1e40856f67" category="paragraph">適応型および非適応型のQoSポリシーグループは、デフォルトで自動的に有効化され、ワークロードのスループット上限を1秒間、一時的に50%増加させることで、短期的なパフォーマンス向上要求に対応します。ONTAP 9.19.1以降では、これらのデフォルト設定を変更できます。ONTAP 9.18.1以前では、これらの設定を変更することはできません。</block>
+  <block id="60315893e2acf5905698d5d0f606fd10" category="inline-link-macro">QoS スループット上限の詳細</block>
+  <block id="90845cd8ac5d10e2937758f233798b78" category="paragraph"><block ref="d91291c9e48585273f64f9043b3d3422" category="inline-link-macro-rx"></block>。</block>
+  <block id="4f27a34799ad8580f67b93c57e242ad0" category="section-title">SANの構成</block>
+  <block id="0049b7998bb071bfe030bf33eb2c9de3" category="paragraph">ストレージ エリア ネットワーク（SAN）は、iSCSIやFCなどのSAN転送プロトコルを介してホストに接続されるストレージ ソリューションで構成されます。1つ以上のスイッチを介してホストにストレージ ソリューションを接続するように、SANを構成できます。iSCSIを使用している場合は、スイッチを使用せずにホストにストレージ ソリューションを直接接続するように、SANを構成することもできます。</block>
+  <block id="ea188495f5bc167e82a7fbff3f977e1f" category="section-title">SAN ダイレクトアタッチメント</block>
+  <block id="89dd72f722952148a52848398de2af98" category="paragraph">ONTAP 9.19.1以降、FCスイッチは、FCおよびFC-NVMeホストとONTAPストレージ間の接続を確立するために必要ありません。ホストは、ASA r2システムのFCアダプタポートに直接接続できます。ダイレクト接続機能は、シンプルさが重要なリモートサイトやハイブリッド環境において特に有用です。</block>
+  <block id="d6fda1bbe79a70e1ad34ce9857102a6f" category="inline-link-macro">SAN ダイレクトアタッチメントの詳細</block>
+  <block id="6ae2ce2d58a3fa8990ebae194277f9c3" category="list-text"><block ref="ca36c2c6ca138f3af9323afde8970be4" category="inline-link-macro-rx"></block>。</block>
+  <block id="be475f74890bbcee818b4dcaa88fc2ef" category="paragraph">ストレージ効率とは、ストレージ リソースを最適化し、無駄なスペースを最小限に抑え、書き込まれたデータの物理的なフットプリントを削減することで、ストレージ システムが利用可能なスペースをどれだけ効率的に使用しているかを示す指標です。</block>
+  <block id="470668cf61ea3bcd6e1cb686cce301ab" category="paragraph">ONTAPは、ストレージ使用量の最適化とコスト削減に役立つ、さまざまなストレージ効率化技術を提供します。</block>
+  <block id="4064dbb2da19e8796b10f1c59bc4f23a" category="inline-link-macro">ONTAP ストレージ効率化テクノロジの詳細</block>
+  <block id="a8421094cc908d8f315c1ab2f19b8085" category="paragraph"><block ref="fddba30123b8f0cdf7b9e22a9b2eaad2" category="inline-link-macro-rx"></block>。</block>
+  <block id="d2faa14ab70288d07188a62b2f1242e8" category="section-title">グローバル重複排除</block>
+  <block id="3cc42248c8d3e1724108887db39a1fc0" category="inline-link-macro">既存の ONTAP 重複排除によるスペース削減効果</block>
+  <block id="dfa4d4587562c16f4a5925d3b5594a9e" category="paragraph">ONTAP 9.19.1以降、_グローバル重複排除_は、ストレージユニットレベルの<block ref="c7d4c0ceea3d0bc35cdb8645e84b0be9" category="inline-link-macro-rx"></block>をStorage Availability Zone（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除は、機能ライセンスを必要とせず、デフォルトで有効になっており、既存のストレージ効率化テクノロジとシームレスに統合され、最小限のパフォーマンスへの影響で透過的に動作し、管理設定も不要です。</block>
+  <block id="65481be362fd14e3b943e8347948143f" category="paragraph">ONTAP 9.19.1以降、SnapMirror Active Sync保護を有効にする予定のAIX LUNを作成する場合は、*ホスト情報*で*アクセスモード*に*ローカル*を選択します。これは、透過的なアプリケーションのフェイルオーバーを有効にするために必要です。</block>
+  <block id="b8cd8dd355516b19f7a3260bfd645929" category="paragraph">ASA r2システムの各HAペアは、_ストレージの可用性ゾーン_と呼ばれる共通のストレージプールを使用します。ストレージの可用性ゾーンは、ストレージシステム内の利用可能なすべてのディスクにアクセスでき、HAペアの両方のノードから認識できます。ストレージの可用性ゾーンの利用可能なスペースを監視することで、必要に応じて使用量を減らしたり容量を増やしたりできるため、スペース不足によるワークロードの障害を回避できます。</block>
+  <block id="f1c9e9af80bb533618f5bdefe333747d" category="inline-link-macro">インサイト</block>
+  <block id="ebafe46641c676ef6ab5894f79ff62ab" category="paragraph">ONTAP 9.19.1以降、ASA r2システムのHAペアの1つでストレージの可用性ゾーンが容量限界に近づくと、System Managerの*Insights*にアラートが表示されます。System Managerの詳細については、<block ref="41fc10ce3fe36daf8df250e4d0c01ea9" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="1546607861bbb550ca3750055c66328f" category="paragraph">* ストレージユニット * の下に、ストレージの可用性ゾーン内のすべてのストレージユニットのリストが表示されます。</block>
+  <block id="2e9d0a1cf17808045f957a3e9c93942b" category="paragraph">ストレージの可用性ゾーンのスペースが少なくなっている場合は、<block ref="a3223fe003597dcfd7b6d75426783c5a" category="inline-link-macro-rx"></block>別のストレージの可用性ゾーンに移動してクラスター全体のストレージ使用率を均等化するか、スナップショットを削除して空き容量を確保するか、ノードにディスクを追加して容量を増やすことを計画してください。</block>
+  <block id="f81baecda64413757c058ded626fcc01" category="summary">ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明します。</block>
+  <block id="2be5fa0f2f2942f164632e2517148f97" category="doc">ONTAP 9.19.1 for ASA r2システムの新機能</block>
+  <block id="3f1aac64a6f9339cbf436a8cebfe6bf1" category="inline-link-macro">SnapMirror active syncのAIXホストサポート</block>
+  <block id="a8e9a396c69578ce7333f984da64c336" category="cell"><block ref="a8e9a396c69578ce7333f984da64c336" category="inline-link-macro-rx"></block></block>
+  <block id="555e7d49883fdeee7ee35940a1e0422a" category="cell">AIX の透過的アプリケーションフェイルオーバーは、対称型アクティブ / アクティブ構成の SnapMirror アクティブ同期でサポートされます。</block>
+  <block id="f3c0ac77cfd922d5495f5c32bde93fef" category="inline-link-macro">ONTAP外部LUNインポート（FLI）のiSCSIプロトコルサポート</block>
+  <block id="571961045f6acced447011686935e734" category="cell"><block ref="571961045f6acced447011686935e734" category="inline-link-macro-rx"></block></block>
+  <block id="41e5e49b6c7d76352e103517e3eef2b2" category="cell">ONTAP外部LUNインポート（FLI）は、バックエンド接続用のiSCSIプロトコルをサポートしています。</block>
+  <block id="911fbb20c80fb962a01d41ff494bdac4" category="inline-link-macro">直接接続型FC構成のサポート</block>
+  <block id="832bd89ad9f3cb073b0b1c7a24fda2ad" category="cell"><block ref="832bd89ad9f3cb073b0b1c7a24fda2ad" category="inline-link-macro-rx"></block></block>
+  <block id="9d255f8061d2c26397587d57452560a3" category="cell">FC スイッチは、FC および FC-NVMe ホストと ONTAP ストレージ間の接続を確立するために必要ありません。ホストは、ASA r2 システムの FC アダプタポートに直接接続できます。直接接続機能は、簡便性が重要な遠隔地やハイブリッド環境において特に有用です。</block>
+  <block id="1c1e4bbac513ca426ea459850a27cf80" category="inline-link-macro">SnapMirror アクティブ同期関係を使用したARP/AIのサポート</block>
+  <block id="06c698f9402b1596702afca5eb290c16" category="cell"><block ref="06c698f9402b1596702afca5eb290c16" category="inline-link-macro-rx"></block></block>
+  <block id="ae5b88290cbba1c2143301d124dcbbbf" category="cell">人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期関係におけるプライマリ読み書きストレージユニットをサポートしています。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。</block>
+  <block id="281fd14262fa7c1793e3c18dfd336f7f" category="inline-link-macro">TLS ハードウェアオフロードのサポート</block>
+  <block id="1c03eaa9510cac0323e8851def881c41" category="cell"><block ref="1c03eaa9510cac0323e8851def881c41" category="inline-link-macro-rx"></block></block>
+  <block id="856d2008511fbcc3fde42bc9df07cc74" category="inline-link-macro">グローバル重複排除のサポート</block>
+  <block id="c2aae43e9678be7b1ccbf9e69e5c7eb2" category="cell"><block ref="c2aae43e9678be7b1ccbf9e69e5c7eb2" category="inline-link-macro-rx"></block></block>
+  <block id="497405d1bfd083677d0d9555d9027d88" category="cell">グローバル重複排除は、既存のONTAP重複排除によるスペース削減効果をStorage Availability Zone（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除はデフォルトで有効になっており、管理者による設定を必要とせずに透過的に動作します。</block>
+  <block id="92da55166137739e02f5b936f74380ee" category="section-title">ストレージ リソースの管理</block>
+  <block id="111932fc1f94afb73674c79d84d3c63f" category="inline-link-macro">System Manager でのストレージの可用性ゾーン容量アラートのサポート</block>
+  <block id="445c41dab6c25da30423427c5174c083" category="cell"><block ref="445c41dab6c25da30423427c5174c083" category="inline-link-macro-rx"></block></block>
+  <block id="63c3c3a7296a9754070057942295221b" category="cell">ASA r2システムのストレージアベイラビリティゾーンが容量限界に近づくと、System Managerにアラートが表示されます。</block>
+  <block id="06d8255b249000a8dc1ea05905facab1" category="inline-link-macro">自動QoSスループット上限の増加を制御するデフォルト設定の変更のサポート</block>
+  <block id="5ebe4d2005a9bf12b4599600d5b37a74" category="cell"><block ref="5ebe4d2005a9bf12b4599600d5b37a74" category="inline-link-macro-rx"></block></block>
+  <block id="526357124bf4a788b83696c381ec921e" category="cell">QoSポリシーグループが、短期的なパフォーマンス向上ニーズに応じてQoSスループットの上限を自動的に引き上げる方法を制御するデフォルト設定を変更できます。これらの設定は、ONTAP 9.18.1以前では変更できません。</block>
+  <block id="f683581d3e75f05f9d9215f9b4696cef" category="section-title">Upgrade</block>
+  <block id="446769ecfd2416f049608620cc994ac8" category="inline-link-macro">自動アップグレード前チェックのレポート機能の強化</block>
+  <block id="368f083985829ad76ae5f8d7530fbd0e" category="cell"><block ref="368f083985829ad76ae5f8d7530fbd0e" category="inline-link-macro-rx"></block></block>
+  <block id="2b1cc84feb959647df3e34b19f0fa843" category="cell">自動アップグレード前チェックを実行する際、エラーと警告は別々に表示されるため、アップグレード前に解決する必要のある問題を簡単に特定できます。</block>
+  <block id="064aa1a0e3e542c891816ff0102a8eca" category="summary">ASA r2クラスタにAutonomous Ransomware Protectionライセンスがインストールされている場合、ONTAP 9.18.1へのアップグレード後、または新しいONTAP 9.18.1 ASA r2クラスタの初期化後12時間で、既存および新規に作成されたすべてのストレージユニットでARPがデフォルトで有効になります。</block>
+  <block id="c21e619b6e99a5ee7d89c9b052f96fb0" category="summary">AIを使用したARPを有効にすると、潜在的なランサムウェアの脅威を検出し、データを保護するための対策を自動的に実行し、System Managerに警告メッセージを表示して不審なアクティビティを通知します。</block>
+  <block id="99705e545197778e8e90edce81239e6b" category="paragraph">ARPは、SAN環境における絶えず進化するランサムウェアを検出する機械学習モデルをランサムウェア対策分析に採用することで、サイバーレジリエンスを向上させます。ARPの機械学習モデルは、ランサムウェア攻撃をシミュレーションした前後のファイルからなる大規模なデータセットを用いて事前学習されています。このリソース集約型のトレーニングはONTAPの外部で行われ、このトレーニングから得られる事前学習済みモデルがONTAPに搭載されています。このモデルはアクセスも変更もできません。ARP/AIは有効化後すぐにアクティブになります。<block ref="3fa1bfd584351c2c430a6346ba4b1ef3" category="inline-link-macro-rx"></block>はありません。</block>
+  <block id="32993ed903bc1884ece0b04175a7a552" category="list-text">ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。</block>
+  <block id="0da4b61d19faba4a01242d2539243538" category="list-text">ARP/AI は、SnapLock で保護されているストレージユニットではサポートされていません。</block>
+  <block id="df2caa7829ca66f49ae2621799defacd" category="summary">ASA r2システムでIPプロトコルを使用している場合は、IPセキュリティを設定してデータセキュリティを強化できます。</block>
+  <block id="51e4b174c948dff20235dc02acc443e7" category="summary">NVMe TCP over TLS を構成して、NVMe TCP ホストと ONTAP 間でネットワーク経由で送信されるすべてのデータを暗号化することで、データセキュリティを強化します。</block>
+  <block id="4cc34abbf04951a48585b5548e80ee6b" category="summary">異常なワークロードイベントを計画している場合は、ランサムウェア攻撃の誤検出を防ぐために、AI分析を使用したARPを一時的に停止できます</block>
+  <block id="f89ff085af9a8e3382e45dfd5fc7eead" category="sidebar">AIXホストを準備する</block>
+  <block id="7ceef35284e2093e2f3f2e17a1256628" category="sidebar">ONTAP 9.19.1の新機能</block>
 </blocks>

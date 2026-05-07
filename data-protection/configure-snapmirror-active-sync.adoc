@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: data-protection/configure-snapmirror-active-sync.html 
-keywords: asa r2, data protection, protect data, configure, snapmirror active sync, ,disaster recovery, symmetric active/active 
+keywords: asa r2, data protection, protect data, configure, snapmirror active sync, ,disaster recovery, symmetric active active 
 summary: 災害発生時にセカンダリ データ コピーを作成し、自動フェイルオーバーを有効にすることで、ビジネスの継続性を確保するためにSnapMirrorアクティブ シンクを構成する方法を学習します。 
 ---
 = ASA r2 システムでSnapMirrorアクティブ同期を構成する
@@ -17,6 +17,9 @@ ASA r2システムでは、 SnapMirror Active Syncは対称型アクティブ/�
 
 .タスクの内容
 iSCSIまたはFCプロトコルを使用しており、VMware Sphere用のONTAPツールを使用している場合は、オプションでlink:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["ONTAP Tools for VM ware を使用してSnapMirror Active Sync を設定する"^] 。
+
+
+NOTE: ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIを有効にするには、link:../secure-data/enable-anti-ransomware-protection.html["AIによる自律型ランサムウェア対策を有効にする"]を参照してください。
 
 .開始する前に
 link:create-snapshots.html#step-1-optionally-create-a-consistency-group["一貫性グループを作成する"]プライマリサイトに新しいストレージユニットを追加し、非均一な対称アクティブ/アクティブ構成を作成する場合は、セカンダリサイトにも新しいストレージユニットを追加して整合性グループを作成してください。

@@ -1,0 +1,101 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9191.html 
+keywords: 'what"s new, release notes, 9.19.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20' 
+summary: ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明します。 
+---
+= ONTAP 9.19.1 for ASA r2システムの新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明します。
+
+
+
+== データ保護
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../data-protection/prepare-aix-snapmirror-active-sync.html["SnapMirror active syncのAIXホストサポート"] | AIX の透過的アプリケーションフェイルオーバーは、対称型アクティブ / アクティブ構成の SnapMirror アクティブ同期でサポートされます。 
+|===
+
+
+== SANデータ移行
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../install-setup/set-up-data-access.html#migrate-data-from-a-third-party-storage-system["ONTAP外部LUNインポート（FLI）のiSCSIプロトコルサポート"] | ONTAP外部LUNインポート（FLI）は、バックエンド接続用のiSCSIプロトコルをサポートしています。 
+|===
+
+
+== SANの構成
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#san-direct-attachment["直接接続型FC構成のサポート"] | FC スイッチは、FC および FC-NVMe ホストと ONTAP ストレージ間の接続を確立するために必要ありません。ホストは、ASA r2 システムの FC アダプタポートに直接接続できます。直接接続機能は、簡便性が重要な遠隔地やハイブリッド環境において特に有用です。 
+|===
+
+
+== セキュリティ
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../secure-data/enable-anti-ransomware-protection.html["SnapMirror アクティブ同期関係を使用したARP/AIのサポート"] | 人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期関係におけるプライマリ読み書きストレージユニットをサポートしています。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#tls-hardware-offload["TLS ハードウェアオフロードのサポート"] | サポートされているイーサネットカードに、クラスタ全体のトランスポート層セキュリティ（TLS）の暗号化と復号化をオフロードできます。これにより CPU 負荷が軽減され、TLS を使用するシステムのパフォーマンスが向上します。 
+|===
+
+
+== Storage Efficiency
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#global-deduplication["グローバル重複排除のサポート"] | グローバル重複排除は、既存のONTAP重複排除によるスペース削減効果をStorage Availability Zone（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除はデフォルトで有効になっており、管理者による設定を必要とせずに透過的に動作します。 
+|===
+
+
+== ストレージ リソースの管理
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../monitor/monitor-storage.html#monitor-storage-availability-zone-utilization["System Manager でのストレージの可用性ゾーン容量アラートのサポート"] | ASA r2システムのストレージアベイラビリティゾーンが容量限界に近づくと、System Managerにアラートが表示されます。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#modify-default-settings-that-control-automatic-qos-throughput-ceiling-increases["自動QoSスループット上限の増加を制御するデフォルト設定の変更のサポート"] | QoSポリシーグループが、短期的なパフォーマンス向上ニーズに応じてQoSスループットの上限を自動的に引き上げる方法を制御するデフォルト設定を変更できます。これらの設定は、ONTAP 9.18.1以前では変更できません。 
+|===
+
+
+== Upgrade
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../administer/upgrade-ontap.html["自動アップグレード前チェックのレポート機能の強化"] | 自動アップグレード前チェックを実行する際、エラーと警告は別々に表示されるため、アップグレード前に解決する必要のある問題を簡単に特定できます。 
+|===

@@ -13,8 +13,18 @@ summary: ASA r2 システムのONTAPソフトウェア アップグレードは�
 [role="lead"]
 ASA R2システムでONTAPソフトウェアをアップグレードすると、ONTAPの新機能や強化された機能を活用して、コストの削減、重要なワークロードの高速化、セキュリティの強化、組織で利用できるデータ保護の範囲の拡大を実現できます。
 
-ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。link:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html["Active IQ Digital AdvisorのUpgrade AdvisorまたはUpgrade Health Checkerを使用してアップグレードの準備をする"]から始めることをお勧めします。
+ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。link:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html["Active IQ Digital AdvisorのUpgrade AdvisorまたはUpgrade Health Checkerを使用してアップグレードの準備をする"^]から始めることをお勧めします。
 
-アップグレードの準備が完了したら、を使用してアップグレードを実行することを推奨しlink:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["System Managerからの自動無停止アップグレード（ANDU）"]ます。ANDUは、ONTAPの高可用性（HA）フェイルオーバーテクノロジを活用して、アップグレード中もクラスタが中断することなくデータを提供し続けます。
+アップグレードの準備ができたら、link:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["System Managerからの自動無停止アップグレード（ANDU）"^]を使用してアップグレードを実行することをお勧めします。ANDUでは、ONTAPのハイアベイラビリティ（HA）フェイルオーバー テクノロジを利用して、アップグレード中もクラスタからデータが提供されます。
 
-詳細については、をご覧ください link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPソフトウェアのアップグレード"]。
+link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPソフトウェアのアップグレード"^]の詳細をご覧ください。
+
+
+
+== 自動アップグレード前チェックの実行 - 計画的アップグレード前
+
+ONTAPソフトウェアのアップグレード プロセス中でなくても、ONTAPの自動アップグレード前チェックは実行できます。アップグレード前チェックをONTAPの自動アップグレード プロセスとは別に実行することで、クラスタに対して実行されたチェックを把握して、アップグレードを実際に開始する前に修正しておくべきエラーや警告のリストを入手できます。
+
+ONTAP 9.19.1以降では、エラーと警告が個別に表示されるため、アップグレード前に解決する必要がある問題を簡単に特定できます。
+
+link:https://docs.netapp.com/us-en/ontap/upgrade/automated-pre-checks.html["ONTAP 自動アップグレード前チェックを実行"^]方法をご確認ください。

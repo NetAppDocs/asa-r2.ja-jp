@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: data-protection/prepare-aix-snapmirror-active-sync.html 
+keywords: asa r2, data protection, protect data, configure, snapmirror active sync, ,disaster recovery, symmetric active active, prepare, aix 
+summary: ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。 
+---
+= ASA r2システムでのSnapMirrorアクティブ同期保護に向けたAIXホストの準備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.19.1以降、AIXの透過的アプリケーションフェイルオーバーは、対称アクティブ/アクティブ構成のSnapMirror active syncでサポートされています。SnapMirror active syncデータ保護により、完全なサイト障害が発生した場合でもビジネスサービスの稼働を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。
+
+ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。他のホストタイプでは、アクセスモードの選択は不要です。link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html["SnapMirror アクティブ同期の相互運用性"^]の詳細をご覧ください。
+
+.開始する前に
+ONTAP 9.19.1以降を実行している必要があります。ONTAP 9.18.1以前を実行している場合、SnapMirrorアクティブ同期のAIXホストサポートには機能ポリシー変更要求（FPVR）が必要です。
+
+.手順
+. System Managerで、*[ストレージ]*を選択します。
+. SnapMirror アクティブ同期保護用に準備するAIXストレージユニットの名前にカーソルを合わせます。
+. image:icon_kabob.gif["メニュー選択アイコン"]を選択し、* Edit *を選択します。
+. * ホスト情報 * で、* アクセスモード * に * local * を選択し、* 編集 * を選択します。
+
+
+.次の手順
+AIXホスト用のストレージユニットは、SnapMirrorアクティブ同期保護に対応できる状態です。
