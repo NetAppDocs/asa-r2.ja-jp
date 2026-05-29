@@ -15,6 +15,8 @@ ASA r2システムのストレージ層では、アグリゲートの代わり�
 
 この簡素化されたストレージ管理のアプローチにより、  `storage aggregate`コマンドはASA r2システムではサポートされていません。特定の `lun` 、  `storage`そして `volume`コマンドとパラメータも制限されます。
 
+サポートされていないと記載されていない限り、link:https://docs.netapp.com/us-en/ontap-cli/["ONTAPコマンド リファレンス"]内の他のすべてのコマンドはASA r2システムでサポートされています。
+
 次のコマンドおよびコマンドセットは、R2上のASAではサポートされていません。
 
 .サポートされない<code> LUN </code>コマンド
@@ -139,9 +141,6 @@ NOTE: その `lun move-in-volume`コマンドは、  `lun rename`そして `vser
 
 
 ====
-.詳細情報
-link:https://docs.netapp.com/us-en/ontap-cli/["ONTAPコマンド リファレンス"]サポートされるコマンドの一覧については、を参照してください。
-
 
 
 == CLIを使用したONTAP ASA R2クラスタのセットアップ
