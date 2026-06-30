@@ -852,7 +852,6 @@
   <block id="a75bf2b9e1da63b60510e670e13280f5" category="example-title">サポートされない&lt;code&gt; storage &lt;/code&gt;コマンド</block>
   <block id="96e3e25ced73cbc3087692d33e698dfc" category="list-text"><block ref="c1391c72a0f399cab63e0f906219eba1" prefix="" category="inline-code"></block></block>
   <block id="db03a3b1b5e9221c407a3226384456b7" category="list-text"><block ref="852ce55a153bc728405ba8a2c95bcdf1" prefix="" category="inline-code"></block></block>
-  <block id="cb493146003b5096fb9dbce0cf86abad" category="list-text"><block ref="f0f37fae9d089110c4fb0245013845fb" prefix="" category="inline-code"></block></block>
   <block id="2134111bb81c1ada4be502decedecb30" category="list-text"><block ref="3c698d76925a2f101122edd72990fc94" prefix="" category="inline-code"></block></block>
   <block id="c3c96ea806ac83498c365d5180661ba3" category="list-text"><block ref="9b82d4f814395730025ab1c7b269e56e" prefix="" category="inline-code"></block></block>
   <block id="4dae76cd6e28c01554edf8f2fb2ff842" category="list-text"><block ref="ec9655721b41e06c690354a032042fc1" prefix="" category="inline-code"></block></block>
@@ -950,7 +949,6 @@
   <block id="4428c7556a1eea23721f907d8d23eb21" category="inline-link-macro">Snapshotをロックする方法</block>
   <block id="19deecdd8b763ce6f48eadb0070d24cd" category="list-text"><block ref="f5c7881d0f64c83ae31bbc947dffd4c1" category="inline-link-macro-rx"></block>ASA R2システム。</block>
   <block id="a45dbe7c067a9974c8fca40e2b212fd6" category="inline-link-macro">デュアルレイヤ暗号化の適用方法</block>
-  <block id="bcdcf9cfaaa690edc9d618403dd65057" category="list-text"><block ref="285ab21de69619aa33a3697c0850e834" category="inline-link-macro-rx"></block>ASA R2システム上のデータに接続します。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法的通知では、著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
@@ -1235,7 +1233,6 @@
   <block id="2906636dbf4e4249f5399e9553d745b9" category="paragraph">保存データを暗号化すると、ストレージメディアの転用、返却、置き忘れ、盗難に際してデータを読み取ることができません。ONTAP System Managerを使用してデータをハードウェアレベルとソフトウェアレベルで暗号化し、デュアルレイヤ保護を実現できます。</block>
   <block id="7b51e981529660667d1414c7a37e2172" category="paragraph">NetAppストレージ暗号化（NSE）は、自己暗号化ドライブ（SED）を使用したハードウェア暗号化をサポートしています。SEDはデータを書き込み時に暗号化します。各SEDには一意の暗号化キーが含まれています。SEDに保存されている暗号化されたデータは、SEDの暗号化キーなしでは読み取ることができません。SEDから読み取るノードは、SEDの暗号化キーにアクセスするために認証される必要があります。ノードの認証では、キー管理ツールから認証キーを取得し、その認証キーをSEDに提供します。認証キーが有効な場合、SEDはノードに格納されたデータにアクセスするための暗号化キーをノードに付与します。</block>
   <block id="97453174e9fea59b5b73518b257f2785" category="paragraph">ASA R2のオンボードキーマネージャまたは外部キーマネージャを使用して、ノードに認証キーを提供します。</block>
-  <block id="2a1bd1bede081db0130e4d43abfae163" category="paragraph">NSEに加えて、ソフトウェア暗号化を有効にしてデータのセキュリティを強化することもできます。</block>
   <block id="c3895fd1cc061addf95194af9659baa6" category="list-text">System Managerで、*[クラスタ]&gt;[設定]*を選択します。</block>
   <block id="b59449d4094d1449f93a0de73791997c" category="list-text">[セキュリティ]*セクションの*[暗号化]*で、*[設定]*を選択します。</block>
   <block id="9bd21eab9d09006d0846084b0f1b970d" category="list-text">キー管理ツールを設定します。</block>
@@ -2868,4 +2865,11 @@
   <block id="6be3407e36219b0795158b00b3dff0ca" category="list-text"><block ref="ca933b90c89fa23c09167e20b9cccb24" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
   <block id="8b046b3216eeb1b646506eacab8f767f" category="paragraph"><block ref="ca9cf0fa026ed1f702f811d5351a5f40" category="inline-link-macro-rx"></block>。</block>
   <block id="44fb59de1e9bca7d7d33dee185838ea7" category="paragraph">サポートされていないと記載されていない限り、<block ref="585532baa3876b6b8281302459d86312" category="inline-link-macro-rx"></block>内の他のすべてのコマンドはASA r2システムでサポートされています。</block>
+  <block id="a809a3f67f68e189b93c920155d8f362" category="list-text">NetApp Aggregate Encryption（NAE）</block>
+  <block id="2b115325b25b8f67f05803e840eb1b7c" category="paragraph">ASA r2システムは、自己暗号化ドライブ（SED）を使用したハードウェア暗号化と、NetApp Volume Encryption（NVE）テクノロジーを使用したソフトウェア暗号化をサポートしています。<block ref="285ab21de69619aa33a3697c0850e834" category="inline-link-macro-rx"></block>ASA r2システム上のデータに。</block>
+  <block id="f5c9d4c28f92d0b49036a87f3b949ecc" category="paragraph">NSEに加えて、ソフトウェア暗号化を有効にすることで、データのセキュリティをさらに強化することもできます。ASA r2システムは、NetApp Volume Encryption（NVE）テクノロジーを使用して、ソフトウェアレベルでデータを暗号化します。NetApp Aggregate Encryption（NAE）は、ASA r2システムのストレージ レイヤがアグリゲートではなくストレージの可用性ゾーンを使用しているため、ASA r2システムではサポートされていません。</block>
+  <block id="c4b8c29f448328e82ce27062b5fd9c28" category="inline-link-macro">NetApp Volume Encryption</block>
+  <block id="3b02d77db56f5837a4003247043c2394" category="paragraph"><block ref="31c33696bbbaa92dffde7abe3995709d" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
+  <block id="a77592aaf5c220b3ff9f169a775bd853" category="inline-link-macro">ASA r2システムとその他のONTAPシステムの違い</block>
+  <block id="a3516695dad8c94bdcdc3a67a8d5dd34" category="paragraph"><block ref="539f35f6411ebaaeab190de38a065f4e" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
 </blocks>

@@ -21,7 +21,11 @@ NOTE: ASA r2 システムでは、SED は NVMe ベースの SSD でのみサポ�
 
 ASA R2のオンボードキーマネージャまたは外部キーマネージャを使用して、ノードに認証キーを提供します。
 
-NSEに加えて、ソフトウェア暗号化を有効にしてデータのセキュリティを強化することもできます。
+NSEに加えて、ソフトウェア暗号化を有効にすることで、データのセキュリティをさらに強化することもできます。ASA r2システムは、NetApp Volume Encryption（NVE）テクノロジーを使用して、ソフトウェアレベルでデータを暗号化します。NetApp Aggregate Encryption（NAE）は、ASA r2システムのストレージ レイヤがアグリゲートではなくストレージの可用性ゾーンを使用しているため、ASA r2システムではサポートされていません。
+
+link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-netapp-volume-encryption-concept.html["NetApp Volume Encryption"^]の詳細をご覧ください。
+
+link:https://docs.netapp.com/us-en/asa-r2/learn-more/hardware-comparison.html["ASA r2システムとその他のONTAPシステムの違い"]の詳細をご覧ください。
 
 .手順
 . System Managerで、*[クラスタ]>[設定]*を選択します。

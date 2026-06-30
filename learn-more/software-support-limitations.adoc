@@ -24,6 +24,7 @@ iSCSI LIFの自動フェイルオーバーを有効にしている場合、ス�
 * FabricPool
 * LUNシックプロビジョニング
 * MetroCluster
+* NetApp Aggregate Encryption（NAE）
 * オブジェクトプロトコル
 * ONTAP S3 SnapMirrorとS3 API
 
@@ -35,7 +36,7 @@ link:../secure-data/ransomware-protection.html["Snapshotをロックする方法
 
 * デュアルレイヤ暗号化
 +
-link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA R2システム上のデータに接続します。
+ASA r2システムは、自己暗号化ドライブ（SED）を使用したハードウェア暗号化と、NetApp Volume Encryption（NVE）テクノロジーを使用したソフトウェア暗号化をサポートしています。link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA r2システム上のデータに。
 
 
 

@@ -40,7 +40,6 @@ NOTE: その `lun move-in-volume`コマンドは、  `lun rename`そして `vser
 ====
 * `storage failover show-takeover`
 * `storage failover show-giveback`
-* `storage aggregate relocation`
 * `storage disk assign`
 * `storage disk partition`
 * `storage disk reassign`
