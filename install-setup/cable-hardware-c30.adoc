@@ -30,6 +30,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["ケーブルプル�
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == 手順1：クラスタ/ HAをケーブル接続する
 
 コントローラーをケーブルで接続してONTAPクラスター接続を作成します。スイッチレスクラスタの場合は、コントローラ同士を接続します。スイッチドクラスタの場合は、コントローラをクラスタネットワークスイッチに接続します。
@@ -144,6 +145,7 @@ image::../media/drw_isi_a30-50_2p_100gbe_1card_switched_cabling_ieops-1926.svg[�
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == 手順2：ホストネットワーク接続をケーブル接続する
 
 イーサネットモジュールポートまたはファイバチャネル（FC）モジュールポートをホストネットワークに接続します。
@@ -193,6 +195,7 @@ image::../media/drw_isi_a30-50_4p_64gb_fc_1card_cabling_ieops-1924.svg[64 Gb/s F
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == 手順3：管理ネットワークをケーブル接続する
 
 コントローラを管理ネットワークに接続します。
@@ -210,6 +213,7 @@ IMPORTANT: まだ電源コードを接続しないでください。
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == 手順4：シェルフをケーブル接続する
 
 NS224シェルフの配線手順では、NSM100モジュールではなくNSM100Bモジュールが示されています。使用するNSMモジュールの種類に関わらず、配線は同じで、ポート名のみが異なります。

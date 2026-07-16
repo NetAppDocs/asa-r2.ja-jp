@@ -64,6 +64,7 @@ ASA r2 システムは、次のストレージ制限をサポートします。
 |===
 
 
+[[limits-for-snapmirror-asynchronous-relationships]]
 == SnapMirror非同期関係の制限
 
 SnapMirror非同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。最新のASA r2ストレージ制限の完全なリストについては、link:https://hwu.netapp.com/["NetApp Hardware Universe"^] 。
@@ -80,6 +81,7 @@ SnapMirror非同期レプリケーション関係のストレージ ユニット
 |===
 
 
+[[limits-for-snapmirror-active-sync-relationship]]
 == SnapMirrorアクティブ同期関係の制限
 
 SnapMirrorアクティブ同期レプリケーション関係のストレージ ユニットと整合性グループには、次の制限が適用されます。SnapMirrorアクティブ同期は、 ONTAP 9.17.1 以降、2 ノード クラスタでのみサポートされます。  ONTAP 9.18.1 以降では、4 ノード クラスタでSnapMirrorアクティブ シンクがサポートされます。

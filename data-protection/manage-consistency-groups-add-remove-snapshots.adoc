@@ -17,6 +17,7 @@ ASA r2 ストレージ システム内のコンシステンシー グループ�
 
 
 
+[[add-snapshot-data-protection-to-a-consistency-group]]
 == 整合性グループへのSnapshotデータ保護の追加
 
 整合性グループにSnapshotデータ保護を追加すると、事前定義されたスケジュールに基づいて、整合性グループのローカルSnapshotが一定の間隔で作成されます。
@@ -66,6 +67,7 @@ Snapshotでデータを保護したのでlink:../secure-data/encrypt-data-at-res
 
 
 
+[[remove-snapshot-data-protection-from-a-consistency-group]]
 == 整合性グループからのSnapshotデータ保護の削除
 
 整合性グループからSnapshotデータ保護を解除すると、整合性グループ内のすべてのストレージユニットのSnapshotが無効になります。

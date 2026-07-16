@@ -16,6 +16,7 @@ ASA R2システム上のストレージユニットは、Storage Virtual Machine
 
 
 
+[[create-a-storage-vm]]
 == Storage VM を作成
 
 クラスタのセットアップ時に、デフォルトのデータStorage Virtual Machine（VM）が作成されます。別のStorage VMを作成して選択しないかぎり、すべての新しいストレージユニットはデフォルトのデータStorage VM内に作成されます。Storage VMを追加で作成して、アプリケーション、部門、クライアントごとにストレージユニットを分離することができます。たとえば、開発環境用にストレージVMを作成して本番環境用に別のストレージVMを作成したり、財務部門用にストレージVMを作成してマーケティング部門用に別のストレージVMを作成したりできます。
@@ -38,6 +39,7 @@ Storage VMを作成しておきます。これで、Storage VMを使用してを
 
 
 
+[[create-ipspaces]]
 == IPspaceの作成
 
 IPspaceは、Storage VMが配置される個別のIPアドレススペースです。IPspaceを作成すると、Storage VMに独自のセキュアなストレージ、管理、およびルーティングを設定できます。また、管理上分離されたネットワークドメイン内のクライアントで、同じIPアドレスサブネット範囲の重複するIPアドレスを使用できるようにします。
@@ -59,6 +61,7 @@ IPspaceは、Storage VMが配置される個別のIPアドレススペースで�
 
 
 
+[[create-subnets]]
 == サブネットの作成
 
 サブネットを使用すると、LIF（ネットワークインターフェイス）の作成時に使用するIPv4またはIPv6アドレスの特定のブロックを割り当てることができます。サブネットを使用すると、LIFごとに特定のIPアドレスやネットワークマスクではなくサブネット名を指定できるため、LIFの作成が簡単になります。
@@ -89,6 +92,7 @@ IPspaceは、Storage VMが配置される個別のIPアドレススペースで�
 
 
 
+[[create-a-lif-network-interface]]
 == LIFを作成する（ネットワークインターフェイス）
 
 LIF（ネットワークインターフェイス）は、物理ポートまたは論理ポートに関連付けられたIPアドレスです。データへのアクセスに使用するポートにLIFを作成します。Storage VMは、1つ以上のLIFを介してクライアントにデータを提供します。コンポーネントに障害が発生しても、LIFは別の物理ポートにフェイルオーバーまたは移行できるため、ネットワーク通信が中断されません。
@@ -121,6 +125,7 @@ ONTAPコマンドライン インターフェイス (CLI) を使用して、自�
 
 
 
+[[create-a-custom-iscsi-only-lif-service-policy]]
 === カスタムiSCSI専用LIFサービスポリシーを作成する
 
 自動 LIF フェイルオーバーを備えた iSCSI 専用 LIF を作成する場合は、まずカスタム iSCSI 専用 LIF サービス ポリシーを作成する必要があります。
@@ -156,6 +161,7 @@ set -privilege admin
 
 
 
+[[create-iscsi-only-lifs-with-automatic-lif-failover]]
 === 自動LIFフェイルオーバー機能を備えたiSCSI専用LIFを作成する
 
 ストレージ VM 上に自動 LIF フェイルオーバーが有効になっていない iSCSI LIF がある場合、新しく作成された LIF でも自動 LIF フェイルオーバーは有効になりません。LIFの自動フェイルオーバーが有効になっていない状態でフェイルオーバーが発生すると、iSCSI LIFは移行されません。
@@ -197,6 +203,7 @@ network interface show -lif iscsi*
 
 
 
+[[modify-a-lif-network-interfaces]]
 == LIFを変更する（ネットワークインターフェイス）
 
 LIFは、必要に応じて無効にしたり名前を変更したりできます。LIFのIPアドレスとサブネットマスクを変更することもできます。

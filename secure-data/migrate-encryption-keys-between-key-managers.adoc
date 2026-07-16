@@ -50,6 +50,7 @@ summary: データ暗号化キーは、ASA R2システム上のONTAPオンボー
 |===
 
 
+[[migrate-keys-between-key-managers-at-the-ontap-cluster-level]]
 == ONTAPクラスタレベルでのキー管理ツール間でのキーの移行
 
 ONTAP 9.16.1以降では、ONTAPのコマンドラインインターフェイス（CLI）を使用して、クラスタレベルのキー管理ツール間でキーを移行できます。
@@ -131,6 +132,7 @@ set -privilege admin
 ====
 
 
+[[migrate-keys-between-key-managers-across-ontap-cluster-and-storage-vm-levels]]
 == ONTAPクラスタレベルとStorage VMレベルのキー管理ツール間でキーを移行
 
 ONTAPのコマンドラインインターフェイス（CLI）を使用して、クラスタレベルのキー管理ツールとStorage VMレベルのキー管理ツールの間でキーを移行できます。

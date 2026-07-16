@@ -46,6 +46,7 @@ ASA r2 システムでのSnapMirror Active Sync のサポートは、 ONTAP の�
 
 
 
+[[nvme-protocol-limitations-with-snapmirror-active-sync-on-asa-r2-systems]]
 == ASA r2 システムにおけるSnapMirror Active Sync の NVMe プロトコルの制限
 
 NVMe ホストを備えたASA r2 システムでSnapMirror Active Sync を設定する前に、特定の NVMe プロトコルの制限事項に注意する必要があります。

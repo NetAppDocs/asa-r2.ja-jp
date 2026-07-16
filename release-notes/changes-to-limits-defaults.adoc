@@ -18,6 +18,7 @@ ASA R2システムに影響する制限とデフォルトの変更について�
 
 
 
+[[changes-to-ontap-limits]]
 == ONTAPの制限に対する変更
 
 [cols="2,4,4"]

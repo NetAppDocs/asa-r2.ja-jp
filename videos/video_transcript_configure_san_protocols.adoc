@@ -13,7 +13,7 @@ summary: ASA R2ストレージシステムでONTAP System Managerを使用して
 [role="lead"]
 ビデオには以下のトランスクリプトが用意されて `Configure SAN protocols on your ASA r2 storage system`います。
 
-link:videos-common-tasks.html#video_transcript_return_configure_san_protocols["ページに戻る"]
+link:videos-common-tasks.html["ページに戻る"]
 
 ONTAP System Managerを使用すると、SANプロトコルをすばやく簡単に設定できます。この例では、iSCSIネットワークインターフェイスのIPアドレスを設定します。
 

@@ -13,7 +13,7 @@ summary: ASA R2ストレージシステムでONTAP System Managerを使用して
 [role="lead"]
 ビデオには以下のトランスクリプトが用意されて `Replicate data to a remote cluster from an ASA r2 storage system`います。
 
-link:videos-common-tasks.html#video_transcript_return_replicate_data["ページに戻る"]
+link:videos-common-tasks.html["ページに戻る"]
 
 ONTAPシステムマネージャを使用して、ストレージユニットまたは整合グループのSnapshotのスケジュールを設定し、リモートの場所にレプリケートすることでデータを保護できます。
 

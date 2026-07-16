@@ -17,12 +17,14 @@ ASA r2 システムはONTAPの合理化されたバージョンを実行する�
 
 
 
+[[data-protection]]
 == データ保護
 
 ASA r2 システムでサポートされている一般的なデータ保護機能の詳細について説明します。
 
 
 
+[[clustered-external-key-servers]]
 === クラスタ化された外部キーサーバー
 
 ストレージ VM 上のクラスター化された外部キー管理サーバーへの接続を構成できます。クラスター化されたキー サーバーを使用すると、ストレージ VM 上にプライマリ キー サーバーとセカンダリ キー サーバーを指定できます。キーを登録する際、ONTAPは最初にプライマリ キー サーバへのアクセスを試行し、その後処理が正常に完了するまで各セカンダリ サーバへのアクセスを順次試行して、キーの重複を回避します。
@@ -31,6 +33,7 @@ link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-ke
 
 
 
+[[external-key-management-for-encryption-at-rest]]
 === 保存時の暗号化のための外部キー管理
 
 1つ以上のKMIPサーバを使用して、暗号化されたデータにアクセスする際にクラスタで使用するキーを安全に保管できます。
@@ -41,12 +44,14 @@ link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-ke
 
 
 
+[[data-security]]
 == データセキュリティ
 
 ASA r2 システムでサポートされている一般的なデータ セキュリティ機能の詳細について説明します。
 
 
 
+[[administrator-access-management]]
 === 管理者アクセス管理
 
 管理者に割り当てられたロールによって、管理者が実行できる機能が決まります。System Managerには、クラスタ管理者およびStorage VM管理者向けの事前定義されたロールが用意されています。ロールは管理者のアカウントを作成するときに割り当てますが、あとで別のロールを割り当てることもできます。
@@ -56,6 +61,7 @@ ASA r2 システムでサポートされている一般的なデータ セキュ
 
 
 
+[[client-authentication-and-authorization]]
 === クライアント認証と許可
 
 ONTAPでは、標準的な手段を使用して、クライアントや管理者によるストレージへのアクセスを保護し、またウイルスから守ります。保存データの暗号化やWORMストレージでは、高度なテクノロジも使用できます。ONTAPでは、信頼できるソースでIDを検証してクライアント マシンおよびユーザを認証します。ユーザのクレデンシャルとファイルまたはディレクトリに対して設定されているアクセス許可を比較し、ユーザにファイルやディレクトリへのアクセスを許可します。
@@ -64,6 +70,7 @@ link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.
 
 
 
+[[oauth-2-0-authentication]]
 === OAuth 2.0認証
 
 Open Authorization（OAuth 2.0）フレームワークを使用して、 ONTAPクラスターへのアクセスを制御できます。  OAuth 2.0 は、署名されたアクセス トークンを使用して、保護されたリソースへのアクセスを制限および制御します。
@@ -72,6 +79,7 @@ link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["OA
 
 
 
+[[saml-authentication-and-administrator-access]]
 === SAML認証と管理者アクセス
 
 Web サービスに対して Security Assertion Markup Language (SAML) 認証を構成して有効にすることができます。  SAML は、Active Directory や LDAP などのディレクトリ サービス プロバイダーではなく、外部 ID プロバイダー (IdP) によってユーザーを認証します。
@@ -80,6 +88,7 @@ link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authenticat
 
 
 
+[[tls-hardware-offload]]
 === TLSハードウェアオフロード
 
 サポートされているイーサネットカードに、クラスタ全体のトランスポート層セキュリティ（TLS）の暗号化と復号化をオフロードできます。これにより CPU 負荷が軽減され、TLS を使用するシステムのパフォーマンスが向上します。
@@ -88,12 +97,14 @@ link:https://docs.netapp.com/us-en/ontap/networking/configure-tls-offload.html["
 
 
 
+[[networking]]
 == ネットワーク
 
 ASA r2 システムでサポートされている一般的なネットワーク機能の詳細について説明します。
 
 
 
+[[fips-compliance]]
 === FIPS準拠
 
 ONTAPは、すべてのSSL接続に対する連邦情報処理標準（FIPS）140-2に準拠しています。ONTAP内で SSL FIPS モードをオン/オフにしたり、SSL プロトコルをグローバルに設定したり、RC4 などの弱い暗号をオフにしたりすることができます。
@@ -105,6 +116,7 @@ ONTAP 9.18.1 以降では、SSL でポスト量子コンピューティング暗
 
 
 
+[[link-aggregation-groups-lags]]
 === リンク アグリゲーション グループ（LAG）
 
 インターフェイス グループ（別名リンク アグリゲーション グループ[LAG]）は、同じノード上の2つ以上の物理ポートを1つの論理ポートに組み合わせて作成します。論理ポートを使用すると、耐障害性と可用性が向上し、負荷も共有できます。
@@ -113,12 +125,14 @@ link:https://docs.netapp.com/us-en/ontap/networking/combine_physical_ports_to_cr
 
 
 
+[[performance]]
 == Performance
 
 ASA r2システムでサポートされている一般的なパフォーマンス機能の詳細については、こちらをご覧ください。
 
 
 
+[[modify-default-settings-that-control-automatic-qos-throughput-ceiling-increases]]
 === QoS スループット上限の自動増加を制御するデフォルト設定を変更します
 
 適応型および非適応型のQoSポリシーグループは、デフォルトで自動的に有効化され、ワークロードのスループット上限を1秒間、一時的に50%増加させることで、短期的なパフォーマンス向上要求に対応します。ONTAP 9.19.1以降では、これらのデフォルト設定を変更できます。ONTAP 9.18.1以前では、これらの設定を変更することはできません。
@@ -127,12 +141,14 @@ link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-
 
 
 
+[[san-configuration]]
 == SANの構成
 
 ストレージ エリア ネットワーク（SAN）は、iSCSIやFCなどのSAN転送プロトコルを介してホストに接続されるストレージ ソリューションで構成されます。1つ以上のスイッチを介してホストにストレージ ソリューションを接続するように、SANを構成できます。iSCSIを使用している場合は、スイッチを使用せずにホストにストレージ ソリューションを直接接続するように、SANを構成することもできます。
 
 
 
+[[san-direct-attachment]]
 === SAN ダイレクトアタッチメント
 
 ONTAP 9.19.1以降、FCスイッチは、FCおよびFC-NVMeホストとONTAPストレージ間の接続を確立するために必要ありません。ホストは、ASA r2システムのFCアダプタポートに直接接続できます。ダイレクト接続機能は、シンプルさが重要なリモートサイトやハイブリッド環境において特に有用です。
@@ -142,6 +158,7 @@ ONTAP 9.19.1以降、FCスイッチは、FCおよびFC-NVMeホストとONTAPス�
 
 
 
+[[san-protocols]]
 == SANプロトコル
 
 ASA r2 システムは、すべての SAN プロトコル (iSCSI、FC、NVMe/FC、NVMe/TCP) をサポートします。
@@ -164,6 +181,7 @@ ONTAP 9.16.1 以降では、NVMe 名前空間のスペース割り当て解除 (
 
 
 
+[[storage-efficiency]]
 == Storage Efficiency
 
 ストレージ効率とは、ストレージ リソースを最適化し、無駄なスペースを最小限に抑え、書き込まれたデータの物理的なフットプリントを削減することで、ストレージ システムが利用可能なスペースをどれだけ効率的に使用しているかを示す指標です。
@@ -174,12 +192,14 @@ link:https://docs.netapp.com/us-en/ontap/concepts/storage-efficiency-overview.ht
 
 
 
+[[global-deduplication]]
 === グローバル重複排除
 
 ONTAP 9.19.1以降、_グローバル重複排除_は、ストレージユニットレベルのlink:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html["既存の ONTAP 重複排除によるスペース削減効果"^]をStorage Availability Zone（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除は、機能ライセンスを必要とせず、デフォルトで有効になっており、既存のストレージ効率化テクノロジとシームレスに統合され、最小限のパフォーマンスへの影響で透過的に動作し、管理設定も不要です。
 
 
 
+[[system-manager]]
 == System Manager
 
 System Manager では、さまざまなアクション、オブジェクト、情報トピックを検索できます。表示されたデータの中から特定のエントリを検索することもできます。

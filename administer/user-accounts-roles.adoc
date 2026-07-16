@@ -15,6 +15,7 @@ System Managerを使用して、Active Directoryドメインコントローラ�
 
 
 
+[[configure-active-directory-domain-controller-access]]
 == Active Directoryドメインコントローラアクセスの設定
 
 Active Directory（AD）ドメインコントローラからクラスタまたはStorage VMへのアクセスを設定し、ADアカウントからのアクセスを有効にできるようにします。
@@ -29,6 +30,7 @@ Active Directory（AD）ドメインコントローラからクラスタまた�
 
 
 
+[[configure-ldap]]
 == LDAPの設定
 
 認証用のユーザ情報を一元的に管理するように、Lightweight Directory Access Protocol（LDAP）サーバを設定します。
@@ -47,6 +49,7 @@ Active Directory（AD）ドメインコントローラからクラスタまた�
 
 
 
+[[configure-saml-authentication]]
 == SAML認証の設定
 
 Security Assertion Markup Language（SAML）認証を使用すると、Active DirectoryやLDAPなどの直接接続のサービスプロバイダではなく、セキュアなアイデンティティプロバイダ（IdP）でユーザを認証できます。
@@ -80,6 +83,7 @@ IdPシステムに認証画面が表示されます。
 
 
 
+[[create-user-account-roles]]
 == ユーザアカウントロールの作成
 
 クラスタ管理者とStorage VM管理者のロールは、クラスタの初期化時に自動的に作成されます。追加のユーザアカウントロールを作成して、そのロールに割り当てられたユーザがクラスタで実行できる特定の機能を定義します。
@@ -100,6 +104,7 @@ IdPシステムに認証画面が表示されます。
 
 
 
+[[create-an-administrator-account]]
 == 管理者アカウントの作成
 
 管理者ユーザアカウントを作成して、アカウントユーザがアカウントに割り当てられたロールに基づいてクラスタに対して特定の操作を実行できるようにします。アカウントのセキュリティを強化するには、アカウントの作成時に多要素認証（MFA）を設定します。

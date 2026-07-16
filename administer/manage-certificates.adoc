@@ -17,6 +17,7 @@ Online Certificate Status Protocol （ OCSP ）は、 SSL 接続と Transport La
 
 
 
+[[generate-a-certificate-signing-request]]
 == 証明書署名要求を生成する
 
 証明書署名要求（CSR）を生成して、パブリック証明書の生成に使用できる秘密鍵を作成します。
@@ -34,6 +35,7 @@ Online Certificate Status Protocol （ OCSP ）は、 SSL 接続と Transport La
 
 
 
+[[add-a-trusted-certificate-authority]]
 == 信頼された認証局を追加します。
 
 ONTAPには、Transport Layer Security（TLS）を使用するアプリケーション用の信頼されたルート証明書のデフォルトセットが用意されています。必要に応じて、信頼された認証局を追加できます。
@@ -50,6 +52,7 @@ ONTAPには、Transport Layer Security（TLS）を使用するアプリケーシ
 
 
 
+[[renew-or-delete-a-trusted-certificate-authority]]
 == 信頼された認証局を更新または削除する
 
 信頼された認証局は毎年更新する必要があります。期限切れの証明書を更新しない場合は、削除する必要があります。
@@ -83,6 +86,7 @@ ASA R2システム上の既存の信頼された認証局を更新または削�
 
 
 
+[[add-a-clientserver-certificate-or-local-certificate-authorities]]
 == クライアント/サーバ証明書またはローカル認証局を追加する
 
 セキュアなWebサービスを有効にするには、クライアント/サーバ証明書またはローカル認証局を追加します。
@@ -99,6 +103,7 @@ ASA R2システムに新しいクライアント/サーバ証明書または地�
 
 
 
+[[renew-or-delete-a-clientserver-certificate-or-local-certificate-authorities]]
 == クライアント/サーバ証明書またはローカル認証局の更新または削除
 
 クライアント/サーバ証明書とローカル認証局は、毎年更新する必要があります。期限切れの証明書やローカル認証局を更新しない場合は、削除する必要があります。

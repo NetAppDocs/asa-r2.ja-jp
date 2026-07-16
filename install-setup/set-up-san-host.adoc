@@ -25,6 +25,7 @@ image::multi-fabric-san-configuration.png[2つのFCファブリックで複数�
 
 
 
+[[zoning-recommendation-for-fc-hosts]]
 == FCホストのゾーニングに関する推奨事項
 
 ゾーニングを使用するようにFCホストを設定する必要があります。ASA R2システムは、他のすべてのONTAPシステムと同じFCホストゾーニングの推奨事項とガイドラインに従います。

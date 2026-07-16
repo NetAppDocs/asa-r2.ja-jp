@@ -27,6 +27,7 @@ ASA r2 システムは、オールフラッシュ ソリューション上に構
 
 
 
+[[personality-differences]]
 == 性格の違い
 
 ASA R2システムでは、ONTAPソフトウェアが合理化され、SAN関連以外の機能の可視性と可用性を制限しながら、重要なSAN機能をサポートします。たとえば、ASA R2システムで実行されているSystem Managerには、NASクライアントのホームディレクトリを作成するオプションは表示されません。この合理化されたバージョンのONTAPは、_ ASA R2 personality_として識別されます。ASAシステムで実行されているONTAPは、_ ASA ONTAP personality_として識別されます。AFFおよびFAS ONTAPシステムで実行されているONTAPは、_Unified ONTAP personality_として識別されます。ONTAPのパーソナリティの違いについては、ONTAPコマンドリファレンス（マニュアルページ）、REST API仕様、およびEMSメッセージ（該当する場合）を参照してください。
@@ -43,6 +44,7 @@ ONTAPストレージシステムのパーソナリティは変更できません
 
 
 
+[[storage-layer-differences]]
 == ストレージ層の違い
 
 ASA r2 システムは、 FAS、 AFF、およびASAシステムで使用されるストレージ レイヤーとは異なる、簡素化されたストレージ レイヤーを使用します。
@@ -57,6 +59,7 @@ ASA r2 システムのストレージ層では、アグリゲートの代わり�
 
 
 
+[[summary-of-asa-r2-system-differences]]
 == ASA r2システムの違いのまとめ
 
 ASA r2 システムは、 FAS、 AFF、およびASAシステムと次の点で異なります。

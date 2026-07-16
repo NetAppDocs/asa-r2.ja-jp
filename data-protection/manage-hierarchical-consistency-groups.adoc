@@ -15,6 +15,7 @@ ONTAP 9.16.1 以降では、System Manager を使用してASA r2 システムに
 
 
 
+[[promote-an-existing-consistency-group-into-a-parent-consistency-group]]
 == 既存の整合性グループを親整合性グループに昇格する
 
 既存の整合性グループを親に昇格すると、新しい子整合性グループが作成され、昇格された整合性グループに属するストレージ ユニットが新しい子整合性グループに移動されます。ストレージ ユニットを親整合性グループに直接関連付けることはできません。
@@ -35,6 +36,7 @@ ONTAP 9.16.1を実行していて、昇格したいコンシステンシーグ�
 
 
 
+[[demote-a-parent-consistency-group-to-a-single-consistency-group]]
 == 親整合グループを単一の整合グループに降格する
 
 親整合性グループを単一の整合性グループに降格すると、関連付けられている子整合性グループのストレージ ユニットが親整合性グループに追加されます。子の整合性グループは削除され、親は単一の整合性グループとして管理されます。
@@ -54,6 +56,7 @@ link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group["Sna
 
 
 
+[[create-a-child-consistency-group]]
 == 子整合グループを作成する
 
 子整合性グループを作成すると、各子に個別のスナップショット ポリシーを適用できます。  ONTAP 9.17.1 以降では、個別のレプリケーション ポリシーを各子に直接適用することもできます。  ONTAP 9.16.1 では、レプリケーション ポリシーは親レベルでのみ適用できます。
@@ -104,6 +107,7 @@ link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group["Sna
 
 
 
+[[detach-a-child-consistency-group-from-a-parent-consistency-group]]
 == 親整合グループから子整合グループの接続解除
 
 子コンシステンシ グループを親コンシステンシ グループからデタッチすると、子コンシステンシ グループは親コンシステンシ グループから削除され、単一のコンシステンシ グループとして管理されます。親に適用されたレプリケーション ポリシーは、分離された子の整合性グループには適用されなくなりました。

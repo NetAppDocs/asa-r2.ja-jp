@@ -15,6 +15,7 @@ summary: ストレージ可用性ゾーンのスペースが少なくなって�
 
 
 
+[[manually-cut-over-clients-to-an-asa-r2-system-after-a-storage-vm-migration]]
 == ストレージ VM の移行後にクライアントをASA r2 システムに手動で切り替える
 
 ASAクラスタからASA r2 クラスタへのストレージ VM の移行中に自動クライアント カットオーバーを無効にした場合は、移行が正常に完了した後、 ASA r2 ストレージ VM がクライアントにデータを提供できるように手動でカットオーバーを実行します。
@@ -42,6 +43,7 @@ vserver migrate show
 
 
 
+[[manually-remove-an-asa-storage-vm-after-migration-to-an-asa-r2-cluster]]
 == ASA r2 クラスタへの移行後にASAストレージ VM を手動で削除する
 
 ASAクラスタからASA r2 クラスタへのストレージ VM の移行中に自動ソース クリーンアップを無効にした場合は、移行が完了したら、ストレージ VM をASAクラスタから削除して、ストレージ領域を解放します。

@@ -18,6 +18,7 @@ ASA R2 REST APIは、Unified ONTAPパーソナリティで提供されるREST AP
 
 
 
+[[types-of-api-changes]]
 == APIの変更の種類
 
 ASA R2システムREST APIと、FAS、AFF、およびASAシステムで使用できるUnified ONTAP REST APIには、いくつかの違いがあります。変更の種類を理解することで、オンラインのAPIリファレンスドキュメントをより有効に活用できます。
@@ -45,6 +46,7 @@ ASA R2での特定のREST API要求の処理方法にいくつかの変更があ
 
 
 
+[[enhanced-security-with-oauth-2-0]]
 == OAuth 2.0によるセキュリティの強化
 
 OAuth 2.0は業界標準の認可フレームワークです。署名されたアクセストークンに基づいて、保護されたリソースへのアクセスを制限および制御するために使用されます。ASA R2システムリソースを保護するために、System Managerを使用してOAuth 2.0を設定できます。
@@ -53,6 +55,7 @@ System ManagerでOAuth 2.0をセットアップすると、REST APIクライア�
 
 
 
+[[access-the-asa-r2-api-reference-documentation-through-the-swagger-ui]]
 == Swagger UIからASA R2 APIのリファレンスドキュメントにアクセス
 
 REST APIのリファレンスドキュメントには、ASA R2システムのSwagger UIからアクセスできます。

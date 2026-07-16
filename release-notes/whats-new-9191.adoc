@@ -18,6 +18,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 
 
 
+[[data-protection]]
 == データ保護
 
 [cols="2,4"]
@@ -29,6 +30,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[san-data-migration]]
 == SANデータ移行
 
 [cols="2,4"]
@@ -40,6 +42,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[san-configuration]]
 == SANの構成
 
 [cols="2,4"]
@@ -51,6 +54,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[security]]
 == セキュリティ
 
 [cols="2,4"]
@@ -65,6 +69,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[storage-efficiency]]
 == Storage Efficiency
 
 [cols="2,4"]
@@ -76,6 +81,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[storage-resource-management]]
 == ストレージ リソースの管理
 
 [cols="2,4"]
@@ -90,6 +96,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[upgrade]]
 == Upgrade
 
 [cols="2,4"]

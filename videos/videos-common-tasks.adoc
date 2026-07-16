@@ -13,16 +13,32 @@ summary: ASA R2ストレージシステムでONTAP System Managerを使用して
 [role="lead"]
 ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。
 
-.ASA R2システムでSANプロトコルを設定する
+
+
+[[configure-san-protocols-on-your-asa-r2-system]]
+== ASA R2システムでSANプロトコルを設定する
+
+ONTAP System Manager を使用すると、SAN プロトコルを迅速かつ簡単に設定できます。この例では、iSCSI ネットワークインターフェイスの IP アドレスを設定します。
+
 video::96cf3b2d-1cbd-4fff-a6e7-b1f0014ef793[panopto]
 link:video_transcript_configure_san_protocols.html["ビデオのトランスクリプト"]
 
-[#video_transcript_return_configure_san_protocols]
-.ASA R2システムでのSANストレージのプロビジョニング
+
+
+[[provision-san-storage-on-your-asa-r2-system]]
+== ASA R2システムでのSANストレージのプロビジョニング
+
+ONTAP System Manager を使用して、ASA r2 ストレージシステム上のホスト用ストレージユニットを迅速かつ簡単にプロビジョニングできます。この例では、VMware ホスト用に 6 つの新しいストレージユニットを作成します。
+
 video::1d3e1a18-7dbe-44e9-a53d-b1f0014ef7c5[panopto]
 link:video_transcript_provision_san_storage.html["ビデオのトランスクリプト"]
 
-[#video_transcript_return_provision_san_storage]
-.ASA R2システムからリモートクラスタにデータをレプリケート
+
+
+[[replicate-data-to-a-remote-cluster-from-an-asa-r2-storage-system]]
+== ASA R2ストレージシステムからリモートクラスタにデータをレプリケートする
+
+ONTAP System Manager を使用して、ストレージユニットまたは整合性グループのスナップショットをスケジュール設定し、リモートの場所にレプリケートすることで、データを保護できます。この例では、既存のストレージユニットのスナップショットをスケジュール設定します。
+
 video::4b78312d-1bfa-4df5-afac-b1f0014ef80e[panopto]
 link:video_transcript_replicate_data.html["ビデオのトランスクリプト"]

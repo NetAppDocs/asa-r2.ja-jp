@@ -11,7 +11,10 @@ summary: ストレージ可用性ゾーンのスペースが少なくなって�
 
 
 [role="lead"]
-ONTAP 9.18.1 以降では、任意のASAクラスタから任意のASA r2 クラスタにストレージ仮想マシン (VM) を無停止で移行できます。  ASAクラスタからASA r2 クラスタに移行すると、SAN のみの環境向けにASA r2 システムの簡素化され合理化されたアーキテクチャを採用できます。
+ONTAP 9.18.1 以降では、任意の標準 ASA クラスターから任意の ASA r2 クラスターへ、ストレージ仮想マシン（VM）を無停止で移行できます。標準 ASA クラスターから ASA r2 クラスターへ移行することで、SAN 専用環境向けの ASA r2 システムの簡素化・合理化されたアーキテクチャを採用できます。
+
+
+NOTE: ASA MetroCluster から ASA r2 クラスターにストレージ VM を移行することはできません。ASA r2 システムは MetroCluster 構成をサポートしていません。
 
 ASAとASA r2 ストレージ システム間のストレージ VM 移行は、次のようにサポートされます。
 
@@ -46,8 +49,7 @@ ASAとASA r2 ストレージ システム間のストレージ VM 移行は、�
 
 
 |===
-
-NOTE: ASAおよびASA r2システムの最新のリストについては、以下を参照してください。link:https://hwu.netapp.com/["NetApp Hardware Universe"^] 。  ASA r2 システムは、 NetApp Hardware Universeに「ASA A シリーズ/C シリーズ (新規)」として記載されています。
+ASAおよびASA r2システムの最新のリストについては、以下を参照してください。link:https://hwu.netapp.com/["NetApp Hardware Universe"^] 。  ASA r2 システムは、 NetApp Hardware Universeに「ASA A シリーズ/C シリーズ (新規)」として記載されています。
 
 ストレージ VM を ASA クラスタからASA r2 クラスタに移行できるのは、 ASAクラスタからのみです。他のタイプのONTAPシステムからの移行はサポートされていません。
 
@@ -56,6 +58,7 @@ ASA r2 クラスタとASAクラスタ内のすべてのノードでONTAP 9.18.1 
 
 
 
+[[step-1-verify-the-status-of-the-asa-storage-vm]]
 == ステップ1: ASAストレージVMのステータスを確認する
 
 ASAシステムからストレージ VM を移行する前に、NVMe 名前空間またはvVols が存在しないようにし、ストレージ VM 内の各ボリュームに LUN が 1 つだけ含まれている必要があります。  NVMe 名前空間とvVolsの移行はサポートされていません。  ASA r2 システムのアーキテクチャでは、ボリュームに単一の LUN が含まれている必要があります。
@@ -95,6 +98,7 @@ ASAとASA r2 クラスタ間のクラスタ ピア関係を作成する準備が
 
 
 
+[[step-2-create-a-cluster-peer-relationship-between-your-asa-and-asa-r2-clusters]]
 == ステップ2: ASAとASA r2クラスタ間のクラスタピア関係を作成する
 
 ストレージ VM をASAクラスタからASA r2 クラスタに移行する前に、ピア関係を作成する必要があります。ピア関係は、 ONTAPクラスタとストレージ VM が安全にデータを交換できるようにするネットワーク接続を定義します。
@@ -165,6 +169,7 @@ ASAストレージ VM を移行用に準備する準備が整いました。
 
 
 
+[[step-3-prepare-for-storage-vm-migration-from-an-asa-to-an-asa-r2-cluster]]
 == ステップ3: ASAからASA r2クラスタへのストレージVMの移行の準備
 
 ストレージ仮想マシン (VM) をASAクラスタからASA r2 クラスタに移行する前に、移行の事前チェックを実行し、必要な問題を修正する必要があります。事前チェックが正常に完了するまで、移行を実行することはできません。
@@ -186,6 +191,7 @@ ASAクラスタを移行する準備をするために問題を修正する必�
 
 
 
+[[step-4-migrate-an-asa-storage-vm-to-an-asa-r2-cluster]]
 == ステップ4: ASAストレージVMをASA r2クラスタに移行する
 
 ASAクラスタを準備し、 ASA r2 クラスタとの必要なクラスタ ピア関係を作成したら、ストレージ VM の移行を開始できます。

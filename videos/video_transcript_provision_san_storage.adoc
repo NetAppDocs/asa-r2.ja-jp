@@ -13,7 +13,7 @@ summary: ASA R2ストレージシステムでONTAP System Managerを使用して
 [role="lead"]
 ビデオには以下のトランスクリプトが用意されて `Provision SAN storage on your ASA r2 storage system`います。
 
-link:videos-common-tasks.html#video_transcript_return_provision_san_storage["ページに戻る"]
+link:videos-common-tasks.html["ページに戻る"]
 
 ONTAP System Managerを使用すると、ASA R2ストレージシステム上のホスト用のストレージユニットをすばやく簡単にプロビジョニングできます。
 

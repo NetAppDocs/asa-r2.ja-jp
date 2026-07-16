@@ -142,6 +142,7 @@ NOTE: その `lun move-in-volume`コマンドは、  `lun rename`そして `vser
 ====
 
 
+[[set-up-an-ontap-asa-r2-cluster-using-the-cli]]
 == CLIを使用したONTAP ASA R2クラスタのセットアップ
 
 お勧めしlink:../install-setup/initialize-ontap-cluster.html["System Managerを使用してONTAP ASA R2クラスタをセットアップする"]ます。System Managerには、クラスタの運用を迅速かつ簡単に開始できるガイド付きワークフローが用意されています。ただし、ONTAPコマンドを使い慣れている場合は、クラスタのセットアップにONTAPのコマンドラインインターフェイス（CLI）を使用することもできます。CLIを使用したクラスタセットアップには、System Managerを使用したクラスタセットアップに比べて追加のオプションや利点はありません。

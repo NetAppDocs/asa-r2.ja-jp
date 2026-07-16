@@ -42,6 +42,7 @@ ASA r2システムは、自己暗号化ドライブ（SED）を使用したハ�
 
 
 
+[[support-for-snapmirror-replication]]
 == SnapMirrorレプリケーションのサポート
 
 SnapMirrorレプリケーションは、次の制限付きでASA r2 システムでサポートされます。

@@ -18,6 +18,7 @@ ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能につい
 
 
 
+[[san-data-migration]]
 == SANデータ移行
 
 [cols="2,4"]
@@ -29,6 +30,7 @@ ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能につい
 |===
 
 
+[[data-protection]]
 == データ保護
 
 [cols="2,4"]
@@ -49,6 +51,7 @@ ASA r2 システム用のONTAP 9.17.1 で利用できる新しい機能につい
 |===
 
 
+[[storage-management]]
 == ストレージ管理
 
 [cols="2,4"]

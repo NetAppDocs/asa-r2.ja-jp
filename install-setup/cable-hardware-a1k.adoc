@@ -34,6 +34,7 @@ image:../media/drw_cable_pull_tab_direction_ieops-1699.svg["ケーブルプル�
 
 
 
+[[step-1-cable-the-clusterha-connections]]
 == 手順1：クラスタ/ HAをケーブル接続する
 
 コントローラーをケーブルで接続してONTAPクラスター接続を作成します。スイッチレスクラスタの場合は、コントローラ同士を接続します。スイッチドクラスタの場合は、コントローラをクラスタネットワークスイッチに接続します。
@@ -91,6 +92,7 @@ image::../media/drw_a1k_switched_cluster_cabling_ieops-1652.svg[クラスタネ�
 ====
 
 
+[[step-2-cable-the-host-network-connections]]
 == 手順2：ホストネットワーク接続をケーブル接続する
 
 イーサネットモジュールポートをホストネットワークに接続します。
@@ -135,6 +137,7 @@ image::../media/drw_a1k_network_cabling2_ieops-1650.svg[10/25 GbE Ethernetネッ
 ====
 
 
+[[step-3-cable-the-management-network-connections]]
 == 手順3：管理ネットワークをケーブル接続する
 
 コントローラを管理ネットワークに接続します。
@@ -160,6 +163,7 @@ IMPORTANT: まだ電源コードを接続しないでください。
 
 
 
+[[step-4-cable-the-shelf-connections]]
 == 手順4：シェルフをケーブル接続する
 
 ASA A1Kストレージシステムは、NSM100またはNSM100Bモジュールのいずれかを使用したNS224シェルフに対応しています。各モジュールの主な違いは以下のとおりです：
@@ -212,9 +216,9 @@ NS224シェルフが2台ある場合は、このケーブル接続オプショ�
 . コントローラAで、次のポートを接続します。
 +
 .. ポートe11aをシェルフ1のNSM Aのポートe0aに接続します。
-.. ポートe11bをシェルフ2のNSM Bのポートe0bに接続します。
-.. ポートe10aをシェルフ2のNSM Aのポートe0aに接続します。
 .. ポートe10bをシェルフ1のNSM Bポートe0bに接続します。
+.. ポートe10aをシェルフ2のNSM Aのポートe0aに接続します。
+.. ポートe11bをシェルフ2のNSM Bのポートe0bに接続します。
 +
 image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["コントロオラAノコントロオラ/シエルフカンノセツソク"]
 
@@ -223,9 +227,9 @@ image:../media/drw_a1k_2shelf_cabling_a_ieops-1705.svg["コントロオラAノ�
 . コントローラBで、次のポートを接続します。
 +
 .. ポートe11aをシェルフ1のNSM Bのポートe0aに接続します。
-.. ポートe11bをシェルフ2のNSM Aのポートe0bに接続します。
-.. ポートe10aをシェルフ2のNSM Bのポートe0aに接続します。
 .. ポートe10bをシェルフ1のNSM Aのポートe0bに接続します。
+.. ポートe10aをシェルフ2のNSM Bのポートe0aに接続します。
+.. ポートe11bをシェルフ2のNSM Aのポートe0bに接続します。
 +
 image:../media/drw_a1k_2shelf_cabling_b_ieops-1706.svg["コントローラBのコントローラ/シェルフ間の接続"]
 

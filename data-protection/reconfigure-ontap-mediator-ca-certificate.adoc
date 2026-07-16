@@ -15,6 +15,7 @@ summary: 自己署名証明書を使用してONTAP Mediator またはONTAP Cloud
 
 
 
+[[step-1-remove-the-mediator-configuration]]
 == ステップ1: メディエーター構成を削除する
 
 メディエーターを再構成するには、まずクラスターから現在の構成を削除する必要があります。
@@ -30,6 +31,7 @@ summary: 自己署名証明書を使用してONTAP Mediator またはONTAP Cloud
 
 
 
+[[step-2-remove-the-self-signed-certificate]]
 == ステップ2: 自己署名証明書を削除する
 
 メディエーター構成を削除した後、関連付けられている自己署名証明書をクラスターから削除する必要があります。
@@ -43,6 +45,7 @@ summary: 自己署名証明書を使用してONTAP Mediator またはONTAP Cloud
 
 
 
+[[step-3-reinstall-the-mediator-with-a-third-party-certificate]]
 == ステップ3: サードパーティの証明書を使用してメディエーターを再インストールする
 
 関連付けられている自己署名証明書を削除した後、サードパーティの証明書を使用してメディエーターを再構成できます。

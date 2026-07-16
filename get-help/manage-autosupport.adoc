@@ -20,6 +20,7 @@ AutoSupportを管理するには、クラスタ管理者である必要があり
 
 
 
+[[test-autosupport-connectivity]]
 == AutoSupport接続のテスト
 
 クラスタのセットアップが完了したら、AutoSupport接続をテストして、テクニカルサポートがAutoSupportによって生成されたメッセージを受信することを確認する必要があります。
@@ -35,6 +36,7 @@ AutoSupportを管理するには、クラスタ管理者である必要があり
 
 
 
+[[add-autosupport-recipients]]
 == AutoSupport受信者の追加
 
 社内のサポート部門のメンバーを、AutoSupportメッセージを受信するEメールアドレスのリストに追加します。
@@ -55,6 +57,7 @@ AutoSupportを管理するには、クラスタ管理者である必要があり
 
 
 
+[[send-autosupport-data]]
 == AutoSupportデータの送信
 
 ASA R2システムで問題が発生した場合、AutoSupportデータを使用すると、問題の特定と解決にかかる時間が大幅に短縮されます。
@@ -70,6 +73,7 @@ AutoSupportデータがテクニカルサポートに送信されます。
 
 
 
+[[suppress-support-case-generation]]
 == サポートケースの生成を抑制
 
 ASA R2システムでアップグレードまたはメンテナンスを実行する場合は、アップグレードまたはメンテナンスが完了するまでAutoSupportでサポートケースが生成されないようにすることができます。
@@ -86,6 +90,7 @@ ASA R2システムでアップグレードまたはメンテナンスを実行�
 
 
 
+[[resume-support-case-generation]]
 == サポートケースの生成を再開
 
 アップグレードまたはメンテナンス期間中にサポートケースが生成されないようにした場合は、アップグレードまたはメンテナンスの完了後すぐにサポートケースの生成を再開する必要があります。

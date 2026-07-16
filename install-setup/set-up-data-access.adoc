@@ -15,6 +15,7 @@ summary:
 
 
 
+[[set-up-data-access-from-san-hosts]]
 == SANホストからのデータアクセスを設定する
 
 SANホストからASA R2システムへのデータアクセスを設定するために必要な設定は、ホストのオペレーティングシステムとプロトコルによって異なります。最適なパフォーマンスと正常なフェイルオーバーを実現するには、正しい設定が重要です。
@@ -23,6 +24,7 @@ link:https://docs.netapp.com/us-en/ontap-sanhost/hu_vsphere_8.html["VMware vSphe
 
 
 
+[[migrate-vmware-virtual-machines]]
 == VMware仮想マシンの移行
 
 VMワークロードをASAストレージシステムからASA r2ストレージシステムに移行する必要がある場合、 NetApp以下を使用することを推奨しています。link:https://www.vmware.com/products/cloud-infrastructure/vsphere-foundation["VMware vSphere vMotion"^]中断なくライブでデータの移行を実行します。
@@ -38,6 +40,7 @@ ASA r2 ストレージ ユニットは、デフォルトでシン プロビジ�
 
 
 
+[[migrate-data-from-a-third-party-storage-system]]
 == サードパーティのストレージシステムからデータを移行する
 
 ONTAP 9.17.1以降では、Foreign LUN Import（FLI）を使用して、サードパーティ製ストレージシステムのLUNからASA r2システムにデータを移行できます。データ移行にFLIを使用すると、移行プロセス中のデータ損失やダウンタイムのリスクを軽減できます。
@@ -51,6 +54,7 @@ ONTAP 9.19.1以降、FLIはバックエンド接続用のiSCSIプロトコルを
 
 
 
+[[configure-your-asa-r2-system-as-a-storage-provider-in-your-vmware-environment]]
 == ASA R2システムをVMware環境のストレージプロバイダとして設定する
 
 ONTAP tools for VMwareを使用すると、ASA R2システムをVMware環境のストレージプロバイダとして簡単に有効にすることができます。
