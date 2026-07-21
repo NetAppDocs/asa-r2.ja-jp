@@ -141,6 +141,15 @@ link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-
 
 
 
+[[ipspace-tcp-performance]]
+=== IPspaceのTCPパフォーマンス
+
+ONTAP 9.19.1以降、ONTAPはPRRとRACKという2つの損失回復機能をONTAP TCPスタックに統合することで、損失が多く遅延の大きいWANリンク上のTCPデータ転送パフォーマンスを向上させます。PRRはすべてのネットワークに適しており、デフォルトで有効になっています。RACKは、リンク速度が約25 Gigabits/secondの輻輳したネットワークに適しており、デフォルトでは無効になっています。
+
+link:https://docs.netapp.com/us-en/ontap/networking/improve-tcp-wan-performance.html["PRRとRACKを使用してTCP WANパフォーマンスを向上させる方法の詳細"^]。
+
+
+
 [[san-configuration]]
 == SANの構成
 

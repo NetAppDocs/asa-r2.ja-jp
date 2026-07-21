@@ -30,6 +30,18 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 |===
 
 
+[[performance]]
+== Performance
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#performance["TCPのパフォーマンス向上"] | ONTAPは、PRRとRACKという2つの損失回復機能をONTAP TCPスタックに統合することで、損失が多く遅延の大きいWANリンク上のTCPデータ転送パフォーマンスを向上させます。 
+|===
+
+
 [[san-data-migration]]
 == SANデータ移行
 
@@ -62,7 +74,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 | 更新 | 説明 
 
 
-| link:../secure-data/enable-anti-ransomware-protection.html["SnapMirror アクティブ同期関係を使用したARP/AIのサポート"] | 人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期関係におけるプライマリ読み書きストレージユニットをサポートしています。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。 
+| link:../secure-data/enable-anti-ransomware-protection.html["SnapMirror アクティブ同期関係を使用したARP/AIのサポート"] | 人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期関係におけるプライマリ読み書きストレージユニットをサポートしています。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。以前は同期レプリケーション関係によりデフォルトのARP有効化が抑制されていたクラスターをONTAP 9.19.1にアップグレードすると、自動的に復元されます。アップデート前の警告により管理者に通知され、無効化するオプションが提供されます。 
 
 
 | link:../learn-more/additional-supported-ontap-features.html#tls-hardware-offload["TLS ハードウェアオフロードのサポート"] | サポートされているイーサネットカードに、クラスタ全体のトランスポート層セキュリティ（TLS）の暗号化と復号化をオフロードできます。これにより CPU 負荷が軽減され、TLS を使用するシステムのパフォーマンスが向上します。 

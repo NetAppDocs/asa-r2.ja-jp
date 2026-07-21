@@ -2770,7 +2770,6 @@
   <block id="7dadbaefb3cf1bd5b8a86802fac0839a" category="inline-link-macro">ONTAP 自動アップグレード前チェックを実行</block>
   <block id="c240788f59668332d5c171cbe489376a" category="paragraph"><block ref="9c7fdd39bc5019d6cec3e908fec6a772" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
   <block id="9917a58904f13efdde588f2978fd93b9" category="inline-link-macro">AIによる自律型ランサムウェア対策を有効にする</block>
-  <block id="fb1b02686213ed6e031c1f039708270a" category="admonition">ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIを有効にするには、<block ref="1ee41ad3123e5db18e6fae76e28afe9f" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="b71329b670dac542862012007751fd6f" category="summary">ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。</block>
   <block id="e7afd2cc385e151dc252f52489678be6" category="doc">ASA r2システムでのSnapMirrorアクティブ同期保護に向けたAIXホストの準備</block>
   <block id="16624daae6b7659680047c4fc428fec2" category="paragraph">ONTAP 9.19.1以降、AIXの透過的アプリケーションフェイルオーバーは、対称アクティブ/アクティブ構成のSnapMirror active syncでサポートされています。SnapMirror active syncデータ保護により、完全なサイト障害が発生した場合でもビジネスサービスの稼働を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。</block>
@@ -2784,7 +2783,6 @@
   <block id="6d33f82590752283d027e2c7394ab829" category="paragraph">AIXホスト用のストレージユニットは、SnapMirrorアクティブ同期保護に対応できる状態です。</block>
   <block id="55aa696f6eeaf20f8cd5f18a42f214dd" category="paragraph">ASA r2 システムで SnapMirror アクティブ同期を設定するための System Manager の手順は、統合 ONTAP パーソナリティを実行している NetApp FAS 、 AFF 、および ASA システムとは異なりますが、 SnapMirror アクティブ同期の要件、アーキテクチャ、および動作は同じです。<block ref="a4d3fa0a90b98ed30452a119486e6ae3" category="inline-link-macro-rx"></block></block>
   <block id="1783622f273954ab75caf352332b94b9" category="paragraph">ASA r2システムでは、SnapMirror Active Syncは対称アクティブ / アクティブ構成をサポートしています。対称アクティブ / アクティブ構成では、両方のサイトがアクティブI/O用のローカルストレージにアクセスできます。<block ref="cd08e89ddecf5772544f56e955b2d721" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
-  <block id="98c953c1bb66d85c490522bafc5c85b5" category="list-text">ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み取り/書き込みストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIの有効化手順については、<block ref="1ee41ad3123e5db18e6fae76e28afe9f" category="inline-link-macro-rx"></block>を参照してください。</block>
   <block id="f6948bd1b416e70ac7297904c89918c2" category="inline-link-macro">AIXホストを準備する</block>
   <block id="9f3699fb5ae95cc656437f0d40316b3a" category="paragraph">ONTAP 9.19.1以降を実行していて、AIXホストに対してSnapMirrorアクティブ同期を有効にする場合は、<block ref="a1eb09700bb6039b09944ad4a8beb294" category="inline-link-macro-rx"></block>してください。</block>
   <block id="d844604326e9cd2c315729a7379f2f39" category="paragraph">ONTAP 9.19.1以降、FLIはバックエンド接続用のiSCSIプロトコルをサポートしています。</block>
@@ -2829,7 +2827,6 @@
   <block id="9d255f8061d2c26397587d57452560a3" category="cell">FC スイッチは、FC および FC-NVMe ホストと ONTAP ストレージ間の接続を確立するために必要ありません。ホストは、ASA r2 システムの FC アダプタポートに直接接続できます。直接接続機能は、簡便性が重要な遠隔地やハイブリッド環境において特に有用です。</block>
   <block id="1c1e4bbac513ca426ea459850a27cf80" category="inline-link-macro">SnapMirror アクティブ同期関係を使用したARP/AIのサポート</block>
   <block id="06c698f9402b1596702afca5eb290c16" category="cell"><block ref="06c698f9402b1596702afca5eb290c16" category="inline-link-macro-rx"></block></block>
-  <block id="ae5b88290cbba1c2143301d124dcbbbf" category="cell">人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期関係におけるプライマリ読み書きストレージユニットをサポートしています。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。</block>
   <block id="281fd14262fa7c1793e3c18dfd336f7f" category="inline-link-macro">TLS ハードウェアオフロードのサポート</block>
   <block id="1c03eaa9510cac0323e8851def881c41" category="cell"><block ref="1c03eaa9510cac0323e8851def881c41" category="inline-link-macro-rx"></block></block>
   <block id="856d2008511fbcc3fde42bc9df07cc74" category="inline-link-macro">グローバル重複排除のサポート</block>
@@ -2849,7 +2846,6 @@
   <block id="064aa1a0e3e542c891816ff0102a8eca" category="summary">ASA r2クラスタにAutonomous Ransomware Protectionライセンスがインストールされている場合、ONTAP 9.18.1へのアップグレード後、または新しいONTAP 9.18.1 ASA r2クラスタの初期化後12時間で、既存および新規に作成されたすべてのストレージユニットでARPがデフォルトで有効になります。</block>
   <block id="c21e619b6e99a5ee7d89c9b052f96fb0" category="summary">AIを使用したARPを有効にすると、潜在的なランサムウェアの脅威を検出し、データを保護するための対策を自動的に実行し、System Managerに警告メッセージを表示して不審なアクティビティを通知します。</block>
   <block id="99705e545197778e8e90edce81239e6b" category="paragraph">ARPは、SAN環境における絶えず進化するランサムウェアを検出する機械学習モデルをランサムウェア対策分析に採用することで、サイバーレジリエンスを向上させます。ARPの機械学習モデルは、ランサムウェア攻撃をシミュレーションした前後のファイルからなる大規模なデータセットを用いて事前学習されています。このリソース集約型のトレーニングはONTAPの外部で行われ、このトレーニングから得られる事前学習済みモデルがONTAPに搭載されています。このモデルはアクセスも変更もできません。ARP/AIは有効化後すぐにアクティブになります。<block ref="3fa1bfd584351c2c430a6346ba4b1ef3" category="inline-link-macro-rx"></block>はありません。</block>
-  <block id="32993ed903bc1884ece0b04175a7a552" category="list-text">ONTAP 9.19.1 RCから、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。</block>
   <block id="0da4b61d19faba4a01242d2539243538" category="list-text">ARP/AI は、SnapLock で保護されているストレージユニットではサポートされていません。</block>
   <block id="df2caa7829ca66f49ae2621799defacd" category="summary">ASA r2システムでIPプロトコルを使用している場合は、IPセキュリティを設定してデータセキュリティを強化できます。</block>
   <block id="51e4b174c948dff20235dc02acc443e7" category="summary">NVMe TCP over TLS を構成して、NVMe TCP ホストと ONTAP 間でネットワーク経由で送信されるすべてのデータを暗号化することで、データセキュリティを強化します。</block>
@@ -2873,4 +2869,15 @@
   <block id="a40044a10e4010bd1fcc3bb2a5acd96f" category="paragraph">ONTAP System Manager を使用すると、SAN プロトコルを迅速かつ簡単に設定できます。この例では、iSCSI ネットワークインターフェイスの IP アドレスを設定します。</block>
   <block id="fa3b2d5f55592e57d1efa4cfd44b807d" category="paragraph">ONTAP System Manager を使用して、ASA r2 ストレージシステム上のホスト用ストレージユニットを迅速かつ簡単にプロビジョニングできます。この例では、VMware ホスト用に 6 つの新しいストレージユニットを作成します。</block>
   <block id="1de3d3f8e9212838f0341d59efab31fa" category="paragraph">ONTAP System Manager を使用して、ストレージユニットまたは整合性グループのスナップショットをスケジュール設定し、リモートの場所にレプリケートすることで、データを保護できます。この例では、既存のストレージユニットのスナップショットをスケジュール設定します。</block>
+  <block id="f43f4b6bc588a7f61fa9daea46159573" category="admonition">ONTAP 9.19.1以降、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIを有効にするには、<block ref="1ee41ad3123e5db18e6fae76e28afe9f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="eda51543caac7ba0656479493808f25e" category="list-text">ONTAP 9.19.1以降、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システムのSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIの有効化手順については、<block ref="1ee41ad3123e5db18e6fae76e28afe9f" category="inline-link-macro-rx"></block>を参照してください。</block>
+  <block id="67de111be220e704fc0fcaa510ec0b92" category="section-title">IPspaceのTCPパフォーマンス</block>
+  <block id="d3e53b85a4d88cd5e122ce8261a4169a" category="paragraph">ONTAP 9.19.1以降、ONTAPはPRRとRACKという2つの損失回復機能をONTAP TCPスタックに統合することで、損失が多く遅延の大きいWANリンク上のTCPデータ転送パフォーマンスを向上させます。PRRはすべてのネットワークに適しており、デフォルトで有効になっています。RACKは、リンク速度が約25 Gigabits/secondの輻輳したネットワークに適しており、デフォルトでは無効になっています。</block>
+  <block id="895bf8811e3cb07ceb13e94fad59a963" category="inline-link-macro">PRRとRACKを使用してTCP WANパフォーマンスを向上させる方法の詳細</block>
+  <block id="e0246ce94795c8bf02a28b9de49fbc5d" category="paragraph"><block ref="619e9e74d549309a1b0c41bc76031498" category="inline-link-macro-rx"></block>。</block>
+  <block id="1d3f2716111de88760369111858eeee2" category="inline-link-macro">TCPのパフォーマンス向上</block>
+  <block id="4dc45270721fefe8db171547732b5405" category="cell"><block ref="4dc45270721fefe8db171547732b5405" category="inline-link-macro-rx"></block></block>
+  <block id="17ff1a352874a1bd5fb7c4707117cd86" category="cell">ONTAPは、PRRとRACKという2つの損失回復機能をONTAP TCPスタックに統合することで、損失が多く遅延の大きいWANリンク上のTCPデータ転送パフォーマンスを向上させます。</block>
+  <block id="4910573cab7d204a834f1ef33d28e6aa" category="cell">人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期関係におけるプライマリ読み書きストレージユニットをサポートしています。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。以前は同期レプリケーション関係によりデフォルトのARP有効化が抑制されていたクラスターをONTAP 9.19.1にアップグレードすると、自動的に復元されます。アップデート前の警告により管理者に通知され、無効化するオプションが提供されます。</block>
+  <block id="43711203668248fcdb2737c0b52f163a" category="list-text">ONTAP 9.19.1以降、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。</block>
 </blocks>
