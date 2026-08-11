@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: secure-data/snaplock.html 
+keywords: asa r2, secure data, data security, ransomware, ransomware attacks, protection, snaplock, snaplock compliance, snaplock enterprise, snaplock compliance clock 
+summary: 改ざんを防止するSnapshotを使用してデータを保護します。改ざんを防止するSnapshotは削除できません。また、ランサムウェア攻撃によって侵害されたデータをリカバリするために使用できます。 
+---
+= ASA r2 ストレージシステムの SnapLock データ保護について学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP SnapLockは、規制やガバナンスの目的でファイルを未変更の状態で保持するためにWORMストレージを使用する組織向けのハイパフォーマンス コンプライアンス ソリューションです。SnapLockはコンプライアンス モードまたはエンタープライズ モードで実行でき、それぞれ異なるレベルのWORMデータ保護を提供します。SnapLock Compliance および Enterprise モードは、SAN環境のプライマリ クラスタではサポートされていませんが、セカンダリ システムで SnapLock for SnapVaultを有効にすることで、セカンダリ スナップショットを偶発的または悪意のある削除から保護できます。
+
+SnapLock for SnapVaultでお客様のセカンダリ システム上のスナップショットを保護するには、SnapLock Compliance Clockを初期化する必要があります。
+
+.関連情報
+* link:https://docs.netapp.com/us-en/ontap/san-admin/configure-backup-vaults-san-environment-concept.html["SAN環境におけるSnapLock for SnapVault"^]の詳細をご覧ください。
+* link:https://docs.netapp.com/us-en/ontap/snaplock/index.html["ONTAP SnapLock"^]の詳細をご覧ください。
+
+
+
+
+[[initialize-the-snaplock-compliance-clock]]
+== SnapLock コンプライアンス クロックの初期化
+
+セカンダリ システム上の宛先スナップショットを SnapLock for SnapVault で保護する場合は、まずローカルクラスターと宛先クラスターの SnapLock Compliance Clock を初期化する必要があります。
+
+.手順
+. [*Cluster] > [Overview] を選択します。
+. [ノード]*セクションで、*[Initialize SnapLock Compliance Clock]*を選択します。
+. [初期化]*を選択します。
+. コンプライアンス クロックが初期化されていることを確認してください。
++
+.. [*Cluster] > [Overview] を選択します。
+.. [Nodes]*セクションでを選択しimage:icon_show_hide.png["白い背景に3つの青い列"]、* SnapLock Compliance Clock *を選択します。
+
+
+
+
+.次の手順
+ローカルおよびデスティネーションクラスターの SnapLock コンプライアンスクロックを初期化したら、link:../data-protection/snapshot-replication.html["SnapLock for SnapVault を使用してレプリケーション関係を作成する"] する準備が整います。

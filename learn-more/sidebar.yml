@@ -2,15 +2,15 @@
 section: learn-more
 title: 詳細
 entries:
-- title: ASA R2 for ONTAPパワーユーザ
+- title: ハードウェアシステムの比較
+  url: "/learn-more/hardware-comparison.html"
+- title: 一般的なONTAP機能のサポート
+  url: "/learn-more/additional-supported-ontap-features.html"
+- title: ソフトウェアのサポートと制限事項
+  url: "/learn-more/software-support-limitations.html"
+- title: ASA r2 CLI と REST API による ONTAP パワーユーザー向けサポート
   entries:
-  - title: ハードウェアシステムの比較
-    url: "/learn-more/hardware-comparison.html"
-  - title: ソフトウェアのサポートと制限事項
-    url: "/learn-more/software-support-limitations.html"
   - title: CLIのサポート
     url: "/learn-more/cli-support.html"
   - title: REST APIをサポート
     url: "/learn-more/rest-api-support.html"
-- title: 一般的なONTAP機能のサポート
-  url: "/learn-more/additional-supported-ontap-features.html"

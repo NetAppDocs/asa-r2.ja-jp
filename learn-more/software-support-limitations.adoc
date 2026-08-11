@@ -14,47 +14,35 @@ summary: ASA R2システムはSANソリューションを幅広くサポート�
 ASA R2システムはSANソリューションを幅広くサポートしていますが、一部のONTAPソフトウェア機能はサポートされていません。
 
 .ASA R2システムでは、次の機能はサポートされません。
-* デフォルトのiSCSI LIFの自動フェイルオーバー
-+
-ASA R2システムでは、デフォルトのネットワークLIFがNVMeホストとSCSIホストの間で共有されるため、自動フェイルオーバーはサポートされません。iSCSI LIFの自動フェイルオーバーを有効にするには、が必要ですlink:../administer/manage-client-vm-access.html#create-a-lif-network-interface["iSCSIのみのLIFを作成する"]。自動フェイルオーバーは、iSCSIのみのLIFではデフォルトで有効になっています。
-
-+
-iSCSI LIFの自動フェイルオーバーを有効にしている場合、ストレージフェイルオーバーが発生すると、iSCSI LIFはホームノードまたはポートからHAパートナーノードまたはポートに自動的に移行され、フェイルオーバーの完了後に再び移行されます。または、iSCSI LIFのポートが正常な状態でなくなった場合、そのLIFは現在のホームノードの正常なポートに自動的に移行され、ポートが正常な状態に戻った時点で元のポートに戻ります。
-
 * FabricPool
 * LUNシックプロビジョニング
 * MetroCluster
 * NetApp Aggregate Encryption（NAE）
 * オブジェクトプロトコル
 * ONTAP S3 SnapMirrorとS3 API
-
-
-.ASA R2システムは、次の機能をサポートしています。
 * SnapLock
 +
-link:../secure-data/ransomware-protection.html["Snapshotをロックする方法"]ASA R2システム。
+SnapLock Compliance および Enterprise モードは、SAN 環境のプライマリクラスタではサポートされていません。SnapLock for SnapVault はセカンダリ システムのクラスタでサポートされています。
 
-* デュアルレイヤ暗号化
+* SnapMirrorレプリケーションは、次の制限付きでASA r2 システムでサポートされます。
 +
-ASA r2システムは、自己暗号化ドライブ（SED）を使用したハードウェア暗号化と、NetApp Volume Encryption（NVE）テクノロジーを使用したソフトウェア暗号化をサポートしています。link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA r2システム上のデータに。
+** SnapMirror同期レプリケーションはサポートされていません。
+** SnapMirror非同期レプリケーションは、2 つのASA r2 システム間でのみサポートされます。SnapMirror非同期レプリケーションは、 ASA r2 システムとASA、 AFF 、 FASシステムまたはクラウド間ではサポートされません。
++
+詳細はこちらlink:../data-protection/pre-defined-protection-policies.html["ASA r2 システムでサポートされるSnapMirrorレプリケーション ポリシー"]。
 
-
-
-
-
-[[support-for-snapmirror-replication]]
-== SnapMirrorレプリケーションのサポート
-
-SnapMirrorレプリケーションは、次の制限付きでASA r2 システムでサポートされます。
-
-* SnapMirror同期レプリケーションはサポートされていません。
-* SnapMirrorアクティブ同期は、2 つのASA r2 システム間でのみサポートされます。
+** SnapMirrorアクティブ同期は、2 つのASA r2 システム間でのみサポートされます。
 +
 詳細はこちらlink:../data-protection/snapmirror-active-sync.html["ASA r2 システムでのSnapMirrorアクティブ同期"]。
 
-* SnapMirror非同期レプリケーションは、2 つのASA r2 システム間でのみサポートされます。SnapMirror非同期レプリケーションは、 ASA r2 システムとASA、 AFF 、 FASシステムまたはクラウド間ではサポートされません。
+
+
+
+
+.ASA R2システムは、次の機能をサポートしています。
+* デュアルレイヤ暗号化
 +
-詳細はこちらlink:../data-protection/pre-defined-protection-policies.html["ASA r2 システムでサポートされるSnapMirrorレプリケーション ポリシー"]。
+ASA r2システムは、自己暗号化ドライブ（SED）を使用したハードウェア暗号化と、NetApp Volume Encryption（NVE）テクノロジーを使用したソフトウェア暗号化をサポートしています。link:../secure-data/encrypt-data-at-rest.html["デュアルレイヤ暗号化の適用方法"]ASA r2システム上のデータに。
 
 
 

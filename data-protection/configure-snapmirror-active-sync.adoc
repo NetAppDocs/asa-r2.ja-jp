@@ -29,7 +29,7 @@ link:create-snapshots.html#step-1-optionally-create-a-consistency-group["一貫�
 .手順
 . System Managerで、*[保護]>[整合グループ]*を選択します。
 . SnapMirrorアクティブ同期で保護する整合性グループの名前にマウスを移動します。
-. 選択image:icon_kabob.gif["3つの垂直な青い点"]次に、[保護] を選択します。
+. image:icon_kabob.gif["3つの垂直な青い点"]を選択し、*保護*を選択します。
 . [リモート保護]*で、*[リモートクラスタにレプリケート]*を選択します。
 . 既存のクラスター ピアを選択するか、*新しいクラスター ピアを追加*することを選択します。
 . Storage VMを選択します。
