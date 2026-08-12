@@ -2866,4 +2866,5 @@
   <block id="794d2058bfa0143a6c722eb0d40f6fa2" category="paragraph">ASA r2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートしています。すべてのプロトコルは、ホストとストレージ間のすべてのパスがアクティブかつ最適化されるよう、マルチパス向けの対称アクティブ / アクティブアーキテクチャをサポートしています。iSCSIおよびNVMe/TCPプロトコルは、サポートされているすべてのONTAPバージョンにおいて、ネットワーク構成および直接接続構成をサポートしています。FCおよびNVMe/FCプロトコルは、サポートされているすべてのONTAPバージョンにおいてネットワーク構成をサポートしており、ONTAP 9.19.1以降では直接接続構成もサポートしています。ASA r2システムは、ASA、AFF、またはFASシステムとのクラスター混在をサポートしていません。</block>
   <block id="5cdfe0a12dbe0154513cd399f4ebb394" category="cell"><block ref="5cdfe0a12dbe0154513cd399f4ebb394" category="inline-link-macro-rx"></block></block>
   <block id="79e8ff3b299a4fcb9f7a7eaedd4a6306" category="cell">IP LIFとNVMe/TCP LIFの両方で、デフォルトの自動LIFフェイルオーバーがサポートされています。</block>
+  <block id="f4a196522bd29f2dc617b123e426fca8" category="admonition">仮想マシン（VM）の制限は Hardware Universe には記載されていません。HAペアあたりの推奨最大VM数は800、クラスターあたりは1200です。これは ASA r2 システムのボリューム制限に基づいています。この制限は、VMFSデータストアに存在する仮想マシンには適用されません。VMFSデータストアには、仮想マシンの最大数に制限はありません。</block>
 </blocks>
