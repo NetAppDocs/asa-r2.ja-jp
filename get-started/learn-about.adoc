@@ -34,19 +34,18 @@ ASA R2システムでは、ストレージユニットとコンシステンシ�
 
 ASA r2 システムは、一貫性グループを持つストレージ ユニットを使用して、ストレージ管理とデータ保護を簡素化します。たとえば、整合性グループ内の 10 個のストレージ ユニットで構成されるデータベースがあり、データベース全体をバックアップする必要があるとします。各ストレージ ユニットを個別にバックアップする代わりに、整合性グループをバックアップすることでデータベース全体を保護できます。
 
+.データ保護とセキュリティ
 盗難やランサムウェアなどの悪意のある攻撃からデータを保護するため、ASA r2システムは、オンボードのキーマネージャ、二重層暗号化、多要素認証、および複数管理者による検証をサポートしています。スナップショットをセカンダリ システムの場所にレプリケートし、SnapLock for SnapVaultを使用して、デスティネーションのスナップショットが誤って、または悪意を持って削除されるのを防ぐこともできます。
 
 .サポートされているプロトコル、マルチパス、および構成
-ASA r2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートしています。すべてのプロトコルは、ホストとストレージ間のすべてのパスがアクティブかつ最適化されるように、マルチパス向けの対称アクティブ / アクティブアーキテクチャをサポートしています。iSCSIおよびNVMe/TCPプロトコルは、サポートされているすべてのONTAPバージョンで、ネットワーク構成と直接接続構成をサポートしています。FCおよびNVMe/FCプロトコルは、サポートされているすべてのONTAPバージョンでネットワーク構成をサポートしており、ONTAP 9.19.1以降では直接接続構成もサポートしています。
+ASA r2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートしています。すべてのプロトコルは、ホストとストレージ間のすべてのパスがアクティブかつ最適化されるよう、マルチパス向けの対称アクティブ / アクティブアーキテクチャをサポートしています。iSCSIおよびNVMe/TCPプロトコルは、サポートされているすべてのONTAPバージョンにおいて、ネットワーク構成および直接接続構成をサポートしています。FCおよびNVMe/FCプロトコルは、サポートされているすべてのONTAPバージョンにおいてネットワーク構成をサポートしており、ONTAP 9.19.1以降では直接接続構成もサポートしています。ASA r2システムは、ASA、AFF、またはFASシステムとのクラスター混在をサポートしていません。
 
 * link:https://docs.netapp.com/us-en/ontap/san-admin/multipath-automatic-lif-failover-support.html["SANマルチパスサポート"^]の詳細をご覧ください。
 * link:https://docs.netapp.com/us-en/ontap/san-config/configure-iscsi-san-hosts-ha-pairs-reference.html["iSCSIおよびNVMe/TCPプロトコルの設定"^]の詳細をご覧ください。
 * link:https://docs.netapp.com/us-en/ontap/san-config/configure-fc-nvme-hosts-ha-pairs-reference.html["FCおよびNVMe/FCプロトコルの構成"^]の詳細をご覧ください。
 
 
-ASA r2 システムは、 ASA、 AFF、またはFASシステムとのクラスターの混在をサポートしていません。
-
-.詳細情報
+.関連情報
 * ASA R2システムのサポートおよび制限の詳細については、をlink:https://hwu.netapp.com/["NetApp Hardware Universe"^]参照してください。
 * 詳細については、をご覧ください link:../learn-more/hardware-comparison.html["ASA R2システムとASAシステムの比較"]。
 * の詳細については、をlink:https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA"^]参照してください。

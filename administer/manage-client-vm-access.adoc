@@ -98,9 +98,9 @@ IPspaceは、Storage VMが配置される個別のIPアドレススペースで�
 LIF（ネットワークインターフェース）とは、物理ポートまたは論理ポートに関連付けられたIPアドレスのことです。データにアクセスするために使用するポートにLIFを作成します。ストレージVMは、1つ以上のLIFを介してクライアントにデータを提供します。ASA r2システムでは、IP、FC、およびNVMe/FC LIFを作成できます。IPデータLIFは、デフォルトでiSCSIトラフィックとNVMe/TCPトラフィックの両方を処理できます。FCトラフィックとNVMe/FCトラフィック用に、それぞれ別のデータLIFを作成する必要があります。
 
 .ASA r2 システムでの LIF フェイルオーバー
-コンポーネントの障害が発生した場合、LIF はフェイルオーバーするか、別の物理ポートに移行することで、ネットワーク通信が中断されないようにします。ONTAP 9.19.1 以降、iSCSI、NVMe/TCP、および共有 IP LIF に対して、自動 LIF フェイルオーバーがデフォルトでサポートされています。自動 LIF フェイルオーバーが有効になっている場合、ストレージ フェイルオーバーが発生すると、LIF は自動的にホーム ノードまたはポートから HA パートナー ノードまたはポートに移行され、フェイルオーバーが完了すると元のホーム ノードまたはポートに戻ります。あるいは、ポートが異常状態になった場合、LIF は自動的に現在のホーム ノード内の正常なポートに移行され、ポートが再び正常状態になると元のポートに戻ります。
+コンポーネントの障害が発生した場合、ネットワーク通信が中断されないように、LIF はフェイルオーバーするか、別の物理ポートに移行されます。ONTAP 9.19.1 以降、IP LIF に対して自動 LIF フェイルオーバーがデフォルトでサポートされています。自動 LIF フェイルオーバーが有効になっている場合、ストレージフェイルオーバーが発生すると、LIF は自動的にホームノードまたはポートから HA パートナーノードまたはポートに移行され、フェイルオーバーが完了すると元のノードまたはポートに戻ります。あるいは、ポートが異常状態になった場合、LIF は自動的に現在のホームノード内の正常なポートに移行され、ポートが再び正常状態になると元のポートに戻ります。
 
-ONTAP 9.18.1以前のバージョンでは、NVMe/TCP LIFまたは共有IP LIFに対する自動LIFフェイルオーバーはサポートされていません。iSCSI専用LIFを作成する場合、ストレージVMに既に自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在しない限り、自動LIFフェイルオーバーはデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI専用LIFが存在する場合、新しく作成されたLIFも有効になりません。このような場合は、まず既存のiSCSI専用LIFを削除し、その後、自動LIFフェイルオーバーを有効にして再作成する必要があります。link:https://docs.netapp.com/us-en/ontap/san-admin/delete-lif-san-environment-task.html["SAN環境でLIFを削除する"^]方法をご確認ください。
+ONTAP 9.18.1以前では、iSCSIトラフィックとNVMe/TCPトラフィックの両方を含むIP LIFに対して、自動LIFフェイルオーバーはサポートされていません。iSCSI専用LIFを作成する場合、ストレージVMに既に自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在しない限り、自動LIFフェイルオーバーはデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在する場合、新しく作成されたLIFも有効になりません。このような場合は、まず既存のiSCSI LIFを削除し、その後、自動LIFフェイルオーバーを有効にして再作成する必要があります。link:https://docs.netapp.com/us-en/ontap/san-admin/delete-lif-san-environment-task.html["SAN環境でLIFを削除する"^]の方法を確認してください。
 
 永続ポートは、FCおよびNVMe/FC LIFのフェイルオーバーに使用されます。ONTAPドキュメントのlink:https://docs.netapp.com/us-en/ontap/san-config/asa-support-limitations.html#support-for-persistent-ports["永続ポート"^]の詳細をご覧ください。
 
@@ -130,6 +130,7 @@ ONTAP 9.18.1以前のバージョンでは、NVMe/TCP LIFまたは共有IP LIF�
 
 ONTAP 9.18.1 以前で自動 iSCSI LIF フェイルオーバーを有効にする場合は、まずカスタムの iSCSI 専用 LIF サービスポリシーを作成する必要があります。
 
+.タスクの内容
 カスタム サービス ポリシーを作成するには、 ONTAPコマンド ライン インターフェイス (CLI) を使用する必要があります。
 
 .ステップ
@@ -167,10 +168,13 @@ ONTAPコマンドライン インターフェイス (CLI) を使用して、自�
 [[create-iscsi-only-lifs-with-automatic-lif-failover]]
 === 自動LIFフェイルオーバー機能を備えたiSCSI専用LIFを作成する
 
-ONTAP 9.18.1以前のバージョンでは、ストレージVM上の他のすべてのiSCSI LIFでも自動LIFフェイルオーバーが有効になっている場合、iSCSI専用LIFを作成すると、自動LIFフェイルオーバーがデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI専用LIFが存在する場合、新しく作成されたLIFも自動LIFフェイルオーバーが有効になりません。
+ONTAP 9.18.1以前のバージョンでは、ストレージVM上の他のすべてのiSCSI LIFでも自動LIFフェイルオーバーが有効になっている場合、iSCSI専用LIFを作成すると、自動LIFフェイルオーバーがデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在する場合、新しく作成されたLIFも自動LIFフェイルオーバーが有効になりません。
 
 .開始する前に
 カスタム iSCSI 専用 LIF サービス ポリシーを作成しておく必要があります。
+
+.タスクの内容
+iSCSI 専用の LIF を作成するには、ONTAP コマンドラインインターフェイス（CLI）を使用する必要があります。
 
 .手順
 . 自動 LIF フェイルオーバーを備えた iSCSI 専用 LIF を作成します。
@@ -226,6 +230,6 @@ ONTAP は、ネットワーク タイム プロトコル (NTP) を使用して�
 LIFが変更されました。
 
 .関連情報
-* link:https://docs.netapp.com/us-en/ontap/san-admin/move-san-lifs-task.html["SAN LIFの移動"]。
-* link:https://docs.netapp.com/us-en/ontap/san-admin/remove-lif-from-portset-task.html["SAN LIF をポートセットから削除する"]。
+* link:https://docs.netapp.com/us-en/ontap/san-admin/move-san-lifs-task.html["SAN LIFの移動"^]。
+* link:https://docs.netapp.com/us-en/ontap/san-admin/remove-lif-from-portset-task.html["SAN LIF をポートセットから削除する"^]。
 

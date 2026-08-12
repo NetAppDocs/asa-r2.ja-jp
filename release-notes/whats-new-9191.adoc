@@ -38,7 +38,7 @@ ONTAP 9.19.1 for ASA r2システムで利用可能な新機能について説明
 | 更新 | 説明 
 
 
-| SAN LIFの自動フェイルオーバーのサポートが強化されました | iSCSIおよびNVMe/TCP LIFでは、デフォルトの自動LIFフェイルオーバーがサポートされています。 
+| link:../administer/manage-client-vm-access.html#create-a-lif-network-interface["SAN LIFの自動フェイルオーバーのサポートが強化されました"] | IP LIFとNVMe/TCP LIFの両方で、デフォルトの自動LIFフェイルオーバーがサポートされています。 
 |===
 
 

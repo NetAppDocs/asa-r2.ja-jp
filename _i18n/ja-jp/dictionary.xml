@@ -449,7 +449,6 @@
   <block id="f731460115898cdd49151a66d75556b6" category="cell">ローカルソース</block>
   <block id="5833acf9cb6206654194780dbf5bb4e0" category="list-text">[Local sources]*を選択し、を選択します<block ref="08a74c2de12fbe2628462227f788ae6a" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a18a6418cfbf231c4bb22f6553628bd0" category="list-text">レプリケーションポリシーを選択します。</block>
-  <block id="7ab1f0b2182b6c6f36937d583dfeac9c" category="paragraph">レプリケーションポリシーと関係を作成したので、レプリケーションポリシーの定義に従って最初のデータ転送が開始されます。必要に応じて、レプリケーションフェイルオーバーをテストして、ASA R2システムがオフラインになった場合にフェイルオーバーが正常に実行されることを確認できます。</block>
   <block id="55af8fe36cb88367588d3f92024db64d" category="section-title">手順4：レプリケーションのフェイルオーバーをテストする</block>
   <block id="920b6f48db05908e2d7fdde6821a89e3" category="paragraph">必要に応じて、ソースクラスタがオフラインの場合に、リモートクラスタ上のレプリケートされたストレージユニットからデータを正常に提供できることを検証します。</block>
   <block id="a2640285f2f549a8106a0b1aa4d9fbd1" category="list-text">テストするレプリケーション関係にカーソルを合わせ、を選択します<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>。</block>
@@ -2187,7 +2186,6 @@
   <block id="87531525c3b816a3a29dbbcbcd9e58b1" category="inline-link-macro">レプリケーションポリシーについて学ぶ</block>
   <block id="3014b2db79594ac1202cd88300196335" category="list-text"><block ref="143654464f8325f80e4706e133fabf02" category="inline-link-macro-rx"></block> 。</block>
   <block id="820e745f4ceb298ff41836e6ae6e0376" category="paragraph">レプリケーション関係を作成するときは、レプリケーション関係に適切なレプリケーション ポリシーを選択する必要があります。事前定義されたポリシーを使用することも、カスタム ポリシーを作成することもできます。</block>
-  <block id="39f2cc2c7247fe111861f8e1e350fca5" category="paragraph">ASA r2 システムは、 ASA、 AFF、またはFASシステムとのクラスターの混在をサポートしていません。</block>
   <block id="bec1e41aa312239c590ea19d2cd648e2" category="paragraph">VMワークロードをASAストレージシステムからASA r2ストレージシステムに移行する必要がある場合、 NetApp以下を使用することを推奨しています。<block ref="5e3823885235dce61c55802a90e4bf09" category="inline-link-macro-rx"></block>中断なくライブでデータの移行を実行します。</block>
   <block id="8472fc4ccb1079c9fe1f338f10dae548" category="list-text">CLI から次のように入力します。<block ref="f0af09467abded8f889764e0118fc371" prefix=" " category="inline-code"></block></block>
   <block id="6e3ec6c33e748e95fcc9a00b80c75047" category="paragraph">ASA r2 システムの場合、_personality_ は _ASA r2_ であり、_is-disaggregated_ のステータスは _true_ です。</block>
@@ -2794,17 +2792,12 @@
   <block id="20290ba3bc660a6b1ec6d46adf0b0974" category="paragraph">1回の手順で追加すべきドライブの最小数は3台です。ドライブを1台追加するだけでも、パフォーマンスが低下する可能性があります。</block>
   <block id="38964f69af54ac13a49e3e0955441258" category="paragraph">LIF（ネットワークインターフェース）とは、物理ポートまたは論理ポートに関連付けられたIPアドレスのことです。データにアクセスするために使用するポートにLIFを作成します。ストレージVMは、1つ以上のLIFを介してクライアントにデータを提供します。ASA r2システムでは、IP、FC、およびNVMe/FC LIFを作成できます。IPデータLIFは、デフォルトでiSCSIトラフィックとNVMe/TCPトラフィックの両方を処理できます。FCトラフィックとNVMe/FCトラフィック用に、それぞれ別のデータLIFを作成する必要があります。</block>
   <block id="0da4b7c484f1bfa3f71126ddd8e221ce" category="paragraph-title">ASA r2 システムでの LIF フェイルオーバー</block>
-  <block id="b7f8c7f57cc6cf3263d927fa39301bbe" category="paragraph">コンポーネントの障害が発生した場合、LIF はフェイルオーバーするか、別の物理ポートに移行することで、ネットワーク通信が中断されないようにします。ONTAP 9.19.1 以降、iSCSI、NVMe/TCP、および共有 IP LIF に対して、自動 LIF フェイルオーバーがデフォルトでサポートされています。自動 LIF フェイルオーバーが有効になっている場合、ストレージ フェイルオーバーが発生すると、LIF は自動的にホーム ノードまたはポートから HA パートナー ノードまたはポートに移行され、フェイルオーバーが完了すると元のホーム ノードまたはポートに戻ります。あるいは、ポートが異常状態になった場合、LIF は自動的に現在のホーム ノード内の正常なポートに移行され、ポートが再び正常状態になると元のポートに戻ります。</block>
   <block id="2f510f91f88e7ad0b5faca1d650d5c46" category="inline-link-macro">SAN環境でLIFを削除する</block>
-  <block id="773288d84a800e3b1d7803ab90036215" category="paragraph">ONTAP 9.18.1以前のバージョンでは、NVMe/TCP LIFまたは共有IP LIFに対する自動LIFフェイルオーバーはサポートされていません。iSCSI専用LIFを作成する場合、ストレージVMに既に自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在しない限り、自動LIFフェイルオーバーはデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI専用LIFが存在する場合、新しく作成されたLIFも有効になりません。このような場合は、まず既存のiSCSI専用LIFを削除し、その後、自動LIFフェイルオーバーを有効にして再作成する必要があります。<block ref="bd7be76bcbb9f56b8521a7457373f6cc" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
   <block id="16bbf9f716eb1b1f397ecd56fea6a475" category="inline-link-macro">永続ポート</block>
   <block id="3ee1e150b971acda14b2f412bb3b363a" category="paragraph">永続ポートは、FCおよびNVMe/FC LIFのフェイルオーバーに使用されます。ONTAPドキュメントの<block ref="f05616066afed51c38bb80daf2d2c177" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
   <block id="77fb55c5f214bb33b9bd943baa52258c" category="paragraph">ONTAP 9.18.1 以前で自動 iSCSI LIF フェイルオーバーを有効にする場合は、まずカスタムの iSCSI 専用 LIF サービスポリシーを作成する必要があります。</block>
-  <block id="2a3ee0bdebde6bb4f90001e2d1ff5518" category="paragraph">ONTAP 9.18.1以前のバージョンでは、ストレージVM上の他のすべてのiSCSI LIFでも自動LIFフェイルオーバーが有効になっている場合、iSCSI専用LIFを作成すると、自動LIFフェイルオーバーがデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI専用LIFが存在する場合、新しく作成されたLIFも自動LIFフェイルオーバーが有効になりません。</block>
   <block id="c7e321fca2a8f7e1f3ab296539b0195c" category="inline-link-macro">SAN LIFの移動</block>
-  <block id="061c16b0ed3909e672bb167f666657d2" category="list-text"><block ref="84859be9a33e5a2046d8b8f65121e08b" category="inline-link-macro-rx"></block>。</block>
   <block id="a56c83faed28c1bd9c232e9aad91422d" category="inline-link-macro">SAN LIF をポートセットから削除する</block>
-  <block id="39475d761f36ea805bf52bd0d85cd6fa" category="list-text"><block ref="6ee35dee3ff81a58e64cd1105fa8d841" category="inline-link-macro-rx"></block>。</block>
   <block id="ca9419cb261d1f542e7ca3641ce02a6c" category="list-text"><block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>を選択し、*保護*を選択します。</block>
   <block id="f033c9cc89aa0606022393d542e81b55" category="list-text"><block ref="2bf8f430922192bda6865bad87ff2a74" category="inline-image-macro-rx" type="image"></block>を選択し、*編集*を選択します。</block>
   <block id="0ca961272103b716d585866f80eab6e3" category="paragraph">SnapLock Enterprise モードと Compliance モードは、ASA r2 システムの SnapMirror アクティブ同期ではサポートされていません。</block>
@@ -2826,7 +2819,6 @@
   <block id="c6032ff25210fd8264d5f370b7924a96" category="paragraph-title">ストレージユニットと整合グループ</block>
   <block id="e13d282f1b6dc4032c4acd77d766ee11" category="paragraph">盗難やランサムウェアなどの悪意のある攻撃からデータを保護するため、ASA r2システムは、オンボードのキーマネージャ、二重層暗号化、多要素認証、および複数管理者による検証をサポートしています。スナップショットをセカンダリ システムの場所にレプリケートし、SnapLock for SnapVaultを使用して、デスティネーションのスナップショットが誤って、または悪意を持って削除されるのを防ぐこともできます。</block>
   <block id="4c78514417b4a0942051bcf756b5e689" category="paragraph-title">サポートされているプロトコル、マルチパス、および構成</block>
-  <block id="e5dcf60b35d63934d42e3aac7f00c836" category="paragraph">ASA r2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートしています。すべてのプロトコルは、ホストとストレージ間のすべてのパスがアクティブかつ最適化されるように、マルチパス向けの対称アクティブ / アクティブアーキテクチャをサポートしています。iSCSIおよびNVMe/TCPプロトコルは、サポートされているすべてのONTAPバージョンで、ネットワーク構成と直接接続構成をサポートしています。FCおよびNVMe/FCプロトコルは、サポートされているすべてのONTAPバージョンでネットワーク構成をサポートしており、ONTAP 9.19.1以降では直接接続構成もサポートしています。</block>
   <block id="46fe1d288c9a0f1af878fd298319c1f5" category="inline-link-macro">SANマルチパスサポート</block>
   <block id="0e8a99bad4b792a0f1d2b26bca172d70" category="list-text"><block ref="e49bc3d33674d3c62051d808bc03b9aa" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
   <block id="e8010ed5357d34c65bda392b1759dc21" category="inline-link-macro">iSCSIおよびNVMe/TCPプロトコルの設定</block>
@@ -2847,7 +2839,6 @@
   <block id="fd69c5cf902969e6fb71d043085ddee6" category="paragraph-title">結果</block>
   <block id="e76b5069871e2a0c42b0b2e86e9e5d0b" category="paragraph">お客様の特定の ASA r2 システムと ONTAP バージョンでサポートされている制限が表示されます。</block>
   <block id="e0f4fdf47233f69304e680fd1923eb88" category="cell">SAN LIFの自動フェイルオーバーのサポートが強化されました</block>
-  <block id="8a9840e8547ff441eef956289166e3cc" category="cell">iSCSIおよびNVMe/TCP LIFでは、デフォルトの自動LIFフェイルオーバーがサポートされています。</block>
   <block id="443ddb7ca2bd07f5946e8a824feee453" category="list-text">*ランサムウェア対策*で*有効にしない*を選択し、次に*無効にする*を選択します。</block>
   <block id="882422644d0036961f2ef9aed07712d6" category="list-text">「ランサムウェア対策」の横にある<block ref="09996779530a0566a9742876e9ffd4f1" category="inline-image-macro-rx" type="image"></block>を選択し、「既存のすべてのストレージユニットで有効にする」を選択します。</block>
   <block id="6dc61dbf62f6b39ca07f06ff22297587" category="doc">ASA r2 ストレージシステムの SnapLock データ保護について学ぶ</block>
@@ -2864,4 +2855,15 @@
   <block id="1c455b71b9a6a19b8ab5534d9dd3545f" category="paragraph">ローカルおよびデスティネーションクラスターの SnapLock コンプライアンスクロックを初期化したら、<block ref="716f8ed67937d4ffe779f9f204ed103b" category="inline-link-macro-rx"></block> する準備が整います。</block>
   <block id="53ba0b0af13871c9c1e7a43da8f40ede" category="sidebar">ASA r2 CLI と REST API による ONTAP パワーユーザー向けサポート</block>
   <block id="56487b0f66d25f7027042188a0b85f01" category="sidebar">SnapLockについて</block>
+  <block id="479de3f7ce60040c78f3aea05b661d3d" category="paragraph">コンポーネントの障害が発生した場合、ネットワーク通信が中断されないように、LIF はフェイルオーバーするか、別の物理ポートに移行されます。ONTAP 9.19.1 以降、IP LIF に対して自動 LIF フェイルオーバーがデフォルトでサポートされています。自動 LIF フェイルオーバーが有効になっている場合、ストレージフェイルオーバーが発生すると、LIF は自動的にホームノードまたはポートから HA パートナーノードまたはポートに移行され、フェイルオーバーが完了すると元のノードまたはポートに戻ります。あるいは、ポートが異常状態になった場合、LIF は自動的に現在のホームノード内の正常なポートに移行され、ポートが再び正常状態になると元のポートに戻ります。</block>
+  <block id="d26b171679a151dddcf0f77ce05e7dd3" category="paragraph">ONTAP 9.18.1以前では、iSCSIトラフィックとNVMe/TCPトラフィックの両方を含むIP LIFに対して、自動LIFフェイルオーバーはサポートされていません。iSCSI専用LIFを作成する場合、ストレージVMに既に自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在しない限り、自動LIFフェイルオーバーはデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在する場合、新しく作成されたLIFも有効になりません。このような場合は、まず既存のiSCSI LIFを削除し、その後、自動LIFフェイルオーバーを有効にして再作成する必要があります。<block ref="bd7be76bcbb9f56b8521a7457373f6cc" category="inline-link-macro-rx"></block>の方法を確認してください。</block>
+  <block id="f6cd95bfbbfa8cfbf33805948f9e02ab" category="paragraph">ONTAP 9.18.1以前のバージョンでは、ストレージVM上の他のすべてのiSCSI LIFでも自動LIFフェイルオーバーが有効になっている場合、iSCSI専用LIFを作成すると、自動LIFフェイルオーバーがデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在する場合、新しく作成されたLIFも自動LIFフェイルオーバーが有効になりません。</block>
+  <block id="a52cb55bc715199db0a2c89f5628463a" category="paragraph">iSCSI 専用の LIF を作成するには、ONTAP コマンドラインインターフェイス（CLI）を使用する必要があります。</block>
+  <block id="5fe25a30e97a2bdf4a723672ff4742c0" category="list-text"><block ref="27c75436a238633e1d18ab51a23477b5" category="inline-link-macro-rx"></block>。</block>
+  <block id="92a1cbd4a70feecdf2052aa1fa356bcb" category="list-text"><block ref="7a7f88f43b7074f5986625bfd88c1f41" category="inline-link-macro-rx"></block>。</block>
+  <block id="586d267f3f13eb8c297cb08d2d97ab3e" category="paragraph">レプリケーション関係が作成されると、レプリケーションポリシーで定義されたとおりに最初のデータ転送が開始されます。オプションで、ASA r2システムがオフラインになった場合にフェイルオーバーが正常に実行されるかどうかを確認するために、レプリケーションのフェイルオーバーをテストできます。</block>
+  <block id="da0717e9287d2101d9333f2031bca9aa" category="paragraph-title">データ保護とセキュリティ</block>
+  <block id="794d2058bfa0143a6c722eb0d40f6fa2" category="paragraph">ASA r2システムは、すべてのSANプロトコル（iSCSI、FC、NVMe/FC、NVMe/TCP）をサポートしています。すべてのプロトコルは、ホストとストレージ間のすべてのパスがアクティブかつ最適化されるよう、マルチパス向けの対称アクティブ / アクティブアーキテクチャをサポートしています。iSCSIおよびNVMe/TCPプロトコルは、サポートされているすべてのONTAPバージョンにおいて、ネットワーク構成および直接接続構成をサポートしています。FCおよびNVMe/FCプロトコルは、サポートされているすべてのONTAPバージョンにおいてネットワーク構成をサポートしており、ONTAP 9.19.1以降では直接接続構成もサポートしています。ASA r2システムは、ASA、AFF、またはFASシステムとのクラスター混在をサポートしていません。</block>
+  <block id="5cdfe0a12dbe0154513cd399f4ebb394" category="cell"><block ref="5cdfe0a12dbe0154513cd399f4ebb394" category="inline-link-macro-rx"></block></block>
+  <block id="79e8ff3b299a4fcb9f7a7eaedd4a6306" category="cell">IP LIFとNVMe/TCP LIFの両方で、デフォルトの自動LIFフェイルオーバーがサポートされています。</block>
 </blocks>
