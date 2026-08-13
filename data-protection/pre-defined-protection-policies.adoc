@@ -4,7 +4,7 @@ permalink: data-protection/pre-defined-protection-policies.html
 keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication, policy, pre-defined, default, custom, policies 
 summary: レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。 
 ---
-= 事前定義されたONTAPデータ保護ポリシーについて学ぶ
+= ASA r2システムの事前定義済みデータ保護ポリシーについて
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

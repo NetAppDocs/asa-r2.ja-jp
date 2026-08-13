@@ -4,7 +4,7 @@ permalink: data-protection/snapmirror-active-sync.html
 keywords: asa r2, data protection, business continuity, setup, set up, snapmirror active sync, disaster recovery, workflow 
 summary: 'SnapMirrorアクティブ同期を使用して、ゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) を必要とするホスト アプリケーションを、予期しない中断やサイト災害による停止から保護します。' 
 ---
-= SnapMirrorアクティブ同期のセットアップワークフロー
+= SnapMirror active sync の ASA r2 システム向けセットアップワークフロー
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

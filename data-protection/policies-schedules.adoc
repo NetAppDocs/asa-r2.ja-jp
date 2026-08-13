@@ -4,7 +4,7 @@ permalink: data-protection/policies-schedules.html
 keywords: data protection, polices, schedules, protect data, snapshot policies, snapshot schedules, replication policies 
 summary: データ保護ポリシーとスケジュールを使用して、自動化されたスケジュールでデータを保護します。 
 ---
-= ASA R2ストレージシステムのONTAPデータ保護ポリシーとスケジュールを管理します。
+= ASA r2システムのデータ保護ポリシーとスケジュールを管理する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

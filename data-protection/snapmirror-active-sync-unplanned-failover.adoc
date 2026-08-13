@@ -4,7 +4,7 @@ permalink: data-protection/snapmirror-active-sync-unplanned-failover.html
 keywords: asa r2, reestablish, snapmirror active sync, unplanned failover, disaster recovery 
 summary: ASA r2 クラスターの計画外のフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立する方法を学びます。 
 ---
-= ASA r2 クラスタの予期しないフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立します。
+= ASA r2 での計画外フェイルオーバー後に SnapMirror アクティブ同期を再確立する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

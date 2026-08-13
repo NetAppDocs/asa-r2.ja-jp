@@ -339,7 +339,6 @@
   <block id="b32275e0392f5cbab8806c7ce85e42f5" category="list-text">警告を受け入れ、*[削除]*を選択します。</block>
   <block id="dde86492e27a0d7b75963e7c4b928397" category="paragraph">整合グループを削除すると、その整合グループに含まれていたストレージユニットはSnapshotによって保護されなくなります。これらのストレージユニットをデータ損失から保護するために、別の整合グループに追加することを検討してください。</block>
   <block id="f64372c965917d3f83cea4c8fcaab6e6" category="summary">データ保護ポリシーとスケジュールを使用して、自動化されたスケジュールでデータを保護します。</block>
-  <block id="c9d9054182df60da02ddbfbf4efecfdb" category="doc">ASA R2ストレージシステムのONTAPデータ保護ポリシーとスケジュールを管理します。</block>
   <block id="d3919acd269a3722bd7dde17248b45a2" category="paragraph">Snapshotポリシーを使用して、整合性グループ内のデータを自動スケジュールで保護します。Snapshotポリシー内のポリシースケジュールを使用して、Snapshotを作成する頻度を決定します。</block>
   <block id="a5d94ffe746cc520a02e27113f7f17f8" category="section-title">新しい保護ポリシースケジュールを作成する</block>
   <block id="839eaac1f4b53c683e9bc97157690966" category="paragraph">保護ポリシースケジュールは、Snapshotポリシーを実行する頻度を定義します。日数、時間数、または分数に基づいて一定の間隔で実行するスケジュールを作成できます。たとえば、1時間ごとに実行するスケジュールや、1日に1回のみ実行するスケジュールを作成できます。特定の曜日または月の特定の時間に実行するスケジュールを作成することもできます。たとえば、毎月20日の午前12時15分に実行するスケジュールを作成できます。</block>
@@ -858,7 +857,6 @@
   <block id="3c3574a78c74302dbc13bf11e0435275" category="list-text">クラスタがNTPサーバに関連付けられていることを確認します。</block>
   <block id="7a15ceb09d1ef08df7b9021f7341e654" category="paragraph">これで、<block ref="0675c663575ea5d2004171fa7c4c09af" category="inline-link-macro-rx"></block>SANクライアントからシステムに接続する準備が整いました。</block>
   <block id="e42d5bab0edf2441b75829873e298e1b" category="summary">ASAシステムは、SANのみのソリューション向けに最適化されたハードウェアサポートを提供します。ASA R2システムは、ハードウェアとソフトウェアの最適化を提供します。</block>
-  <block id="b8d343a2d9dfd7386b6b373e6050b930" category="searchtitle">ASA R2システムを他のONTAPシステムと比較する</block>
   <block id="cf4ae521a2a16cdd073860fee0fbab96" category="paragraph">ONTAPストレージのパーソナリティは、System ManagerまたはONTAP CLIを使用して確認できます。</block>
   <block id="c3e4be39d2ab89664b205dd7d0bb6510" category="list-text">System Managerのメニューで、*[クラスタ]&gt;[概要]*を選択します。</block>
   <block id="8369fc694deadf80f5d106ef41b6e7b2" category="paragraph">ONTAPストレージシステムのパーソナリティは変更できません。</block>
@@ -1019,7 +1017,6 @@
   <block id="2c7986b55d62aa1db59f4d09ab214512" category="paragraph">ストレージユニットのサイズを拡張した場合、ホストがサイズの変更を認識できるように、ホスト上のストレージユニットを再スキャンする必要があります。</block>
   <block id="bb761368ebc9763c37adc9f2f9182164" category="summary">ASA R2でONTAPストレージをプロビジョニングして、SAN（SCSIおよびNVMe）ホストが指定したストレージユニット（LUNおよびNVMeネームスペース）に対してデータの読み取りと書き込みを行えるようにします。</block>
   <block id="1bd888345785eeccf1ec0db2ace03041" category="searchtitle">ONTAP System Managerを使用したSANストレージのプロビジョニング| ASA R2</block>
-  <block id="21ba50dbf4007619e7e1e3d1d4890d04" category="doc">ASA R2システムでのONTAP SANストレージのプロビジョニング</block>
   <block id="5130efcbab54e3de0826ab521946e46d" category="paragraph">ストレージをプロビジョニングするときに、SANホストがASA R2ストレージシステムに対してデータの読み取りと書き込みを実行できるようにします。ストレージをプロビジョニングするには、ONTAPシステムマネージャを使用して、ストレージユニットを作成し、ホストイニシエータを追加し、ホストをストレージユニットにマッピングします。また、読み取り/書き込み処理を有効にするために、ホストで手順を実行する必要があります。</block>
   <block id="765e871d79c6c686febb0d212efcee42" category="section-title">ストレージユニットの作成</block>
   <block id="1d78dc8ed51214e518b5114fe24490ae" category="inline-link-macro">マッピング</block>
@@ -1180,7 +1177,6 @@
   <block id="94a2e0e8ab485816cc10fd24499c15d8" category="list-text">保存先の情報を入力し、*[追加]*を選択します。</block>
   <block id="ff859a51425032eeba77af0fbd94f566" category="paragraph">追加したEメールアドレスに、クラスタイベントと監査ログに関する指定したEメール通知が送信されるようになります。</block>
   <block id="902f69f8add54032a3780db669e4e052" category="summary">ONTAP System Managerの[Insights（インサイト）]を表示して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。</block>
-  <block id="39eb974e3811334d91ec84b86aec1732" category="doc">ASA R2ストレージシステムの分析情報でクラスタのセキュリティとパフォーマンスを最適化</block>
   <block id="9d86f65ca6623815e9bd6f0547909992" category="paragraph">ONTAP System Managerのview_insights_inを使用して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。</block>
   <block id="f73a710b7e6b349114b2765ad1274f5e" category="paragraph">たとえば、クラスタ用にNetwork Time Protocol（NTP；ネットワークタイムプロトコル）サーバが設定されているとします。ただし、クラスタ時間管理を最適化するために必要なNTPサーバの数が推奨される数を下回っていることがわかりません。クラスタ時間が不正確な場合に発生する問題を回避するために、設定されているNTPサーバが少なすぎることが通知され、この問題の詳細を確認するか、修正するか、または却下するかを選択できます。</block>
   <block id="48cfda35c766b770b4272442f0e97eec" category="inline-image-macro">System Managerのインサイトページのスクリーンショット</block>
@@ -1249,7 +1245,6 @@
   <block id="fb5c0f9ac1d7ca64f515441ac68af5b9" category="paragraph">System Managerダッシュボードで、*[プロトコルの設定]*を選択します。</block>
   <block id="9e0acd2071d8ef683d886a96a243f9cc" category="paragraph">[IP]*で、*[IPインターフェイスの設定]*を選択し、*[サブネットの追加]*を選択します。</block>
   <block id="75d7e21ebd9ad6b23f1103cbbb28fd31" category="paragraph">これで、iSCSIネットワークインターフェイスのIPアドレスを簡単かつ迅速に設定できました。</block>
-  <block id="d41e8dd34fef54160816dae4105416f6" category="doc">ASA R2システムでのSANストレージの設定</block>
   <block id="501a74ab6e17a226c7db107b0b362ce4" category="paragraph">ビデオには以下のトランスクリプトが用意されて<block ref="c4c3ae1c600a410ad0a77c184a6ed22d" prefix=" " category="inline-code"></block>います。</block>
   <block id="a74447cd194e6886256748db76e9ae46" category="paragraph">ONTAP System Managerを使用すると、ASA R2ストレージシステム上のホスト用のストレージユニットをすばやく簡単にプロビジョニングできます。</block>
   <block id="eb691c0f91c8f9367dcb6c9f06318778" category="paragraph">この例では'VMwareホスト用に6つの新しいストレージ・ユニットを作成します</block>
@@ -1656,7 +1651,6 @@
   <block id="b78c98e70e341751d6f58db28ecec461" category="paragraph-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> <block ref="29aaf1b4e7e6610ae4790f0740e69e4e" category="inline-link-macro-rx"></block></block>
   <block id="e5d9de39f7ca1ba2637e5640af3ae8aa" category="inline-image-macro">5 つ</block>
   <block id="77aa123fc5c68731cdf628d8e9c75afc" category="paragraph-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> <block ref="69d31d64dbed246448f394257b05fdb9" category="inline-link-macro-rx"></block></block>
-  <block id="95f5e5110bbbc9d987c115097008c227" category="doc">ASA R2ストレージシステム上のセキュアなIP接続</block>
   <block id="c10f6cdf89366933afe9e0a05f726423" category="paragraph">ASA R2システムでIPプロトコルを使用している場合は、IPセキュリティ（IPsec）を設定してデータセキュリティを強化できます。IPsecは、転送中データの暗号化、IPレベルでのネットワークエンドポイント間のトラフィックの認証、およびデータに対するリプレイおよび悪意のある中間者攻撃からの保護を提供するインターネット標準です。</block>
   <block id="602c5938acf67898ca9af2011ec2c721" category="paragraph">ASA R2システムでは、iSCSIホストとNVMe/TCPホストでIPSecを使用できます。</block>
   <block id="a0304825371175c4b6363207289817a6" category="paragraph">一部のASA R2システムでは、暗号化や整合性チェックなどの暗号化処理の一部を、サポートされているネットワークインターフェイスコントローラ（NIC）カードにオフロードできます。NICカードにオフロードされた処理のスループットは約5%以下です。これにより、IPsecで保護されるネットワークトラフィックのパフォーマンスとスループットが大幅に向上します。</block>
@@ -1774,7 +1768,6 @@
   <block id="842dcef5223aaf88ec80c981db6281af" category="list-text">Storage VMを選択します。</block>
   <block id="533fb0f30c2a24bf44c7a68b00aed588" category="list-text">レプリケーション ポリシーには、*AutomatedFailOverDuplex* を選択します。</block>
   <block id="28dda6c6cd8928858d47bf343ece67f7" category="list-text">非均一な対称アクティブ/アクティブ構成を作成する場合は、「*宛先設定*」を選択し、この手順を開始する前に作成する新しい宛先整合性グループの名前を入力します。</block>
-  <block id="9973b2dc6ff0d198b66645d9b9f56c95" category="doc">ASA r2 ストレージ システムでクラスタ間ストレージ VM ピア関係を作成する</block>
   <block id="2b85569d3702bb2d36113451710361a0" category="paragraph">ピア関係は、クラスタとストレージ仮想マシン（VM）が安全にデータを交換できるようにするネットワーク接続を定義します。異なるクラスタ上のストレージVM間でピア関係を作成することで、 SnapMirrorを使用したデータ保護とディザスタリカバリが可能になります。</block>
   <block id="96d54cd4dca11897495ae0700eabe4db" category="inline-link-macro">仲間関係についてもっと学ぶ</block>
   <block id="c6729b936e54a0a4447cabb61660a9d4" category="paragraph"><block ref="1dc8c581a19c9273878f4245199fc483" category="inline-link-macro-rx"></block> 。</block>
@@ -1792,7 +1785,6 @@
   <block id="6fb5023500d2f772bfda250aee9189e3" category="inline-link-macro">自己署名証明書を使用してONTAPメディエーターを設定する</block>
   <block id="61ad23b638716bf0a345ab306b490801" category="paragraph">ONTAPメディエーターをインストールしたら、 <block ref="32ce91cb98769079c3f189462b53f48e" category="inline-link-macro-rx"></block> 。</block>
   <block id="1d4e19ef25fe54c490c90b84de5b941b" category="summary">潜在的なランサムウェア攻撃の警告を表示し、System Manager でアクションを実行します。</block>
-  <block id="ffebabaf8051c5f32f02bdc0ef022af1" category="doc">SnapMirror Active Sync を設定する前に、 ASA r2 クラスタの設定を確認してください。</block>
   <block id="317b640808ec09a0efa427a71506d876" category="paragraph">SnapMirror Active Sync は、フェイルオーバー発生時にデータを保護するために、ピアリングされたクラスタを使用します。SnapMirrorActive Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。</block>
   <block id="43f3def96f033272abf0478fc4738baf" category="list-text">クラスタ間にクラスタ ピア関係が確立されていることを確認します。</block>
   <block id="f5e7302cb0ac2b00c2d0bbab0782656a" category="admonition">SnapMirrorアクティブ同期でクラスタ ピア関係を確立するには、デフォルトのIPspaceが必要です。カスタム IPspace はサポートされていません。</block>
@@ -1809,7 +1801,6 @@
   <block id="e615d081056a6324246cc9785367d8c8" category="inline-link-macro">ONTAPメディエーターをインストールする</block>
   <block id="229ae8f0472b87ad8714bd265cdb8c32" category="paragraph">クラスタ構成を確認したら、 <block ref="781396984d6963e02a0f354491f1e60f" category="inline-link-macro-rx"></block> 。</block>
   <block id="050a9798f5e7e652c91062296d549925" category="summary">ビジネス継続性と災害復旧を確保するために、 SnapMirrorアクティブ同期関係の計画的なフェイルオーバーを実行する方法を学習します。</block>
-  <block id="b523d4446fe92e51af8153c1037dd3c0" category="doc">SnapMirrorアクティブ同期関係でASA r2 クラスタの計画されたフェイルオーバーを実行する</block>
   <block id="2a7ca9f182eb13965b41490352a28925" category="paragraph">SnapMirror Active Syncは、セカンダリサイトにデータのコピーを作成し、災害発生時にホストアプリケーションを自動的かつ透過的にフェイルオーバーさせることで、ビジネスクリティカルなアプリケーションの継続的な可用性を実現します。フェイルオーバープロセスをテストしたり、プライマリサイトでメンテナンスを実行したりするために、 SnapMirror Active Sync関係の計画的なフェイルオーバーを実行する必要がある場合があります。</block>
   <block id="36813a25710ff6e6474b3b529511e797" category="list-text">SnapMirrorアクティブ同期関係が同期されている必要があります。</block>
   <block id="9bc690936650c0a86f8a2f0501647f6b" category="list-text">ストレージ ユニットの移動などの中断を伴わない操作が進行中の場合は、計画されたフェイルオーバーを開始することはできません。</block>
@@ -1854,13 +1845,11 @@
   <block id="2fc36b1a4b7ee19add6fb96fa51e06e8" category="inline-link-macro">クラスタ構成を確認する</block>
   <block id="de03dfd1ae9f6be9d8b9a3908591e8b8" category="paragraph">SnapMirrorアクティブ同期を有効にするために必要な準備が完了したら、 <block ref="04df4bf09ed66e3358600cfc6c24fb99" category="inline-link-macro-rx"></block> 。</block>
   <block id="d611938cbbf8e09d8cffb8d50d6f69d7" category="summary">ASA r2 クラスターの計画外のフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立する方法を学びます。</block>
-  <block id="d9f4c40f0a9837797bd436d8c81aa4aa" category="doc">ASA r2 クラスタの予期しないフェイルオーバー後にSnapMirrorアクティブ同期関係を再確立します。</block>
   <block id="4e85ef85cff46642712b0ee2dcf46ebb" category="list-text">ONTAP Mediatorが設定されて接続され、クォーラムを構成している必要があります。</block>
   <block id="5d356c397f5a143daadc1597a8fd7a34" category="list-text">再確立する必要があるSnapMirrorアクティブ同期関係を選択します。</block>
   <block id="9f4215830573390fcfe4dab1715a643e" category="list-text">関係ステータスに「*InSync*」と表示されるまで待ちます。</block>
   <block id="a1f13cb349233b9c7d0b9e95fdff569e" category="list-text">選択<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block> ; 次に、[フェールオーバー] を選択して、元のプライマリ クラスターで操作を再開します。</block>
   <block id="4e815228ca61a1f75181e7efe619c495" category="summary">SnapMirrorアクティブ同期を使用して、ゼロ復旧ポイント目標 (RPO) とゼロ復旧時間目標 (RTO) を必要とするホスト アプリケーションを、予期しない中断やサイト災害による停止から保護します。</block>
-  <block id="497c72a2f611a19c23299b5daea37215" category="doc">SnapMirrorアクティブ同期のセットアップワークフロー</block>
   <block id="c0da5a4756d4ac1721f7418cfa0145da" category="paragraph">ONTAP SnapMirrorアクティブ同期データ保護により、サイト全体の障害が発生してもビジネス サービスは継続して稼働でき、セカンダリ コピーを使用してアプリケーションを透過的にフェイルオーバーできます。SnapMirrorアクティブ同期でフェイルオーバーをトリガーするために、手動操作やカスタム スクリプトは必要ありません。</block>
   <block id="e5aa1050a01e875d0fd4839753c22c3a" category="inline-link-macro">SnapMirrorアクティブ同期の詳細</block>
   <block id="c42fce7fb66798714860f8785e01c4fd" category="paragraph"><block ref="a408e5a82a63466cbd34839f021414e3" category="inline-link-macro-rx"></block> 。</block>
@@ -2038,7 +2027,6 @@
   <block id="b4a4e19f8caa5675ed75c7e4c2f95379" category="inline-link-macro">SnapMirrorのアクティブ同期関係を削除します</block>
   <block id="79bc5a42c0ce5e77f02d040d055dfae3" category="summary">ASA r2 システムのONTAPソフトウェア アップグレードは、他のONTAPシステムのアップグレードと同じプロセスに従います。  ASA r2 システムでONTAPソフトウェアをアップグレードすると、新しい ONTAP 機能と強化されたONTAP機能を利用できるようになります。</block>
   <block id="676b55575e438300a6a0242a0e2d75e1" category="summary">ASA r2 システム用の自己署名証明書またはサードパーティ証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定する方法について説明します。</block>
-  <block id="891f36b135a18ccbdefecd4dd19a3c84" category="doc">ASA r2 システムでONTAP Mediator またはONTAP Cloud Mediatior を構成する</block>
   <block id="97bae85f844627b195ba9e949527cd8e" category="list-text">右側のペインの「メディエーター」の下で、「メディエーターの追加」を選択します。</block>
   <block id="42d4a1ca1a8c97aaab863879660365c9" category="list-text">証明書情報を追加する</block>
   <block id="d766068c7f16a578ba3f54cfb9431541" category="list-text">自己署名証明書を使用している場合は、<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>ファイルをダウンロードして*証明書*欄に貼り付けるか、*インポート*を選択して<block ref="9e1f34d274d54e077ab71c2c0fe0badd" prefix=" " category="inline-code"></block>ファイルを作成し、証明書情報をインポートします。</block>
@@ -2092,7 +2080,6 @@
   <block id="85bef1d1a49cbb3a5a043ae91ac899f5" category="paragraph">ONTAP 9.16.1を実行していて、デタッチするコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、<block ref="33d9216c15eaaa9769b5c96c29eb8a4f" category="inline-link-macro-rx"></block>整合性グループをデタッチする前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、<block ref="34346ff5cca42944a4ed431b70afdf69" category="inline-link-macro-rx"></block>整合性グループをデタッチする前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。</block>
   <block id="8e735c2c6a3f530bcf5ec1e68dcead8d" category="paragraph"><block ref="2e81c1e2e7e67baddc7dd1eab1535a95" category="inline-link-macro-rx"></block>切り離された子コンシステンシー グループのスナップショットをリモート クラスターに複製します。</block>
   <block id="69476e145701ec47dd0e3181118ad91d" category="summary">レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。</block>
-  <block id="3de0089e51a9f451f4891a9694b94d7e" category="doc">事前定義されたONTAPデータ保護ポリシーについて学ぶ</block>
   <block id="9f69e96ba899e0e31a6aada411ff602e" category="paragraph">レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。</block>
   <block id="ed8bdaffa7dc68cc8c956646c4e8fe55" category="inline-link-macro">カスタムレプリケーションポリシーを作成する</block>
   <block id="cd84790f97e4e9beb448a5f86dfdf828" category="paragraph">事前定義されたポリシーがニーズを満たしていない場合は、<block ref="780c8d0d6612638332edd501d17289ee" category="inline-link-macro-rx"></block> 。</block>
@@ -2124,7 +2111,6 @@
   <block id="a56c1780b810accc7f0bc23193dc16aa" category="cell">XDPDefault</block>
   <block id="6b56815783be20f0a82bd8f4880fefa5" category="cell">日単位および週単位ルールを使用したバックアップ ポリシー</block>
   <block id="83d91de2f52b22872c66e363d396d82b" category="summary">自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定する場合は、サードパーティの証明書を使用するように Mediator を再設定できます。セキュリティ上の理由から、組織ではサードパーティの証明書が推奨または要求される場合があります。</block>
-  <block id="8212aa9e3969d005df60d6c0a8d03da9" category="doc">ASA r2 システムでサードパーティの証明書を使用するようにONTAP Mediator またはONTAP Cloud Mediator を再設定します。</block>
   <block id="6fa9fd24f49ecdb135d0af635134c226" category="section-title">ステップ1: メディエーター構成を削除する</block>
   <block id="1b017ccd17d10e80ac7e3b702a530790" category="paragraph">メディエーターを再構成するには、まずクラスターから現在の構成を削除する必要があります。</block>
   <block id="d76107f3fb2c3c33ee326f5ddecf626e" category="list-text">右側のペインの*メディエーター*の下で、<block ref="c2bfb9c080f7666b2b95fa7dd1fddf25" category="inline-image-macro-rx" type="image"></block>削除するメディエーター構成を持つクラスター ピアの横にあるをクリックし、[*削除*] を選択します。</block>
@@ -2272,7 +2258,6 @@
   <block id="bfbfee5b7921da567b4e7f4846f074a4" category="list-text">システム マネージャーで、*クラスター &gt; ストレージ VM* を選択し、*設定* を選択します。</block>
   <block id="82083a09f8e30e28eb5bea2adf44745b" category="list-text">*ポリシー*の下の*スナップショット*の横にある<block ref="ea08f7a0a99302dbbfd0c8a2575314f3" category="inline-image-macro-rx" type="image"></block>; 次に、[*スナップショット予約のデフォルトの設定/編集*] を選択します。</block>
   <block id="154d9d875cdce0523c156baad6b9aaf9" category="paragraph">新しく作成されたストレージ ユニットのスナップショット予約は、指定したパーセンテージに設定されます。これらのストレージ ユニット内のスナップショットによって消費されるスペースの量が予約量に達すると、古いスナップショットは自動的に削除されます。</block>
-  <block id="8ac521aa288da78824531c0731c9f2ce" category="doc">ASA r2ストレージのONTAPスナップショットリザーブについて学ぶ</block>
   <block id="b172b37fc1d3aaa39402471d5fe32da8" category="paragraph">スナップショット予約とは、スナップショット専用に予約されているストレージ ユニット内のスペースの量です。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。これにより、スナップショットがユーザー データ用のストレージ ユニット内のスペースを消費することがなくなります。</block>
   <block id="dc4385ccf12373b89768d8f0604ac921" category="paragraph">スナップショット予約は、ストレージ ユニットの合計サイズのパーセンテージとして設定されます。たとえば、ストレージ ユニットが 50 GB で、スナップショット予約を 10% に設定した場合、スナップショット用に予約される領域の量は 5 GB になります。スナップショットで使用されるスペースの量が 5 GB に達すると、新しいスナップショット用のスペースを確保するために古いスナップショットが自動的に削除されます。ストレージ ユニットのサイズが 100 GB に増加すると、スナップショット予約は 10 GB に増加します。設定できるスナップショット予約の最大値は 200% です。ストレージ ユニットが最大サイズの 128 TB まで拡張された場合、200% のスナップショット予約により、完全なスナップショットを 2 つ取得できます。</block>
   <block id="b5c51b506b8606572637075d65d777dd" category="paragraph">デフォルトでは、スナップショットの予約は 0% に設定されており、スナップショットの自動削除は有効になっていません。</block>
@@ -2408,7 +2393,6 @@
   <block id="5ae2b91104e852585ddf073635450cf8" category="paragraph">デフォルトのスナップショット予約を変更し、スナップショットの自動削除を有効にします。</block>
   <block id="715a6e64eed03295b4e2bc3df4da2dc6" category="list-text">*スナップショット予約率 %* の下に、スナップショットに割り当てるストレージ ユニット領域の割合を表す数値を入力します。</block>
   <block id="162edb1432d7c690ed0b5b42fa399a29" category="summary">最適なパフォーマンス、構成、サポートを得るには、 ASA r2 のストレージ制限に注意する必要があります。</block>
-  <block id="9027c61cfac0613d2e6d2a3e9f8dce46" category="doc">ASA r2 システムへの移行後にクライアントをカットオーバーし、ソース ストレージ VM をクリーンアップする</block>
   <block id="a36422a2f9f3777ca6a112c936b8ffc7" category="paragraph">ストレージ仮想マシン (VM) がASAクラスタからASA r2 クラスタに移行されると、デフォルトでは、クライアントは自動的にASA r2 クラスタにカットオーバーされ、 ASAクラスタ上のストレージ VM は自動的に削除されます。移行中にASAストレージ VM の自動カットオーバーと削除を無効にすることを選択した場合は、移行が完了した後にこれらの手順を手動で実行する必要があります。</block>
   <block id="b1a60764d65e294c75af5b4d8f70838b" category="section-title">ストレージ VM の移行後にクライアントをASA r2 システムに手動で切り替える</block>
   <block id="aac22a8dfae9665f2f3c5a2f9431abe7" category="paragraph">ASAクラスタからASA r2 クラスタへのストレージ VM の移行中に自動クライアント カットオーバーを無効にした場合は、移行が正常に完了した後、 ASA r2 ストレージ VM がクライアントにデータを提供できるように手動でカットオーバーを実行します。</block>
@@ -2561,8 +2545,6 @@
   <block id="8e06442a81408e5b3d9d881ee34604d9" category="list-text">ポートe10bをシェルフ1のNSM Bポートe0bに接続します。</block>
   <block id="a21739611cdd87f44b21b69f2d1255c4" category="doc">ASA r2ストレージシステムでデフォルトの自律型ランサムウェア保護を無効にします</block>
   <block id="8a7cfb8fa6ea38ee5f0146687bddcd42" category="doc">ASA r2ストレージシステムでAIを使用した自律型ランサムウェア対策を有効にする</block>
-  <block id="a9adededf161bd5d8bb9db9309976ce3" category="doc">ASA r2ストレージシステムでAIによる自律型ランサムウェア対策を一時停止または再開します</block>
-  <block id="bd38f3869f7e640b90d83fffd4208955" category="doc">ASA r2ストレージシステムでAIアラートを使用した自律型ランサムウェア対策に対応</block>
   <block id="3e43f7eeca64d5c830b0064870a6156b" category="admonition">設置およびメンテナンス手順中は、検証済みの接地点に接続された接地リストストラップを常に着用してください。適切なESD予防措置に従わないと、コントローラーノード、ストレージシェルフ、およびネットワークスイッチに永久的な損傷が発生する可能性があります。</block>
   <block id="fc4a9f6cd00df6dfa4d8144f15b57af3" category="paragraph">ストレージユニット（LUNまたはNVMeネームスペースに基づく）が作成されると、ONTAPは適切なストレージの可用性ゾーンにボリュームを自動的に作成し、ストレージユニットを格納します。新しく作成されたボリュームは、最適なパフォーマンスとバランスの取れた容量利用を実現するために、ストレージの可用性ゾーン内に自動的に配置されます。容量利用率は、ONTAPのバージョンに基づいて、ストレージの可用性ゾーン内でバランスが取られます。<block ref="44cab674f8c9e72d3dcaedde750c6695" category="inline-link-macro-rx"></block>。</block>
   <block id="862cd7ba2a996f4f7baaf919aeabdaa3" category="summary">ASA A1Kストレージシステムをネットワークとストレージシェルフに接続して、クラスタ通信、管理アクセス、およびSANホスト接続を有効にします。</block>
@@ -2681,7 +2663,6 @@
   <block id="c240788f59668332d5c171cbe489376a" category="paragraph"><block ref="9c7fdd39bc5019d6cec3e908fec6a772" category="inline-link-macro-rx"></block>方法をご確認ください。</block>
   <block id="9917a58904f13efdde588f2978fd93b9" category="inline-link-macro">AIによる自律型ランサムウェア対策を有効にする</block>
   <block id="b71329b670dac542862012007751fd6f" category="summary">ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。</block>
-  <block id="e7afd2cc385e151dc252f52489678be6" category="doc">ASA r2システムでのSnapMirrorアクティブ同期保護に向けたAIXホストの準備</block>
   <block id="16624daae6b7659680047c4fc428fec2" category="paragraph">ONTAP 9.19.1以降、AIXの透過的アプリケーションフェイルオーバーは、対称アクティブ/アクティブ構成のSnapMirror active syncでサポートされています。SnapMirror active syncデータ保護により、完全なサイト障害が発生した場合でもビジネスサービスの稼働を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。</block>
   <block id="ba38f5c107e42f69bfac0d9f7824f8c9" category="inline-link-macro">SnapMirror アクティブ同期の相互運用性</block>
   <block id="f80d8776833174e556c56272ce794684" category="paragraph">ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。他のホストタイプでは、アクセスモードの選択は不要です。<block ref="987f5b7a840f16d7e10b014311f90ef1" category="inline-link-macro-rx"></block>の詳細をご覧ください。</block>
@@ -2867,4 +2848,22 @@
   <block id="5cdfe0a12dbe0154513cd399f4ebb394" category="cell"><block ref="5cdfe0a12dbe0154513cd399f4ebb394" category="inline-link-macro-rx"></block></block>
   <block id="79e8ff3b299a4fcb9f7a7eaedd4a6306" category="cell">IP LIFとNVMe/TCP LIFの両方で、デフォルトの自動LIFフェイルオーバーがサポートされています。</block>
   <block id="f4a196522bd29f2dc617b123e426fca8" category="admonition">仮想マシン（VM）の制限は Hardware Universe には記載されていません。HAペアあたりの推奨最大VM数は800、クラスターあたりは1200です。これは ASA r2 システムのボリューム制限に基づいています。この制限は、VMFSデータストアに存在する仮想マシンには適用されません。VMFSデータストアには、仮想マシンの最大数に制限はありません。</block>
+  <block id="a536b53a0230979ea7dced793dc9491e" category="doc">ASA r2システムでのONTAP MediatorまたはONTAP Cloud Mediatorの設定</block>
+  <block id="6e3fcbcce3441b9118a284072b2d43aa" category="doc">ASA r2システムでクラスター間ストレージVMのピア関係を作成する</block>
+  <block id="6bf0920af0bdc9c57b36bb8d2920f050" category="doc">ASA r2システムのデータ保護ポリシーとスケジュールを管理する</block>
+  <block id="f8bb47b24976c7bf4723961daedd3e1a" category="doc">ASA r2システムの事前定義済みデータ保護ポリシーについて</block>
+  <block id="76e0d98c8871e04d4f9ff544bbb24b78" category="doc">ASA r2システムでのSnapMirrorアクティブ同期のためにAIXホストを準備する</block>
+  <block id="96072d2cdbee5229e27852ec585d56d1" category="doc">ASA r2システムでサードパーティ証明書を使用するようにMediatorを再構成する</block>
+  <block id="b062004dfbb4ad5e82066f96dc686b12" category="doc">SnapMirror active sync用のASA r2クラスター構成を確認します</block>
+  <block id="198085dfe5a8229e7c749f1dbdf5e4f7" category="doc">ASA r2 SnapMirror アクティブ同期関係のフェイルオーバー</block>
+  <block id="c52c6c6622ecbf9a06ed9e2749751ea7" category="doc">ASA r2 での計画外フェイルオーバー後に SnapMirror アクティブ同期を再確立する</block>
+  <block id="5040e8878b6b4047227bf23dfa69ad32" category="doc">SnapMirror active sync の ASA r2 システム向けセットアップワークフロー</block>
+  <block id="9a923360fe18ef8d2ab0c152cf8b442b" category="doc">ASA r2ストレージシステムのONTAPスナップショット予約について</block>
+  <block id="d0f9bfc8fd9b34fb299681a49d3c44f2" category="searchtitle">ASA r2 とその他の ONTAP システムとの違い</block>
+  <block id="b97444b3293ace41e23cdcd254cb82d6" category="doc">ASA r2システムでONTAP SANストレージをプロビジョニングする</block>
+  <block id="3a70164c0ba54edbf03abe9eb4ddcf0f" category="doc">ASA r2ストレージVMの移行後のカットオーバーとクリーンアップ</block>
+  <block id="86c0d573069eca002c586264ae1b0211" category="doc">ASA r2システムのInsightsを使用してクラスターのセキュリティとパフォーマンスを最適化する</block>
+  <block id="d59a2ca55fba4c918ce94764958c72c4" category="doc">ASA r2ストレージシステムのIPsecおよびハードウェアオフロードのサポート</block>
+  <block id="58c7744ea9658fb6f86ed215f89056ad" category="doc">ASA r2ストレージシステムでARP/AI保護を一時停止または再開する</block>
+  <block id="a80d92389a122d0641f947975df5f6d2" category="doc">ASA r2ストレージシステムでのARP/AIアラートへの対応</block>
 </blocks>

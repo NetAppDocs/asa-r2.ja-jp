@@ -4,7 +4,7 @@ permalink: monitor/view-insights.html
 keywords: view, insights, optimize, cluster, performance, best practices, configuration, security 
 summary: 'ONTAP System Managerの[Insights（インサイト）]を表示して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。' 
 ---
-= ASA R2ストレージシステムの分析情報でクラスタのセキュリティとパフォーマンスを最適化
+= ASA r2システムのInsightsを使用してクラスターのセキュリティとパフォーマンスを最適化する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

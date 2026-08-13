@@ -4,7 +4,7 @@ permalink: data-protection/snapmirror-active-sync-confirm-cluster-configuration.
 keywords: asa r2, data protection, business continuity, snapmirror active sync, cluster configuration 
 summary: Active Syncを設定する前に、 ASA r2 クラスタがサポート対象のピアリング関係にあり、その他の設定要件を満たしていることを確認する必要があります。 
 ---
-= SnapMirror Active Sync を設定する前に、 ASA r2 クラスタの設定を確認してください。
+= SnapMirror active sync用のASA r2クラスター構成を確認します
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: data-protection/snapshot-reserve.html
 keywords: asa r2, snapshot reserve, percentage 
 summary: スナップショット予約とは、スナップショット専用に予約されているストレージ ユニット内のスペースの量です。スナップショットの自動削除でスナップショット予約が設定されている場合、スナップショットによって使用されるスペースがスナップショット予約を超えると、古いスナップショットが自動的に削除されます。 
 ---
-= ASA r2ストレージのONTAPスナップショットリザーブについて学ぶ
+= ASA r2ストレージシステムのONTAPスナップショット予約について
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

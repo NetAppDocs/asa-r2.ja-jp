@@ -4,7 +4,7 @@ permalink: videos/video_transcript_provision_san_storage.html
 keywords: frontmatter, front matter 
 summary: ASA R2ストレージシステムでONTAP System Managerを使用して一般的なタスクをすばやく簡単に実行する方法を紹介する短いビデオをご覧ください。 
 ---
-= ASA R2システムでのSANストレージの設定
+= ASA R2システムでのSANストレージのプロビジョニング
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

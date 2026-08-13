@@ -5,7 +5,7 @@ keywords: provision storage,san, create storage units, luns, namespaces, nvme, a
 summary: ASA R2でONTAPストレージをプロビジョニングして、SAN（SCSIおよびNVMe）ホストが指定したストレージユニット（LUNおよびNVMeネームスペース）に対してデータの読み取りと書き込みを行えるようにします。 
 searchtitle: ONTAP System Managerを使用したSANストレージのプロビジョニング| ASA R2 
 ---
-= ASA R2システムでのONTAP SANストレージのプロビジョニング
+= ASA r2システムでONTAP SANストレージをプロビジョニングする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

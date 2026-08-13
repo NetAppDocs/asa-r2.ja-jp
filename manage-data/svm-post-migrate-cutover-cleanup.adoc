@@ -4,7 +4,7 @@ permalink: manage-data/svm-post-migrate-cutover-cleanup.html
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine, manual cutover, manual cleanup, remove source svm 
 summary: ストレージ可用性ゾーンのスペースが少なくなってきた場合は、ストレージユニットを別のストレージ可用性ゾーンに移動して、クラスタ全体でストレージ利用率を分散させることができます。 
 ---
-= ASA r2 システムへの移行後にクライアントをカットオーバーし、ソース ストレージ VM をクリーンアップする
+= ASA r2ストレージVMの移行後のカットオーバーとクリーンアップ
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
