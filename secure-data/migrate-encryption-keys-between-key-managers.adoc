@@ -4,14 +4,14 @@ permalink: secure-data/migrate-encryption-keys-between-key-managers.html
 keywords: onboard key manager, external key manager, configure, migrate keys, store keys, authentication keys, encryption keys, asa r2 
 summary: データ暗号化キーは、ASA R2システム上のONTAPオンボードキーマネージャ、外部キーマネージャ、またはその両方（一方の場合）で管理できます。 
 ---
-= ASA R2システムのキー管理ツール間でONTAPデータ暗号化キーを移行する
+= ASA r2システムでキーマネージャ間のONTAPデータ暗号化キーを移行する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-データ暗号化キーは、ASA R2システムのONTAPオンボードキーマネージャまたは外部キー管理ツール（またはその両方）を使用して管理できます。外部キー管理ツールはStorage VMレベルでのみ有効にできます。ONTAPクラスタレベルでは、オンボードキーマネージャまたは外部キーマネージャを有効にできます。
+データ暗号化キーは、ASA r2システムのONTAPオンボードキーマネージャ、外部キーマネージャ、またはサポートされている構成ではその両方を使用して管理できます。外部キーマネージャは、ストレージVMレベルでのみサポートされています。ONTAPクラスタレベルでは、オンボードキーマネージャまたは外部キーマネージャのいずれかを使用できます。
 
 [cols="2,2"]
 |===
@@ -53,11 +53,11 @@ summary: データ暗号化キーは、ASA R2システム上のONTAPオンボー
 [[migrate-keys-between-key-managers-at-the-ontap-cluster-level]]
 == ONTAPクラスタレベルでのキー管理ツール間でのキーの移行
 
-ONTAP 9.16.1以降では、ONTAPのコマンドラインインターフェイス（CLI）を使用して、クラスタレベルのキー管理ツール間でキーを移行できます。
+ONTAP 9.16.1以降では、ONTAP コマンドラインインターフェース（CLI）を使用して、クラスタレベルのキーマネージャ間でキーを移行できます。
 
 [role="tabbed-block"]
 ====
-.オンホオトカラカイフヘ
+.オンボード キー マネージャから外部キー管理ツールへ
 --
 .手順
 . 権限レベルをadvancedに設定します。
@@ -93,7 +93,7 @@ set -privilege admin
 
 
 --
-.カイフカラオンボードヘ
+.外部キー管理ツールからオンボード キー マネージャへ
 --
 .手順
 . 権限レベルをadvancedに設定します。
@@ -114,7 +114,7 @@ security key-manager onboard create-config
 ----
 security key-manager keystore enable -vserver <storage_vm_name> -type OKM
 ----
-. 外部キー管理ツールの設定を削除します。
+. 外部キーマネージャの設定を削除する
 +
 [source, cli]
 ----
@@ -135,7 +135,7 @@ set -privilege admin
 [[migrate-keys-between-key-managers-across-ontap-cluster-and-storage-vm-levels]]
 == ONTAPクラスタレベルとStorage VMレベルのキー管理ツール間でキーを移行
 
-ONTAPのコマンドラインインターフェイス（CLI）を使用して、クラスタレベルのキー管理ツールとStorage VMレベルのキー管理ツールの間でキーを移行できます。
+ONTAP コマンドラインインターフェイス（CLI）を使用して、クラスタレベルとストレージ VM レベルのキーマネージャ間でキーを移行できます。
 
 .手順
 . 権限レベルをadvancedに設定します。

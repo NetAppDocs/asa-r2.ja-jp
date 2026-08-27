@@ -11,7 +11,7 @@ summary: ストレージ可用性ゾーンのスペースが少なくなって�
 
 
 [role="lead"]
-ONTAP 9.18.1 以降では、任意の標準 ASA クラスターから任意の ASA r2 クラスターへ、ストレージ仮想マシン（VM）を無停止で移行できます。標準 ASA クラスターから ASA r2 クラスターへ移行することで、SAN 専用環境向けの ASA r2 システムの簡素化・合理化されたアーキテクチャを採用できます。
+ONTAP 9.18.1以降では、SAN専用環境向けに簡素化・合理化されたASA r2システムのアーキテクチャを採用するために、任意の標準ASAクラスターから任意のASA r2クラスターへストレージ仮想マシン（VM）を無停止で移行できます。
 
 
 NOTE: ASA MetroCluster から ASA r2 クラスターにストレージ VM を移行することはできません。ASA r2 システムは MetroCluster 構成をサポートしていません。
@@ -77,7 +77,7 @@ vserver nvme namespace show -vserver <storage_VM>
 +
 [source, cli]
 ----
-lun show -verser <storage_VM> -class protocol-endpoint,vvol
+lun show -vserver <storage_VM> -class protocol-endpoint,vvol
 ----
 +
 vVolsが存在する場合は、それらを別のストレージ VM にコピーし、移行するストレージ VM から削除する必要があります。参照 `lun copy`そして `lun delete`コマンドlink:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html["ONTAPコマンド リファレンス"^]詳細についてはこちらをご覧ください。
@@ -86,7 +86,7 @@ vVolsが存在する場合は、それらを別のストレージ VM にコピ�
 +
 [source, cli]
 ----
-lun show -verser <storage_VM>
+lun show -vserver <storage_VM>
 ----
 +
 ボリュームに複数のLUNが含まれている場合は、 `volume create`そして `lun move`1:1 のボリュームと LUN の比率を作成するコマンド。詳細については、link:https://docs.netapp.com/us-en/ontap/concepts/manual-pages.html["ONTAPコマンド リファレンス"^]を参照してください。
@@ -182,7 +182,7 @@ ASAストレージ VM を移行用に準備する準備が整いました。
 vserver migrate start -vserver <storage_VM> -source-cluster <asa_cluster> -check-only true
 ----
 +
-ASAクラスタを移行する準備をするために問題を修正する必要がある場合は、問題と修正アクションが表示されます。問題を修正し、正常に完了するまで事前チェ​​ックを繰り返します。
+移行に向けてASA クラスターを準備するために修正が必要な問題がある場合は、その問題と是正措置が表示されます。問題を修正し、事前チェックが正常に完了するまで繰り返してください。
 
 
 

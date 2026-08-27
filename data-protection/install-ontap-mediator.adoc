@@ -17,5 +17,5 @@ ONTAP Mediator のインストールには、インストールの準備、リ�
 
 ONTAPメディエーターをインストールするには、 link:https://docs.netapp.com/us-en/ontap/mediator/workflow-summary.html["このワークフロー"^]
 
-.次のステップ
+.次の手順
 ONTAPメディエーターをインストールしたら、 link:configure-ontap-mediator.html["自己署名証明書を使用してONTAPメディエーターを設定する"] 。

@@ -62,8 +62,8 @@ image:icon_dropdown_arrow.gif["下向きの青い矢印"]デフォルトポリ�
 . [ 保存（ Save ） ] を選択します。
 
 
-.次のステップ
-Snapshotでデータを保護したのでlink:../secure-data/encrypt-data-at-rest.html["Snapshotレプリケーションのセットアップ"]、バックアップとディザスタリカバリのために、地理的に離れた場所に整合グループをコピーする必要があります。
+.次の手順
+スナップショットでデータが保護されたので、link:snapshot-replication.html["Snapshotレプリケーションのセットアップ"]を使用して、整合性グループを地理的に離れた場所にコピーし、バックアップおよび災害復旧に備えてください。
 
 
 

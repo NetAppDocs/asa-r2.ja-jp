@@ -4,14 +4,14 @@ permalink: secure-data/disable-default-anti-ransomware-protection.html
 keywords: asa r2, secure data, data security, anti-ransomware, autonomous ransomware protection, arp, ai, disable 
 summary: ASA r2クラスタにAutonomous Ransomware Protectionライセンスがインストールされている場合、ONTAP 9.18.1へのアップグレード後、または新しいONTAP 9.18.1 ASA r2クラスタの初期化後12時間で、既存および新規に作成されたすべてのストレージユニットでARPがデフォルトで有効になります。 
 ---
-= ASA r2ストレージシステムでデフォルトの自律型ランサムウェア保護を無効にします
+= ASA r2ストレージシステムでデフォルトの自律型ランサムウェア対策を無効にする
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-新しい ONTAP 9.18.1 ASA r2 クラスタを初期化するか、クラスタを ONTAP 9.18.1 にアップグレードすると、12 時間の猶予期間が経過した後、すべての新規ストレージユニットで ARP/AI がデフォルトで自動的に有効化されます。猶予期間中に ARP/AI を無効化しない場合、猶予期間終了時に新規ストレージユニットに対してクラスタ全体で ARP/AI が有効化されます。
+新しい ONTAP 9.18.1 ASA r2 クラスターを初期化する場合、またはクラスターを ONTAP 9.18.1 にアップグレードする場合、12時間の猶予期間後、すべての新しいストレージユニットで ARP/AI がデフォルトで有効になります。その期間中に ARP/AI を無効にしない場合、猶予期間が終了すると、ONTAP は新しいストレージユニットに対してクラスタ全体で ARP/AI を有効にします。
 
 ONTAP 9.17.1で作成されたストレージユニットは、ARP/AI用にlink:enable-anti-ransomware-protection.html["手動で有効化"]する必要があります。
 
@@ -49,7 +49,7 @@ ONTAP 9.17.1で作成されたストレージユニットは、ARP/AI用にlink:
 ----
 security anti-ransomware auto-enable show
 ----
-. 既存および新規ボリュームのデフォルトの有効化を無効にします：
+. 既存および新規ストレージユニットのデフォルト有効化を無効にする：
 +
 [source, cli]
 ----

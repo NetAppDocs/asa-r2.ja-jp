@@ -37,7 +37,7 @@ ONTAP 9.18.1 以降では、スナップショット予約とスナップショ�
 link:snapshot-reserve.html["ASA r2 ストレージシステムのスナップショット予約の詳細"]。
 
 .開始する前に
-ONTAP 9.16.1を実行していて、拡張したいコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、link:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"]ストレージユニットを追加する前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、link:snapmirror-active-sync-break-relationship.html["関係を断つ"]整合性グループを拡張する前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。
+ONTAP 9.16.1 を実行していて、拡張する整合性グループが SnapMirror アクティブ同期関係にある場合は、ストレージ ユニットを追加する前に link:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"] を実行する必要があります。ONTAP 9.16.1 を実行していて、整合性グループが非同期レプリケーション関係にある場合は、整合性グループを拡張する前に link:snapmirror-active-sync-break-relationship.html["関係を断つ"] を実行する必要があります。整合性グループを拡張する前に SnapMirror アクティブ同期関係を削除したり、非同期関係を解除したりする必要は、ONTAP 9.17.1 以降のリリースでは不要です。
 
 [role="tabbed-block"]
 ====
@@ -67,7 +67,7 @@ ONTAP 9.16.1を実行していて、拡張したいコンシステンシーグ�
 
 
 .次の手順
-新しいストレージユニットを作成したらlink:../manage-data/provision-san-storage.html#add-host-initiators["ホストイニシエータの追加"]、とを実行しlink:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host["新しく作成したストレージ・ユニットをホストにマッピングします"]ます。ホストイニシエータを追加すると、ホストはストレージユニットにアクセスしてデータ処理を実行できるようになります。ストレージ・ユニットをホストにマッピングすると'ストレージ・ユニットは'マッピング先のホストへのデータの提供を開始できます
+新しいストレージユニットを作成したら、link:../manage-data/provision-san-storage.html#add-host-initiators["ホストイニシエータの追加"]およびlink:../manage-data/provision-san-storage.html#map-the-storage-unit-to-a-host["新しく作成したストレージ・ユニットをホストにマッピングします"]を行う必要があります。ホストイニシエータを追加すると、ホストはストレージユニットにアクセスしてデータ操作を実行できるようになります。ストレージユニットをホストにマッピングすることで、そのストレージユニットはマッピング先のホストに対してデータの提供を開始できるようになります。
 
 --
 ====
@@ -90,5 +90,5 @@ ONTAP 9.16.1を実行していて、拡張したいコンシステンシーグ�
 .結果
 ストレージユニットはコンシステンシグループのメンバーではなくなりました。
 
-.次のステップ
+.次の手順
 ストレージユニットのデータ保護を継続する必要がある場合は、別のコンシステンシグループにストレージユニットを追加します。

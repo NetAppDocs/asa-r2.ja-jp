@@ -11,14 +11,14 @@ summary: System Managerを使用して、Active Directoryドメインコント�
 
 
 [role="lead"]
-System Managerを使用して、Active Directoryドメインコントローラアクセス、LDAPおよびSAML認証をユーザアカウントに設定します。ユーザアカウントロールを作成して、そのロールに割り当てられたユーザがクラスタで実行できる特定の機能を定義します。
+System Manager を使用して、ユーザーアカウントの Active Directory ドメイン コントローラアクセス、LDAP 認証、および SAML 認証を設定します。ユーザーアカウントロールを作成することで、ロールに割り当てられたユーザーがクラスター上で実行できる特定の機能を定義します。
 
 
 
 [[configure-active-directory-domain-controller-access]]
-== Active Directoryドメインコントローラアクセスの設定
+== Active Directoryドメイン コントローラ アクセスの設定
 
-Active Directory（AD）ドメインコントローラからクラスタまたはStorage VMへのアクセスを設定し、ADアカウントからのアクセスを有効にできるようにします。
+Active Directory （AD） ドメイン コントローラのアクセスをクラスターまたはストレージ VM に設定して、AD アカウントのアクセスを有効にします。
 
 .手順
 . System Managerで、* Cluster > Settings *の順に選択します。
@@ -64,7 +64,7 @@ Security Assertion Markup Language（SAML）認証を使用すると、Active Di
 
 .手順
 . System Managerで、* Cluster > Settings *の順に選択します。
-. [セキュリティ]*で、* SAML認証*の横にあるを選択しますimage:icon_gear_white_bg.png["機械式ギアの青い輪郭"]。
+. *セキュリティ* の下の *SAML 認証* の横で、image:icon_gear_white_bg.png["機械式ギアの青い輪郭"] を選択します。
 . [SAML認証を有効にする]*を選択します。
 . IdPのURLとホストシステムのIPアドレスを入力し、*[保存]*を選択します。
 +
@@ -115,7 +115,7 @@ IdPシステムに認証画面が表示されます。
 . [ユーザ]*で、を選択しますimage:icon_add_blue_bg.png["プラス記号が付いた青い四角形の後に、白い文字で「add」という単語が続く"]。
 . ユーザ名を入力し、ユーザに割り当てるロールを選択します。
 . ユーザのログイン方法と認証方法を選択します。
-. MFAを有効にするには、を選択しimage:icon_add.gif["プラス記号の後に青い文字で「add」という単語が続く"]、セカンダリログイン方法と認証方法を選択します。
+. MFAを有効にするには、image:icon_add.gif["プラス記号の後に青い文字で「add」という単語が続く"]を選択し、次に二次ログイン方法と認証方法を選択します。
 . ユーザのパスワードを入力します。
 . [ 保存（ Save ） ] を選択します。
 

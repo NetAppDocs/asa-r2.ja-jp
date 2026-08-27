@@ -15,7 +15,7 @@ ASA R2システムでONTAPソフトウェアをアップグレードすると、
 
 ASA r2 システムの ONTAP ソフトウェアアップグレードは、他の ONTAP システムのアップグレードと同じプロセスに従います。link:https://docs.netapp.com/us-en/ontap/upgrade/create-upgrade-plan.html["Active IQ Digital AdvisorのUpgrade AdvisorまたはUpgrade Health Checkerを使用してアップグレードの準備をする"^]から始めることをお勧めします。
 
-アップグレードの準備ができたら、link:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["System Managerからの自動無停止アップグレード（ANDU）"^]を使用してアップグレードを実行することをお勧めします。ANDUでは、ONTAPのハイアベイラビリティ（HA）フェイルオーバー テクノロジを利用して、アップグレード中もクラスタからデータが提供されます。
+アップグレードの準備ができたら、link:https://docs.netapp.com/us-en/ontap/upgrade/task_upgrade_andu_sm.html["System Managerからの自動無停止アップグレード（ANDU）"^]を使用してアップグレードを実行することをお勧めします。ANDUはONTAPの高可用性（HA）フェイルオーバー テクノロジを活用して、アップグレード中にクラスタが中断することなく引き続きデータを提供することを保証します。
 
 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPソフトウェアのアップグレード"^]の詳細をご覧ください。
 
@@ -26,6 +26,6 @@ link:https://docs.netapp.com/us-en/ontap/upgrade/index.html["ONTAPソフトウ�
 
 ONTAPソフトウェアのアップグレード プロセス中でなくても、ONTAPの自動アップグレード前チェックは実行できます。アップグレード前チェックをONTAPの自動アップグレード プロセスとは別に実行することで、クラスタに対して実行されたチェックを把握して、アップグレードを実際に開始する前に修正しておくべきエラーや警告のリストを入手できます。
 
-ONTAP 9.19.1以降では、エラーと警告が個別に表示されるため、アップグレード前に解決する必要がある問題を簡単に特定できます。
+ONTAP 9.19.1以降、エラーと警告が別々に表示されるため、アップグレード前に解決が必要な問題を簡単に特定できます。
 
 link:https://docs.netapp.com/us-en/ontap/upgrade/automated-pre-checks.html["ONTAP 自動アップグレード前チェックを実行"^]方法をご確認ください。

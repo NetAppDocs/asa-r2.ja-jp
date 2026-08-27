@@ -31,7 +31,7 @@ Online Certificate Status Protocol （ OCSP ）は、 SSL 接続と Transport La
 
 
 .結果
-パブリック証明書の生成に使用できるCSRを生成しておきます。
+公開証明書を生成するために使用できるCSRが生成されました。
 
 
 

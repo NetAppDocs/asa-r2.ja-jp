@@ -26,7 +26,7 @@ ASA r2 システム用のONTAP 9.18.1 で利用できる新しい機能につい
 | 更新 | 説明 
 
 
-| link:../data-protection/snapmirror-active-sync.html["SnapMirrorアクティブ同期構成のサポートが強化されました"] | SnapMirrorアクティブ同期のサポートが 2 ノード クラスタから 4 ノード クラスタに拡大されました。 
+| link:../data-protection/snapmirror-active-sync.html["SnapMirrorアクティブ同期構成のサポートが強化されました"] | SnapMirror アクティブ同期のサポートが、2 ノード クラスタから 4 ノード クラスタに拡張されました。 
 |===
 
 

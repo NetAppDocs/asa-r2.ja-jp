@@ -21,7 +21,7 @@ ASA R2 REST APIは、Unified ONTAPパーソナリティで提供されるREST AP
 [[types-of-api-changes]]
 == APIの変更の種類
 
-ASA R2システムREST APIと、FAS、AFF、およびASAシステムで使用できるUnified ONTAP REST APIには、いくつかの違いがあります。変更の種類を理解することで、オンラインのAPIリファレンスドキュメントをより有効に活用できます。
+FAS、AFF、およびASAシステムで使用できるASA r2 REST APIと統合ONTAP REST APIの間には、いくつかの違いがあります。これらの違いを理解することで、オンラインAPIリファレンスドキュメントをより効果的に活用できます。
 
 .Unified ONTAPでサポートされない新しいASA R2エンドポイント
 ASA R2 REST APIには、Unified ONTAPでは使用できないエンドポイントがいくつか追加されています。
@@ -34,7 +34,7 @@ ASA R2 REST APIには、Unified ONTAPでは使用できないエンドポイン�
 ASA R2で使用できるいくつかのエンドポイントには、Unified ONTAPと比較して使用できるHTTPメソッドが制限されています。たとえば `/api/protocols/nvme/services`、ASA R2システムでエンドポイントを使用する場合、POSTとDELETEは実行できません。
 
 .エンドポイントとHTTPメソッドのプロパティの変更
-一部のASA R2システムエンドポイントとメソッドの組み合わせでは、Unified ONTAP Personalityで使用可能な定義済みプロパティの一部がサポートされていません。たとえば、エンドポイントでPATCHを使用する場合、 `/api/storage/volumes/{uuid}`ASA R2では次のようないくつかのプロパティがサポートされません。
+一部のASA r2エンドポイントとメソッドの組み合わせは、統合ONTAPパーソナリティ向けに定義されたすべてのプロパティをサポートしていません。たとえば、エンドポイントでPATCHを使用する場合 `/api/storage/volumes/{uuid}`、ASA r2ではサポートされていないプロパティがいくつかあります。以下がその例です：
 
 * `autosize.maximum`
 * `autosize.minimum`
@@ -49,7 +49,7 @@ ASA R2での特定のREST API要求の処理方法にいくつかの変更があ
 [[enhanced-security-with-oauth-2-0]]
 == OAuth 2.0によるセキュリティの強化
 
-OAuth 2.0は業界標準の認可フレームワークです。署名されたアクセストークンに基づいて、保護されたリソースへのアクセスを制限および制御するために使用されます。ASA R2システムリソースを保護するために、System Managerを使用してOAuth 2.0を設定できます。
+OAuth 2.0は、業界標準の認可フレームワークです。これは、署名付きアクセストークンに基づいて、保護されたリソースへのアクセスを制限および制御するために使用されます。System Manager を使用して OAuth 2.0 を設定し、ASA r2 システムリソースを保護できます。
 
 System ManagerでOAuth 2.0をセットアップすると、REST APIクライアントによるアクセスを制御できます。まず、認可サーバーからアクセストークンを取得する必要があります。RESTクライアントは、認証要求ヘッダーを使用して、そのトークンをベアラトークンとしてASA R2クラスタに渡します。詳細については、を参照してください https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["OAuth 2.0を使用した認証と許可"^] 。
 
