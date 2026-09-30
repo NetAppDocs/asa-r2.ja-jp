@@ -1,0 +1,197 @@
+---
+sidebar: sidebar 
+permalink: administer/remove-nodes.html 
+keywords: remove, node, removing, asa r2 
+summary: 組織の命名規則やその他の管理上の理由で、ノードの名前を変更しなければならない場合があります。 
+---
+= ASA r2 ノードを ONTAP クラスタから削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メンテナンス、交換、または廃止の目的で、クラスターからノードを削除する必要がある場合があります。ノードは1つずつ削除する必要があります。ノードを削除する場合は、そのHAパートナーも削除する必要があります。
+
+
+
+[[step-1-prepare-to-remove-nodes-from-an-asa-r2-cluster]]
+== ステップ 1：ASA r2 クラスターからノードを削除する準備をする
+
+ASA r2 クラスターからノードを削除する前に、クラスターが正常な状態であることを確認する必要があります。次に、ノードからストレージユニット、VLAN、および LIF を移行または削除し、ストレージフェイルオーバーを無効にする必要があります。
+
+.手順
+. クラスタが正常に動作していることを確認します。
++
+[source, cli]
+----
+cluster show
+----
+. link:../manage-data/move-storage-units.html["Move"]またはlink:../manage-data/delete-storage-units.html["delete"]ノードからすべてのストレージユニットを選択します。
+. 削除対象のノードに SCSI ストレージ ユニット（LUN）がある場合、link:https://docs.netapp.com/us-en/ontap/san-admin/modify-slm-reporting-nodes-task.html["選択的LUNマップ（SLM）レポートノードリストから、ノードとそのHAパートナーを削除します。"^]。
++
+SLMのレポートノードリストからノードとそのHAパートナーを削除しないと、LUNが別のノードに移動された場合でも、以前そのノード上にあったLUNへのアクセスが失われる可能性があります。
+
+. link:https://docs.netapp.com/us-en/ontap/networking/delete_a_lif.html["削除"^]またはlink:https://docs.netapp.com/us-en/ontap/san-admin/move-san-lifs-task.html["マイグレート"^]ノードからのすべてのネットワークインターフェース（LIF）。
++
+** データLIFは別のノードに移動するか、削除する必要があります。
++
+iSCSI LIFの移行は、ホームノードまたはHAパートナー上のポートのみに限定されるため、削除する必要があります。
+
+** クラスター間 LIF は削除する必要があります。
++
+クラスター間LIFを削除すると、無視しても問題ない警告が表示されます。
+
+** クラスタ管理LIFは別のノードに移動する必要があります。
+
+
+. link:../administer/manage-cluster-networking.html#delete-a-vlan["すべてのVLANを削除する"]ノード上。
+. ノードのストレージフェイルオーバーを無効にする：
++
+[source, cli]
+----
+storage failover modify -enabled false -node <nodename>
+----
+
+
+.次の手順
+HAペアの最初のノードをクラスターから削除し、次にそのHAパートナーを削除します。
+
+
+
+[[step-2-remove-a-node-from-an-asa-r2-cluster]]
+== ステップ 2：ASA r2 クラスターからノードを削除する
+
+ノードの削除に必要な準備手順を完了した後にのみ、ASA r2 クラスターからノードを削除してください。クラスターからノードを削除した後は、そのノードの HA パートナーも削除する必要があります。
+
+.開始する前に
+クラスターからノードを削除する前に、link:../get-help/manage-autosupport.html#send-autosupport-data["AutoSupport メッセージを発行する"]して、NetApp テクニカルサポートにその旨を通知することをお勧めします。
+
+
+NOTE: 自動化された ONTAP アップグレードの実行中は、クラスタからノードを削除したり、ノードの名前を変更したりしないでください。
+
+.タスクの内容
+* 4ノードクラスターから2つのノードを削除すると、残りの2つのノードでクラスターHAが自動的に有効になります。
+* クラスタからノードを削除する前に、ノードに接続されたすべてのディスクのすべてのシステム データとユーザ データにユーザがアクセスできないようにする必要があります。
+* ノードが誤ってクラスタから削除された場合は、NetAppサポートに連絡して、リカバリオプションに関するサポートを受けてください。
+
+
+.手順
+. 権限レベルをadvancedに変更します。
++
+[source, cli]
+----
+set -privilege advanced
+----
+. クラスター内でイプシロンを保持しているノードを特定します。
++
+[source, cli]
+----
+cluster show
+----
++
+次の例では、「node0」は現在イプシロンを保持しています：
+
++
+[listing]
+----
+cluster::*> cluster show
+Node                 Health  Eligibility  Epsilon
+-------------------- ------- ------------ ------------
+node0                true    true         true
+node1                true    true         false
+node2                true    true         false
+node3                true    true         false
+----
+. 削除するノードにイプシロンが含まれている場合は、イプシロンを存続するノードに移動します。
++
+.. ノードからイプシロンを削除します。
++
+[source, cli]
+----
+cluster modify -node <name_of_node_to_be_removed> -epsilon false
+----
+.. イプシロンを別のノードに移動します：
++
+[source, cli]
+----
+cluster modify -node <node_name> -epsilon true
+----
+
+
+. 現在のプライマリノードを特定します。
++
+[source, cli]
+----
+cluster ring show
+----
++
+プライマリノードとは、mgmt、vldb、vifmgr、bcomd、crsなどのプロセスを保持するノードのことです。
+
+. 削除するノードが現在のプライマリノードである場合は、クラスタ内の別のノードをプライマリノードとして選出できるように設定してください。
++
+.. 現在のプライマリノードがクラスタに参加できないように設定します。
++
+[source, cli]
+----
+cluster modify -node <node_name> -eligibility false
+----
++
+プライマリノードが資格を失った場合、残りのノードのいずれかがクラスタのクォーラムによって新しいプライマリとして選出されます。HAペアの最初のノードでこの手順を実行する場合は、そのノードのみを対象外としてマークしてください。これらの手順をパートナー側で再度実行するまでは、HAパートナーの状態を変更しないでください。
+
++
+パートナーノードが新しいプライマリとして選出され、イプシロンを保持している場合、パートナーを不適格とマークする前に、イプシロンを別のノードに移動する必要があります。
+
+.. 以前のプライマリノードを再びクラスタに参加できるようにします。
++
+[source, cli]
+----
+cluster modify -node <node_name> -eligibility true
+----
+
+
+. クラスタから削除しないノード上のリモート ノード管理 LIF またはクラスタ管理 LIF にログインします。
+. ノード名またはノードのIPアドレスを使用して、クラスターからノードを削除します：
++
+複数のバージョンが混在するクラスタがあり、最後に残った下位バージョンのノードを削除する場合は、これらのコマンドで -skip-last-low-version-node-check パラメータを使用してください。
+
++
+** ノード名を使用してノードを削除します：
++
+[source, cli]
+----
+cluster remove-node -node <node_name>
+----
+** ノードを削除するには、ノードのIPアドレスを使用します。
++
+[source, cli]
+----
+cluster remove-node -cluster_ip <node_ip>
+----
++
+ノードを削除する前に対処しなければならない条件がある場合、エラーメッセージが表示されます。この場合は、条件に対処してから `cluster remove-node`コマンドを再実行してください。
+
++
+ノードはクラスターから正常に削除された後、自動的に再起動します。
+
+
+
+
+
+.次の手順
+フェールオーバーパートナーをクラスターから削除するには、これらの手順を繰り返してください。
+
+.関連情報
+link:https://docs.netapp.com/us-en/ontap-cli/cluster-remove-node.html["クラスタ remove-node"] コマンドの詳細をご確認ください。
+
+
+
+[[step-3-optionally-erase-the-node-configuration-and-initialize-all-disks]]
+== ステップ3：必要に応じて、ノード構成を消去し、すべてのディスクを初期化します。
+
+ASA r2 クラスターから削除したノードを再利用する場合は、クラスターに再参加する前に、ノード構成を消去し、すべてのディスクを初期化する必要があります。
+
+.手順
+. 起動プロセス中にプロンプトが表示されたら、*Ctrl-C* を押してブートメニューを表示します。
+. ブートメニューのオプション *(4) Clean configuration and initialize all disks* またはオプション *(9) Configure Advanced Drive Partitioning* を選択して、ノードの構成を消去し、すべてのディスクを初期化します。
+

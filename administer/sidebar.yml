@@ -32,6 +32,8 @@ entries:
   entries:
   - title: ノードの追加
     url: "/administer/add-nodes.html"
+  - title: ノードを削除する
+    url: "/administer/remove-nodes.html"
   - title: ノードのリブート、テイクオーバー、ギブバック
     url: "/administer/reboot-take-over-give-back-nodes.html"
   - title: ノードの名前変更

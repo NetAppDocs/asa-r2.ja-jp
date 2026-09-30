@@ -123,12 +123,9 @@
   <block id="f3833c816c6fe5b26b4e4266ccfed699" category="paragraph">LIFが変更されました。</block>
   <block id="092a2a219a66f53ad918ecfca02a40cb" category="summary">ONTAPシステムマネージャを使用して、ASA R2システムの基本的なストレージネットワーク管理を実行します。</block>
   <block id="7727ebf2fbdb4d8c5b88383f3872253c" category="doc">ASA R2ストレージシステムのクラスタネットワークを管理します。</block>
-  <block id="dce69090c45af3d113621dac45bca7fb" category="paragraph">ONTAPシステムマネージャを使用して、ASA R2システムで基本的なストレージネットワーク管理を実行できます。たとえば、ブロードキャストドメインを追加したり、ポートを別のブロードキャストドメインに再割り当てしたりできます。</block>
   <block id="142e63ab347e5afebe1ee3eddeb82dc4" category="section-title">ブロードキャストドメインを追加する</block>
   <block id="18021c31fe204f4bcb54336f24bb7958" category="paragraph">ブロードキャストドメインを使用すると、同じレイヤ2ネットワークに属するネットワークポートをグループ化してクラスタネットワークの管理を簡易化できます。その後、Storage Virtual Machine（VM）は、グループ内のポートをデータトラフィックまたは管理トラフィックに使用できます。</block>
   <block id="4d00d5474a9eac58d3c8b5a5efd05a9a" category="paragraph">「Default」ブロードキャストドメインと「Cluster」ブロードキャストドメインは、クラスタのセットアップ時に作成します。「Default」ブロードキャストドメインには、「Default」IPspace内のポートが含まれています。これらのポートは、主にデータの提供に使用されます。クラスタ管理ポートとノード管理ポートも、このブロードキャスト ドメインに含まれています。「Cluster」ブロードキャストドメインには、「Cluster」IPspace内のポートが含まれています。これらのポートはクラスタ通信に使用され、クラスタ内のすべてのノードのすべてのクラスタポートが含まれます。</block>
-  <block id="98436b7b9537997727c62df8cd1c5b4b" category="paragraph">クラスタが初期化されたら、追加のブロードキャストドメインを作成できます。ブロードキャストドメインを作成すると、同じポートを含むフェイルオーバーグループが自動的に作成されます。</block>
-  <block id="67484e42ec7ef0f9c6081b26a7966a3f" category="paragraph">ブロードキャストドメインに追加されたポートのMaximum Transmission Unit（MTU；最大伝送ユニット）は、ブロードキャストドメインに設定されているMTU値に更新されます。</block>
   <block id="5be487237484d4edf568d618438fb533" category="list-text">System Managerで、*[ネットワーク]&gt;[概要]*を選択します。</block>
   <block id="6169050a4730f8d024d60e5e811d6085" category="list-text">[ブロードキャスト]*[ドメイン]で、を選択します<block ref="120e8ce30fa09c1e015e32b4fdada4d3" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="01b73cca64689dc46d9d7ff592613e09" category="list-text">ブロードキャストドメインの名前を入力するか、デフォルトの名前をそのまま使用します。</block>
@@ -1931,7 +1928,6 @@
   <block id="4a9d271be00cfe80ccf9f2ae1e86c4ff" category="sidebar">vSphere 環境向けの継続的な可用性ソリューションについて学習します</block>
   <block id="07deeffbd26ae347c81cfaf3e2169044" category="sidebar">NetApp ASAシステムのベストプラクティス</block>
   <block id="65393a1b15c3a63904bb446f4a99001a" category="sidebar">REST API移行ガイド</block>
-  <block id="eaeb215b56b171344d62780dd997477e" category="paragraph">ONTAP 9.16.1 以降、 ASA r2 ストレージ システムはクラスタごとに最大 12 個のノードをサポートします。  HA ペアの新しいノードがケーブル接続され、電源がオンになった後、それらをクラスターに参加させる必要があります。</block>
   <block id="b8838348a8da924f377a5d293230f4f4" category="summary">ASA r2 システムのONTAPソフトウェアの復元は、他のONTAPシステムの復元と同じプロセスに従います。ONTAPクラスタのリバートはシステム停止を伴います。</block>
   <block id="b4a4e19f8caa5675ed75c7e4c2f95379" category="inline-link-macro">SnapMirrorのアクティブ同期関係を削除します</block>
   <block id="79bc5a42c0ce5e77f02d040d055dfae3" category="summary">ASA r2 システムのONTAPソフトウェア アップグレードは、他のONTAPシステムのアップグレードと同じプロセスに従います。  ASA r2 システムでONTAPソフトウェアをアップグレードすると、新しい ONTAP 機能と強化されたONTAP機能を利用できるようになります。</block>
@@ -2859,4 +2855,77 @@
   <block id="e7e7921d40004de3413b2feb5d015c04" category="paragraph">ストレージユニットのアクティビティに急増が見られる場合（一時的な急増、または新たな常態を特徴づける急増のいずれか）は、それらを安全として報告する必要があります。これらの急増を手動で安全として報告することで、ARPの脅威評価の精度向上に役立ちます。<block ref="8dee558f5c9b6bedf916b9781132862f" category="inline-link-macro-rx"></block>の方法を確認してください。</block>
   <block id="200e37440690270fcdf5d35f1f9f63c6" category="paragraph">ONTAP SnapLockは、規制やガバナンスの目的でファイルを未変更の状態で保持するためにWORMストレージを使用する組織向けのハイパフォーマンス コンプライアンス ソリューションです。SnapLockは、コンプライアンスモードとエンタープライズモードで実行でき、それぞれ異なるレベルのWORMデータ保護を提供します。SnapLock Compliance および Enterprise モードは、SAN環境のプライマリクラスタではサポートされていませんが、セカンダリシステムで SnapLock for SnapVault を有効にして、セカンダリスナップショットを偶発的または悪意のある削除から保護することができます。</block>
   <block id="44ed1558e28022693124a32e31d67183" category="paragraph">ローカルおよびデスティネーションクラスターの SnapLock コンプライアンスクロックを初期化したら、<block ref="716f8ed67937d4ffe779f9f204ed103b" category="inline-link-macro-rx"></block> する準備が整います。</block>
+  <block id="e237bf865e87bbdfd26ab56b61fc4b9e" category="summary">ASA r2ストレージシステムは、クラスターあたり最大12ノードをサポートします。HAペアの新しいノードにケーブルを接続して電源を入れた後、それらをクラスタに参加させる必要があります。</block>
+  <block id="cc7c52d2eca1519912be5504b86923e5" category="paragraph">ONTAP System Manager を使用すると、ASA r2 システムでブロードキャスト ドメインの追加やブロードキャスト ドメイン間のポートの再割り当てなど、基本的なストレージ ネットワーク管理を実行して、インフラのニーズに合わせてネットワーク トラフィックを整理できます。</block>
+  <block id="ba9a7a46c6bc7f943d070bcccd364153" category="paragraph">クラスターの初期化後、追加のブロードキャストドメインを作成できます。ブロードキャストドメインを作成すると、同じポートを含むフェールオーバーグループが自動的に作成されます。</block>
+  <block id="8b32050d3c96b6bd0a885f98eb1416ea" category="paragraph">ブロードキャストドメインに追加されたポートの最大伝送単位（MTU）は、ブロードキャストドメインで設定されているMTU値に更新されます。</block>
+  <block id="81cbd40cd8660cff0ad2a901db8d929f" category="section-title">VLANの削除</block>
+  <block id="e6a55391d40a820f0fb96c2886a44b1b" category="paragraph">NICをスロットから取り外す前、またはクラスタからノードを取り外す前に、VLANを削除する必要がある場合があります。VLANを削除すると、そのVLANを使用しているすべてのフェイルオーバールールとグループから自動的に削除されます。</block>
+  <block id="dc4d5090d51115b6ed8141aa254c3b32" category="paragraph">VLANに関連付けられているLIFがないことを確認します。</block>
+  <block id="dd5e47c75e64cbe3996c8133e894e247" category="paragraph">ポートから最後のVLANを削除すると、そのポートとネットワークが一時的に切断される可能性があります。</block>
+  <block id="ac7d09a665b758116e45c0e4113cc186" category="paragraph">VLANを削除するには、System ManagerまたはCLIを使用できます。</block>
+  <block id="cea11a3fe22277f7f45d6feb4b7f56bf" category="list-text">System Manager で、*Network &gt; Ethernet port &gt; VLAN* を選択します。</block>
+  <block id="1aae6a12505549a87c2e3ea5f5464f0f" category="list-text">削除するVLANを選択します。</block>
+  <block id="feb83dac816796145feb86b7475c73f5" category="list-text">VLANを表示する：</block>
+  <block id="0f39a6bacc3fe5756c2bc83081df6c3a" category="list-text">VLANを削除する：</block>
+  <block id="ac309ab0be86396fc6a66899780ddf5b" category="list-text">VLANが削除されていることを確認します。</block>
+  <block id="8bd15b309bcdb0c15b1b0e6adeb166d0" category="doc">ASA r2 ノードを ONTAP クラスタから削除する</block>
+  <block id="f46b886aa665a8d7c7a7a4c7aa9c6346" category="paragraph">メンテナンス、交換、または廃止の目的で、クラスターからノードを削除する必要がある場合があります。ノードは1つずつ削除する必要があります。ノードを削除する場合は、そのHAパートナーも削除する必要があります。</block>
+  <block id="e0236ccc281e8e954020151e28594361" category="section-title">ステップ 1：ASA r2 クラスターからノードを削除する準備をする</block>
+  <block id="71b734249d4ab321665fcafc817c1579" category="paragraph">ASA r2 クラスターからノードを削除する前に、クラスターが正常な状態であることを確認する必要があります。次に、ノードからストレージユニット、VLAN、および LIF を移行または削除し、ストレージフェイルオーバーを無効にする必要があります。</block>
+  <block id="1715d07a24988d9207de94794a6f01cc" category="list-text">クラスタが正常に動作していることを確認します。</block>
+  <block id="6bc362dbf494c61ea117fe3c71ca48a5" category="inline-link-macro">Move</block>
+  <block id="099af53f601532dbd31e0ea99ffdeb64" category="inline-link-macro">delete</block>
+  <block id="cd6171fad4b783d0411b357a70e025b9" category="list-text"><block ref="103126b24482021bd492866bc35410e7" category="inline-link-macro-rx"></block>または<block ref="397d82cf73bd33098ee8615a2f9e95f3" category="inline-link-macro-rx"></block>ノードからすべてのストレージユニットを選択します。</block>
+  <block id="09a776ad2b6e83e1b754e6f7ebfafba3" category="inline-link-macro">選択的LUNマップ（SLM）レポートノードリストから、ノードとそのHAパートナーを削除します。</block>
+  <block id="ae6f4389297774f1a5988f7c44c7db66" category="list-text">削除対象のノードに SCSI ストレージ ユニット（LUN）がある場合、<block ref="2df19a9598282fc5088ade88859e3e79" category="inline-link-macro-rx"></block>。</block>
+  <block id="e84ba10869a172504b256da9f24370e6" category="paragraph">SLMのレポートノードリストからノードとそのHAパートナーを削除しないと、LUNが別のノードに移動された場合でも、以前そのノード上にあったLUNへのアクセスが失われる可能性があります。</block>
+  <block id="f2a6c498fb90ee345d997f888fce3b18" category="inline-link-macro">削除</block>
+  <block id="f183fde1c1f409b21fc8463052ca49e5" category="inline-link-macro">マイグレート</block>
+  <block id="39b0e3c1790c5d7e62d9065fac6449c0" category="list-text"><block ref="a406326f89a3bbce30953ad7824da1f0" category="inline-link-macro-rx"></block>または<block ref="7991084d788264d2f8515724f03312a6" category="inline-link-macro-rx"></block>ノードからのすべてのネットワークインターフェース（LIF）。</block>
+  <block id="a1d06a7b7bc7900c0dc19460251f84e1" category="list-text">データLIFは別のノードに移動するか、削除する必要があります。</block>
+  <block id="eea3b175d0f6393f8f1dbd8d7bdc392e" category="paragraph">iSCSI LIFの移行は、ホームノードまたはHAパートナー上のポートのみに限定されるため、削除する必要があります。</block>
+  <block id="2155c348c0a765e1cbd1204177de8f6b" category="list-text">クラスター間 LIF は削除する必要があります。</block>
+  <block id="a9702b3847949399c05d5c3540819764" category="paragraph">クラスター間LIFを削除すると、無視しても問題ない警告が表示されます。</block>
+  <block id="284480082b3f00fd5851296324820748" category="list-text">クラスタ管理LIFは別のノードに移動する必要があります。</block>
+  <block id="c2031112d335614e483a8e73e8f0e80e" category="inline-link-macro">すべてのVLANを削除する</block>
+  <block id="40f77f5330ce09a02647bfff9d2b11a1" category="list-text"><block ref="13cea30368888692a0a04edaddc87489" category="inline-link-macro-rx"></block>ノード上。</block>
+  <block id="7da250e00cfaee667a1544bb30473c35" category="list-text">ノードのストレージフェイルオーバーを無効にする：</block>
+  <block id="df17f0e15b00039cb79f8c73233345dc" category="paragraph">HAペアの最初のノードをクラスターから削除し、次にそのHAパートナーを削除します。</block>
+  <block id="400f2bdb4ba287bc175bb483c502645d" category="section-title">ステップ 2：ASA r2 クラスターからノードを削除する</block>
+  <block id="47560f69aa17b178f049071f943efdc3" category="paragraph">ノードの削除に必要な準備手順を完了した後にのみ、ASA r2 クラスターからノードを削除してください。クラスターからノードを削除した後は、そのノードの HA パートナーも削除する必要があります。</block>
+  <block id="ff13cd92e9c877582383685ad84e1408" category="inline-link-macro">AutoSupport メッセージを発行する</block>
+  <block id="c742d6b26a30fa446c7ef8b5dab2c732" category="paragraph">クラスターからノードを削除する前に、<block ref="82761e960f0e30a8f5a0b51f2de27c3a" category="inline-link-macro-rx"></block>して、NetApp テクニカルサポートにその旨を通知することをお勧めします。</block>
+  <block id="add39e8e05dc6feabb5680336ff42056" category="admonition">自動化された ONTAP アップグレードの実行中は、クラスタからノードを削除したり、ノードの名前を変更したりしないでください。</block>
+  <block id="8b7e38ab7ab942e33ee9b58f43906ab5" category="list-text">4ノードクラスターから2つのノードを削除すると、残りの2つのノードでクラスターHAが自動的に有効になります。</block>
+  <block id="ba20c2b3b00275ac5d310648e6ff4a27" category="list-text">クラスタからノードを削除する前に、ノードに接続されたすべてのディスクのすべてのシステム データとユーザ データにユーザがアクセスできないようにする必要があります。</block>
+  <block id="2e926e0f22616c9494cae63cff92b8f5" category="list-text">ノードが誤ってクラスタから削除された場合は、NetAppサポートに連絡して、リカバリオプションに関するサポートを受けてください。</block>
+  <block id="8a3e1e55cf4f3f7698b5923333b44f7a" category="list-text">権限レベルをadvancedに変更します。</block>
+  <block id="1e6d712b266f8755c066ccc30bde9fdc" category="list-text">クラスター内でイプシロンを保持しているノードを特定します。</block>
+  <block id="9f964a34bab4b3112781e0b28258f5bb" category="paragraph">次の例では、「node0」は現在イプシロンを保持しています：</block>
+  <block id="b32cb3a5af2992203383db7140663697" category="list-text">削除するノードにイプシロンが含まれている場合は、イプシロンを存続するノードに移動します。</block>
+  <block id="a688ab20f94fae358a349cab6d019da3" category="list-text">ノードからイプシロンを削除します。</block>
+  <block id="c7a7b8bd7c37d4318c7e769f4286f17b" category="list-text">イプシロンを別のノードに移動します：</block>
+  <block id="49e8d819c7a12b23ca983a3bc99e1bdf" category="list-text">現在のプライマリノードを特定します。</block>
+  <block id="7a76ce80b9cd6059ed18dca9be6af204" category="paragraph">プライマリノードとは、mgmt、vldb、vifmgr、bcomd、crsなどのプロセスを保持するノードのことです。</block>
+  <block id="a4fdc400f1c7bb92f441328b2a58ab2c" category="list-text">削除するノードが現在のプライマリノードである場合は、クラスタ内の別のノードをプライマリノードとして選出できるように設定してください。</block>
+  <block id="1f915321f7e8155e5ee88f538eca12b5" category="list-text">現在のプライマリノードがクラスタに参加できないように設定します。</block>
+  <block id="b774483fd19fa8acb4407780df5d4d87" category="paragraph">プライマリノードが資格を失った場合、残りのノードのいずれかがクラスタのクォーラムによって新しいプライマリとして選出されます。HAペアの最初のノードでこの手順を実行する場合は、そのノードのみを対象外としてマークしてください。これらの手順をパートナー側で再度実行するまでは、HAパートナーの状態を変更しないでください。</block>
+  <block id="0d4121decd846754730f2b08483bac20" category="paragraph">パートナーノードが新しいプライマリとして選出され、イプシロンを保持している場合、パートナーを不適格とマークする前に、イプシロンを別のノードに移動する必要があります。</block>
+  <block id="bbbdda94513cf5e245680f89dc7113d5" category="list-text">以前のプライマリノードを再びクラスタに参加できるようにします。</block>
+  <block id="2c3337f10b57ece73ad05be4f4418e0d" category="list-text">クラスタから削除しないノード上のリモート ノード管理 LIF またはクラスタ管理 LIF にログインします。</block>
+  <block id="cd61023a75b13d7ddd81a51dd5fd5bad" category="list-text">ノード名またはノードのIPアドレスを使用して、クラスターからノードを削除します：</block>
+  <block id="c660a1ebe622089157d033f8e00d3b45" category="paragraph">複数のバージョンが混在するクラスタがあり、最後に残った下位バージョンのノードを削除する場合は、これらのコマンドで -skip-last-low-version-node-check パラメータを使用してください。</block>
+  <block id="6d2290891d47080550b5fed55fbf344f" category="list-text">ノード名を使用してノードを削除します：</block>
+  <block id="2935c03696a9fc643ed379f7af4ea5bf" category="list-text">ノードを削除するには、ノードのIPアドレスを使用します。</block>
+  <block id="8a1cd083e3f95f4585c2102d6c2b05bf" category="paragraph">ノードを削除する前に対処しなければならない条件がある場合、エラーメッセージが表示されます。この場合は、条件に対処してから<block ref="b592ef8b0e17ac31ab55e93e7c1d10e1" prefix=" " category="inline-code"></block>コマンドを再実行してください。</block>
+  <block id="ee3943d184071eb8b00fa718413c59da" category="paragraph">ノードはクラスターから正常に削除された後、自動的に再起動します。</block>
+  <block id="01d5d2ace7126b43c6c161bd5ee9a875" category="paragraph">フェールオーバーパートナーをクラスターから削除するには、これらの手順を繰り返してください。</block>
+  <block id="b592ef8b0e17ac31ab55e93e7c1d10e1" category="inline-link-macro">クラスタ remove-node</block>
+  <block id="07e709e4a23132b1e1dd12b1fd7fee71" category="paragraph"><block ref="700df13594259d61712a860f23f94890" category="inline-link-macro-rx"></block> コマンドの詳細をご確認ください。</block>
+  <block id="6d554e0c9ffc1fe9e00235aea8dd5770" category="section-title">ステップ3：必要に応じて、ノード構成を消去し、すべてのディスクを初期化します。</block>
+  <block id="9cba5ce5176add967894dfbbc6536a52" category="paragraph">ASA r2 クラスターから削除したノードを再利用する場合は、クラスターに再参加する前に、ノード構成を消去し、すべてのディスクを初期化する必要があります。</block>
+  <block id="895863970f247b187f4fcbba3ee248c3" category="list-text">起動プロセス中にプロンプトが表示されたら、*Ctrl-C* を押してブートメニューを表示します。</block>
+  <block id="7d12381790ebb192cc4ad1b88892635d" category="list-text">ブートメニューのオプション *(4) Clean configuration and initialize all disks* またはオプション *(9) Configure Advanced Drive Partitioning* を選択して、ノードの構成を消去し、すべてのディスクを初期化します。</block>
+  <block id="93fa60c43fe67fdb72ad8e06d21cbed0" category="sidebar">ノードを削除する</block>
 </blocks>
