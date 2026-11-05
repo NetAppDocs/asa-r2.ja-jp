@@ -74,7 +74,7 @@ Security Assertion Markup Language（SAML）認証を使用すると、Active Di
 . System Managerの確認ウィンドウに戻り、*[ホストのURIまたはメタデータでIdPを設定しました]*を選択します。
 . SAMLベースの認証を有効にする場合は、*[ログアウト]*を選択します。
 +
-IdPシステムに認証画面が表示されます。
+IdPシステムは認証画面を表示します。
 
 
 

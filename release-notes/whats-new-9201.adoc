@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: release-notes/whats-new-9201.html 
+keywords: 'what"s new, release notes, 9.20.1, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20' 
+summary: ONTAP 9.20.1 for ASA r2システムで利用可能な新機能について説明します。 
+---
+= ONTAP 9.20.1 for ASA r2システムの新機能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1 for ASA r2システムで利用可能な新機能について説明します。
+
+
+
+[[san-data-migration]]
+== SANデータ移行
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../manage-data/migrate-svm-from-asa-r2.html["ASA r2システムからASAおよびAFFシステムへの無停止ストレージVM移行のサポート"] | ストレージ仮想マシン（VM）を、2ノードのASA r2クラスタから2ノードのASAまたは2ノードのAFFクラスタに無停止で移行できます。移行中も、LUNおよびネームスペースの既存のホストマッピングとストレージユニット構成は維持されるため、運用上の労力とリスクが軽減されます。 
+
+
+| link:../manage-data/migrate-svm.html["ASAシステムからASA r2システムへストレージVMを移行した後のパフォーマンス向上のサポート"] | ONTAPは、ストレージ仮想マシン（VM）がASAシステムからASA r2システムに移行されたあとに発生する可能性のある、追加の読み取りレイテンシとCPU使用量を削減します。 
+|===
+
+
+[[security]]
+== セキュリティ
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#fc-sp-3-authentication-and-encryption["BroadcomセキュアHBAによるFC-SP-3認証および暗号化のサポート"] | ONTAPは、ASA r2システムのBroadcomセキュアHBAにおいて、Fibre Channel Security Protocol 3（FC-SP-3）の認証と暗号化をサポートしています。FC-SP-3のサポートにより、ハードウェアレベルのエンドツーエンドの暗号化とデバイス認証が可能になり、T11 Fibre Channelセキュリティ標準に準拠しつつ、FCおよびNVMe/FC SANホストとONTAPストレージシステム間で転送中のデータを保護できます。 
+
+
+| ウェブ管理の可用性保護とプレクラスタ機能強化のサポート | 接続フラッド時にもWeb[1]管理APIの可用性を維持する改善が実施されています。クラスタ設定前の動的ホスト構成プロトコル（DHCP）の処理も強化され、ノード管理LIFがクラスタ設定を待機している間、DHCP接続を維持および更新できるようになりました。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#external-key-management-for-encryption-at-rest["ストレージVMボリューム暗号化キーの自動移行のサポート"] | データストレージVMで外部キーマネージャを有効にすると、ONTAPは、そのストレージVMのボリューム暗号化キーを管理者スコープのキーマネージャから新しいデータストレージVMのキーマネージャに自動的に移行します。これにより、外部キー管理への移行が簡素化され、標準ワークフローにおける別途の手動移行手順が不要になります。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#multi-admin-verification-mav["MAVグループサポート"] | MAV承認グループには、個々の管理者に加えて、IDプロバイダー（IdP）、Active Directory（AD）、およびLDAP（nsswitch）グループを承認者として含めることができます。サポートされているグループの種類には、Entra ID、ADFS、ADドメイングループ、およびLDAPグループが含まれます。IdP、AD、またはLDAPディレクトリでユーザーを追加または削除しても、MAV構成を変更する必要はありません。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#snmp["SNMPでのSHA-512のサポート"] | ONTAPは、SNMPv3ユーザー向けにSHA-512認証をサポートしています。この機能強化により、外部SNMPクライアントおよびスイッチ監視（SHA-512認証を必要とするスイッチを含む）において、より強力なSNMPv3認証を使用できるようになります。 
+|===
+
+
+[[storage-efficiency]]
+== Storage Efficiency
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#data-reduction-rate-drr["ストレージ効率のデータ削減率の簡易レポートのサポート"] | ストレージ効率のデータ削減率（DRR）は、削減可能なデータのみを含めることで、ONTAPのストレージ効率によるスペース削減量をより正確に評価します。ONTAP 9.19.1以前では、DRRには削減可能なデータと削減不可能なデータの両方が含まれます。 
+
+
+| SANコピー オフロードのパフォーマンス向上のサポート | ONTAPは、対象となるNVMeおよびSCSIコピーワークロードのSANコピー オフロードのパフォーマンスを向上させます。詳細については、NetAppの担当者にお問い合わせください。 
+
+
+| 自動重複排除スケジューラ（ADS）の最適化 | 自動重複排除スケジューラ（ADS）が改良され、ノードあたりの同時重複排除セッション数を増やすとともに、よりスマートで的を絞ったスロットリングによってクライアントI/Oのバランスを改善しました。DPボリュームでの重複排除アクティビティ（SnapMirror転送によるもの）とグローバル重複排除セッションは、通常のボリューム重複排除と並行してより最適に管理され、競合とメタデータの増加が軽減されます。特に混合ワークロード環境において、構成変更なしでストレージ効率の向上によるコスト削減効果を享受できます。この機能はデフォルトで有効になっています。 
+|===
+
+
+[[system-manager]]
+== System Manager
+
+[cols="2,4"]
+|===
+| 更新 | 説明 
+
+
+| link:../administer/manage-certificates.html["証明書の有効期限切れアラートのサポート"] | システムマネージャは、クラスタまたはストレージ仮想マシン（SVM）の証明書の有効期限が切れる30日前にダッシュボードの健全性アラートを表示し、有効期限までの残り日数を毎日更新します。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#system-manager["ユーザーパスワード有効期限切れアラートのサポート"] | ユーザーアカウントに関連付けられた役割でパスワード有効期限切れアラートが設定されている場合、パスワードの有効期限が切れる14日前から、ログイン直後にSystem Managerのページ上部にバナーアラートが表示されます。アラートはユーザーがログインするたびに更新され、パスワードの有効期限が切れるまでの残り日数が表示されます。 
+
+
+| link:../learn-more/additional-supported-ontap-features.html#autosupport["追加のAutoSupportアラートのサポート"] | System Managerは、AutoSupportの設定に関する問題の対処に役立つ、新しいAutoSupportアラートを表示します。 
+|===

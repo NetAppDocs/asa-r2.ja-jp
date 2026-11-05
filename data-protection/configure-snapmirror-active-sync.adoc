@@ -11,12 +11,12 @@ summary: 災害発生時にセカンダリ データ コピーを作成し、自
 
 
 [role="lead"]
-SnapMirrorアクティブ同期を構成して、セカンダリ サイトにデータのコピーを作成し、災害発生時にホスト アプリケーションが自動的かつ透過的にフェイルオーバーできるようにします。
+セカンダリサイトにデータのコピーを作成し、災害発生時にホストアプリケーションが自動的かつ透過的にフェイルオーバーできるように、SnapMirror active syncを設定します。
 
 ASA r2システムでは、 SnapMirror Active Syncは対称型アクティブ/アクティブ構成をサポートします。対称型アクティブ/アクティブ構成では、両方のサイトからアクティブI/O用のローカルストレージにアクセスできます。
 
 .タスクの内容
-iSCSIまたはFCプロトコルを使用しており、VMware Sphere用のONTAPツールを使用している場合は、オプションでlink:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["ONTAP Tools for VM ware を使用してSnapMirror Active Sync を設定する"^] 。
+iSCSIまたはFCプロトコルを使用しており、ONTAP tools for VMware vSphereを使用している場合は、オプションでlink:https://docs.netapp.com/us-en/netapp-solutions/vmware/vmware-vmsc-with-smas.html["ONTAP tools for VMware vSphereを使用して、SnapMirror active syncを設定する"^]。
 
 
 NOTE: ONTAP 9.19.1以降、人工知能による自律型ランサムウェア対策（ARP/AI）は、ASA r2システム上のSnapMirrorアクティブ同期SAN関係におけるプライマリ読み書きストレージユニットをサポートします。ARP/AIはアクティブなプライマリストレージユニット上で動作し、プライマリ専用のARPスナップショットを作成し、それらのストレージユニットに対して機械学習ベースのランサムウェア検出機能を提供します。ARP/AIを有効にするには、link:../secure-data/enable-anti-ransomware-protection.html["AIによる自律型ランサムウェア対策を有効にする"]を参照してください。
@@ -34,7 +34,7 @@ link:create-snapshots.html#step-1-optionally-create-a-consistency-group["一貫�
 . 既存のクラスター ピアを選択するか、*新しいクラスター ピアを追加*することを選択します。
 . Storage VMを選択します。
 . レプリケーション ポリシーには、*AutomatedFailOverDuplex* を選択します。
-. 非均一な対称アクティブ/アクティブ構成を作成する場合は、「*宛先設定*」を選択し、この手順を開始する前に作成する新しい宛先整合性グループの名前を入力します。
+. 不均一な対称アクティブ / アクティブ構成を作成する場合は、*デスティネーション設定*を選択し、この手順を開始する前に作成した新しいデスティネーション整合性グループの名前を入力します。
 . [ 保存（ Save ） ] を選択します。
 
 

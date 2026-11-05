@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/pre-defined-protection-policies.html 
 keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication, policy, pre-defined, default, custom, policies 
-summary: レプリケーション ポリシーは、 ASA r2 クラスタで実行された更新がリモート サイトにいつ複製されるかを定義します。  ONTAP には、レプリケーション関係に使用できるさまざまな定義済みデータ保護ポリシーが含まれています。 
+summary: ASA r2クラスタのデータをリモートサイトにレプリケートするには、非同期ポリシーやSnapMirrorアクティブ同期ポリシーなどの事前定義されたデータ保護ポリシーを選択します。 
 ---
 = ASA r2システムの事前定義済みデータ保護ポリシーについて
 :allow-uri-read: 
@@ -15,10 +15,18 @@ summary: レプリケーション ポリシーは、 ASA r2 クラスタで実�
 
 事前定義されたポリシーがニーズを満たしていない場合は、link:snapshot-replication.html#step-2-optionally-create-a-custom-replication-policy["カスタムレプリケーションポリシーを作成する"] 。
 
+ONTAP 9.20.1以降では、サポートされている非同期データ保護ポリシーを使用して、既存のFCファブリック上でバックエンドのSnapMirror非同期レプリケーションを設定できます。以下の事前定義された保護ポリシーは、バックエンドFCレプリケーションをサポートしています：
 
-NOTE: ASA r2 システムは同期レプリケーションをサポートしていません。
+* 非同期
+* MirrorAllSnapshots
+* MirrorAndVault
+* XDPDefault
+
 
 ASA r2 システムは、次の定義済み保護ポリシーをサポートしています。
+
+
+NOTE: ASA r2 システムは同期レプリケーションをサポートしていません。
 
 [cols="3,4,1"]
 |===

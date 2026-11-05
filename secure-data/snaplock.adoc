@@ -13,7 +13,11 @@ summary: 改ざんを防止するSnapshotを使用してデータを保護しま
 [role="lead"]
 ONTAP SnapLockは、規制やガバナンスの目的でファイルを未変更の状態で保持するためにWORMストレージを使用する組織向けのハイパフォーマンス コンプライアンス ソリューションです。SnapLockは、コンプライアンスモードとエンタープライズモードで実行でき、それぞれ異なるレベルのWORMデータ保護を提供します。SnapLock Compliance および Enterprise モードは、SAN環境のプライマリクラスタではサポートされていませんが、セカンダリシステムで SnapLock for SnapVault を有効にして、セカンダリスナップショットを偶発的または悪意のある削除から保護することができます。
 
-SnapLock for SnapVaultでお客様のセカンダリ システム上のスナップショットを保護するには、SnapLock Compliance Clockを初期化する必要があります。
+SnapLockコンプライアンスクロックはlink:../data-protection/snapshot-replication.html["SnapLock for SnapVaultを使用してセカンダリシステム上のスナップショットを保護する"]に初期化する必要があります。
+
+ONTAP 9.20.1以降では、既存のFCファブリックを介したバックエンドのSnapLock for SnapVaultレプリケーションを設定できます。そのためには、ONTAPシステムのバックエンドがFCレプリケーション用に設定されており、FCファブリックとクラスタ間IPネットワークの両方が稼働している必要があります。レプリケーションデータはFCファブリックを介して転送できますが、クラスタ間の通信およびレプリケーション管理機能にはクラスタ間IPネットワークが必要です。
+
+link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html["FCレプリケーション用にONTAPシステムバックエンドを設定する"^]方法を学びます。
 
 .関連情報
 * link:https://docs.netapp.com/us-en/ontap/san-admin/configure-backup-vaults-san-environment-concept.html["SAN環境におけるSnapLock for SnapVault"^]の詳細をご覧ください。

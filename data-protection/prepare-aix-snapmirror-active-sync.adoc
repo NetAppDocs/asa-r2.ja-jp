@@ -11,12 +11,12 @@ summary: ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアク�
 
 
 [role="lead"]
-ONTAP 9.19.1以降、AIXの透過的アプリケーションフェイルオーバーは、対称アクティブ/アクティブ構成のSnapMirror active syncでサポートされています。SnapMirror active syncデータ保護により、完全なサイト障害が発生した場合でもビジネスサービスの稼働を継続でき、アプリケーションがセカンダリコピーを使用して透過的にフェイルオーバーできるようになります。
+ONTAP 9.19.1以降では、SnapMirror active syncは、対称型アクティブ / アクティブ構成におけるAIXホストの透過的アプリケーションフェイルオーバーをサポートします。SnapMirror active syncは、アプリケーションをセカンダリコピーに透過的にフェイルオーバーすることで、完全なサイト障害が発生した場合でもビジネスサービスの継続的な稼働を可能にします。
 
 ONTAP 9.19.1以降を実行しているAIXホストでSnapMirrorアクティブ同期を有効にする前に、ホストアクセスモードをローカルに設定する必要があります。他のホストタイプでは、アクセスモードの選択は不要です。link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/interoperability-reference.html["SnapMirror アクティブ同期の相互運用性"^]の詳細をご覧ください。
 
 .開始する前に
-ONTAP 9.19.1以降を実行している必要があります。ONTAP 9.18.1以前を実行している場合、SnapMirrorアクティブ同期のAIXホストサポートには機能ポリシー変更要求（FPVR）が必要です。
+ONTAP 9.19.1以降を実行している必要があります。ONTAP 9.18.1以前を実行している場合、SnapMirror active syncのAIXホストサポートには機能ポリシー変更要求（FPVR）が必要です。
 
 .手順
 . System Managerで、*[ストレージ]*を選択します。

@@ -1,0 +1,325 @@
+---
+sidebar: sidebar 
+permalink: manage-data/migrate-svm-from-asa-r2.html 
+keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine 
+summary: ONTAP 9.20.1以降では、ストレージ仮想マシン（VM）を2ノードのASA r2クラスタから2ノードのASAまたは2ノードのAFFクラスタへ無停止で移行できます。 
+---
+= ASA r2クラスタからASAまたはAFFクラスタへストレージVMを移行する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.20.1以降では、2ノードのASA r2クラスタから2ノードのASAまたは2ノードのAFFクラスタへ、ストレージ仮想マシン（VM）を無停止で移行できます。SANとNASのワークロードの統合、ASA r2システムでは利用できないONTAP機能の導入、または環境のハードウェア更新の一環として、ストレージVMの移行が必要になる場合があります。移行中も、LUNおよびネームスペースの既存のホストマッピングとストレージユニット構成は維持されるため、運用上の労力とリスクが軽減されます。
+
+.開始する前に
+* クラスタ管理者である必要があります。
+* 両方のクラスタのすべてのノードで、ONTAP 9.20.1以降が稼働している必要があります。
+
+
+.タスクの内容
+* ASA r2ストレージVMは、2ノードASA r2クラスタから2ノードAFFクラスタへのみ移行できます。
++
+** ASA r2ストレージVMをFASクラスタ、または2ノードを超えるASAクラスタやAFFクラスタに移行することはできません。
+** 2ノードを超えるASA r2クラスタからASA r2ストレージVMを移行することはできません。
+
+
+* ASA r2クラスタからAFFクラスタへのデータ移行は、元に戻すことはできません。
++
+切り替え前であれば移行を中止できますが、切り替えが開始された後は、移行を中断したり元に戻したりすることはできません。移行が完了した後は、AFFクラスタからASA r2クラスタにデータを移行することはできません。
+
++
+link:migrate-svm.html["SVMをASAからASA r2クラスタに移行する"]することができます。
+
+* ストレージVMは一度に1台しか移行できません。
+* ストレージVMには、最大400個のストレージユニットを含めることができます。
+* ストレージVMには、SnapMirrorデスティネーション ストレージユニットを含めることはできません。
+
+
+
+
+[[step-1-create-a-cluster-peer-relationship]]
+== 手順1：クラスタピア関係を作成する
+
+ASA r2クラスタからストレージVMを移行する前に、ピア関係を作成する必要があります。ピア関係は、ONTAPクラスタとストレージVM間でデータを安全に交換できるようにするネットワーク接続を定義します。
+
+.タスクの内容
+以下の手順では、ASAまたはAFFクラスタは_デスティネーション_ クラスタであり、ASA r2クラスタは_ソース_ クラスタです。
+
+.開始する前に
+次のいずれかの方法を使用して、ピアリングするクラスタ内のすべてのノードにクラスタ間 LIF を作成する必要があります。
+
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html["共有データ ポートでのクラスタ間LIFの設定"^]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-dedicated-ports-task.html["専用データ ポートでのクラスタ間LIFの設定"^]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-ports-own-networks-task.html["カスタムIPspaceでのクラスタ間LIFの設定"^]
+
+
+.手順
+. デスティネーション クラスタで、ソース クラスタとのピア関係を作成し、パスフレーズを生成します：
++
+[source, cli]
+----
+cluster peer create -peer-addrs <source_cluster_LIF_IPs> -generate-passphrase
+----
++
+次の例では、クラスタ 1 とクラスタ 2 の間にクラスタ ピア関係を作成し、システム生成のパスフレーズを作成します。
+
++
+[listing]
+----
+cluster1::> cluster peer create -peer-addrs 10.98.191.193 -generate-passphrase
+Passphrase: UCa+6lRVICXeL/gq1WrK7ShR
+            Peer Cluster Name: cluster2
+            Initial Allowed Vserver Peers: -
+            Expiration Time: 6/7/2017 09:16:10 +5:30
+            Intercluster LIF IP: 10.140.106.185
+Warning: make a note of the passphrase - it cannot be displayed again.
+
+----
+. 生成されたパスフレーズをコピーします。
+. ソースクラスタで、デスティネーション クラスタとのピア関係を作成します：
++
+[source, cli]
+----
+cluster peer create -peer-addrs <destination_cluster_LIF_IPs>
+----
+. デスティネーション クラスタで生成されたパスフレーズを入力してください。
+. クラスター ピア関係が作成されたことを確認します。
++
+[source, cli]
+----
+cluster peer show
+----
++
+次の例は、正常にピアリングされたクラスターの予想される出力を示しています。
+
++
+[listing]
+----
+cluster1::> cluster peer show
+
+Peer Cluster Name   Cluster Serial Number   Availability   Authentication
+-----------------   ---------------------   -------------- --------------
+cluster2             1-80-123456             Available      ok
+----
+
+
+.結果
+クラスタはピアリングされています。Storage VMのデータは安全に転送できます。
+
+.次の手順
+ASA r2ストレージVMの移行準備を行う用意ができました。
+
+
+
+[[step-2-prepare-the-asa-r2-storage-vm-for-migration]]
+== ステップ2：移行用にASA r2ストレージVMを準備する
+
+ASA r2クラスタからストレージ仮想マシン（VM）を移行する前に、レプリケーション関係とSnapMirrorアクティブ同期関係を削除し、さまざまなチェックを実行する必要があります。
+
+.手順
+. link:../data-protection/snapmirror-active-sync-break-relationship.html["既存のレプリケーション関係をすべて削除します"]。
+. link:../data-protection/snapmirror-active-sync-delete-relationship.html["既存のSnapMirrrorアクティブな同期関係をすべて削除します"]。
+. IPsecが有効になっているか確認してください：
++
+[source, cli]
+----
+security ipsec config show
+----
++
+.. IPsecが有効になっている場合は、無効にしてください：
++
+[source, cli]
+----
+security ipsec config modify -is-enabled -false
+----
++
+link:https://docs.netapp.com/us-en/ontap-cli/security-ipsec-config-show.html["security ipsec config show"^] コマンドの詳細をご確認ください。
+
+.. iPv6および仮想IP（VIP）LIFを確認してください：
++
+[source, cli]
+----
+network interface show -vserver <storage_vm_name> -fields address-family, is-vip
+----
++
+iPv6 LIFの場合、 `-address-family`は `ipv6`です。VIP LIFの場合、 `-is-vip`パラメータは `true`です。
+
+.. iPv6またはVIP LIFが存在する場合は、それらを削除してください：
++
+[source, cli]
+----
+network interface delete -vserver <storage_vm_name> - lif <lif_name>
+----
+.. ストレージVM上にIPv6またはVIP LIFが残っていないことを確認してください：
++
+[source, cli]
+----
+network interface show -vserver <storage_VM_name>
+----
++
+link:https://docs.netapp.com/us-en/ontap-cli/network-interface-show.html["network interface show"^]およびlink:https://docs.netapp.com/us-en/ontap-cli/network-interface-delete.html["network interface delete"^]コマンドの詳細をご確認ください。
+
+
+
+. インターフェースグループが設定されているかどうかを確認してください：
++
+[source, cli]
+----
+network port ifgrp show
+----
++
+.. インターフェイス グループが設定されている場合は、ストレージ VM 上の LIF がインターフェイス グループにバインドされているかどうかを確認します：
++
+[source, cli]
+----
+network interface show -vserver <storage_VM_name> -fields home,node, home-port, curr-node, curr-port
+----
+.. ストレージVM上のLIFがインターフェースグループにバインドされている場合は、LIFを別の物理ポートに移行します：
++
+[source, cli]
+----
+network interface migrate -vserver <storage_VM_name> -lif <LIF> -des-node <destination_node> -dest-port <destination_port>
+----
++
+link:https://docs.netapp.com/us-en/ontap-cli/network-port-ifgrp-show.html["cluster::> network port ifgrp show"^] コマンドの詳細をご確認ください。
+
+
+
+
+
+.次の手順
+これで移行の事前チェックを実行する準備が整いました。
+
+
+
+[[step-3-execute-the-migration-pre-check]]
+== ステップ3：移行の事前チェックを実行する
+
+ASA r2クラスタからストレージVMを移行する前に、移行の事前チェックを実行し、必要な問題を修正する必要があります。事前チェックが正常に完了するまで、移行を実行することはできません。
+
+.ステップ
+. デスティネーション クラスタから、移行の事前チェックを実行します：
++
+[source, cli]
+----
+vserver migrate start -vserver <storage_VM> -source-cluster <sourcecluster> -check-only true
+----
++
+移行準備のために修正が必要な問題がある場合は、問題の内容と修正方法が表示されます。問題を修正し、事前チェックが正常に完了するまで繰り返してください。
+
+
+
+.次の手順
+ASA r2クラスタからストレージVMを移行する準備ができました。
+
+
+
+[[step-4-migrate-a-storage-vm-from-an-asa-r2-cluster]]
+== ステップ4：ASA r2クラスタからストレージVMを移行する
+
+ASA r2クラスタとASAまたはAFFクラスタの間に必要なクラスタ ピア関係を作成し、両方のクラスタを準備する手順を完了したら、ストレージVMの移行を開始できます。
+
+ストレージVMの移行を実行する際は、移行のCPUワークロードを実行できるように、ASA r2クラスタとAFFクラスタの両方でCPUヘッドルームを30%残しておくことがベストプラクティスです。
+
+.タスクの内容
+* ストレージVMの移行後、クライアントI/Oは中断することなくシームレスにデスティネーション クラスタに移行し、ASA r2クラスタ上のストレージVMは自動的に削除されます。自動切り替えと自動ストレージVM削除は、デフォルトで有効になっています。必要に応じて、いずれか一方または両方のオプションを無効にして、手動で実行することもできます。
+* ASAクラスタはストレージVMの移行元となる_ソース_ クラスタであり、ASA r2クラスタはストレージVMの移行先となる_デスティネーション_ クラスタです。
+
+
+.手順
+. デスティネーション クラスタから、ストレージVMの移行を開始します：
++
+[source, cli]
+----
+vserver migrate start -vserver <storage_VM_name> -source-cluster <source_cluster>
+----
++
+自動切り替えを無効にするには、 `-auto-cutover false`パラメータを使用します。ソースストレージVMの自動削除を無効にするには、 `-auto-source-cleanup false`パラメータを使用します。
+
+. 移行のステータスを監視する
++
+[source, cli]
+----
+vserver migrate show -vserver <storage_VM_name>
+----
++
+自動カットオーバーが始まる前に移行を一時停止またはキャンセルする必要がある場合は、 `vserver migrate pause`そして `vserver migrate abort`コマンド。移行をキャンセルする前に一時停止する必要があります。カットオーバーの開始後は移行をキャンセルできません。
+
++
+自動切り替えが有効になっている場合、移行が完了すると、*ステータス*は*migration-complete*と表示されます。自動切り替えが無効になっている場合、*ステータス*は*Ready for source cleanup*と表示されます。
+
+
+
+.結果
+ストレージVMは、ASA r2クラスタからデスティネーション クラスタに移行されます。
+
+.次の手順
+自動切り替えと自動ストレージ VM 削除を無効にした場合は、移行後の切り替えとクリーンアップを実行して、ASA r2クライアントをデスティネーション クラスタに手動で切り替え、ASA r2クラスタからストレージ VM を削除します。
+
+
+
+[[step-5-post-migration-cutover-and-cleanup]]
+== ステップ5：移行後の切り替えとクリーンアップ
+
+クラスタ間のストレージVM移行中、クライアントI/Oはデスティネーション クラスタに移行し、ソースクラスタ上のストレージVMは自動的に削除されます。移行中にソースストレージVMの自動カットオーバーと削除を無効にすることを選択した場合、移行ステータスが*Ready for source cleanup*に達したあとに、これらの手順を手動で実行する必要があります。
+
+
+
+[[manually-cut-over-clients-after-a-storage-vm-migration]]
+=== ストレージVMの移行後にクライアントを手動で切り替える
+
+ストレージVMのクラスタ間移行中にクライアントの自動切り替えを無効にした場合、移行関係が切り替え準備完了となった後、手動で切り替えを実行して、移行先のストレージVMがクライアントにデータを提供できるようにしてください。
+
+.タスクの内容
+このタスクはデスティネーション クラスタから実行してください。
+
+.手順
+. クライアント カットオーバーを手動で実行します。
++
+[source, cli]
+----
+vserver migrate cutover -vserver <storage_VM_name>
+----
+. カットオーバー操作が完了したことを確認します。
++
+[source, cli]
+----
+vserver migrate show
+----
+
+
+.結果
+データは、デスティネーション クラスタ上のストレージVMからクライアントに提供されています。
+
+.次の手順
+これで、ソースクラスタからストレージVMを削除する準備が整いました。
+
+
+
+[[manually-remove-a-storage-vm-after-migration]]
+=== 移行後にストレージVMを手動で削除する
+
+クラスタ間ストレージVM移行中に自動ソースクリーンアップを無効にした場合、移行完了後に、ストレージVMをソースクラスタから削除してストレージ領域を解放してください。
+
+.開始する前に
+クライアントは、デスティネーション クラスタからデータを提供している必要があります。
+
+.手順
+. ソースクラスタから、ソースストレージVMの状態が「ソースクリーンアップの準備完了」であることを確認します：
++
+[source, cli]
+----
+vserver migrate show
+----
+. ソースストレージVMを削除します：
++
+[source, cli]
+----
+vserver migrate source-cleanup -vserver <storage_VM_name>
+----
+
+
+.結果
+ソースクラスタ上のストレージVMが削除されます。

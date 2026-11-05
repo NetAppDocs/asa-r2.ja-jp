@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: learn-more/additional-supported-ontap-features.html 
 keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, command line interface, clustered external key servers, external key management, encryption at rest, administrator access management, client authentication, oauth 2.0, saml authentication, fips compliance, link aggregation groups, iscsi, fibre channel, fc, nvme, nvme unmap, hole punch, deallocation, system manager 
-summary: ASA r2 システムはONTAPの合理化されたバージョンを実行するため、多くの一般的なONTAPタスクと System Manager 機能は、 ASA r2 システムでも他のONTAPシステムと同じように実行されます。 
+summary: 暗号化、認証、ネットワーク、SANプロトコル、ストレージ効率などの一般的なONTAP機能のうち、ASA r2システムでも同じように機能するものについて確認します。 
 ---
 = ASA r2 システムでサポートされる一般的なONTAP機能
 :allow-uri-read: 
@@ -14,6 +14,15 @@ summary: ASA r2 システムはONTAPの合理化されたバージョンを実�
 ASA r2システムは合理化されたバージョンのONTAPを実行するため、多くの一般的なONTAPタスクとSystem Managerの機能を他のONTAPシステムと同様に実行できます。
 
 共通の機能の詳細については、次のONTAPドキュメントを参照してください。
+
+
+
+[[autosupport]]
+== AutoSupport
+
+ONTAP 9.20.1以降では、AutoSupportがHTTPsプロトコルではなくSMTPプロトコル用に構成されている場合、AutoSupportが無効になっているにもかかわらずお客様やパートナーの電子メール受信者が設定されたままになっている場合、およびDNSの問題によりAutoSupportの送信が失敗した場合に、System ManagerはAutoSupportアラートを表示します。
+
+link:https://docs.netapp.com/us-en/ontap/system-admin/manage-autosupport-concept.html["AutoSupport に関する詳細情報"^]。
 
 
 
@@ -38,6 +47,8 @@ link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/configure-cluster-ke
 
 1つ以上のKMIPサーバを使用して、暗号化されたデータにアクセスする際にクラスタで使用するキーを安全に保管できます。
 
+ONTAP 9.20.1以降では、データストレージVMで外部キーマネージャを有効にすると、ONTAPは、そのストレージVMのボリューム暗号化キーを管理者スコープのキーマネージャから新しいデータストレージVMのキーマネージャに自動的に移行します。これにより、外部キー管理への移行が簡素化され、標準ワークフローにおける別途の手動移行手順が不要になります。
+
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-hw-task.html["外部キー管理の有効化"^]。
 * link:https://docs.netapp.com/us-en/ontap/encryption-at-rest/enable-external-key-management-96-later-nve-task.html["外部キー管理（NVE）を有効にする"^] 。
 
@@ -54,10 +65,9 @@ ASA r2 システムでサポートされている一般的なデータ セキュ
 [[administrator-access-management]]
 === 管理者アクセス管理
 
-管理者に割り当てられたロールによって、管理者が実行できる機能が決まります。System Managerには、クラスタ管理者およびStorage VM管理者向けの事前定義されたロールが用意されています。ロールは管理者のアカウントを作成するときに割り当てますが、あとで別のロールを割り当てることもできます。
+管理者に割り当てられた役割によって、管理者が実行できる機能が決まります。System Managerは、クラスタ管理者とストレージVM管理者向けに、あらかじめ定義された役割を提供します。管理者アカウントを作成する際に役割を割り当てることも、後から別の役割を割り当てることもできます。
 
-* link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html["System Manager を使用して管理者アクセスを管理する方法を学びます"^]。
-
+link:https://docs.netapp.com/us-en/ontap/task_security_administrator_access.html["System Manager を使用して管理者アクセスを管理する方法を学びます"^]。
 
 
 
@@ -67,6 +77,23 @@ ASA r2 システムでサポートされている一般的なデータ セキュ
 ONTAPでは、標準的な手段を使用して、クライアントや管理者によるストレージへのアクセスを保護し、またウイルスから守ります。保存データの暗号化やWORMストレージでは、高度なテクノロジも使用できます。ONTAPでは、信頼できるソースでIDを検証してクライアント マシンおよびユーザを認証します。ユーザのクレデンシャルとファイルまたはディレクトリに対して設定されているアクセス許可を比較し、ユーザにファイルやディレクトリへのアクセスを許可します。
 
 link:https://docs.netapp.com/us-en/ontap/concepts/client-access-storage-concept.html["クライアントの認証と承認について学ぶ"^] 。
+
+
+
+[[fc-sp-3-authentication-and-encryption]]
+=== FC-SP-3認証および暗号化
+
+ONTAP 9.20.1以降、ONTAPはASA r2システムのBroadcomセキュアHBAでのFibre Channel Security Protocol 3（FC-SP-3）認証および暗号化をサポートします。FC-SP-3のサポートにより、T11 Fibre Channelセキュリティ標準に準拠しながら、FCおよびNVMe/FC SANホストとONTAPストレージシステム間で転送中のデータを保護する、ハードウェアレベルのエンドツーエンドの暗号化とデバイス認証が可能になります。
+
+* link:https://docs.netapp.com/us-en/ontap/san-admin/fc-sp-3-security-support.html["FC-SP-3認証と暗号化について"^]。
+
+
+
+
+[[multi-admin-verification-mav]]
+=== マルチ管理者認証（MAV）
+
+ONTAP 9.20.1以降では、MAV承認グループには、個々の管理者に加えて、IDプロバイダ（IdP）、Active Directory（AD）、およびLDAP（nsswitch）グループを承認者として含めることができます。サポートされるグループの種類には、Entra ID、ADFS、ADドメイングループ、およびLDAPグループが含まれます。IdP、AD、またはLDAPディレクトリでのユーザーの追加や削除で、MAV構成を変更する必要はありません。link:https://docs.netapp.com/us-en/ontap/multi-admin-verify/index.html["MAVの詳細"^]。
 
 
 
@@ -84,7 +111,18 @@ link:https://docs.netapp.com/us-en/ontap/authentication/overview-oauth2.html["OA
 
 Web サービスに対して Security Assertion Markup Language (SAML) 認証を構成して有効にすることができます。  SAML は、Active Directory や LDAP などのディレクトリ サービス プロバイダーではなく、外部 ID プロバイダー (IdP) によってユーザーを認証します。
 
-link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html["SAML認証の設定方法を学ぶ"^] 。
+link:https://docs.netapp.com/us-en/ontap/system-admin/configure-saml-authentication-task.html["SAML認証の設定方法を学習します"^]。
+
+
+
+[[snmp]]
+=== SNMP
+
+ONTAP 9.20.1以降、ONTAPはSNMPv3ユーザーに対するSHA-512認証をサポートしています。この機能強化により、外部SNMPクライアントおよびスイッチ監視（SHA-512認証を必要とするスイッチを含む）において、より強力なSNMPv3認証を使用できるようになります。
+
+* link:https://docs.netapp.com/us-en/ontap/networking/configure_snmpv3_users_in_a_cluster.html["SNMPv3ユーザーの設定方法"^]。
+* link:https://docs.netapp.com/us-en/ontap-systems-switches/switch-cshm/config-snmpv3.html["スイッチでSNMPv3を設定する方法"^]。
+
 
 
 
@@ -178,7 +216,7 @@ ASA r2 システムは、すべての SAN プロトコル (iSCSI、FC、NVMe/FC�
 +
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/nvme-copy-offload.html["NVMeコピーオフロードの設定方法を学ぶ"^]。
 +
-ONTAP 9.18.1 以降では、NVMe コピー オフロードがサポートされます。 NVMe コピー オフロードにより、NVMe ホストはコピー操作をその CPU からONTAPストレージ コントローラの CPU にオフロードできるようになります。ホストは、CPU リソースをアプリケーション ワークロード用に予約しながら、ある NVMe 名前空間から別の NVMe 名前空間にデータをコピーできます。
+ONTAP 9.18.1以降、ONTAPはNVMeコピー オフロードをサポートしています。NVMeコピー オフロードを使用すると、NVMeホストはコピー処理を自身のCPUからONTAPストレージ コントローラのCPUにオフロードできます。ホストは、アプリケーション ワークロード用にCPUリソースを確保しながら、あるNVMeネームスペースから別のNVMeネームスペースへデータをコピーできます。
 
 ** link:https://docs.netapp.com/us-en/ontap/san-admin/enable-space-allocation.html["NVMeのスペース割り当て（アンマップ）の詳細"^]。
 +
@@ -201,10 +239,19 @@ link:https://docs.netapp.com/us-en/ontap/concepts/storage-efficiency-overview.ht
 
 
 
+[[data-reduction-rate-drr]]
+=== データ削減率（DRR）
+
+ONTAP 9.20.1以降では、ストレージ効率のデータ削減率（DRR）は、削減可能なデータのみを含めることで、ONTAPのストレージ効率によるスペース削減量をより正確に評価できます。ONTAP 9.19.1以前では、DRRには削減可能なデータと削減不可能なデータの両方が含まれます。
+
+link:https://docs.netapp.com/us-en/ontap/concepts/capacity-measurements.html["ONTAPが使用済みストレージをレポートする方法の詳細"^]。
+
+
+
 [[global-deduplication]]
 === グローバル重複排除
 
-ONTAP 9.19.1以降、_グローバル重複排除_は、link:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html["既存の ONTAP 重複排除によるスペース削減効果"^]ストレージユニットレベルの機能をストレージの可用性ゾーン（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除機能は、機能ライセンスを必要とせず、デフォルトで有効になっており、既存のストレージ効率化技術とシームレスに統合され、管理設定を必要とせず、パフォーマンスへの影響を最小限に抑えながら透過的に動作します。
+ONTAP 9.19.1以降、_グローバル重複排除_は、ストレージユニットレベルのlink:https://docs.netapp.com/us-en/ontap/concepts/deduplication-concept.html["既存の ONTAP 重複排除によるスペース削減効果"^]をストレージの可用性ゾーン（SAZ）全体に拡張します。SAZ内のすべてのストレージユニットにわたる重複データブロックを排除することで、ストレージ効率を大幅に向上させ、総所有コストを削減できます。グローバル重複排除は、機能ライセンスを必要とせず、デフォルトで有効になっており、既存のストレージ効率化テクノロジとシームレスに統合され、パフォーマンスへの影響を最小限に抑えながら透過的に動作し、管理設定も不要です。
 
 
 
@@ -214,3 +261,12 @@ ONTAP 9.19.1以降、_グローバル重複排除_は、link:https://docs.netapp
 System Managerでは、さまざまな操作、オブジェクト、および情報トピックを検索できます。表示されたデータの中から特定のエントリを検索することもできます。
 
 link:https://docs.netapp.com/us-en/ontap/task_admin_search_filter_sort.html["システム マネージャーで情報を検索、フィルタリング、並べ替える方法を学びます"^]。
+
+
+
+[[user-password-expiration-alerts]]
+=== ユーザーパスワード有効期限切れアラート
+
+ONTAP 9.20.1以降では、ユーザーアカウントに関連付けられたロールでパスワードの有効期限アラートが設定されている場合、パスワードの有効期限が切れる14日前から、ログイン直後にSystem Managerのページ上部にバナーアラートが表示されます。アラートはユーザーがログインするたびに更新され、パスワードの有効期限が切れるまでの残り日数が表示されます。管理者ロールを追加または編集する際に、有効期限アラートを設定できます。
+
+link:https://docs.netapp.com/us-en/ontap/authentication/configure-password-expiry-alerts.html["System Managerでパスワードの有効期限アラートを設定する方法について説明します。"^]。

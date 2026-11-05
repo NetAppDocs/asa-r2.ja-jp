@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: administer/manage-client-vm-access.html 
 keywords: asa r2, client access, host access, virtual machines, storage virtual machines, create, ipspaces, subnets, lifs, network interface, iscsi lif failover, 
-summary: ASA R2上のストレージユニット内のデータにアクセスするためのLIFを作成します。サブネットを使用してLIFの作成を簡易化し、IPspaceを使用してセキュアな管理とルーティングを実現します。 
+summary: ASA r2のストレージユニット内のデータにアクセスするためのLIFを作成します。サブネットを使用してLIFの作成を簡素化し、IPspaceを使用して安全な管理とルーティングを提供します。 
 searchtitle: ONTAP System Managerを使用したストレージへのクライアントアクセスの管理| ASA R2 
 ---
 = ASA R2ストレージシステム上のStorage VMへのクライアントアクセスを管理します。
@@ -64,7 +64,7 @@ IPspaceは、Storage VMが配置される個別のIPアドレススペースで�
 [[create-subnets]]
 == サブネットの作成
 
-サブネットを使用すると、LIF（ネットワークインターフェイス）の作成時に使用するIPv4またはIPv6アドレスの特定のブロックを割り当てることができます。サブネットを使用すると、LIFごとに特定のIPアドレスやネットワークマスクではなくサブネット名を指定できるため、LIFの作成が簡単になります。
+サブネットを使用すると、LIF（ネットワークインターフェース）を作成する際に使用するIPv4またはIPv6アドレスの特定のブロックを割り当てることができます。サブネットを使用すると、各LIFに対して特定のIPアドレスとネットワークマスクではなくサブネット名を指定できるため、LIFの作成が簡素化されます。
 
 .開始する前に
 * このタスクを実行するには、クラスタ管理者である必要があります。
@@ -98,7 +98,7 @@ IPspaceは、Storage VMが配置される個別のIPアドレススペースで�
 LIF（ネットワークインターフェース）とは、物理ポートまたは論理ポートに関連付けられたIPアドレスのことです。データにアクセスするために使用するポートにLIFを作成します。ストレージVMは、1つ以上のLIFを介してクライアントにデータを提供します。ASA r2システムでは、IP、FC、およびNVMe/FC LIFを作成できます。IPデータLIFは、デフォルトでiSCSIトラフィックとNVMe/TCPトラフィックの両方を処理できます。FCトラフィックとNVMe/FCトラフィック用に、それぞれ別のデータLIFを作成する必要があります。
 
 .ASA r2 システムでの LIF フェイルオーバー
-コンポーネントの障害が発生した場合、ネットワーク通信が中断されないように、LIF はフェイルオーバーするか、別の物理ポートに移行されます。ONTAP 9.19.1 以降、IP LIF に対して自動 LIF フェイルオーバーがデフォルトでサポートされています。自動 LIF フェイルオーバーが有効になっている場合、ストレージフェイルオーバーが発生すると、LIF は自動的にホームノードまたはポートから HA パートナーノードまたはポートに移行され、フェイルオーバーが完了すると元のノードまたはポートに戻ります。あるいは、ポートが異常状態になった場合、LIF は自動的に現在のホームノード内の正常なポートに移行され、ポートが再び正常状態になると元のポートに戻ります。
+コンポーネントに障害が発生した場合、ネットワーク通信が中断されないように、LIFをフェイルオーバーするか、別の物理ポートに移行できます。ONTAP 9.19.1以降では、IP LIFの自動LIFフェイルオーバーがデフォルトでサポートされています。自動LIFフェイルオーバーが有効になっている場合、ストレージフェイルオーバーが発生すると、LIFは自動的にホームノードまたはポートからHAパートナーノードまたはポートに移行され、フェイルオーバーの完了後に元に戻ります。または、ポートが異常な状態になった場合、LIFは自動的に現在のホームノード内の正常なポートに移行され、ポートが再び正常な状態になったあとに元のポートに戻されます。
 
 ONTAP 9.18.1以前では、iSCSIトラフィックとNVMe/TCPトラフィックの両方を含むIP LIFに対して、自動LIFフェイルオーバーはサポートされていません。iSCSI専用LIFを作成する場合、ストレージVMに既に自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在しない限り、自動LIFフェイルオーバーはデフォルトで有効になります。ストレージVM上に、自動LIFフェイルオーバーが有効になっていないiSCSI LIFが存在する場合、新しく作成されたLIFも有効になりません。このような場合は、まず既存のiSCSI LIFを削除し、その後、自動LIFフェイルオーバーを有効にして再作成する必要があります。link:https://docs.netapp.com/us-en/ontap/san-admin/delete-lif-san-environment-task.html["SAN環境でLIFを削除する"^]の方法を確認してください。
 
@@ -184,7 +184,7 @@ iSCSI 専用の LIF を作成するには、ONTAP コマンドラインインタ
 network interface create -vserver <storage_VM_name> -lif <iscsi_lif_name> -service-policy <service_policy_name> -home-node <home_node> -home-port <port_name> -address <ip_address> -netmask <netmask> -failover-policy sfo-partner-only -status-admin up
 ----
 +
-** 各ノードに2つのiSCSI LIF（ファブリックA用とファブリックB用）を作成することをお勧めします。これにより、iSCSIトラフィックの冗長性と負荷分散が実現します。次の例では、各ノードに2つ、各ファブリックに1つ、合計4つのiSCSI LIFが作成されます。
+** 各ノードに2つのiSCSI LIFを作成します。1つはファブリックA用、もう1つはファブリックB用です。これにより、iSCSIトラフィックに冗長性とロード バランシングが提供されます。次の例では、合計4つのiSCSI LIFが作成されます。各ノードに2つずつ、各ファブリックに1つずつです。
 +
 [listing]
 ----
@@ -216,7 +216,7 @@ network interface show -lif iscsi*
 LIFは、必要に応じて無効にしたり名前を変更したりできます。LIFのIPアドレスとサブネットマスクを変更することもできます。
 
 .タスクの内容
-ONTAP は、ネットワーク タイム プロトコル (NTP) を使用してクラスタ全体の時間を同期します。LIF IP アドレスを変更した後、同期の失敗を防ぐために NTP 設定を更新する必要がある場合があります。詳細については、ナレッジベースの記事を参照してください。link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629["LIF IPの変更後にNTP同期が失敗する"] 。
+ONTAPはネットワークタイムプロトコル（NTP）を使用して、クラスタ全体で時刻を同期します。LIFのIPアドレスを変更したあとは、同期エラーを防ぐためにNTPの設定を更新する必要がある場合があります。詳細については、ナレッジベースの記事link:https://kb.netapp.com/on-prem/ontap/Ontap_OS/OS-Issues/CONTAP-500629["LIF IPの変更後にNTP同期が失敗する"]を参照してください。
 
 .手順
 . [ネットワーク]>[概要]*を選択し、*[ネットワークインターフェイス]*を選択します。

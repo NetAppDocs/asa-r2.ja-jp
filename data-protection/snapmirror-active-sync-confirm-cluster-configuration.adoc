@@ -17,7 +17,7 @@ SnapMirror Active Sync は、フェイルオーバー発生時にデータを保
 . クラスタ間にクラスタ ピア関係が確立されていることを確認します。
 +
 
-NOTE: SnapMirrorアクティブ同期でクラスタ ピア関係を確立するには、デフォルトのIPspaceが必要です。カスタム IPspace はサポートされていません。
+NOTE: SnapMirrorアクティブ同期では、クラスタピア関係にデフォルトのIPspaceが必要です。カスタムIPspaceはサポートされていません。
 
 +
 link:snapshot-replication.html#step-1-create-a-cluster-peer-relationship["クラスタ ピア関係の作成"] 。

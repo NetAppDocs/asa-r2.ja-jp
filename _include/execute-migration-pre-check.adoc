@@ -1,0 +1,15 @@
+= 
+:allow-uri-read: 
+
+
+.ステップ
+. デスティネーション クラスタから、移行の事前チェックを実行します：
++
+[source, cli]
+----
+vserver migrate start -vserver <storage_VM> -source-cluster <sourcecluster> -check-only true
+----
++
+移行準備のために修正が必要な問題がある場合は、問題の内容と修正方法が表示されます。問題を修正し、事前チェックが正常に完了するまで繰り返してください。
+
+

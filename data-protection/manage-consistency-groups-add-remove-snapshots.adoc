@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/manage-consistency-groups-add-remove-snapshots.html 
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity 
-summary: 整合性グループのスナップショットを作成して、整合性グループの一部であるストレージ ユニット内のデータを保護します。整合性グループ内のいずれかのストレージ ユニットのデータを保護する必要がなくなった場合は、スナップショット保護を削除できます。 
+summary: 整合性グループにSnapshot保護を追加してストレージユニット内のデータを保護するか、不要になった場合はSnapshot保護を削除します。 
 ---
 = スナップショットを使用してASA r2 システムの整合性グループを保護する
 :allow-uri-read: 
@@ -20,7 +20,7 @@ ASA r2 ストレージ システム内のコンシステンシー グループ�
 [[add-snapshot-data-protection-to-a-consistency-group]]
 == 整合性グループへのSnapshotデータ保護の追加
 
-整合性グループにSnapshotデータ保護を追加すると、事前定義されたスケジュールに基づいて、整合性グループのローカルSnapshotが一定の間隔で作成されます。
+スナップショットデータ保護を整合性グループに追加すると、ONTAPは事前に定義されたスケジュールに基づいて、定期的に整合性グループのローカルスナップショットを取得します。
 
 link:restore-data.html["データのリストア"]失われたスナップショットまたは破損したスナップショットをに使用できます。
 
@@ -54,7 +54,7 @@ image:icon_dropdown_arrow.gif["下向きの青い矢印"]デフォルトポリ�
 
 .. ポリシースケジュールを選択します。
 .. [Maximum snapshots]*で、整合グループで保持するSnapshotの最大数を入力します。
-.. 必要に応じて、* SnapMirror label *の下にSnapMirrorラベルを入力します。
+.. オプションで、*SnapMirrorラベル*にSnapMirrorラベルを入力します。
 .. [ 保存（ Save ） ] を選択します。
 
 

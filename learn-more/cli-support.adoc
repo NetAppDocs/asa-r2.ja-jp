@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: learn-more/cli-support.html 
 keywords: asa r2, asa r2, asa a1k, asa a90, asa a70, asa a50, asa a30, asa a20, asa c30, cli, comand line interface 
-summary: '特定の ONTAP コマンドは、ASA r2 システム (ASA A1K、ASA 90、ASA 70、ASA A50、ASA A30、ASA A20、ASA C30) ではサポートされていません。' 
+summary: ASA r2システムでサポートされていないONTAP CLIコマンドとパラメータを確認し、CLIを使用してASA r2クラスタをセットアップします。 
 ---
 = ASA R2ストレージシステムのONTAP CLIサポート
 :allow-uri-read: 
@@ -75,7 +75,7 @@ NOTE: その `lun move-in-volume`コマンドは、  `lun rename`そして `vser
 * `volume expand`
 * `volume modify`
 +
-その `volume modify`このコマンドは、次のパラメータと組み合わせて使用する場合は使用できません。
+ `volume modify`コマンドは、次のパラメータと一緒に使用する場合は使用できません：
 
 +
 ** `-anti-ransomware-state`
@@ -145,7 +145,7 @@ NOTE: その `lun move-in-volume`コマンドは、  `lun rename`そして `vser
 [[set-up-an-ontap-asa-r2-cluster-using-the-cli]]
 == CLIを使用したONTAP ASA R2クラスタのセットアップ
 
-link:../install-setup/initialize-ontap-cluster.html["System Managerを使用してONTAP ASA R2クラスタをセットアップする"]することをお勧めします。System Manager は、クラスタを迅速かつ簡単に起動・稼働させるためのガイド付きワークフローを提供します。ただし、ONTAP コマンドの操作に慣れている場合は、ONTAP コマンドラインインターフェース（CLI）をクラスタのセットアップにオプションとして使用できます。CLI を使用してクラスタをセットアップしても、System Manager と比較して追加のオプションや利点はありません。
+link:../install-setup/initialize-ontap-cluster.html["System Managerを使用したONTAP ASA r2クラスタのセットアップ"]を使用します。System Managerは、クラスタを迅速かつ簡単に稼働させるためのガイド付きワークフローを提供します。ただし、ONTAPコマンドの操作に慣れている場合は、オプションでクラスタのセットアップにONTAPコマンドラインインターフェイス（CLI）を使用することもできます。CLIを使用してクラスタをセットアップしても、System Managerと比較して追加のオプションや利点はありません。
 
 クラスター設定中、ONTAP はデフォルトのデータストレージ VM を作成し、初期ストレージユニットを作成し、データ LIF を自動的に検出します。オプションとして、ホスト名を解決するためにドメインネームシステム（DNS）を有効にしたり、クラスターでネットワークタイムプロトコル（NTP）を使用して時刻同期を行うように設定したり、保存データの暗号化を有効にしたりできます。
 
@@ -186,7 +186,7 @@ cluster setup
 . ノード管理インターフェイスのポート、IPアドレス、ネットマスク、およびデフォルトゲートウェイの値を入力します。
 . コマンドラインインターフェイスを使用してセットアップを続行する場合は* Enter *を押し、新しいクラスタを作成する場合は* create *と入力します。
 . システムのデフォルトを受け入れるか、独自の値を入力します。
-. 1つ目のノードでのセットアップが完了したら、クラスタにログインします。
+. 最初のノードでのセットアップが完了したら、クラスタにログインします。
 . クラスタがアクティブで、第1ノードが正常であることを確認します。
 +
 [source, cli]

@@ -22,7 +22,7 @@ ASA r2システムは幅広いSAN機能をサポートしていますが、一�
 * ONTAP S3 SnapMirrorとS3 API
 * SnapLock
 +
-SnapLock Compliance および Enterprise モードは、SAN 環境のプライマリクラスタではサポートされていません。SnapLock for SnapVault はセカンダリ システムのクラスタでサポートされています。
+SAN環境のプライマリクラスタでは、SnapLock ComplianceおよびEnterpriseモードはサポートされていません。セカンダリクラスタでは、SnapLock for SnapVaultがサポートされています。
 
 * SnapMirrorレプリケーションは、次の制限付きでASA r2 システムでサポートされます。
 +

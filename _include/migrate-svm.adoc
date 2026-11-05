@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+.手順
+. デスティネーション クラスタから、ストレージVMの移行を開始します：
++
+[source, cli]
+----
+vserver migrate start -vserver <storage_VM_name> -source-cluster <source_cluster>
+----
++
+自動切り替えを無効にするには、 `-auto-cutover false`パラメータを使用します。ソースストレージVMの自動削除を無効にするには、 `-auto-source-cleanup false`パラメータを使用します。
+
+. 移行のステータスを監視する
++
+[source, cli]
+----
+vserver migrate show -vserver <storage_VM_name>
+----
++
+自動カットオーバーが始まる前に移行を一時停止またはキャンセルする必要がある場合は、 `vserver migrate pause`そして `vserver migrate abort`コマンド。移行をキャンセルする前に一時停止する必要があります。カットオーバーの開始後は移行をキャンセルできません。
+
++
+自動切り替えが有効になっている場合、移行が完了すると、*ステータス*は*migration-complete*と表示されます。自動切り替えが無効になっている場合、*ステータス*は*Ready for source cleanup*と表示されます。
+
+

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/snapmirror-active-sync-planned-failover.html 
 keywords: snapmirror active sync, planned failover, disaster recovery 
-summary: ビジネス継続性と災害復旧を確保するために、 SnapMirrorアクティブ同期関係の計画的なフェイルオーバーを実行する方法を学習します。 
+summary: フェイルオーバープロセスをテストしたり、プライマリサイトでメンテナンスを実行したりするには、SnapMirrorアクティブ同期関係の計画的フェイルオーバーを実行します。 
 ---
 = ASA r2 SnapMirror アクティブ同期関係のフェイルオーバー
 :allow-uri-read: 

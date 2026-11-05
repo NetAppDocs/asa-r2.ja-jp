@@ -46,3 +46,6 @@ ARP/AIが1つ以上のストレージユニットで異常なアクティビテ�
 
 .次の手順
 ストレージユニットのアクティビティに急増が見られる場合（一時的な急増、または新たな常態を特徴づける急増のいずれか）は、それらを安全として報告する必要があります。これらの急増を手動で安全として報告することで、ARPの脅威評価の精度向上に役立ちます。link:https://docs.netapp.com/us-en/ontap/anti-ransomware/manage-parameters-task.html#report-known-surges["既知のARP/AIサージを報告する"^]の方法を確認してください。
+
+
+NOTE: ストレージユニットのlink:modify-arp-snapshot-retention-period.html["スナップショット応答ポリシー"]がアラートのみ、または攻撃によってトリガーされるスナップショットのみを作成するように設定されている場合、ARP/AIが有効になっていても、そのストレージユニットには定期的なARPスナップショットは表示されません。

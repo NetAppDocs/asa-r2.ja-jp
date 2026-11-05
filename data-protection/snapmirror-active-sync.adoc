@@ -11,9 +11,9 @@ summary: 'SnapMirrorアクティブ同期を使用して、ゼロ復旧ポイン
 
 
 [role="lead"]
-ONTAP SnapMirrorアクティブ同期データ保護により、サイト全体の障害が発生してもビジネス サービスは継続して稼働でき、セカンダリ コピーを使用してアプリケーションを透過的にフェイルオーバーできます。SnapMirrorアクティブ同期でフェイルオーバーをトリガーするために、手動操作やカスタム スクリプトは必要ありません。
+ONTAP SnapMirror active syncのデータ保護により、完全なサイト障害が発生した場合でもビジネスサービスの稼働を継続でき、セカンダリコピーを使用してアプリケーションが透過的にフェイルオーバーできるようにサポートします。SnapMirror active syncを使用してフェイルオーバーをトリガーするために、手動による介入やカスタムスクリプトは必要ありません。
 
-ASA r2 システムで SnapMirror アクティブ同期を設定するための System Manager の手順は、統合 ONTAP パーソナリティを実行している NetApp FAS 、 AFF 、および ASA システムとは異なりますが、 SnapMirror アクティブ同期の要件、アーキテクチャ、および動作は同じです。link:https://www.netapp.com/pdf.html?item=/media/138366-sb-3457-san-disaster-recovery-netapp-asa.pdf["ASA r2システムでのSnapMirror Active Syncを使用した災害復旧の詳細"^]
+SnapMirror アクティブ同期を設定するための System Manager の手順は、統合 ONTAP パーソナリティを実行する NetApp FAS、AFF、および ASA システムとは ASA r2 システムで異なりますが、SnapMirror アクティブ同期の要件、アーキテクチャ、および動作は同じです。 link:https://www.netapp.com/pdf.html?item=/media/138366-sb-3457-san-disaster-recovery-netapp-asa.pdf["ASA r2システムでのSnapMirror Active Syncを使用した災害復旧の詳細"^]
 
 ASA r2システムでは、SnapMirror Active Syncは対称アクティブ / アクティブ構成をサポートしています。対称アクティブ / アクティブ構成では、両方のサイトがアクティブI/O用のローカルストレージにアクセスできます。link:https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/architecture-concept.html#symmetric-activeactive["対称アクティブ/アクティブ構成"^]の詳細をご覧ください。
 
@@ -41,7 +41,7 @@ ONTAP MediatorまたはONTAP Cloud Mediatorを使用すると、クラスタの�
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["4つ"]自己署名証明書を使用してONTAP Mediator またはONTAP Cloud Mediator を設定します。
 [role="quick-margin-para"]
-絶対ですlink:configure-ontap-mediator.html["ONTAPメディエーターまたはONTAPクラウドメディエーターを構成する"]クラスタ監視のためにSnapMirror Active Sync を使用する前に、これを実行する必要があります。
+クラスタ監視用のSnapMirror active syncで使用を開始する前に、link:configure-ontap-mediator.html["ONTAP MediatorまたはONTAP Cloud Mediatorを設定する"]する必要があります。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["5 つ"] SnapMirrorアクティブ同期を構成します。
 [role="quick-margin-para"]

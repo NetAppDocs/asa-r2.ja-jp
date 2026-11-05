@@ -26,10 +26,10 @@ entries:
       url: "/manage-data/delete-storage-units.html"
   - title: ストレージVMの移行
     entries:
-    - title: ASAクラスタからストレージ VM を移行する
+    - title: ASAストレージVMをASA r2クラスタに移行する
       url: "/manage-data/migrate-svm.html"
-    - title: クライアントのカットオーバーとソースストレージVMのクリーンアップ
-      url: "/manage-data/svm-post-migrate-cutover-cleanup.html"
+    - title: ASA r2ストレージVMをASAまたはAFFクラスタに移行する
+      url: "/manage-data/migrate-svm-from-asa-r2.html"
   - title: ストレージの制限
     url: "/manage-data/storage-limits.html"
 - title: データを保護
@@ -110,7 +110,7 @@ entries:
       url: "/secure-data/enable-anti-ransomware-protection.html"
     - title: デフォルトのARP/AIの有効化を無効にする
       url: "/secure-data/disable-default-anti-ransomware-protection.html"
-    - title: ARP/AIスナップショットの保持期間を変更する
+    - title: ARP/AIスナップショット応答ポリシーを設定する
       url: "/secure-data/modify-arp-snapshot-retention-period.html"
     - title: ARP/AIアラートに応答する
       url: "/secure-data/respond-anti-ransomware-protection-alerts.html"

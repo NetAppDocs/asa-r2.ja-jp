@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/manage-hierarchical-consistency-groups.html 
 keywords: consistency groups, snapshots, data protection, protect data, add, remove, delete, storage units, lun, namespace, increase capacity 
-summary: 整合性グループを使用すると、各ストレージユニットに対して個別に操作を実行するのではなく、複数のストレージユニットに対して同時にさまざまな操作を実行できます。階層構造では、1つ以上の整合性グループが、親整合性グループの子として構成されます。 
+summary: ASA r2システム上の複数のストレージユニットのSnapshotとレプリケーションを管理するために、階層型整合性グループを昇格、降格、作成、および切り離します。 
 ---
 = ASA r2 システム上の階層的整合性グループを管理する
 :allow-uri-read: 
@@ -42,13 +42,13 @@ ONTAP 9.16.1を実行していて、昇格したいコンシステンシーグ�
 親整合性グループを単一の整合性グループに降格すると、関連付けられている子整合性グループのストレージ ユニットが親整合性グループに追加されます。子の整合性グループは削除され、親は単一の整合性グループとして管理されます。
 
 .開始する前に
-ONTAP 9.16.1を実行していて、降格したいコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、link:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"]整合性グループを降格する前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、link:snapmirror-active-sync-break-relationship.html["関係を断つ"]整合性グループを降格する前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。
+ONTAP 9.16.1を実行しており、降格する整合性グループがSnapMirror active sync関係にある場合は、整合性グループを降格する前にlink:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"]する必要があります。ONTAP 9.16.1を実行しており、整合性グループが非同期レプリケーション関係にある場合は、整合性グループを降格する前にlink:snapmirror-active-sync-break-relationship.html["関係を断つ"]する必要があります。ONTAP 9.17.1以降のリリースでは、整合性グループを降格する前にSnapMirror active sync関係を削除したり、非同期関係を解除したりする必要はありません。
 
 .手順
 . System Managerで、*[保護]>[整合グループ]*を選択します。
 . 降格する親整合性グループにカーソルを合わせます。
 . を選択しimage:icon_kabob.gif["3つの垂直な青い点"]、*[単一の整合グループに降格]*を選択します。
-. [降格]*を選択します。
+. *「降格」*を選択します。
 
 
 .次の手順
@@ -113,7 +113,7 @@ link:policies-schedules.html#apply-a-snapshot-policy-to-a-consistency-group["Sna
 子コンシステンシ グループを親コンシステンシ グループからデタッチすると、子コンシステンシ グループは親コンシステンシ グループから削除され、単一のコンシステンシ グループとして管理されます。親に適用されたレプリケーション ポリシーは、分離された子の整合性グループには適用されなくなりました。
 
 .開始する前に
-ONTAP 9.16.1を実行していて、デタッチするコンシステンシーグループがSnapMirrorアクティブ同期関係にある場合は、link:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"]整合性グループをデタッチする前に。  ONTAP 9.16.1を実行していて、コンシステンシーグループが非同期レプリケーション関係にある場合は、link:snapmirror-active-sync-break-relationship.html["関係を断つ"]整合性グループをデタッチする前に。  ONTAP 9.17.1 以降のリリースでは、整合性グループを拡張する前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。
+ONTAP 9.16.1を実行しており、切り離す整合性グループがSnapMirrorアクティブ同期関係にある場合は、整合性グループを切り離す前にlink:snapmirror-active-sync-delete-relationship.html["SnapMirrorのアクティブ同期関係を削除する"]する必要があります。ONTAP 9.16.1を実行しており、整合性グループが非同期レプリケーション関係にある場合は、整合性グループを切り離す前にlink:snapmirror-active-sync-break-relationship.html["関係を断つ"]する必要があります。ONTAP 9.17.1以降のリリースでは、整合性グループを切り離す前にSnapMirrorアクティブ同期関係を削除したり、非同期関係を解除したりする必要はありません。
 
 .手順
 . System Managerで、*[保護]>[整合グループ]*を選択します。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: data-protection/snapshot-replication.html 
 keywords: snapshot replication, asa r2, protect data, data protection, replication, replicate data, remote cluster, destination cluster, source cluster, replication relationship, asynchronous replication, synchronous replication 
-summary: ONTAP System Managerを使用して、バックアップおよびディザスタリカバリ用にデータをリモートサイトにコピーします。設定するには、レプリケーションポリシーと関係を作成する必要があります。 
+summary: ONTAP System Managerを使用して、バックアップおよびディザスタリカバリのためにデータをリモートの場所にコピーします。Snapshotレプリケーションを設定するために、レプリケーション ポリシーと関係を作成します。 
 searchtitle: ONTAP System Managerを使用したリモートクラスタへのSnapshotのレプリケート| ASA R2 
 ---
 = ASA R2ストレージシステムからリモートクラスタにSnapshotをレプリケート
@@ -17,7 +17,7 @@ Snapshotレプリケーションは、ASA R2システム上の整合グループ
 
 NOTE: ASA r2 ストレージ システムのスナップショット レプリケーションは、別のASA r2 ストレージ システムとの間のみサポートされます。  ASA r2 システムからASA、 AFF 、またはFASシステムに、あるいはASA、 AFF 、またはFASシステムからASA r2 システムにスナップショットを複製することはできません。
 
-Snapshotレプリケーションを設定するには、ASA R2システムとリモートサイトの間にレプリケーション関係を確立する必要があります。レプリケーション関係はレプリケーションポリシーによって管理されます。すべてのSnapshotをレプリケートするデフォルトポリシーは、クラスタのセットアップ時に作成されます。デフォルトのポリシーを使用することも、必要に応じて新しいポリシーを作成することもできます。
+スナップショットレプリケーションを設定するには、ASA r2システムとリモートロケーションとの間にレプリケーション関係を確立します。レプリケーション関係は、レプリケーションポリシーによって管理されます。クラスタ設定時に、すべてのスナップショットを複製するデフォルトポリシーが作成されます。デフォルトのポリシーを使用することも、新しいポリシーを作成することもできます。
 
 ONTAP 9.17.1 以降では、階層関係にあるコンシステンシー グループに非同期レプリケーション ポリシーを適用できます。  ONTAP 9.16.1 では、階層関係の整合性グループでは非同期レプリケーションはサポートされません。
 
@@ -88,12 +88,12 @@ Snapshotレプリケーション関係により、ASA R2システムとリモー
 
 ランサムウェア攻撃に対するセキュリティを強化するために、SnapLock for SnapVault のレプリケーション関係を作成してください。
 
+.タスクの内容
+* レプリケーション関係を作成するときは、レプリケーション関係に適切なレプリケーション ポリシーを選択する必要があります。事前定義されたポリシーを使用することも、カスタム ポリシーを作成することもできます。
+
+
 .開始する前に
-* link:pre-defined-protection-policies.html["レプリケーションポリシーについて学ぶ"] 。
-+
-レプリケーション関係を作成するときは、レプリケーション関係に適切なレプリケーション ポリシーを選択する必要があります。事前定義されたポリシーを使用することも、カスタム ポリシーを作成することもできます。
-
-
+ONTAP 9.20.1以降では、既存のFCファブリック経由でのバックエンドSnapMirror非同期レプリケーションを設定できます。そのためには、ONTAPシステムのバックエンドがFCレプリケーション用に設定されており、FCファブリックとクラスタ間IPネットワークの両方が稼働している必要があります。レプリケーションデータはFCファブリック経由で転送できますが、クラスタ通信およびレプリケーション管理機能にはクラスタ間IPネットワークが必要です。link:https://docs.netapp.com/us-en/ontap/data-protection/configure-backend-fc-replication.html["FCレプリケーション用にONTAPシステムバックエンドを設定する方法について説明します。"^]。
 
 
 
@@ -101,6 +101,13 @@ Snapshotレプリケーション関係により、ASA R2システムとリモー
 === スナップショットをリモートクラスターにレプリケートするリレーションシップを作成する
 
 スナップショットをリモートクラスターに複製することで、データを保護します。整合性グループの複製されたスナップショットは、災害復旧やデータ移行に使用できます。
+
+.タスクの内容
+ONTAP 9.20.1以降の場合：
+
+* バックエンドFCレプリケーションを使用してSnapMirror関係を作成するには、サポートされている事前定義済みの非同期データ保護ポリシーを使用し、FCトランスポートプロトコルを選択する必要があります。バックエンドのレプリケーションは、デフォルトでIPプロトコルを使用します。link:pre-defined-protection-policies.html["バックエンドFCレプリケーションをサポートする事前定義済みレプリケーションポリシーについて確認します"]。
+* レプリケーション関係を作成した後に選択したトランスポートプロトコルを変更するには、関係をlink:snapmirror-active-sync-break-relationship.html["解除"]してから、目的のトランスポートプロトコルで再作成する必要があります。
+
 
 .手順
 . System Managerで、*[保護]>[レプリケーション]*を選択します。
@@ -129,6 +136,7 @@ _source_consistencyグループは、レプリケートするローカルクラ�
 
 |===
 . レプリケーションポリシーを選択します。
+. ONTAP 9.20.1以降では、レプリケーション関係のトランスポートプロトコルを選択します。
 . データ転送の開始を遅らせるには、*宛先設定*を選択し、*すぐに転送を開始する*のチェックを外します。
 +
 デフォルトでは、最初のデータ転送がすぐに開始されます。
@@ -154,7 +162,8 @@ _source_consistencyグループは、レプリケートするローカルクラ�
 NOTE: ASA r2 システムは、SnapLock Compliance モードまたは SnapLock Enterprise モードをサポートしていません。SnapLock for SnapVault レプリケーション関係を作成すると、宛先スナップショットのロックのみが有効になります。SnapLock Compliance モードまたは Enterprise モードは有効になりません。
 
 .開始する前に
-次の操作が必要です。link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock["SnapLock コンプライアンス クロックを初期化する"]
+* 次の操作が必要です。link:../secure-data/snaplock.html#initialize-the-snaplock-compliance-clock["SnapLock コンプライアンス クロックを初期化する"]
+
 
 .手順
 . System Manager で、*Protection > Consistency groups* を選択し、整合性グループを選択します。
@@ -162,7 +171,11 @@ NOTE: ASA r2 システムは、SnapLock Compliance モードまたは SnapLock E
 . [リモート保護]*で、*[リモートクラスタにレプリケート]*を選択します。
 . [レプリケーションポリシー]*を選択します。
 +
-_vault_replicationポリシーを選択する必要があります。
+_vault_レプリケーションポリシーを選択する必要があります。ONTAP 9.20.1以降では、バックエンドFCレプリケーションを構成するために_MirrorAndVault_ポリシーを選択する必要があります。
+
+. ONTAP 9.20.1以降では、トランスポートプロトコルを選択します。
++
+レプリケーション関係を作成した後に選択したトランスポートプロトコルを変更するには、関係をlink:snapmirror-active-sync-break-relationship.html["解除"]してから、目的のトランスポートプロトコルで再作成する必要があります。
 
 . 「Destination settings」を選択し、次に「Lock destination snapshots to prevent deletion」を選択します。
 . 最大および最小のデータ保持期間を入力します。
@@ -179,6 +192,9 @@ _vault_replicationポリシーを選択する必要があります。
 
 .次の手順
 レプリケーション関係が作成されると、レプリケーションポリシーで定義されたとおりに最初のデータ転送が開始されます。オプションで、ASA r2システムがオフラインになった場合にフェイルオーバーが正常に実行されるかどうかを確認するために、レプリケーションのフェイルオーバーをテストできます。
+
+.関連情報
+link:pre-defined-protection-policies.html["事前定義された保護ポリシーについて学ぶ"]。
 
 
 

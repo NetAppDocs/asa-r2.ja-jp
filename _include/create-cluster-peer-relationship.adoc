@@ -1,0 +1,61 @@
+= 
+:allow-uri-read: 
+
+
+.開始する前に
+次のいずれかの方法を使用して、ピアリングするクラスタ内のすべてのノードにクラスタ間 LIF を作成する必要があります。
+
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-share-data-ports-task.html["共有データ ポートでのクラスタ間LIFの設定"^]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-dedicated-ports-task.html["専用データ ポートでのクラスタ間LIFの設定"^]
+* link:https://docs.netapp.com/us-en/ontap/peering/configure-intercluster-lifs-use-ports-own-networks-task.html["カスタムIPspaceでのクラスタ間LIFの設定"^]
+
+
+.手順
+. デスティネーション クラスタで、ソース クラスタとのピア関係を作成し、パスフレーズを生成します：
++
+[source, cli]
+----
+cluster peer create -peer-addrs <source_cluster_LIF_IPs> -generate-passphrase
+----
++
+次の例では、クラスタ 1 とクラスタ 2 の間にクラスタ ピア関係を作成し、システム生成のパスフレーズを作成します。
+
++
+[listing]
+----
+cluster1::> cluster peer create -peer-addrs 10.98.191.193 -generate-passphrase
+Passphrase: UCa+6lRVICXeL/gq1WrK7ShR
+            Peer Cluster Name: cluster2
+            Initial Allowed Vserver Peers: -
+            Expiration Time: 6/7/2017 09:16:10 +5:30
+            Intercluster LIF IP: 10.140.106.185
+Warning: make a note of the passphrase - it cannot be displayed again.
+
+----
+. 生成されたパスフレーズをコピーします。
+. ソースクラスタで、デスティネーション クラスタとのピア関係を作成します：
++
+[source, cli]
+----
+cluster peer create -peer-addrs <destination_cluster_LIF_IPs>
+----
+. デスティネーション クラスタで生成されたパスフレーズを入力してください。
+. クラスター ピア関係が作成されたことを確認します。
++
+[source, cli]
+----
+cluster peer show
+----
++
+次の例は、正常にピアリングされたクラスターの予想される出力を示しています。
+
++
+[listing]
+----
+cluster1::> cluster peer show
+
+Peer Cluster Name   Cluster Serial Number   Availability   Authentication
+-----------------   ---------------------   -------------- --------------
+cluster2             1-80-123456             Available      ok
+----
+
