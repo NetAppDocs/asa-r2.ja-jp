@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: monitor/view-insights.html 
 keywords: view, insights, optimize, cluster, performance, best practices, configuration, security 
-summary: 'ONTAP System Managerの[Insights（インサイト）]を表示して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。' 
+summary: System Managerのインサイトを確認して、ASA r2クラスターのセキュリティとパフォーマンスを最適化するベストプラクティスと構成の変更を特定します。 
 ---
 = ASA r2システムのInsightsを使用してクラスターのセキュリティとパフォーマンスを最適化する
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary: 'ONTAP System Managerの[Insights（インサイト）]を表示して�
 [role="lead"]
 ONTAP System Managerのview_insights_inを使用して、クラスタのセキュリティとパフォーマンスを最適化するためにASA R2システムに実装できるベストプラクティスと設定変更を特定します。
 
-例えば、クラスタ用に Network Time Protocol （NTP）サーバーが構成されているとします。しかし、最適なクラスタ時刻管理に必要な推奨数の NTP サーバーが不足していることに気づいていません。クラスタ時刻が不正確な場合に発生する可能性のある問題を未然に防ぐため、Insights は設定されている NTP サーバーの数が少なすぎることを通知し、問題の詳細を確認したり、問題を修正したり、無視したりするためのオプションを提供します。
+たとえば、クラスターに推奨されている数よりも少ないネットワークタイムプロトコル（NTP）サーバーを設定したとします。クラスター時刻の不正確さが原因で発生する問題を未然に防ぐため、InsightsはNTPサーバーの設定数が少なすぎることを通知し、詳細の確認、問題の修正、または無視するためのオプションを提供します。
 
 image:insights.png["System Managerのインサイトページのスクリーンショット"]
 

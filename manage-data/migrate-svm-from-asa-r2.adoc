@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-data/migrate-svm-from-asa-r2.html 
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine 
-summary: ONTAP 9.20.1以降では、ストレージ仮想マシン（VM）を2ノードのASA r2クラスタから2ノードのASAまたは2ノードのAFFクラスタへ無停止で移行できます。 
+summary: ONTAP 9.20.1以降では、2ノードのASA r2クラスタから2ノードのASAまたはAFFクラスタへ、ストレージVMを無停止で移行できます。 
 ---
-= ASA r2クラスタからASAまたはAFFクラスタへストレージVMを移行する
+= ASA r2クラスターからASAまたはAFFクラスターへストレージVMを移行する
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ONTAP 9.20.1以降では、2ノードのASA r2クラスタから2ノードのASAまたは2ノードのAFFクラスタへ、ストレージ仮想マシン（VM）を無停止で移行できます。SANとNASのワークロードの統合、ASA r2システムでは利用できないONTAP機能の導入、または環境のハードウェア更新の一環として、ストレージVMの移行が必要になる場合があります。移行中も、LUNおよびネームスペースの既存のホストマッピングとストレージユニット構成は維持されるため、運用上の労力とリスクが軽減されます。
+ONTAP 9.20.1以降では、2ノードのASA r2クラスタから2ノードのASAまたは2ノードのAFFクラスタへ、ストレージ仮想マシン（VM）を無停止で移行できます。SANとNASのワークロードの統合、ASA r2システムでは利用できないONTAP機能の導入、またはハードウェアの更新のために、ストレージVMの移行が必要になる場合があります。移行中も、LUNおよびネームスペースの既存のホストマッピングとストレージユニット構成は維持されるため、運用上の労力とリスクが軽減されます。
 
 .開始する前に
 * クラスタ管理者である必要があります。
@@ -21,8 +21,8 @@ ONTAP 9.20.1以降では、2ノードのASA r2クラスタから2ノードのASA
 .タスクの内容
 * ASA r2ストレージVMは、2ノードASA r2クラスタから2ノードAFFクラスタへのみ移行できます。
 +
-** ASA r2ストレージVMをFASクラスタ、または2ノードを超えるASAクラスタやAFFクラスタに移行することはできません。
-** 2ノードを超えるASA r2クラスタからASA r2ストレージVMを移行することはできません。
+** ASA r2ストレージVMをFASクラスタ、または2つを超えるノードを持つASAまたはAFFクラスタに移行することはできません。
+** 2つを超えるノードを持つASA r2クラスタからASA r2ストレージVMを移行することはできません。
 
 
 * ASA r2クラスタからAFFクラスタへのデータ移行は、元に戻すことはできません。
@@ -30,7 +30,7 @@ ONTAP 9.20.1以降では、2ノードのASA r2クラスタから2ノードのASA
 切り替え前であれば移行を中止できますが、切り替えが開始された後は、移行を中断したり元に戻したりすることはできません。移行が完了した後は、AFFクラスタからASA r2クラスタにデータを移行することはできません。
 
 +
-link:migrate-svm.html["SVMをASAからASA r2クラスタに移行する"]することができます。
+link:migrate-svm.html["ストレージVMをASAからASA r2クラスタに移行する"]することができます。
 
 * ストレージVMは一度に1台しか移行できません。
 * ストレージVMには、最大400個のストレージユニットを含めることができます。
@@ -120,7 +120,7 @@ ASA r2クラスタからストレージ仮想マシン（VM）を移行する前
 
 .手順
 . link:../data-protection/snapmirror-active-sync-break-relationship.html["既存のレプリケーション関係をすべて削除します"]。
-. link:../data-protection/snapmirror-active-sync-delete-relationship.html["既存のSnapMirrrorアクティブな同期関係をすべて削除します"]。
+. link:../data-protection/snapmirror-active-sync-delete-relationship.html["既存のSnapMirrorアクティブ同期関係をすべて削除します"]。
 . IPsecが有効になっているか確認してください：
 +
 [source, cli]
@@ -137,16 +137,16 @@ security ipsec config modify -is-enabled -false
 +
 link:https://docs.netapp.com/us-en/ontap-cli/security-ipsec-config-show.html["security ipsec config show"^] コマンドの詳細をご確認ください。
 
-.. iPv6および仮想IP（VIP）LIFを確認してください：
+.. IPv6および仮想IP（VIP）LIFを確認してください：
 +
 [source, cli]
 ----
 network interface show -vserver <storage_vm_name> -fields address-family, is-vip
 ----
 +
-iPv6 LIFの場合、 `-address-family`は `ipv6`です。VIP LIFの場合、 `-is-vip`パラメータは `true`です。
+IPv6 LIFの場合、 `-address-family`は `ipv6`です。VIP LIFの場合、 `-is-vip`パラメータは `true`です。
 
-.. iPv6またはVIP LIFが存在する場合は、それらを削除してください：
+.. IPv6またはVIP LIFが存在する場合は、それらを削除してください：
 +
 [source, cli]
 ----
@@ -221,7 +221,7 @@ ASA r2クラスタからストレージVMを移行する準備ができました
 
 ASA r2クラスタとASAまたはAFFクラスタの間に必要なクラスタ ピア関係を作成し、両方のクラスタを準備する手順を完了したら、ストレージVMの移行を開始できます。
 
-ストレージVMの移行を実行する際は、移行のCPUワークロードを実行できるように、ASA r2クラスタとAFFクラスタの両方でCPUヘッドルームを30%残しておくことがベストプラクティスです。
+ベストプラクティスとして、移行ワークロードを実行できるように、ASA r2クラスターとAFFクラスターの両方でCPUの余裕を30%残してください。
 
 .タスクの内容
 * ストレージVMの移行後、クライアントI/Oは中断することなくシームレスにデスティネーション クラスタに移行し、ASA r2クラスタ上のストレージVMは自動的に削除されます。自動切り替えと自動ストレージVM削除は、デフォルトで有効になっています。必要に応じて、いずれか一方または両方のオプションを無効にして、手動で実行することもできます。

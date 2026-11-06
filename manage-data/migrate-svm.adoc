@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/migrate-svm.html 
 keywords: move svm, migrate svm, asa, asa r2, storage vm, storage virtual machine 
-summary: ストレージ可用性ゾーンのスペースが少なくなってきた場合は、ストレージユニットを別のストレージ可用性ゾーンに移動して、クラスタ全体でストレージ利用率を分散させることができます。 
+summary: ストレージVMの検証、クラスタのピアリング、事前チェックの実行、および移行を含め、ASAクラスタからASA r2クラスタへストレージVMを無停止で移行します。 
 ---
 = ストレージVMをASAクラスタからASA r2クラスタに移行する
 :allow-uri-read: 
@@ -16,7 +16,7 @@ ONTAP 9.18.1以降では、SAN専用環境向けに簡素化・合理化され�
 
 NOTE: ASA MetroCluster から ASA r2 クラスターにストレージ VM を移行することはできません。ASA r2 システムは MetroCluster 構成をサポートしていません。
 
-ASA r2システムは、QuickAssistテクノロジ（QAT）をサポートしています。ASAシステムはQATをサポートしていません。ONTAP 9.20.1以降、ONTAPは、ストレージ仮想マシン（VM）がASA（非QAT）システムからASA r2（QAT）システムに移行されたあとに発生する可能性のある、高い読み取りレイテンシとCPU使用率を低減します。
+ASA r2システムは、QuickAssist テクノロジ（QAT）をサポートしています。ASAシステムはQATをサポートしていません。ONTAP 9.20.1以降、ONTAPは、ストレージVMがASA（非QAT）システムからASA r2（QAT）システムに移行されたあとに発生する可能性のある、高い読み取りレイテンシとCPU使用率を低減します。
 
 ASAとASA r2 ストレージ システム間のストレージ VM 移行は、次のようにサポートされます。
 
@@ -249,7 +249,7 @@ vserver migrate show -vserver <storage_VM_name>
 
 
 .結果
-ストレージ VM はASAクラスタからASA r2 クラスタに移行されます。ストレージ VM の名前と UUID、データ LIF 名、IP アドレス、ボリューム名などのオブジェクト名は変更されません。ストレージ VM 内の移行されたオブジェクトの UUID が更新されます。
+ストレージVMは、ASAクラスターからASA r2クラスターに移行されます。ストレージVMの名前とUUID、データLIF名、IPアドレス、およびボリューム名などのオブジェクト名は変更されません。ストレージVM内の移行済みオブジェクトのUUIDが更新されます。
 
 .次の手順
 自動切り替えと自動ストレージ VM 削除を無効にした場合は、移行後の切り替えとクリーンアップを実行し、ASAクライアントをデスティネーション クラスタへ手動で切り替えて、ASAクラスタからストレージ VM を削除します。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-data/data-cloning.html 
 keywords: data cloning, clone data, cloning data, luns, namespaces, clone storage units, clone, cloning, clone consistency groups 
-summary: ASA R2上のストレージユニットと整合グループのクローンを作成して、本番環境の外部でさまざまな目的に使用できるデータコピーを作成します。 
+summary: ASA r2システム上のストレージユニットと整合性グループのクローンを作成して、本番環境外で使用するデータコピーを作成します。 
 searchtitle: ONTAP System Managerを使用したデータクローニング| ASA R2 
 ---
 = ASA R2ストレージシステム上のデータのクローニング
@@ -82,7 +82,7 @@ searchtitle: ONTAP System Managerを使用したデータクローニング| ASA
 
 クローンは、クローニングする整合グループのSnapshotから作成されます。クローンに使用されるスナップショットは、デフォルトでクローニングプロセスが開始された時点で作成されます。既存のSnapshotを使用するようにデフォルトの動作を変更できます。
 
-ストレージユニットのマッピングは、クローニングプロセスの一環としてコピーされます。Snapshotポリシーはクローニングプロセスではコピーされません。
+ストレージユニットのマッピングは、クローニング プロセスの一部としてコピーされます。Snapshotポリシーは、クローニング プロセスの一部としてコピーされません。
 
 クローンは、ASA R2システムにローカルに格納されている整合グループから作成することも、リモートの場所にレプリケートされた整合グループから作成することもできます。
 
